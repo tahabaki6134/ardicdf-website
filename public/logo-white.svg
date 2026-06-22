@@ -1,24 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" role="img" aria-labelledby="title desc">
-  <title id="title">ARDIC Design and Fabrication primary logo</title>
-  <desc id="desc">Stacked premium architectural logo with symbolic A and abstract juniper tree.</desc>
+  <title id="title">ARDIÇ Design and Fabrication Monument Signature logo</title>
+  <desc id="desc">Stacked premium architectural logo with monumental A symbol and abstract juniper tree.</desc>
   
-  <g transform="translate(224 72)">
+  
+  <g transform="translate(224 70)">
     
-  <title id="title">ARDIC architectural A symbol</title>
-  <desc id="desc">Architectural A symbol with an abstract juniper tree integrated into the letterform.</desc>
-  
-  <path d="M96 430 L244 82 C250 68 262 68 268 82 L416 430" fill="none" stroke="#F5F3EE" stroke-width="34" stroke-linecap="square" stroke-linejoin="miter"/>
-  <path d="M171 307 H341" fill="none" stroke="#F5F3EE" stroke-width="24" stroke-linecap="square"/>
-  <path d="M256 144 V352" fill="none" stroke="#F5F3EE" stroke-width="14" stroke-linecap="round"/>
-  <path d="M256 180 C225 190 204 211 190 244 C220 239 242 223 256 198" fill="none" stroke="#F5F3EE" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M256 207 C291 215 316 236 333 270 C298 267 273 247 256 224" fill="none" stroke="#F5F3EE" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M256 249 C230 258 213 276 201 302 C228 299 246 285 256 266" fill="none" stroke="#F5F3EE" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M256 275 C285 282 305 299 319 326 C289 324 268 308 256 291" fill="none" stroke="#F5F3EE" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M236 376 H276" fill="none" stroke="#F5F3EE" stroke-width="12" stroke-linecap="square"/>
-
+  <g>
+    <path d="M70 420 C104 415 116 401 128 370 L218 112 C226 88 239 68 256 68 C273 68 286 88 294 112 L384 370 C396 401 408 415 442 420 L350 420 L256 148 L162 420 Z" fill="#F5F3EE"/>
+    <path d="M145 386 L235 128 C242 108 249 98 256 98 C263 98 270 108 277 128 L367 386 L330 386 L256 174 L182 386 Z" fill="#0D0D0C" opacity="0.88"/>
+    <path d="M145 386 L235 128 C242 108 249 98 256 98 C263 98 270 108 277 128 L367 386" fill="none" stroke="#F5F3EE" stroke-width="8" stroke-linejoin="round" opacity="0.85"/>
+    <path d="M124 420 C96 420 82 421 60 430 C75 410 91 400 128 370 Z" fill="#F5F3EE"/>
+    <path d="M388 370 C425 400 437 410 452 430 C430 421 416 420 388 420 Z" fill="#F5F3EE"/>
   </g>
-  <text x="480" y="672" fill="#F5F3EE" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="112" letter-spacing="12" font-weight="600">ARDIÇ</text>
-  <path d="M210 720 H750" stroke="#F5F3EE" stroke-width="3"/>
-  <text x="480" y="780" fill="#F5F3EE" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="11" font-weight="700">DESIGN &amp; FABRICATION</text>
-  <text x="480" y="846" fill="#F5F3EE" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34">Built to Be Remembered.</text>
+  <g stroke="#F5F3EE" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M256 190 V354" stroke-width="8"/>
+    <path d="M256 238 C235 229 218 217 205 198" stroke-width="5"/>
+    <path d="M256 218 C276 205 292 190 304 171" stroke-width="5"/>
+    <path d="M256 264 C232 256 212 243 196 224" stroke-width="5"/>
+    <path d="M256 260 C282 248 302 232 318 210" stroke-width="5"/>
+    <path d="M256 294 C235 287 218 277 204 262" stroke-width="5"/>
+    <path d="M256 292 C279 284 299 272 314 254" stroke-width="5"/>
+    <path d="M256 325 C238 318 223 309 211 296" stroke-width="4"/>
+    <path d="M256 322 C276 316 292 307 305 294" stroke-width="4"/>
+    <path d="M222 219 C216 211 212 203 210 194" stroke-width="3"/>
+    <path d="M236 229 C229 220 225 211 224 201" stroke-width="3"/>
+    <path d="M286 199 C292 189 295 180 296 170" stroke-width="3"/>
+    <path d="M298 237 C306 228 311 218 313 208" stroke-width="3"/>
+    <path d="M222 273 C216 265 212 257 211 248" stroke-width="3"/>
+    <path d="M291 279 C299 271 303 262 305 253" stroke-width="3"/>
+    <path d="M236 333 H276" stroke-width="7" stroke-linecap="square"/>
+  </g>
+  </g>
+  <text x="480" y="686" fill="#F5F3EE" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="116" letter-spacing="26" font-weight="500">ARDIÇ</text>
+  <text x="480" y="762" fill="#F5F3EE" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="13" font-weight="700">DESIGN &amp; FABRICATION</text>
+  <path d="M435 808 H525" stroke="#F5F3EE" stroke-width="3"/>
+  <text x="480" y="862" fill="#F5F3EE" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34">Built to Be Remembered.</text>
 </svg>

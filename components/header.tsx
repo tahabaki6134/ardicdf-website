@@ -9,27 +9,27 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="group flex items-center gap-3" aria-label="ARDIÇ home">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/95 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-5 md:px-8 md:py-6">
+        <Link href="/" className="group flex items-center gap-4 md:gap-5" aria-label="ARDIÇ home">
           <Image
             src="/logo-symbol.svg"
             alt=""
-            width={40}
-            height={40}
+            width={88}
+            height={88}
             priority
-            className="h-10 w-10"
+            className="h-16 w-16 object-contain md:h-20 md:w-20"
           />
           <Image
             src="/logo-horizontal.svg"
             alt={brand.name}
-            width={220}
-            height={72}
+            width={360}
+            height={118}
             priority
-            className="hidden h-10 w-auto sm:block"
+            className="hidden h-14 w-auto object-contain sm:block md:h-16 lg:h-20"
           />
         </Link>
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Primary navigation">
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (
@@ -47,7 +47,7 @@ export function Header() {
         </nav>
         <Link
           href="/contact"
-          className="border border-bronze px-4 py-2 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain"
+          className="hidden border border-bronze px-4 py-2 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain sm:inline-block"
         >
           Start a Project
         </Link>
