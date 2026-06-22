@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { brand, navigation } from "@/lib/content";
@@ -10,13 +11,23 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="group flex items-center gap-3" aria-label="Ardıç home">
-          <span className="grid h-10 w-10 place-items-center border border-bronze text-sm font-semibold text-bronze">
-            A
-          </span>
-          <span className="hidden text-xs font-semibold tracking-brand text-ink sm:block">
-            {brand.name}
-          </span>
+        <Link href="/" className="group flex items-center gap-3" aria-label="ARDIÇ home">
+          <Image
+            src="/logo-symbol.svg"
+            alt=""
+            width={40}
+            height={40}
+            priority
+            className="h-10 w-10"
+          />
+          <Image
+            src="/logo-horizontal.svg"
+            alt={brand.name}
+            width={220}
+            height={72}
+            priority
+            className="hidden h-10 w-auto sm:block"
+          />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
           {navigation.map((item) => {

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">ARDIC architectural A symbol</title>
+  <desc id="desc">Architectural A symbol with an abstract juniper tree integrated into the letterform.</desc>
+  
+  <path d="M96 430 L244 82 C250 68 262 68 268 82 L416 430" fill="none" stroke="#111111" stroke-width="34" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M171 307 H341" fill="none" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <path d="M256 144 V352" fill="none" stroke="#8C6A43" stroke-width="14" stroke-linecap="round"/>
+  <path d="M256 180 C225 190 204 211 190 244 C220 239 242 223 256 198" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 207 C291 215 316 236 333 270 C298 267 273 247 256 224" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 249 C230 258 213 276 201 302 C228 299 246 285 256 266" fill="none" stroke="#8C6A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 275 C285 282 305 299 319 326 C289 324 268 308 256 291" fill="none" stroke="#8C6A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236 376 H276" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="square"/>
+</svg>

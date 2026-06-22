@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { brand, navigation } from "@/lib/content";
 
@@ -6,7 +7,13 @@ export function Footer() {
     <footer className="bg-ink text-porcelain">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_0.8fr_1fr] md:px-8">
         <div>
-          <p className="text-xs font-semibold tracking-brand text-bronze">{brand.name}</p>
+          <Image
+            src="/logo-white.svg"
+            alt={brand.name}
+            width={210}
+            height={210}
+            className="h-28 w-28 object-contain"
+          />
           <p className="mt-5 max-w-md font-display text-4xl leading-tight md:text-5xl">
             {brand.tagline}
           </p>

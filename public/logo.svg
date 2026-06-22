@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" role="img" aria-labelledby="title desc">
+  <title id="title">ARDIC Design and Fabrication primary logo</title>
+  <desc id="desc">Stacked premium architectural logo with symbolic A and abstract juniper tree.</desc>
+  
+  <g transform="translate(224 72)">
+    
+  <title id="title">ARDIC architectural A symbol</title>
+  <desc id="desc">Architectural A symbol with an abstract juniper tree integrated into the letterform.</desc>
+  
+  <path d="M96 430 L244 82 C250 68 262 68 268 82 L416 430" fill="none" stroke="#111111" stroke-width="34" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M171 307 H341" fill="none" stroke="#111111" stroke-width="24" stroke-linecap="square"/>
+  <path d="M256 144 V352" fill="none" stroke="#8C6A43" stroke-width="14" stroke-linecap="round"/>
+  <path d="M256 180 C225 190 204 211 190 244 C220 239 242 223 256 198" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 207 C291 215 316 236 333 270 C298 267 273 247 256 224" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 249 C230 258 213 276 201 302 C228 299 246 285 256 266" fill="none" stroke="#8C6A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 275 C285 282 305 299 319 326 C289 324 268 308 256 291" fill="none" stroke="#8C6A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236 376 H276" fill="none" stroke="#8C6A43" stroke-width="12" stroke-linecap="square"/>
+
+  </g>
+  <text x="480" y="672" fill="#111111" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="112" letter-spacing="12" font-weight="600">ARDIÇ</text>
+  <path d="M210 720 H750" stroke="#8C6A43" stroke-width="3"/>
+  <text x="480" y="780" fill="#111111" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="11" font-weight="700">DESIGN &amp; FABRICATION</text>
+  <text x="480" y="846" fill="#8C6A43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34">Built to Be Remembered.</text>
+</svg>
