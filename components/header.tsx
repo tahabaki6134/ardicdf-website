@@ -37,7 +37,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-[0.95rem] tracking-[0.02em] transition ${
+                className={`text-[1.0625rem] tracking-[0.02em] transition ${
                   active ? "text-bronze" : "text-ink/70 hover:text-ink"
                 }`}
               >
@@ -54,7 +54,7 @@ export function Header() {
         </Link>
       </div>
       <nav
-        className="flex gap-5 overflow-x-auto border-t border-ink/10 px-5 py-3 text-[0.95rem] tracking-[0.02em] lg:hidden"
+        className="flex gap-5 overflow-x-auto border-t border-ink/10 px-5 py-3 text-base tracking-[0.02em] lg:hidden"
         aria-label="Mobile navigation"
       >
         {navigation.map((item) => (
