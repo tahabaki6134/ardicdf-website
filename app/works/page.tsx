@@ -12,7 +12,7 @@ export default function WorksPage() {
             title="A portfolio framework for memorable spaces and objects."
             copy="This first release uses refined placeholder project imagery and editorial project structure, ready for final case studies."
           />
-          <div className="mt-16 grid gap-10 lg:grid-cols-3">
+          <div className="mt-16 grid gap-10 lg:grid-cols-2">
             {works.map((work) => (
               <WorkCard key={work.title} work={work} />
             ))}

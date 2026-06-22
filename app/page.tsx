@@ -69,7 +69,7 @@ export default function Home() {
               See all works
             </Link>
           </div>
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 lg:grid-cols-2">
             {works.map((work) => (
               <WorkCard key={work.title} work={work} />
             ))}

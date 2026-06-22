@@ -40,25 +40,16 @@ export const services = [
 
 export const works = [
   {
-    title: "Atelier Lobby Feature",
-    type: "Architectural Decor",
-    location: "Istanbul",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+    title: "Thematic Character Sculptures",
+    type: "Theme Parks & Entertainment",
+    number: "Project 01",
+    image: "/projects/thematic-character-sculptures.jpeg"
   },
   {
-    title: "Retail Landmark Installation",
-    type: "Brand Installation",
-    location: "Dubai",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    title: "Gallery Object Series",
-    type: "Sculpture",
-    location: "Bodrum",
-    image:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80"
+    title: "Retail Display Installations",
+    type: "Brand Experience & Fabrication",
+    number: "Project 02",
+    image: "/projects/retail-display-installations.jpeg"
   }
 ];
 
