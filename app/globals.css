@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111111;
+  background: #f5f3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f5f3ee;
+  color: #111111;
+}
+
+::selection {
+  background: #8c6a43;
+  color: #f5f3ee;
+}
+
+.image-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(0deg, rgba(245, 243, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 243, 238, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
