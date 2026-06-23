@@ -53,6 +53,24 @@ export const works = [
   }
 ];
 
+export const portfolioCategories = [
+  "Commercial & Thematic Interiors",
+  "Safari Experiences",
+  "Sculptures & Characters",
+  "Artificial Rock & Water Features",
+  "Historical & Topographic Environments",
+  "CNC Fabrication",
+  "Mold & Production Systems"
+].map((title, index) => ({
+  title,
+  number: `${index + 1}`.padStart(2, "0"),
+  slug: title
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "")
+}));
+
 export const capabilities = [
   "Metal fabrication",
   "CNC routing",
