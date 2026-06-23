@@ -56,7 +56,9 @@ export const works = [
 export const portfolioCategories = [
   {
     title: "Commercial & Thematic Interiors",
-    description: "Immersive interior environments shaped for branded, leisure, and public-facing spaces."
+    description:
+      "Immersive themed environments crafted for hospitality, entertainment, retail, and destination experiences.",
+    href: "/works/commercial-thematic-interiors"
   },
   {
     title: "Safari Experiences",

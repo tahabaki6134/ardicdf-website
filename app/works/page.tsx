@@ -19,20 +19,17 @@ export default function WorksPage() {
                 id={category.slug}
                 className="group scroll-mt-40 bg-porcelain p-7 transition hover:bg-white md:min-h-80 md:p-9"
               >
-                <div className="flex min-h-full flex-col">
+                <a href={category.href ?? `#${category.slug}`} className="flex min-h-full flex-col">
                   <p className="font-display text-5xl text-bronze">{category.number}</p>
                   <h2 className="mt-12 max-w-lg font-display text-4xl leading-tight text-ink">
                     {category.title}
                   </h2>
                   <p className="mt-6 max-w-xl leading-7 text-ink/60">{category.description}</p>
                   <div className="mt-8 h-px w-16 bg-bronze" />
-                  <a
-                    href={`#${category.slug}`}
-                    className="mt-auto pt-10 text-sm font-semibold uppercase tracking-brand text-bronze transition group-hover:text-ink"
-                  >
+                  <span className="mt-auto pt-10 text-sm font-semibold uppercase tracking-brand text-bronze transition group-hover:text-ink">
                     Explore →
-                  </a>
-                </div>
+                  </span>
+                </a>
               </article>
             ))}
           </div>
