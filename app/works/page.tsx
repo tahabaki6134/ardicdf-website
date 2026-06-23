@@ -1,4 +1,5 @@
-import { portfolioCategories } from "@/lib/content";
+import { portfolioCategories, portfolioProjects } from "@/lib/content";
+import { PortfolioProjectCard } from "@/components/portfolio-project-card";
 import { SectionHeading } from "@/components/section-heading";
 
 export default function WorksPage() {
@@ -11,6 +12,12 @@ export default function WorksPage() {
             title="Where Design Becomes a Built Experience."
             copy="Selected projects spanning thematic environments, sculptural fabrication, artificial landscapes, and custom production systems."
           />
+
+          <div className="mt-16 grid gap-10">
+            {portfolioProjects.map((project) => (
+              <PortfolioProjectCard key={project.title} project={project} />
+            ))}
+          </div>
 
           <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2">
             {portfolioCategories.map((category) => (

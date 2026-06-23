@@ -53,6 +53,51 @@ export const works = [
   }
 ];
 
+export const portfolioProjects = [
+  {
+    title: "Fantasy Mushroom Houses",
+    category: "Fantasy & Experience Spaces",
+    description:
+      "Custom themed fantasy structures produced through CNC fabrication, sculpting, coating, painting, and installation workflows.",
+    images: [
+      "/projects/fantasy-mushroom-houses-01.jpeg",
+      "/projects/fantasy-mushroom-houses-02.jpeg",
+      "/projects/fantasy-mushroom-houses-03.jpeg"
+    ]
+  },
+  {
+    title: "Roman Heritage Elements",
+    category: "Historical & Cultural Environments",
+    description:
+      "Architectural heritage reproductions including Roman columns, carved inscriptions, and historical environment elements manufactured for themed cultural spaces.",
+    images: [
+      "/projects/roman-heritage-elements-01.jpeg",
+      "/projects/roman-heritage-elements-02.jpeg",
+      "/projects/roman-heritage-elements-03.jpeg",
+      "/projects/roman-heritage-elements-04.jpeg",
+      "/projects/roman-heritage-elements-05.jpeg",
+      "/projects/roman-heritage-elements-06.jpeg"
+    ]
+  },
+  {
+    title: "Fabrication Showcase",
+    category: "Fabrication & Production",
+    description:
+      "In-house CNC production, sculptural fabrication, finishing, coating, painting, and assembly processes executed under one roof.",
+    images: [
+      "/projects/fabrication-showcase-01.jpeg",
+      "/projects/fabrication-showcase-02.jpeg",
+      "/projects/fabrication-showcase-03.jpeg",
+      "/projects/fabrication-showcase-04.jpeg",
+      "/projects/fabrication-showcase-05.jpeg",
+      "/projects/fabrication-showcase-06.jpeg"
+    ]
+  }
+].map((project, index) => ({
+  ...project,
+  number: `Project ${`${index + 1}`.padStart(2, "0")}`
+}));
+
 export const portfolioCategories = [
   {
     title: "Commercial & Thematic Interiors",
