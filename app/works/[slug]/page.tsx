@@ -1,16 +1,47 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { SectionHeading } from "@/components/section-heading";
-
-export const metadata: Metadata = {
-  title: "Commercial & Thematic Interiors | Ardıç Design & Fabrication",
-  description:
-    "Discover immersive commercial and themed interior environments designed and fabricated by Ardıç. From hospitality venues and retail concepts to visitor attractions and entertainment destinations."
-};
+import { portfolioCategories } from "@/lib/content";
 
 const projectSlots = ["01", "02", "03", "04"];
 
-export default function CommercialThematicInteriorsPage() {
+type CategoryPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+function getCategory(slug: string) {
+  return portfolioCategories.find((category) => category.slug === slug);
+}
+
+export function generateStaticParams() {
+  return portfolioCategories.map((category) => ({
+    slug: category.slug
+  }));
+}
+
+export function generateMetadata({ params }: CategoryPageProps): Metadata {
+  const category = getCategory(params.slug);
+
+  if (!category) {
+    return {};
+  }
+
+  return {
+    title: `${category.title} | Ardıç Design & Fabrication`,
+    description: category.description
+  };
+}
+
+export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
+  const category = getCategory(params.slug);
+
+  if (!category) {
+    notFound();
+  }
+
   return (
     <main>
       <section className="px-5 py-20 md:px-8 md:py-28">
@@ -19,41 +50,25 @@ export default function CommercialThematicInteriorsPage() {
             href="/works"
             className="text-sm font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
           >
-            ← Works
+            &larr; Works
           </Link>
 
           <div className="mt-10">
             <SectionHeading
               eyebrow="Portfolio Category"
-              title="Commercial & Thematic Interiors"
-              copy="Immersive themed environments crafted for hospitality, entertainment, retail, and destination experiences."
+              title={category.title}
+              copy={category.description}
             />
           </div>
 
           <div className="mt-14 grid gap-10 border-y border-ink/10 py-12 lg:grid-cols-[0.9fr_1.1fr]">
             <p className="font-display text-4xl leading-tight text-ink md:text-5xl">
-              Built environments with atmosphere, story, and commercial presence.
+              {category.introHeading}
             </p>
             <div className="space-y-6 text-lg leading-8 text-ink/65">
-              <p>
-                We design and fabricate immersive commercial environments that transform spaces
-                into memorable experiences. From themed restaurants and hospitality venues to
-                visitor attractions, retail concepts, and entertainment destinations, each project
-                is developed through a seamless integration of design, fabrication, and on-site
-                execution.
-              </p>
-              <p>
-                Our work combines architectural thinking, sculptural craftsmanship, custom
-                production, and material expertise to create environments that engage visitors and
-                strengthen brand identity. Whether the objective is storytelling, atmosphere, or
-                commercial impact, every project is tailored to its context and built with
-                long-term durability in mind.
-              </p>
-              <p>
-                Selected projects showcase our ability to deliver complete environments, from
-                concept development and technical detailing to fabrication, installation, and final
-                execution.
-              </p>
+              {category.intro.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
           </div>
 
