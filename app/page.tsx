@@ -1,42 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { brand, capabilities, services, works } from "@/lib/content";
+import { brand, capabilities, heroSlides, services, works } from "@/lib/content";
+import { HomeHeroSlider } from "@/components/home-hero-slider";
 import { SectionHeading } from "@/components/section-heading";
 import { WorkCard } from "@/components/work-card";
 
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[86vh] overflow-hidden bg-ink text-porcelain">
-        <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85"
-          alt="Architectural interior with premium material detailing"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-55"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
-        <div className="image-grain absolute inset-0" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-24 md:px-8 md:pb-24">
-          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">{brand.name}</p>
-          <h1 className="mt-5 max-w-4xl font-display text-6xl leading-[0.95] md:text-8xl lg:text-9xl">
-            {brand.tagline}
-          </h1>
-          <div className="mt-8 flex max-w-3xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <p className="text-lg leading-8 text-porcelain/75 md:text-xl">
-              Architectural design, sculptural fabrication, and memorable spatial experiences
-              delivered with a single studio standard.
-            </p>
-            <Link
-              href="/works"
-              className="w-fit bg-porcelain px-6 py-4 text-xs font-semibold uppercase tracking-brand text-ink transition hover:bg-bronze hover:text-porcelain"
-            >
-              View Works
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeHeroSlider slides={heroSlides} />
 
       <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
@@ -53,6 +25,29 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-ink/60">{service.description}</p>
               </article>
             ))}
+          </div>
+          <div className="mt-14 grid gap-px bg-ink/10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="relative min-h-[360px] overflow-hidden bg-ink md:min-h-[460px]">
+              <Image
+                src="/home/brand-story-lobby.jpeg"
+                alt="Dark premium lobby with natural rock forms and Ardic wall branding"
+                fill
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-end bg-ink p-8 text-porcelain md:p-10">
+              <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                {brand.tagline}
+              </p>
+              <h3 className="mt-5 font-display text-4xl leading-tight md:text-5xl">
+                A studio language shaped by atmosphere, material, and memory.
+              </h3>
+              <p className="mt-6 leading-8 text-porcelain/65">
+                Every environment is developed with the presence of a place, not just the finish of
+                an object.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -86,6 +81,15 @@ export default function Home() {
             light
           />
           <div className="grid gap-5 sm:grid-cols-2">
+            <div className="relative min-h-[360px] overflow-hidden border border-porcelain/15 bg-ink sm:col-span-2">
+              <Image
+                src="/home/production-columns.png"
+                alt="White Corinthian column production and sculptural fabrication details"
+                fill
+                sizes="(min-width: 1024px) 54vw, 100vw"
+                className="object-cover"
+              />
+            </div>
             {["Concept", "Engineering", "Fabrication", "Installation"].map((item) => (
               <div key={item} className="border border-porcelain/15 p-7">
                 <p className="font-display text-4xl text-bronze">{item}</p>

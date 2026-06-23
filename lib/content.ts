@@ -38,18 +38,57 @@ export const services = [
   }
 ];
 
-export const works = [
+export const heroSlides = [
   {
-    title: "Thematic Character Sculptures",
-    type: "Theme Parks & Entertainment",
-    number: "Project 01",
-    image: "/projects/thematic-character-sculptures.jpeg"
+    image: "/home/hero-roman-heritage.jpeg",
+    alt: "Roman columns, ancient stone tablets, and warm historical lighting",
+    label: "Historical Environments"
   },
   {
-    title: "Retail Display Installations",
-    type: "Brand Experience & Fabrication",
+    image: "/home/brand-story-lobby.jpeg",
+    alt: "Dark premium lobby with natural rock forms and Ardic wall branding",
+    label: "Built to Be Remembered"
+  },
+  {
+    image: "/home/production-columns.png",
+    alt: "White Corinthian column production and sculptural fabrication details",
+    label: "Fabrication Workshop"
+  },
+  {
+    image: "/home/featured-entrance-gate.png",
+    alt: "Monumental entrance gate architectural fabrication project",
+    label: "Architectural Environments"
+  },
+  {
+    image: "/home/featured-vintage-vehicle.png",
+    alt: "Vintage black rental vehicle custom experience object",
+    label: "Fantasy & Experience Spaces"
+  },
+  {
+    image: "/home/featured-burger-sculpture.png",
+    alt: "Giant burger sculpture for commercial brand experience",
+    label: "Commercial Sculptures"
+  }
+];
+
+export const works = [
+  {
+    title: "Monumental Architectural Fabrication",
+    type: "Architectural Environments",
+    number: "Project 01",
+    image: "/home/featured-entrance-gate.png"
+  },
+  {
+    title: "Custom Experience Objects",
+    type: "Fantasy & Experience Spaces",
     number: "Project 02",
-    image: "/projects/retail-display-installations.jpeg"
+    image: "/home/featured-vintage-vehicle.png"
+  },
+  {
+    title: "Commercial Sculptures & Brand Experiences",
+    type: "Commercial & Thematic Interiors",
+    number: "Project 03",
+    image: "/home/featured-burger-sculpture.png"
   }
 ];
 
