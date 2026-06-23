@@ -8,8 +8,8 @@ export default function WorksPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Works"
-            title="Portfolio categories for environments, objects, and fabricated experiences."
-            copy="A structured portfolio system organized around the studio’s core production and design disciplines."
+            title="Where Design Becomes a Built Experience."
+            copy="Selected projects spanning thematic environments, sculptural fabrication, artificial landscapes, and custom production systems."
           />
 
           <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2">
