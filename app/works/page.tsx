@@ -12,34 +12,28 @@ export default function WorksPage() {
             copy="A structured portfolio system organized around the studio’s core production and design disciplines."
           />
 
-          <nav
-            aria-label="Portfolio categories"
-            className="mt-14 flex gap-3 overflow-x-auto border-y border-ink/10 py-4"
-          >
+          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2">
             {portfolioCategories.map((category) => (
-              <a
-                key={category.slug}
-                href={`#${category.slug}`}
-                className="shrink-0 border border-ink/10 px-4 py-3 text-sm uppercase tracking-brand text-ink/65 transition hover:border-bronze hover:text-bronze"
-              >
-                {category.number} {category.title}
-              </a>
-            ))}
-          </nav>
-
-          <div className="mt-14 grid gap-px bg-ink/10 md:grid-cols-2">
-            {portfolioCategories.map((category) => (
-              <section
+              <article
                 key={category.slug}
                 id={category.slug}
-                className="scroll-mt-40 bg-porcelain p-7 md:min-h-72 md:p-9"
+                className="group scroll-mt-40 bg-porcelain p-7 transition hover:bg-white md:min-h-80 md:p-9"
               >
-                <p className="font-display text-5xl text-bronze">{category.number}</p>
-                <h2 className="mt-12 max-w-lg font-display text-4xl leading-tight text-ink">
-                  {category.title}
-                </h2>
-                <div className="mt-8 h-px w-16 bg-bronze" />
-              </section>
+                <div className="flex min-h-full flex-col">
+                  <p className="font-display text-5xl text-bronze">{category.number}</p>
+                  <h2 className="mt-12 max-w-lg font-display text-4xl leading-tight text-ink">
+                    {category.title}
+                  </h2>
+                  <p className="mt-6 max-w-xl leading-7 text-ink/60">{category.description}</p>
+                  <div className="mt-8 h-px w-16 bg-bronze" />
+                  <a
+                    href={`#${category.slug}`}
+                    className="mt-auto pt-10 text-sm font-semibold uppercase tracking-brand text-bronze transition group-hover:text-ink"
+                  >
+                    Explore →
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </div>

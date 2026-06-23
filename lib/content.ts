@@ -54,17 +54,38 @@ export const works = [
 ];
 
 export const portfolioCategories = [
-  "Commercial & Thematic Interiors",
-  "Safari Experiences",
-  "Sculptures & Characters",
-  "Artificial Rock & Water Features",
-  "Historical & Topographic Environments",
-  "CNC Fabrication",
-  "Mold & Production Systems"
-].map((title, index) => ({
-  title,
+  {
+    title: "Commercial & Thematic Interiors",
+    description: "Immersive interior environments shaped for branded, leisure, and public-facing spaces."
+  },
+  {
+    title: "Safari Experiences",
+    description: "Atmospheric habitat settings and visitor experiences built around narrative and material realism."
+  },
+  {
+    title: "Sculptures & Characters",
+    description: "Custom figures, scenic objects, and sculptural works produced for memorable spatial storytelling."
+  },
+  {
+    title: "Artificial Rock & Water Features",
+    description: "Textured rockwork and water-driven environments crafted for durable architectural impact."
+  },
+  {
+    title: "Historical & Topographic Environments",
+    description: "Cultural, historical, and terrain-based environments developed with spatial depth and precision."
+  },
+  {
+    title: "CNC Fabrication",
+    description: "Digitally fabricated components, patterns, and forms prepared for custom production workflows."
+  },
+  {
+    title: "Mold & Production Systems",
+    description: "Repeatable mold, casting, and production systems designed for controlled fabrication output."
+  }
+].map((category, index) => ({
+  ...category,
   number: `${index + 1}`.padStart(2, "0"),
-  slug: title
+  slug: category.title
     .toLowerCase()
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
