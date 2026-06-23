@@ -37,29 +37,37 @@ export function HomeHeroSlider({ slides }: HomeHeroSliderProps) {
           priority={index === 0}
           sizes="100vw"
           className={`object-cover transition-opacity duration-1000 ${
-            index === activeSlide ? "opacity-70" : "opacity-0"
+            index === activeSlide ? "opacity-80" : "opacity-0"
           }`}
         />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/65 to-ink/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/58 via-transparent to-transparent" />
       <div className="image-grain absolute inset-0" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-8.5rem)] max-w-7xl flex-col justify-end px-5 pb-12 pt-24 md:min-h-[calc(100vh-9.5rem)] md:px-8 md:pb-16">
         <p className="text-xs font-semibold uppercase tracking-brand text-bronze">{brand.name}</p>
-        <h1 className="mt-5 max-w-6xl font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl xl:text-8xl">
-          Designing Extraordinary Spaces. Fabricating Memorable Experiences.
+        <h1
+          className="mt-5 font-display"
+          style={{
+            fontSize: "clamp(2.2rem, 3.8vw, 4.6rem)",
+            lineHeight: "1",
+            maxWidth: "900px"
+          }}
+        >
+          <span className="block md:whitespace-nowrap">Designing Extraordinary Spaces.</span>
+          <span className="block md:whitespace-nowrap">Fabricating Memorable Experiences.</span>
         </h1>
         <div className="mt-8 flex max-w-4xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <p className="text-lg leading-8 text-porcelain/78 md:text-xl">
-            Custom sculptures, themed environments, architectural elements and large-scale
-            fabrication.
+          <p className="max-w-2xl text-base leading-7 text-porcelain/82 md:text-lg md:leading-8">
+            Design, fabrication and installation of themed environments, sculptures and
+            architectural experiences.
           </p>
           <Link
             href="/works"
             className="w-fit bg-porcelain px-6 py-4 text-xs font-semibold uppercase tracking-brand text-ink transition hover:bg-bronze hover:text-porcelain"
           >
-            View Works
+            VIEW PROJECTS
           </Link>
         </div>
 
