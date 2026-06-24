@@ -54,11 +54,12 @@ export function ContactForm() {
 
       const data = await response.json().catch(() => ({}));
 
-      if (!response.ok) {
+      if (!response.ok || data.ok !== true) {
         throw new Error(data.error || "Unable to send your inquiry right now.");
       }
 
       setForm(initialForm);
+      setError("");
       setStatus("success");
     } catch (submitError) {
       setStatus("error");

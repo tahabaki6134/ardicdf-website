@@ -137,28 +137,31 @@ export async function POST(request: Request) {
   `;
 
   try {
-    await Promise.all([
-      sendEmail({
-        to: NOTIFICATION_EMAIL,
-        subject: `New Website Inquiry - ${inquiry.projectType}`,
-        html: notificationHtml,
-        text: notificationText,
-        replyTo: inquiry.email
-      }),
-      sendEmail({
-        to: inquiry.email,
-        subject: "Ardıç Mimarlık - Inquiry Received",
-        html: confirmationHtml,
-        text: confirmationText
-      })
-    ]);
-
-    return NextResponse.json({ ok: true });
+    await sendEmail({
+      to: NOTIFICATION_EMAIL,
+      subject: `New Website Inquiry - ${inquiry.projectType}`,
+      html: notificationHtml,
+      text: notificationText,
+      replyTo: inquiry.email
+    });
   } catch (error) {
-    console.error("Contact form email error:", error);
+    console.error("Contact form notification email error:", error);
     return NextResponse.json(
       { error: "Unable to send your inquiry right now. Please try again later." },
       { status: 502 }
     );
   }
+
+  try {
+    await sendEmail({
+      to: inquiry.email,
+      subject: "Ardıç Mimarlık - Inquiry Received",
+      html: confirmationHtml,
+      text: confirmationText
+    });
+  } catch (error) {
+    console.error("Contact form confirmation email error:", error);
+  }
+
+  return NextResponse.json({ ok: true });
 }
