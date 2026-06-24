@@ -25,7 +25,7 @@ const contactRows = [
     },
     {
       title: "WhatsApp",
-      value: "Message Fabrication Director",
+      value: "Fabrication Director",
       href: "https://wa.me/905327438441",
       external: true
     }
