@@ -59,7 +59,13 @@ const capabilities = [
   }
 ];
 
-const team = [
+const team: Array<{
+  name: string;
+  initials: string;
+  role: string;
+  copy: string;
+  photo?: string;
+}> = [
   {
     name: "Yusuf Baki",
     initials: "YB",
@@ -93,8 +99,9 @@ const team = [
   {
     name: "Fatih Dilli",
     initials: "FD",
-    role: "Painter",
-    copy: "Resim, yüzey boyama ve dekoratif bitirme teknikleri konularında uzmandır."
+    role: "Ressam",
+    copy: "Sanatsal boyama, ileri renklendirme teknikleri ve özel efekt konularında uzmandır.",
+    photo: "/team/fatih-dilli.png"
   }
 ];
 
@@ -235,11 +242,24 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {team.map((member) => (
               <article key={member.name} className="flex min-h-full flex-col bg-porcelain p-6">
-                <div className="relative flex h-28 w-24 items-center justify-center border border-bronze/25 bg-white shadow-soft">
-                  <div className="absolute inset-2 border border-ink/5" />
-                  <span className="relative font-display text-3xl tracking-[0.16em] text-bronze">
-                    {member.initials}
-                  </span>
+                <div className="relative flex h-28 w-24 items-center justify-center overflow-hidden border border-bronze/25 bg-white shadow-soft">
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={`${member.name} portrait`}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                      style={{ objectPosition: "50% 32%" }}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-2 border border-ink/5" />
+                      <span className="relative font-display text-3xl tracking-[0.16em] text-bronze">
+                        {member.initials}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <h3 className="mt-7 font-display text-2xl leading-tight text-ink">{member.name}</h3>
                 <p className="mt-3 text-sm font-semibold leading-6 text-ink">{member.role}</p>
