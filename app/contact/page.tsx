@@ -1,23 +1,35 @@
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 
-const contactBlocks = [
-  {
-    title: "General Inquiries",
-    value: "+90 543 626 89 69",
-    href: "tel:+905436268969"
-  },
-  {
-    title: "Project Director",
-    value: "+90 532 743 84 41",
-    href: "tel:+905327438441"
-  },
-  {
-    title: "WhatsApp",
-    value: "+90 532 743 84 41",
-    href: "https://wa.me/905327438441",
-    external: true
-  }
+const contactRows = [
+  [
+    {
+      title: "Project Director",
+      value: "+90 543 626 89 69",
+      href: "tel:+905436268969",
+      whatsapp: "https://wa.me/905436268969"
+    },
+    {
+      title: "WhatsApp",
+      value: "Message Project Director",
+      href: "https://wa.me/905436268969",
+      external: true
+    }
+  ],
+  [
+    {
+      title: "Fabrication Director",
+      value: "+90 532 743 84 41",
+      href: "tel:+905327438441",
+      whatsapp: "https://wa.me/905327438441"
+    },
+    {
+      title: "WhatsApp",
+      value: "Message Fabrication Director",
+      href: "https://wa.me/905327438441",
+      external: true
+    }
+  ]
 ];
 
 const projectTypes = [
@@ -47,21 +59,35 @@ export default function ContactPage() {
             <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
               Contact Information
             </p>
-            <div className="mt-8 grid gap-px bg-ink/10 sm:grid-cols-3">
-              {contactBlocks.map((block) => (
-                <article key={block.title} className="bg-white p-6">
-                  <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                    {block.title}
-                  </p>
-                  <Link
-                    href={block.href}
-                    target={block.external ? "_blank" : undefined}
-                    rel={block.external ? "noreferrer" : undefined}
-                    className="mt-4 block font-display text-2xl leading-tight text-ink transition hover:text-bronze"
-                  >
-                    {block.value}
-                  </Link>
-                </article>
+            <div className="mt-8 space-y-px bg-ink/10">
+              {contactRows.map((row, rowIndex) => (
+                <div key={rowIndex} className="grid gap-px sm:grid-cols-2">
+                  {row.map((block) => (
+                    <article key={`${rowIndex}-${block.title}-${block.value}`} className="bg-white p-6">
+                      <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                        {block.title}
+                      </p>
+                      <Link
+                        href={block.href}
+                        target={block.external ? "_blank" : undefined}
+                        rel={block.external ? "noreferrer" : undefined}
+                        className="mt-4 block font-display text-2xl leading-tight text-ink transition hover:text-bronze"
+                      >
+                        {block.value}
+                      </Link>
+                      {"whatsapp" in block && block.whatsapp ? (
+                        <Link
+                          href={block.whatsapp}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-5 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+                        >
+                          WhatsApp
+                        </Link>
+                      ) : null}
+                    </article>
+                  ))}
+                </div>
               ))}
             </div>
 
