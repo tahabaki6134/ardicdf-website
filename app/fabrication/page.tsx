@@ -64,17 +64,42 @@ const infrastructure = [
 ];
 
 const projectTypes = [
-  "Theme Parks",
-  "Hotels & Resorts",
-  "Retail Environments",
-  "Museums & Cultural Spaces",
-  "Public Installations",
-  "Branded Experiences",
-  "Character Sculptures",
-  "Architectural Decor"
+  {
+    title: "Theme Parks",
+    copy: "Immersive scenic elements built for durable guest experiences."
+  },
+  {
+    title: "Hotels & Resorts",
+    copy: "Custom objects and atmosphere-defining features for hospitality spaces."
+  },
+  {
+    title: "Retail Environments",
+    copy: "Brand-led displays, fixtures, and fabricated commercial moments."
+  },
+  {
+    title: "Museums & Cultural Spaces",
+    copy: "Interpretive objects and cultural environments produced with precision."
+  },
+  {
+    title: "Public Installations",
+    copy: "Large-format works planned for visibility, longevity, and site use."
+  },
+  {
+    title: "Branded Experiences",
+    copy: "Promotional objects and spatial installations with strong identity."
+  },
+  {
+    title: "Character Sculptures",
+    copy: "Expressive figures, mascots, and sculptural forms for themed settings."
+  },
+  {
+    title: "Architectural Decor",
+    copy: "Columns, reliefs, ornaments, and decorative surfaces made to order."
+  }
 ];
 
 const scaleStats = [
+  "12+ Years of Manufacturing Experience",
   "600 m² Indoor Facility",
   "400 m² Outdoor Production Area",
   "5 Industrial 3D Printers",
@@ -182,16 +207,17 @@ export default function FabricationPage() {
 
       <section className="bg-ink px-5 py-20 text-porcelain md:px-8 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
-          <div className="relative min-h-[420px] overflow-hidden border border-porcelain/10 bg-porcelain/5">
+          <div className="relative min-h-[420px] overflow-hidden border border-bronze/20 bg-porcelain/5 shadow-soft">
             <Image
               src="/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"
               alt="CNC fabrication process in Ardıç workshop"
               fill
               sizes="(min-width: 1024px) 54vw, 100vw"
-              className="object-cover"
-              style={{ objectPosition: "50% 50%" }}
+              className="object-cover brightness-90 contrast-110 saturate-110"
+              style={{ objectPosition: "50% 42%" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/5 to-transparent" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-porcelain/10" />
           </div>
 
           <div className="flex flex-col justify-center">
@@ -237,9 +263,10 @@ export default function FabricationPage() {
 
           <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {projectTypes.map((type) => (
-              <article key={type} className="bg-porcelain p-7 md:p-8">
-                <h3 className="font-display text-3xl leading-tight text-ink">{type}</h3>
+              <article key={type.title} className="flex min-h-56 flex-col bg-porcelain p-7 md:p-8">
+                <h3 className="font-display text-3xl leading-tight text-ink">{type.title}</h3>
                 <div className="mt-6 h-px w-12 bg-bronze" />
+                <p className="mt-6 text-sm leading-7 text-ink/60">{type.copy}</p>
               </article>
             ))}
           </div>
@@ -258,26 +285,29 @@ export default function FabricationPage() {
               </h2>
             </div>
             <p className="max-w-xl leading-8 text-ink/60">
-              A production environment built for custom objects, large-format surfaces,
-              detailed sculptural work, and coordinated site delivery.
+              From concept models to full-scale installations, Ardıç supports production
+              across custom objects, architectural surfaces, sculptural works, and
+              site-ready environments.
             </p>
           </div>
 
           <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
             {scaleStats.map((stat, index) => (
-              <article key={stat} className="min-h-44 bg-porcelain p-7 md:p-8">
+              <article key={stat} className="flex min-h-48 flex-col bg-porcelain p-7 md:p-8">
                 <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
                   {`${index + 1}`.padStart(2, "0")}
                 </p>
                 <h3 className="mt-8 font-display text-3xl leading-tight text-ink">{stat}</h3>
-                <div className="mt-6 h-px w-12 bg-bronze" />
+                <div className="mt-auto pt-7">
+                  <div className="h-px w-12 bg-bronze" />
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-5 pb-20 md:px-8 md:pb-28">
+      <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-7xl overflow-hidden border border-ink/10 bg-ink lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative min-h-[320px]">
             <Image
