@@ -25,44 +25,74 @@ const approach = [
 ];
 
 const capabilities = [
-  "CNC Üretim",
-  "EPS / XPS İşleme",
-  "Heykel Üretimi",
-  "Dekoratif Mimari Elemanlar",
-  "Kalıp Üretimi",
-  "Polyester Döküm",
-  "Büyük Ölçekli İmalat",
-  "3D Yazıcı Teknolojisi"
+  {
+    title: "CNC Fabrication",
+    copy: "Precision-cut components for complex architectural and sculptural forms."
+  },
+  {
+    title: "EPS / XPS Processing",
+    copy: "Lightweight foam shaping for large-scale scenic and decorative structures."
+  },
+  {
+    title: "Sculpture Production",
+    copy: "Custom figures, organic forms, and detailed artistic production."
+  },
+  {
+    title: "Decorative Architectural Elements",
+    copy: "Columns, capitals, ornaments, and bespoke architectural details."
+  },
+  {
+    title: "Mold Manufacturing",
+    copy: "Durable mold systems for repeatable, controlled production."
+  },
+  {
+    title: "Polyester Casting",
+    copy: "Composite casting solutions for resilient decorative and thematic pieces."
+  },
+  {
+    title: "Large-Scale Fabrication",
+    copy: "Oversized objects and environments produced with workshop precision."
+  },
+  {
+    title: "3D Printing Technology",
+    copy: "Rapid prototyping and fine-detail support for custom production."
+  }
 ];
 
 const team = [
   {
     name: "Yusuf Baki",
+    initials: "YB",
     role: "Owner & Fabrication Director",
     copy: "Üretim stratejisi, atölye yönetimi ve büyük ölçekli proje uygulamalarından sorumludur."
   },
   {
     name: "Taha Baki",
+    initials: "TB",
     role: "Architecture, Strategy & Project Development",
     copy: "Mimari yönlendirme, proje stratejisi, iş geliştirme ve müşteri ilişkilerinden sorumludur."
   },
   {
     name: "Şiba Baki",
+    initials: "SB",
     role: "Interior Design & Presentation",
     copy: "İç mekân tasarımı, sunum geliştirme ve yaratıcı proje anlatımından sorumludur."
   },
   {
     name: "Rasim Gül",
+    initials: "RG",
     role: "Visual Arts Specialist",
     copy: "Sanatsal detaylandırma, görsel geliştirme ve yüzey/bitirme teknikleri konusunda uzmandır."
   },
   {
     name: "Gençağa Dilli",
+    initials: "GD",
     role: "Sculptor",
     copy: "Heykel tasarımı, karakter üretimi ve organik form geliştirme konularında uzmandır."
   },
   {
     name: "Fatih Dilli",
+    initials: "FD",
     role: "Painter",
     copy: "Resim, yüzey boyama ve dekoratif bitirme teknikleri konularında uzmandır."
   }
@@ -174,21 +204,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-8 md:py-20">
+      <section className="px-5 pb-16 pt-24 md:px-8 md:pb-24 md:pt-32">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
             Üretim Kabiliyetlerimiz
           </p>
-          <div className="mt-9 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((capability, index) => (
-              <article key={capability} className="min-h-48 bg-porcelain p-6 md:p-7">
+              <article
+                key={capability.title}
+                className="flex min-h-64 flex-col bg-porcelain p-6 md:p-7"
+              >
                 <p className="font-display text-4xl leading-none text-bronze/75">
                   {`${index + 1}`.padStart(2, "0")}
                 </p>
                 <h3 className="mt-8 max-w-[12rem] text-lg font-semibold leading-tight text-ink">
-                  {capability}
+                  {capability.title}
                 </h3>
                 <div className="mt-5 h-px w-12 bg-bronze" />
+                <p className="mt-5 text-sm leading-7 text-ink/60">{capability.copy}</p>
               </article>
             ))}
           </div>
@@ -198,14 +232,14 @@ export default function AboutPage() {
       <section className="border-y border-ink/10 bg-white/45 px-5 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Ekibimiz</p>
-          <div className="mt-9 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {team.map((member) => (
               <article key={member.name} className="flex min-h-full flex-col bg-porcelain p-6">
-                <div className="flex h-24 w-24 items-center justify-center bg-white text-3xl font-display text-bronze shadow-soft">
-                  {member.name
-                    .split(" ")
-                    .map((part) => part[0])
-                    .join("")}
+                <div className="relative flex h-28 w-24 items-center justify-center border border-bronze/25 bg-white shadow-soft">
+                  <div className="absolute inset-2 border border-ink/5" />
+                  <span className="relative font-display text-3xl tracking-[0.16em] text-bronze">
+                    {member.initials}
+                  </span>
                 </div>
                 <h3 className="mt-7 font-display text-2xl leading-tight text-ink">{member.name}</h3>
                 <p className="mt-3 text-sm font-semibold leading-6 text-ink">{member.role}</p>
@@ -245,7 +279,7 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-ink/62" />
             <div className="relative flex h-full flex-col justify-center">
-              <h2 className="max-w-2xl font-display text-4xl leading-tight text-porcelain md:text-6xl">
+              <h2 className="max-w-xl font-display text-4xl leading-tight text-porcelain md:text-5xl">
                 Birlikte Unutulmaz Mekânlar Yaratalım.
               </h2>
               <p className="mt-6 max-w-xl leading-8 text-porcelain/75">
