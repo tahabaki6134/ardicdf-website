@@ -1,40 +1,264 @@
 import Image from "next/image";
-import { SectionHeading } from "@/components/section-heading";
+import Link from "next/link";
+
+const approach = [
+  {
+    title: "Konsept Geliştirme",
+    copy: "Fikirden tasarıma uzanan yaratıcı ve teknik başlangıç süreci.",
+    icon: "concept"
+  },
+  {
+    title: "Üretim",
+    copy: "Atölye gücüyle hassas imalat, detay çözümü ve malzeme uygulaması.",
+    icon: "production"
+  },
+  {
+    title: "Uygulama",
+    copy: "Sahada koordineli montaj, uygulama ve teslim yönetimi.",
+    icon: "installation"
+  },
+  {
+    title: "Deneyim",
+    copy: "Mekânlara kimlik kazandıran kalıcı, hatırlanabilir sonuçlar.",
+    icon: "experience"
+  }
+];
+
+const capabilities = [
+  "CNC Üretim",
+  "EPS / XPS İşleme",
+  "Heykel Üretimi",
+  "Dekoratif Mimari Elemanlar",
+  "Kalıp Üretimi",
+  "Polyester Döküm",
+  "Büyük Ölçekli İmalat",
+  "3D Yazıcı Teknolojisi"
+];
+
+const team = [
+  {
+    name: "Yusuf Baki",
+    role: "Owner & Fabrication Director",
+    copy: "Üretim stratejisi, atölye yönetimi ve büyük ölçekli proje uygulamalarından sorumludur."
+  },
+  {
+    name: "Taha Baki",
+    role: "Architecture, Strategy & Project Development",
+    copy: "Mimari yönlendirme, proje stratejisi, iş geliştirme ve müşteri ilişkilerinden sorumludur."
+  },
+  {
+    name: "Şiba Baki",
+    role: "Interior Design & Presentation",
+    copy: "İç mekân tasarımı, sunum geliştirme ve yaratıcı proje anlatımından sorumludur."
+  },
+  {
+    name: "Rasim Gül",
+    role: "Visual Arts Specialist",
+    copy: "Sanatsal detaylandırma, görsel geliştirme ve yüzey/bitirme teknikleri konusunda uzmandır."
+  },
+  {
+    name: "Gençağa Dilli",
+    role: "Sculptor",
+    copy: "Heykel tasarımı, karakter üretimi ve organik form geliştirme konularında uzmandır."
+  },
+  {
+    name: "Fatih Dilli",
+    role: "Painter",
+    copy: "Resim, yüzey boyama ve dekoratif bitirme teknikleri konularında uzmandır."
+  }
+];
+
+const reasons = [
+  "Tasarım ve üretim tek çatı altında",
+  "Özgün ve özel üretim çözümleri",
+  "Büyük ölçekli proje tecrübesi",
+  "Hızlı prototipleme ve esnek üretim",
+  "Montaj ve saha uygulama kabiliyeti"
+];
+
+function ApproachIcon({ type }: { type: string }) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.4,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const
+  };
+
+  return (
+    <svg viewBox="0 0 48 48" aria-hidden="true" className="h-12 w-12 text-bronze">
+      {type === "concept" && (
+        <>
+          <path {...common} d="M16 34c-4-3-6-7-6-12a14 14 0 0 1 28 0c0 5-2 9-6 12" />
+          <path {...common} d="M18 38h12M20 42h8M20 24l4-7 4 7M18 28h12" />
+        </>
+      )}
+      {type === "production" && (
+        <>
+          <path {...common} d="M12 17 24 10l12 7v14l-12 7-12-7Z" />
+          <path {...common} d="m12 17 12 7 12-7M24 24v14" />
+        </>
+      )}
+      {type === "installation" && (
+        <>
+          <path {...common} d="m15 15 18 18M33 15 15 33" />
+          <path {...common} d="M12 12h8v8h-8zM28 12h8v8h-8zM12 28h8v8h-8zM28 28h8v8h-8z" />
+        </>
+      )}
+      {type === "experience" && (
+        <>
+          <circle {...common} cx="24" cy="22" r="10" />
+          <path {...common} d="M17 36h14M20 32l-3 8M28 32l3 8M18 22h12M24 12v20" />
+        </>
+      )}
+    </svg>
+  );
+}
 
 export default function AboutPage() {
   return (
     <main>
       <section className="px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <SectionHeading
-            eyebrow="About"
-            title="A design and fabrication studio with a maker’s discipline."
-            copy="Ardıç creates premium architectural features, installations, artworks, and themed environments for clients who need more than decoration."
-          />
-          <div className="relative aspect-[4/3] overflow-hidden bg-ink shadow-soft">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Hakkımızda</p>
+            <h1 className="mt-8 max-w-2xl font-display text-5xl leading-[1.02] text-ink md:text-7xl">
+              Fikirden Üretime, Deneyime Dönüşen Yolculuk.
+            </h1>
+            <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
+              Ardıç; mimari düşünceyi, iç mekan tasarımını, heykel sanatını, dijital
+              üretim teknolojilerini ve tematik dekor imalatını aynı çatı altında
+              buluşturan tasarım ve üretim stüdyosudur.
+            </p>
+            <div className="mt-9 h-px w-16 bg-bronze" />
+          </div>
+
+          <div className="relative min-h-[360px] overflow-hidden border border-ink/10 bg-ink shadow-soft md:min-h-[560px]">
             <Image
-              src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=80"
-              alt="Premium architectural interior placeholder"
+              src="/home/production-columns.png"
+              alt="Ardıç üretim atölyesinde dekoratif mimari eleman imalatı"
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+              sizes="(min-width: 1024px) 58vw, 100vw"
               className="object-cover"
+              style={{ objectPosition: "52% 50%" }}
             />
           </div>
         </div>
       </section>
-      <section className="bg-white px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          {[
-            ["01", "Architectural Luxury", "Clean forms, tactile finishes, and restrained drama."],
-            ["02", "Technical Control", "Design decisions are aligned with fabrication realities early."],
-            ["03", "Memorable Delivery", "Every detail is judged by how it lives in the finished space."]
-          ].map(([number, title, copy]) => (
-            <article key={title} className="border-t border-ink/15 pt-8">
-              <p className="font-display text-5xl text-bronze">{number}</p>
-              <h2 className="mt-8 text-xl font-semibold">{title}</h2>
-              <p className="mt-4 leading-7 text-ink/60">{copy}</p>
-            </article>
-          ))}
+
+      <section className="border-y border-ink/10 bg-white/45 px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="border-b border-ink/10 pb-10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12">
+            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+              Yaklaşımımız
+            </p>
+            <h2 className="mt-7 max-w-md font-display text-4xl leading-tight text-ink md:text-5xl">
+              Tasarım, Üretim ve Uygulama.
+            </h2>
+            <p className="mt-7 max-w-md leading-8 text-ink/60">
+              Her projede konsept geliştirmeden üretime, sahada uygulamaya kadar tüm
+              süreci kendi ekibimiz ve altyapımız ile yönetiyoruz.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+            {approach.map((item) => (
+              <article key={item.title} className="flex flex-col">
+                <ApproachIcon type={item.icon} />
+                <h3 className="mt-8 text-lg font-semibold text-ink">{item.title}</h3>
+                <p className="mt-4 leading-7 text-ink/60">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+            Üretim Kabiliyetlerimiz
+          </p>
+          <div className="mt-9 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+            {capabilities.map((capability, index) => (
+              <article key={capability} className="min-h-48 bg-porcelain p-6 md:p-7">
+                <p className="font-display text-4xl leading-none text-bronze/75">
+                  {`${index + 1}`.padStart(2, "0")}
+                </p>
+                <h3 className="mt-8 max-w-[12rem] text-lg font-semibold leading-tight text-ink">
+                  {capability}
+                </h3>
+                <div className="mt-5 h-px w-12 bg-bronze" />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-ink/10 bg-white/45 px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Ekibimiz</p>
+          <div className="mt-9 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            {team.map((member) => (
+              <article key={member.name} className="flex min-h-full flex-col bg-porcelain p-6">
+                <div className="flex h-24 w-24 items-center justify-center bg-white text-3xl font-display text-bronze shadow-soft">
+                  {member.name
+                    .split(" ")
+                    .map((part) => part[0])
+                    .join("")}
+                </div>
+                <h3 className="mt-7 font-display text-2xl leading-tight text-ink">{member.name}</h3>
+                <p className="mt-3 text-sm font-semibold leading-6 text-ink">{member.role}</p>
+                <div className="mt-5 h-px w-10 bg-bronze" />
+                <p className="mt-5 text-sm leading-7 text-ink/60">{member.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto grid max-w-7xl overflow-hidden border border-ink/10 bg-porcelain lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="p-8 md:p-12">
+            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+              Neden Ardıç?
+            </p>
+            <ul className="mt-8 space-y-5">
+              {reasons.map((reason) => (
+                <li key={reason} className="flex gap-4 text-sm leading-7 text-ink/70 md:text-base">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-bronze text-xs text-bronze">
+                    ✓
+                  </span>
+                  <span>{reason}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative min-h-[360px] bg-ink p-8 md:p-12">
+            <Image
+              src="/home/brand-story-lobby.jpeg"
+              alt="Ardıç marka hikayesi ve doğal formlu premium mekan"
+              fill
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-ink/62" />
+            <div className="relative flex h-full flex-col justify-center">
+              <h2 className="max-w-2xl font-display text-4xl leading-tight text-porcelain md:text-6xl">
+                Birlikte Unutulmaz Mekânlar Yaratalım.
+              </h2>
+              <p className="mt-6 max-w-xl leading-8 text-porcelain/75">
+                Fikirlerinizi gerçeğe dönüştürmek için bizimle iletişime geçin.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-9 inline-flex w-fit border border-bronze px-6 py-4 text-xs font-semibold uppercase tracking-brand text-porcelain transition hover:bg-bronze hover:text-ink"
+              >
+                Bir Proje Başlatın
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
