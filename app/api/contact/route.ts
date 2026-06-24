@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 
 const RESEND_API_URL = "https://api.resend.com/emails";
 const NOTIFICATION_EMAIL = "taaha.baaki@gmail.com";
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "Ardıç Mimarlık <onboarding@resend.dev>";
+const FROM_EMAIL =
+  process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Mimarlık <onboarding@resend.dev>";
 
 type InquiryPayload = {
   fullName?: unknown;
