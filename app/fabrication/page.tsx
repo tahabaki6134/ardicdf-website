@@ -53,22 +53,34 @@ const workflow = [
 ];
 
 const infrastructure = [
-  "CNC Machines",
-  "Foam Processing",
+  "CNC Routing Systems",
+  "EPS / XPS Processing Facility",
   "Sculpture Workshop",
-  "Mold Production",
-  "Polyester Casting",
-  "3D Printing",
-  "Surface Finishing"
+  "Mold Manufacturing Department",
+  "Polyester Casting Area",
+  "3D Printing Lab",
+  "Finishing & Surface Treatment Area",
+  "Installation & Assembly Team"
 ];
 
 const projectTypes = [
   "Theme Parks",
-  "Hotels",
-  "Museums",
+  "Hotels & Resorts",
   "Retail Environments",
+  "Museums & Cultural Spaces",
   "Public Installations",
-  "Branded Experiences"
+  "Branded Experiences",
+  "Character Sculptures",
+  "Architectural Decor"
+];
+
+const scaleStats = [
+  "600 m² Indoor Facility",
+  "400 m² Outdoor Production Area",
+  "5 Industrial 3D Printers",
+  "Multiple CNC Production Systems",
+  "In-House Sculpture Team",
+  "End-to-End Project Delivery"
 ];
 
 export default function FabricationPage() {
@@ -184,11 +196,15 @@ export default function FabricationPage() {
 
           <div className="flex flex-col justify-center">
             <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-              Workshop Infrastructure
+              Integrated Facility
             </p>
             <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-porcelain md:text-5xl">
-              Built around production, finishing, and site reality.
+              Workshop Infrastructure
             </h2>
+            <p className="mt-7 max-w-xl leading-8 text-porcelain/65">
+              Ardıç operates an integrated fabrication facility where digital production,
+              sculptural fabrication, finishing, and installation are coordinated under one roof.
+            </p>
             <div className="mt-10 grid gap-px bg-porcelain/12 sm:grid-cols-2">
               {infrastructure.map((item) => (
                 <div key={item} className="bg-ink p-5">
@@ -210,7 +226,7 @@ export default function FabricationPage() {
                 Project Types
               </p>
               <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-ink md:text-5xl">
-                Production for environments that need presence.
+                Projects We Build
               </h2>
             </div>
             <p className="max-w-xl leading-8 text-ink/60">
@@ -219,10 +235,41 @@ export default function FabricationPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {projectTypes.map((type) => (
               <article key={type} className="bg-porcelain p-7 md:p-8">
                 <h3 className="font-display text-3xl leading-tight text-ink">{type}</h3>
+                <div className="mt-6 h-px w-12 bg-bronze" />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-ink/10 bg-white/45 px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                Fabrication at Scale
+              </p>
+              <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-ink md:text-5xl">
+                Fabrication at Scale
+              </h2>
+            </div>
+            <p className="max-w-xl leading-8 text-ink/60">
+              A production environment built for custom objects, large-format surfaces,
+              detailed sculptural work, and coordinated site delivery.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+            {scaleStats.map((stat, index) => (
+              <article key={stat} className="min-h-44 bg-porcelain p-7 md:p-8">
+                <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                  {`${index + 1}`.padStart(2, "0")}
+                </p>
+                <h3 className="mt-8 font-display text-3xl leading-tight text-ink">{stat}</h3>
                 <div className="mt-6 h-px w-12 bg-bronze" />
               </article>
             ))}
