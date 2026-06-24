@@ -11,7 +11,7 @@ const contactRows = [
     },
     {
       title: "WhatsApp",
-      value: "Message Project Director",
+      value: "Project Director",
       href: "https://wa.me/905436268969",
       external: true
     }
