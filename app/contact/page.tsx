@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactForm } from "@/components/contact-form";
 import { SectionHeading } from "@/components/section-heading";
 
 const contactRows = [
@@ -30,15 +31,6 @@ const contactRows = [
       external: true
     }
   ]
-];
-
-const projectTypes = [
-  "Thematic Environment",
-  "Sculptural Object",
-  "Architectural Decor",
-  "Brand Installation",
-  "Large-Scale Fabrication",
-  "Other"
 ];
 
 const mapsUrl =
@@ -162,101 +154,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <form className="grid gap-5 bg-white p-8 shadow-soft md:p-10">
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                  Full Name
-                </span>
-                <input
-                  name="fullName"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
-                />
-              </label>
-
-              <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                  Company
-                </span>
-                <input
-                  name="company"
-                  type="text"
-                  autoComplete="organization"
-                  className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
-                />
-              </label>
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                  Email
-                </span>
-                <input
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
-                />
-              </label>
-
-              <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                  Phone Number
-                </span>
-                <input
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
-                />
-              </label>
-            </div>
-
-            <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                Project Type
-              </span>
-              <select
-                name="projectType"
-                required
-                className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition focus:border-bronze"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select a project type
-                </option>
-                {projectTypes.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                Message
-              </span>
-              <textarea
-                name="message"
-                rows={6}
-                required
-                className="mt-3 w-full resize-none border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="mt-2 inline-flex w-fit bg-ink px-6 py-4 text-xs font-semibold uppercase tracking-brand text-porcelain transition hover:bg-bronze hover:text-ink"
-            >
-              Start a Project
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </main>
