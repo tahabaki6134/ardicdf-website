@@ -36,6 +36,10 @@ export function ContactForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (status === "submitting") {
+      return;
+    }
+
     setStatus("submitting");
     setError("");
 

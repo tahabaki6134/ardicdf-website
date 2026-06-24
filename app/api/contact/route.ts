@@ -55,8 +55,8 @@ async function sendEmail(payload: {
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(errorText || "Resend request failed");
+    const errorText = await response.text().catch(() => "");
+    throw new Error(`Resend request failed (${response.status}): ${errorText}`);
   }
 }
 
@@ -140,14 +140,14 @@ export async function POST(request: Request) {
     await Promise.all([
       sendEmail({
         to: NOTIFICATION_EMAIL,
-        subject: `New Website Inquiry – ${inquiry.projectType}`,
+        subject: `New Website Inquiry - ${inquiry.projectType}`,
         html: notificationHtml,
         text: notificationText,
         replyTo: inquiry.email
       }),
       sendEmail({
         to: inquiry.email,
-        subject: "Ardıç Mimarlık – Inquiry Received",
+        subject: "Ardıç Mimarlık - Inquiry Received",
         html: confirmationHtml,
         text: confirmationText
       })
