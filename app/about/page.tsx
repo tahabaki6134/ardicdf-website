@@ -99,8 +99,8 @@ const team: Array<{
   {
     name: "Fatih Dilli",
     initials: "FD",
-    role: "Ressam",
-    copy: "Sanatsal boyama, ileri renklendirme teknikleri ve özel efekt konularında uzmandır.",
+    role: "Painter",
+    copy: "Specializes in artistic painting, advanced coloring techniques, and special effects.",
     photo: "/team/fatih-dilli.png"
   }
 ];
