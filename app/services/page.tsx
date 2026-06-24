@@ -4,10 +4,17 @@ import { services } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 
 const serviceImages: Record<string, string> = {
-  "Brand Installations": "/projects/retail-display-installations.jpeg",
-  "Architectural Decor": "/home/featured-entrance-gate.png",
-  "Sculptures & Artworks": "/home/featured-burger-sculpture.png",
-  "Thematic Spaces": "/projects/thematic-character-sculptures.jpeg"
+  "Brand Installations": "/services/brand-nyx-bottle.jpeg",
+  "Architectural Decor": "/services/architectural-decor-columns.jpeg",
+  "Sculptures & Artworks": "/services/sculpture-elephant-front.jpeg",
+  "Thematic Spaces": "/services/thematic-spongebob-patrick.jpeg"
+};
+
+const serviceImagePositions: Record<string, string> = {
+  "Brand Installations": "50% 45%",
+  "Architectural Decor": "50% 42%",
+  "Sculptures & Artworks": "50% 35%",
+  "Thematic Spaces": "48% 45%"
 };
 
 export default function ServicesPage() {
@@ -24,20 +31,21 @@ export default function ServicesPage() {
 
             <div className="relative min-h-[340px] overflow-hidden border border-ink/10 bg-ink shadow-soft md:min-h-[460px]">
               <Image
-                src="/home/production-columns.png"
-                alt="In-house fabrication and architectural detailing"
+                src="/services/architectural-decor-relief.jpeg"
+                alt="CNC carved decorative architectural relief"
                 fill
                 priority
                 sizes="(min-width: 1024px) 54vw, 100vw"
                 className="object-cover"
+                style={{ objectPosition: "50% 45%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
             </div>
           </div>
 
-          <div className="mt-16 grid gap-px bg-ink/10 lg:grid-cols-2">
-            {services.map((service) => (
-              <article key={service.title} className="bg-porcelain">
+          <div className="mt-16 grid gap-px bg-ink/10 lg:grid-cols-2 lg:auto-rows-fr">
+            {services.map((service, index) => (
+              <article key={service.title} className="h-full bg-porcelain">
                 <div className="grid h-full md:grid-cols-[0.9fr_1.1fr]">
                   <div className="relative min-h-64 overflow-hidden bg-ink md:min-h-full">
                     <Image
@@ -45,13 +53,14 @@ export default function ServicesPage() {
                       alt={`${service.title} service visual`}
                       fill
                       sizes="(min-width: 1024px) 28vw, (min-width: 768px) 45vw, 100vw"
-                      className="object-cover transition duration-700 hover:scale-[1.02]"
+                      className="object-cover transition duration-700 hover:scale-[1.015]"
+                      style={{ objectPosition: serviceImagePositions[service.title] }}
                     />
                   </div>
                   <div className="flex min-h-80 flex-col justify-between border border-ink/10 p-7 md:p-9">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                        Service
+                      <p className="font-display text-4xl leading-none text-bronze/80">
+                        {`${index + 1}`.padStart(2, "0")}
                       </p>
                       <h2 className="mt-5 font-display text-3xl leading-tight text-ink md:text-4xl">
                         {service.title}
