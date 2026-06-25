@@ -27,12 +27,9 @@ export function Footer() {
           <div className="mt-5 grid gap-3">
             {navigation.map((item) => (
               <Link key={item.href} href={item.href} className="text-porcelain/75 hover:text-bronze">
-                {item.label}
+                {item.footerLabel ?? item.label}
               </Link>
             ))}
-            <Link href="/live" className="text-porcelain/75 hover:text-bronze">
-              Live Atelier
-            </Link>
           </div>
         </div>
         <div>

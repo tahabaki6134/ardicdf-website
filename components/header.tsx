@@ -66,7 +66,7 @@ export function Header() {
             href={item.href}
             className={pathname === item.href ? "shrink-0 text-bronze" : "shrink-0 text-ink/70"}
           >
-            {item.label}
+            {item.mobileLabel ?? item.label}
           </Link>
         ))}
       </nav>
