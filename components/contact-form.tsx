@@ -14,6 +14,7 @@ const projectTypes = [
 const initialForm = {
   fullName: "",
   company: "",
+  companyWebsite: "",
   email: "",
   phone: "",
   projectType: "",
@@ -73,6 +74,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 bg-white p-8 shadow-soft md:p-10">
+      <label className="hidden" aria-hidden="true">
+        Company website
+        <input
+          name="companyWebsite"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.companyWebsite}
+          onChange={updateField}
+        />
+      </label>
+
       {status === "success" ? (
         <div className="border border-bronze/30 bg-porcelain p-6">
           <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
@@ -190,6 +203,7 @@ export function ContactForm() {
           name="message"
           rows={6}
           required
+          maxLength={3000}
           value={form.message}
           onChange={updateField}
           className="mt-3 w-full resize-none border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"

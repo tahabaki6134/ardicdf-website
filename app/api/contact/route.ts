@@ -5,9 +5,22 @@ const NOTIFICATION_EMAIL = "taaha.baaki@gmail.com";
 const FROM_EMAIL =
   process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Design & Fabrication <onboarding@resend.dev>";
 
+const MAX_MESSAGE_LENGTH = 3000;
+const MAX_LINK_COUNT = 2;
+const SPAM_PHRASES = [
+  "graphic design",
+  "branding refresh",
+  "seo",
+  "marketing services",
+  "we noticed your website",
+  "boost your brand",
+  "rank on google"
+];
+
 type InquiryPayload = {
   fullName?: unknown;
   company?: unknown;
+  companyWebsite?: unknown;
   email?: unknown;
   phone?: unknown;
   projectType?: unknown;
@@ -20,6 +33,41 @@ function clean(value: unknown) {
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function countLinks(value: string) {
+  return (value.match(/https?:\/\/|www\.|[a-z0-9-]+\.[a-z]{2,}/gi) || []).length;
+}
+
+function looksLikeSpam(inquiry: {
+  companyWebsite: string;
+  fullName: string;
+  company: string;
+  email: string;
+  phone: string;
+  projectType: string;
+  message: string;
+}) {
+  if (inquiry.companyWebsite) {
+    return true;
+  }
+
+  const combined = [
+    inquiry.fullName,
+    inquiry.company,
+    inquiry.email,
+    inquiry.phone,
+    inquiry.projectType,
+    inquiry.message
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  if (countLinks(inquiry.message) > MAX_LINK_COUNT) {
+    return true;
+  }
+
+  return SPAM_PHRASES.some((phrase) => combined.includes(phrase));
 }
 
 function escapeHtml(value: string) {
@@ -61,13 +109,6 @@ async function sendEmail(payload: {
 }
 
 export async function POST(request: Request) {
-  if (!process.env.RESEND_API_KEY) {
-    return NextResponse.json(
-      { error: "Email service is not configured." },
-      { status: 500 }
-    );
-  }
-
   let payload: InquiryPayload;
 
   try {
@@ -79,11 +120,16 @@ export async function POST(request: Request) {
   const inquiry = {
     fullName: clean(payload.fullName),
     company: clean(payload.company),
+    companyWebsite: clean(payload.companyWebsite),
     email: clean(payload.email),
     phone: clean(payload.phone),
     projectType: clean(payload.projectType),
     message: clean(payload.message)
   };
+
+  if (inquiry.companyWebsite) {
+    return NextResponse.json({ ok: true });
+  }
 
   if (
     !inquiry.fullName ||
@@ -95,6 +141,24 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { error: "Please complete all required fields with a valid email address." },
       { status: 400 }
+    );
+  }
+
+  if (inquiry.message.length > MAX_MESSAGE_LENGTH) {
+    return NextResponse.json(
+      { error: "Please keep your message under 3000 characters." },
+      { status: 400 }
+    );
+  }
+
+  if (looksLikeSpam(inquiry)) {
+    return NextResponse.json({ ok: true });
+  }
+
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      { error: "Email service is not configured." },
+      { status: 500 }
     );
   }
 
