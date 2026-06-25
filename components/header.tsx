@@ -27,6 +27,9 @@ export function Header() {
             <span className="mt-2 block text-[0.55rem] font-semibold uppercase tracking-[0.32em] text-ink/70 sm:text-[0.65rem] md:text-xs">
               Design & Fabrication
             </span>
+            <span className="mt-1 block text-[0.48rem] font-semibold uppercase tracking-[0.28em] text-ink/45 sm:text-[0.56rem] md:text-[0.65rem]">
+              An EPSLAM Company
+            </span>
             <span className="mt-2 hidden h-px w-20 bg-bronze sm:block" />
           </span>
         </Link>
