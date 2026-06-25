@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const RESEND_API_URL = "https://api.resend.com/emails";
 const NOTIFICATION_EMAIL = "taaha.baaki@gmail.com";
 const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Mimarlık <onboarding@resend.dev>";
+  process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Design & Fabrication <onboarding@resend.dev>";
 
 type InquiryPayload = {
   fullName?: unknown;
@@ -155,7 +155,7 @@ export async function POST(request: Request) {
   try {
     await sendEmail({
       to: inquiry.email,
-      subject: "Ardıç Mimarlık - Inquiry Received",
+      subject: "Ardıç Design & Fabrication - Inquiry Received",
       html: confirmationHtml,
       text: confirmationText
     });

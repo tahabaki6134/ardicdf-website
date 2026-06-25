@@ -3,7 +3,7 @@ export const brand = {
   shortName: "ARDIÇ",
   tagline: "Built to Be Remembered.",
   phone: "+90 543 626 89 69",
-  location: "Karadeniz Caddesi No:131, Ferhatpaşa, Ataşehir, Istanbul, Türkiye"
+  location: "Karadeniz Caddesi No:131, Ferhatpaşa, Ataşehir, Istanbul, Turkey"
 };
 
 export const navigation = [

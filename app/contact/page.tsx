@@ -34,7 +34,7 @@ const contactRows = [
 ];
 
 const mapsUrl =
-  "https://www.google.com/maps?q=Karadeniz%20Caddesi%20No%3A131%2C%20Ferhatpa%C5%9Fa%2C%20Ata%C5%9Fehir%2C%20Istanbul%2C%20T%C3%BCrkiye";
+  "https://www.google.com/maps?q=Karadeniz%20Caddesi%20No%3A131%2C%20Ferhatpa%C5%9Fa%2C%20Ata%C5%9Fehir%2C%20Istanbul%2C%20Turkey";
 
 export default function ContactPage() {
   return (
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 <br />
                 Istanbul
                 <br />
-                Türkiye
+                Turkey
               </address>
               <Link
                 href={mapsUrl}
