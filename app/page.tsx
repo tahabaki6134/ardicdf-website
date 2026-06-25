@@ -15,7 +15,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="What We Do"
             title="Objects, environments, and installations with architectural weight."
-            copy="Ardıç brings together creative direction, material intelligence, and hands-on production for ambitious commercial and cultural spaces."
+            copy="An EPSLAM company, Ardıç brings together design direction, family production experience, and integrated fabrication infrastructure for ambitious commercial and cultural spaces."
           />
           <div className="mt-14 grid gap-px bg-ink/10 md:grid-cols-4">
             {services.map((service, index) => (
@@ -41,11 +41,11 @@ export default function Home() {
                 {brand.tagline}
               </p>
               <h3 className="mt-5 font-display text-4xl leading-tight md:text-5xl">
-                A studio language shaped by atmosphere, material, and memory.
+                A studio language backed by production discipline.
               </h3>
               <p className="mt-6 leading-8 text-porcelain/65">
-                Every environment is developed with the presence of a place, not just the finish of
-                an object.
+                Built on long-term family experience in production and construction, Ardıç develops
+                environments with the presence of a place and the precision of a workshop.
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Featured Works"
               title="Selected project studies."
-              copy="Placeholder imagery sets the tone for the first production-ready release while the portfolio is curated."
+              copy="A curated view of built objects, brand experiences, sculptural works, and thematic environments shaped through design and fabrication."
             />
             <Link href="/works" className="text-sm font-semibold uppercase tracking-brand text-bronze">
               See all works
@@ -77,7 +77,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Design + Fabrication Under One Roof"
             title="A direct line from idea to install."
-            copy="Strategy, detailing, sampling, production, finishing, logistics, and installation are treated as one continuous craft process."
+            copy="Concept development, design, CNC fabrication, EPS/XPS processing, sculpture, mold production, polyester casting, finishing, coating, painting, assembly, and installation are coordinated as one continuous process."
             light
           />
           <div className="grid gap-5 sm:grid-cols-2">
@@ -107,7 +107,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Manufacturing Capabilities"
             title="Built for demanding custom production."
-            copy="The studio works across metals, woods, composites, lighting-ready forms, textures, and installation systems."
+            copy="Supported by EPSLAM fabrication infrastructure, the studio works across CNC-cut forms, composite systems, sculptural surfaces, lighting-ready objects, coatings, finishes, and installation planning."
           />
           <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((capability) => (
@@ -125,7 +125,7 @@ export default function Home() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-brand text-porcelain/70">Contact</p>
               <h2 className="mt-4 max-w-3xl font-display text-5xl leading-tight md:text-7xl">
-                Let’s build a place people remember.
+                Let&apos;s build a place people remember.
               </h2>
             </div>
             <Link

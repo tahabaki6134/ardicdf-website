@@ -4,17 +4,17 @@ import Link from "next/link";
 const approach = [
   {
     title: "Concept Development",
-    copy: "The creative and technical starting point that transforms ideas into design.",
+    copy: "The creative and technical starting point that turns a brief into a buildable direction.",
     icon: "concept"
   },
   {
     title: "Fabrication",
-    copy: "Precise fabrication, detail resolution, and material application powered by in-house workshop capabilities.",
+    copy: "CNC production, sculptural fabrication, mold systems, casting, and material application coordinated through workshop capability.",
     icon: "production"
   },
   {
     title: "Installation",
-    copy: "Coordinated on-site assembly, installation, and delivery management.",
+    copy: "Coordinated assembly, installation, and delivery management planned around site conditions.",
     icon: "installation"
   },
   {
@@ -27,15 +27,15 @@ const approach = [
 const capabilities = [
   {
     title: "CNC Fabrication",
-    copy: "Precision-cut components for complex architectural and sculptural forms."
+    copy: "Precision-cut components for architectural surfaces, sculptural bases, and production-ready forms."
   },
   {
     title: "EPS / XPS Processing",
-    copy: "Lightweight foam shaping for large-scale scenic and decorative structures."
+    copy: "Lightweight foam shaping for scenic structures, organic forms, and large-format decorative work."
   },
   {
     title: "Sculpture Production",
-    copy: "Custom figures, organic forms, and detailed artistic production."
+    copy: "Custom figures, organic forms, and detailed artistic production developed for durable built environments."
   },
   {
     title: "Decorative Architectural Elements",
@@ -43,11 +43,11 @@ const capabilities = [
   },
   {
     title: "Mold Manufacturing",
-    copy: "Durable mold systems for repeatable, controlled production."
+    copy: "Durable mold systems for repeatable, controlled production and consistent surface detail."
   },
   {
     title: "Polyester Casting",
-    copy: "Composite casting solutions for resilient decorative and thematic pieces."
+    copy: "Composite casting solutions for resilient decorative, thematic, and architectural pieces."
   },
   {
     title: "Large-Scale Fabrication",
@@ -106,9 +106,10 @@ const team: Array<{
 ];
 
 const reasons = [
-  "Design and fabrication under one roof",
+  "An EPSLAM company with integrated fabrication infrastructure",
+  "Design and production handled under one roof",
   "Original and custom production solutions",
-  "Large-scale project experience",
+  "Long-term family experience in production and construction",
   "Rapid prototyping and flexible production",
   "Installation and on-site application capability"
 ];
@@ -163,9 +164,9 @@ export default function AboutPage() {
               From Idea to Fabrication, Into Experience.
             </h1>
             <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
-              Ardıç is a design and fabrication studio that brings architectural thinking,
-              interior design, sculpture, digital production technologies, and thematic decor
-              manufacturing together under one roof.
+              Ardıç is an EPSLAM company and a design and fabrication studio that brings
+              architectural thinking, interior design, sculpture, digital production technologies,
+              and thematic decor manufacturing together under one roof.
             </p>
             <div className="mt-9 h-px w-16 bg-bronze" />
           </div>
@@ -194,8 +195,9 @@ export default function AboutPage() {
               Design, Fabrication, and Installation.
             </h2>
             <p className="mt-7 max-w-md leading-8 text-ink/60">
-              In every project, we manage the entire process with our own team and
-              infrastructure - from concept development to fabrication and on-site installation.
+              Built on long-term family experience in production and construction, we manage the
+              entire process with our own team and infrastructure - from concept development to
+              fabrication, finishing, assembly, and on-site installation.
             </p>
           </div>
 

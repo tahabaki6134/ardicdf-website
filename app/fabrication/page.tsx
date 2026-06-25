@@ -5,17 +5,17 @@ const capabilities = [
   {
     number: "01",
     title: "CNC Fabrication",
-    copy: "Precision-cut parts and sculptural components for complex custom production."
+    copy: "Precision-cut parts, reliefs, and structural bases prepared for custom architectural and sculptural production."
   },
   {
     number: "02",
     title: "EPS / XPS Processing",
-    copy: "Lightweight foam shaping for large forms, scenic elements, and installation bases."
+    copy: "Lightweight foam shaping for large scenic forms, organic structures, and production-ready installation bases."
   },
   {
     number: "03",
     title: "Sculpture Production",
-    copy: "Character figures, organic forms, and statement objects built with craft and control."
+    copy: "Character figures, organic forms, and statement objects built through sculpting, coating, painting, and finishing."
   },
   {
     number: "04",
@@ -25,17 +25,17 @@ const capabilities = [
   {
     number: "05",
     title: "Mold Manufacturing",
-    copy: "Repeatable mold systems for reliable production, consistency, and controlled detailing."
+    copy: "Repeatable mold systems for reliable production, consistent detailing, and composite casting workflows."
   },
   {
     number: "06",
     title: "Polyester Casting",
-    copy: "Durable composite casting for decorative, thematic, and architectural applications."
+    copy: "Durable composite casting for decorative, thematic, and architectural applications requiring repeatable quality."
   },
   {
     number: "07",
     title: "Large-Scale Fabrication",
-    copy: "Oversized objects and spatial installations planned for transport, assembly, and site use."
+    copy: "Oversized objects and spatial installations planned for production, transport, assembly, and site use."
   },
   {
     number: "08",
@@ -48,7 +48,7 @@ const workflow = [
   "Concept Development",
   "Digital Modeling",
   "Fabrication",
-  "Finishing",
+  "Finishing & Coating",
   "Installation"
 ];
 
@@ -121,8 +121,9 @@ export default function FabricationPage() {
               Where Ideas Become Built Objects.
             </h1>
             <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
-              From digital modeling to fabrication, finishing, and installation, Ardıç
-              delivers complete production solutions under one roof.
+              As an EPSLAM company, Ardıç connects digital modeling, CNC fabrication, EPS/XPS
+              processing, sculpture, mold production, polyester casting, finishing, painting,
+              assembly, and installation under one roof.
             </p>
             <div className="mt-9 h-px w-16 bg-bronze" />
           </div>
@@ -150,6 +151,11 @@ export default function FabricationPage() {
             <h2 className="mt-7 font-display text-4xl leading-tight text-ink md:text-5xl">
               Integrated tools for custom physical work.
             </h2>
+            <p className="mt-6 max-w-2xl leading-8 text-ink/60">
+              Backed by EPSLAM&apos;s fabrication infrastructure and long-term family production
+              experience, the workshop supports international clients who need buildable detail,
+              controlled finishes, and coordinated delivery.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
@@ -182,8 +188,8 @@ export default function FabricationPage() {
               A controlled path from idea to installation.
             </h2>
             <p className="mt-7 max-w-md leading-8 text-ink/60">
-              Each phase is developed with the final scale, finish, transport, and site
-              conditions in mind.
+              Each phase is developed with the final scale, finish, coating system, transport,
+              assembly sequence, and site conditions in mind.
             </p>
           </div>
 
@@ -228,8 +234,9 @@ export default function FabricationPage() {
               Workshop Infrastructure
             </h2>
             <p className="mt-7 max-w-xl leading-8 text-porcelain/65">
-              Ardıç operates an integrated fabrication facility where digital production,
-              sculptural fabrication, finishing, and installation are coordinated under one roof.
+              Ardıç operates through EPSLAM&apos;s integrated fabrication infrastructure, where digital
+              production, sculptural fabrication, mold systems, polyester casting, finishing,
+              painting, assembly, and installation are coordinated under one roof.
             </p>
             <div className="mt-10 grid gap-px bg-porcelain/12 sm:grid-cols-2">
               {infrastructure.map((item) => (
@@ -257,7 +264,8 @@ export default function FabricationPage() {
             </div>
             <p className="max-w-xl leading-8 text-ink/60">
               Ardıç supports projects that require custom fabrication, durable objects,
-              and expressive surfaces across commercial, cultural, and entertainment contexts.
+              expressive surfaces, and installation-ready components across commercial,
+              cultural, hospitality, and entertainment contexts.
             </p>
           </div>
 

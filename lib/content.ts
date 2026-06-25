@@ -19,22 +19,22 @@ export const services = [
   {
     title: "Brand Installations",
     description:
-      "Immersive retail, hospitality, and event environments built with architectural presence and durable detailing."
+      "Retail, hospitality, and event installations developed from concept and design through fabrication, finishing, assembly, and site delivery."
   },
   {
     title: "Architectural Decor",
     description:
-      "Custom interior and exterior features, wall systems, metal accents, and spatial objects for memorable places."
+      "Custom interior and exterior elements, CNC-carved details, columns, reliefs, surfaces, and architectural features produced to project requirements."
   },
   {
     title: "Sculptures & Artworks",
     description:
-      "Statement works, public art, collectible pieces, and bespoke forms developed from concept to final finish."
+      "Statement works, character forms, artistic objects, and public-facing pieces shaped through sculpture, coating, painting, and finishing."
   },
   {
     title: "Thematic Spaces",
     description:
-      "Narrative-driven spaces for commercial, cultural, and leisure destinations where atmosphere is the brief."
+      "Narrative-driven environments for commercial, cultural, and leisure destinations, built with scenic fabrication and installation coordination."
   }
 ];
 
@@ -198,10 +198,10 @@ export const portfolioCategories = [
 }));
 
 export const capabilities = [
-  "Metal fabrication",
-  "CNC routing",
-  "Woodwork and joinery",
-  "Composite forms",
-  "Surface finishing",
-  "Installation planning"
+  "CNC fabrication",
+  "EPS / XPS processing",
+  "Sculpture production",
+  "Mold systems",
+  "Polyester casting",
+  "Finishing and installation"
 ];

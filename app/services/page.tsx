@@ -26,7 +26,7 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="Services"
               title="Design services shaped around lasting presence."
-              copy="Ardıç supports clients from early spatial ideas to finished physical work, balancing aesthetic ambition with buildable detail."
+              copy="As an EPSLAM company, Ardıç supports clients from early spatial ideas to finished physical work, balancing aesthetic ambition with buildable detail, fabrication logic, and installation planning."
             />
 
             <div className="relative min-h-[340px] overflow-hidden border border-ink/10 bg-ink shadow-soft md:min-h-[460px]">

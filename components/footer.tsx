@@ -17,6 +17,10 @@ export function Footer() {
           <p className="mt-5 max-w-md font-display text-4xl leading-tight md:text-5xl">
             {brand.tagline}
           </p>
+          <p className="mt-5 max-w-md leading-7 text-porcelain/60">
+            An EPSLAM company built on long-term family production experience and integrated
+            fabrication infrastructure.
+          </p>
         </div>
         <div>
           <p className="text-xs uppercase tracking-brand text-porcelain/50">Explore</p>
