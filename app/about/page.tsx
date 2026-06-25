@@ -3,23 +3,23 @@ import Link from "next/link";
 
 const approach = [
   {
-    title: "Konsept Geliştirme",
-    copy: "Fikirden tasarıma uzanan yaratıcı ve teknik başlangıç süreci.",
+    title: "Concept Development",
+    copy: "The creative and technical starting point that transforms ideas into design.",
     icon: "concept"
   },
   {
-    title: "Üretim",
-    copy: "Atölye gücüyle hassas imalat, detay çözümü ve malzeme uygulaması.",
+    title: "Fabrication",
+    copy: "Precise fabrication, detail resolution, and material application powered by in-house workshop capabilities.",
     icon: "production"
   },
   {
-    title: "Uygulama",
-    copy: "Sahada koordineli montaj, uygulama ve teslim yönetimi.",
+    title: "Installation",
+    copy: "Coordinated on-site assembly, installation, and delivery management.",
     icon: "installation"
   },
   {
-    title: "Deneyim",
-    copy: "Mekânlara kimlik kazandıran kalıcı, hatırlanabilir sonuçlar.",
+    title: "Experience",
+    copy: "Lasting, memorable results that give spaces a distinct identity.",
     icon: "experience"
   }
 ];
@@ -70,31 +70,31 @@ const team: Array<{
     name: "Yusuf Baki",
     initials: "YB",
     role: "Owner & Fabrication Director",
-    copy: "Üretim stratejisi, atölye yönetimi ve büyük ölçekli proje uygulamalarından sorumludur."
+    copy: "Responsible for production strategy, workshop management, and large-scale project implementation."
   },
   {
     name: "Taha Baki",
     initials: "TB",
     role: "Architecture, Strategy & Project Development",
-    copy: "Mimari yönlendirme, proje stratejisi, iş geliştirme ve müşteri ilişkilerinden sorumludur."
+    copy: "Responsible for architectural direction, project strategy, business development, and client relations."
   },
   {
     name: "Şiba Baki",
     initials: "SB",
     role: "Interior Design & Presentation",
-    copy: "İç mekân tasarımı, sunum geliştirme ve yaratıcı proje anlatımından sorumludur."
+    copy: "Responsible for interior design, presentation development, and creative project storytelling."
   },
   {
     name: "Rasim Gül",
     initials: "RG",
     role: "Visual Arts Specialist",
-    copy: "Sanatsal detaylandırma, görsel geliştirme ve yüzey/bitirme teknikleri konusunda uzmandır."
+    copy: "Expert in artistic detailing, visual development, and surface / finishing techniques."
   },
   {
     name: "Gençağa Dilli",
     initials: "GD",
     role: "Sculptor",
-    copy: "Heykel tasarımı, karakter üretimi ve organik form geliştirme konularında uzmandır."
+    copy: "Expert in sculpture design, character production, and organic form development."
   },
   {
     name: "Fatih Dilli",
@@ -106,11 +106,11 @@ const team: Array<{
 ];
 
 const reasons = [
-  "Tasarım ve üretim tek çatı altında",
-  "Özgün ve özel üretim çözümleri",
-  "Büyük ölçekli proje tecrübesi",
-  "Hızlı prototipleme ve esnek üretim",
-  "Montaj ve saha uygulama kabiliyeti"
+  "Design and fabrication under one roof",
+  "Original and custom production solutions",
+  "Large-scale project experience",
+  "Rapid prototyping and flexible production",
+  "Installation and on-site application capability"
 ];
 
 function ApproachIcon({ type }: { type: string }) {
@@ -158,14 +158,14 @@ export default function AboutPage() {
       <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Hakkımızda</p>
+            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">About Us</p>
             <h1 className="mt-8 max-w-2xl font-display text-5xl leading-[1.02] text-ink md:text-7xl">
-              Fikirden Üretime, Deneyime Dönüşen Yolculuk.
+              From Idea to Fabrication, Into Experience.
             </h1>
             <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
-              Ardıç; mimari düşünceyi, iç mekan tasarımını, heykel sanatını, dijital
-              üretim teknolojilerini ve tematik dekor imalatını aynı çatı altında
-              buluşturan tasarım ve üretim stüdyosudur.
+              Ardıç is a design and fabrication studio that brings architectural thinking,
+              interior design, sculpture, digital production technologies, and thematic decor
+              manufacturing together under one roof.
             </p>
             <div className="mt-9 h-px w-16 bg-bronze" />
           </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
           <div className="relative min-h-[360px] overflow-hidden border border-ink/10 bg-ink shadow-soft md:min-h-[560px]">
             <Image
               src="/home/production-columns.png"
-              alt="Ardıç üretim atölyesinde dekoratif mimari eleman imalatı"
+              alt="Decorative architectural element fabrication inside the Ardıç production workshop"
               fill
               priority
               sizes="(min-width: 1024px) 58vw, 100vw"
@@ -188,14 +188,14 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <div className="border-b border-ink/10 pb-10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12">
             <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-              Yaklaşımımız
+              Our Approach
             </p>
             <h2 className="mt-7 max-w-md font-display text-4xl leading-tight text-ink md:text-5xl">
-              Tasarım, Üretim ve Uygulama.
+              Design, Fabrication, and Installation.
             </h2>
             <p className="mt-7 max-w-md leading-8 text-ink/60">
-              Her projede konsept geliştirmeden üretime, sahada uygulamaya kadar tüm
-              süreci kendi ekibimiz ve altyapımız ile yönetiyoruz.
+              In every project, we manage the entire process with our own team and
+              infrastructure - from concept development to fabrication and on-site installation.
             </p>
           </div>
 
@@ -214,7 +214,7 @@ export default function AboutPage() {
       <section className="px-5 pb-16 pt-24 md:px-8 md:pb-24 md:pt-32">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-            Üretim Kabiliyetlerimiz
+            Our Production Capabilities
           </p>
           <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((capability, index) => (
@@ -238,7 +238,7 @@ export default function AboutPage() {
 
       <section className="border-y border-ink/10 bg-white/45 px-5 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Ekibimiz</p>
+          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">Our Team</p>
           <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {team.map((member) => (
               <article key={member.name} className="flex min-h-full flex-col bg-porcelain p-6">
@@ -275,7 +275,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl overflow-hidden border border-ink/10 bg-porcelain lg:grid-cols-[0.82fr_1.18fr]">
           <div className="p-8 md:p-12">
             <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-              Neden Ardıç?
+              Why Ardıç?
             </p>
             <ul className="mt-8 space-y-5">
               {reasons.map((reason) => (
@@ -292,7 +292,7 @@ export default function AboutPage() {
           <div className="relative min-h-[360px] bg-ink p-8 md:p-12">
             <Image
               src="/home/brand-story-lobby.jpeg"
-              alt="Ardıç marka hikayesi ve doğal formlu premium mekan"
+              alt="Ardıç brand story inside a premium space with natural forms"
               fill
               sizes="(min-width: 1024px) 58vw, 100vw"
               className="object-cover"
@@ -300,16 +300,16 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-ink/62" />
             <div className="relative flex h-full flex-col justify-center">
               <h2 className="max-w-xl font-display text-4xl leading-tight text-porcelain md:text-5xl">
-                Birlikte Unutulmaz Mekânlar Yaratalım.
+                Let&apos;s Create Unforgettable Spaces Together.
               </h2>
               <p className="mt-6 max-w-xl leading-8 text-porcelain/75">
-                Fikirlerinizi gerçeğe dönüştürmek için bizimle iletişime geçin.
+                Contact us to transform your ideas into reality.
               </p>
               <Link
                 href="/contact"
                 className="mt-9 inline-flex w-fit border border-bronze px-6 py-4 text-xs font-semibold uppercase tracking-brand text-porcelain transition hover:bg-bronze hover:text-ink"
               >
-                Bir Proje Başlatın
+                Start a Project
               </Link>
             </div>
           </div>
