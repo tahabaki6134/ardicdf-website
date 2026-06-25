@@ -46,7 +46,12 @@ export function HomeHeroSlider({ slides }: HomeHeroSliderProps) {
       <div className="image-grain absolute inset-0" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-8.5rem)] max-w-7xl flex-col justify-end px-5 pb-12 pt-24 md:min-h-[calc(100vh-9.5rem)] md:px-8 md:pb-16">
-        <p className="text-xs font-semibold uppercase tracking-brand text-bronze">{brand.name}</p>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-brand text-bronze">{brand.name}</p>
+          <p className="mt-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-porcelain/62">
+            An EPSLAM Company
+          </p>
+        </div>
         <h1
           className="mt-5 font-display"
           style={{
