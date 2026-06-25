@@ -30,6 +30,9 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/live" className="text-porcelain/75 hover:text-bronze">
+              Live Atelier
+            </Link>
           </div>
         </div>
         <div>
