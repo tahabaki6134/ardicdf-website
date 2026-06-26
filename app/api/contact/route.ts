@@ -24,6 +24,8 @@ type InquiryPayload = {
   email?: unknown;
   phone?: unknown;
   projectType?: unknown;
+  projectLocation?: unknown;
+  projectScope?: unknown;
   message?: unknown;
 };
 
@@ -46,6 +48,8 @@ function looksLikeSpam(inquiry: {
   email: string;
   phone: string;
   projectType: string;
+  projectLocation: string;
+  projectScope: string;
   message: string;
 }) {
   if (inquiry.companyWebsite) {
@@ -58,6 +62,8 @@ function looksLikeSpam(inquiry: {
     inquiry.email,
     inquiry.phone,
     inquiry.projectType,
+    inquiry.projectLocation,
+    inquiry.projectScope,
     inquiry.message
   ]
     .join(" ")
@@ -124,6 +130,8 @@ export async function POST(request: Request) {
     email: clean(payload.email),
     phone: clean(payload.phone),
     projectType: clean(payload.projectType),
+    projectLocation: clean(payload.projectLocation),
+    projectScope: clean(payload.projectScope),
     message: clean(payload.message)
   };
 
@@ -139,7 +147,7 @@ export async function POST(request: Request) {
     !inquiry.message
   ) {
     return NextResponse.json(
-      { error: "Please complete all required fields with a valid email address." },
+      { error: "Please add your name, email, project type, and message before sending." },
       { status: 400 }
     );
   }
@@ -163,18 +171,20 @@ export async function POST(request: Request) {
   }
 
   const rows = [
-    ["Full Name", inquiry.fullName],
+    ["Name", inquiry.fullName],
     ["Company", inquiry.company || "-"],
     ["Email", inquiry.email],
-    ["Phone Number", inquiry.phone || "-"],
+    ["Phone / WhatsApp", inquiry.phone || "-"],
     ["Project Type", inquiry.projectType],
+    ["Project Location", inquiry.projectLocation || "-"],
+    ["Project Size / Scope", inquiry.projectScope || "-"],
     ["Message", inquiry.message]
   ];
 
   const notificationText = rows.map(([label, value]) => `${label}: ${value}`).join("\n");
   const notificationHtml = `
     <div style="font-family: Arial, sans-serif; color: #111111; line-height: 1.6;">
-      <h1 style="font-family: Georgia, serif; font-size: 28px;">New Ardıç Website Inquiry</h1>
+      <h1 style="font-family: Georgia, serif; font-size: 28px;">New Ardıç Project Enquiry</h1>
       <table style="border-collapse: collapse; width: 100%;">
         ${rows
           .map(
@@ -191,19 +201,19 @@ export async function POST(request: Request) {
   `;
 
   const confirmationText =
-    "Thank you for contacting Ardıç.\nOur team has received your inquiry and will respond shortly.";
+    "Thank you for contacting Ardıç Design & Fabrication.\nOur team has received your project enquiry and will review the brief shortly.";
   const confirmationHtml = `
     <div style="font-family: Arial, sans-serif; color: #111111; line-height: 1.7;">
-      <h1 style="font-family: Georgia, serif; font-size: 28px;">Inquiry Received</h1>
-      <p>Thank you for contacting Ardıç.</p>
-      <p>Our team has received your inquiry and will respond shortly.</p>
+      <h1 style="font-family: Georgia, serif; font-size: 28px;">Project Enquiry Received</h1>
+      <p>Thank you for contacting Ardıç Design & Fabrication.</p>
+      <p>Our team has received your project enquiry and will review the brief shortly.</p>
     </div>
   `;
 
   try {
     await sendEmail({
       to: NOTIFICATION_EMAIL,
-      subject: `New Website Inquiry - ${inquiry.projectType}`,
+      subject: `New Project Enquiry - ${inquiry.projectType}`,
       html: notificationHtml,
       text: notificationText,
       replyTo: inquiry.email
@@ -211,7 +221,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Contact form notification email error:", error);
     return NextResponse.json(
-      { error: "Unable to send your inquiry right now. Please try again later." },
+      { error: "Unable to send your project enquiry right now. Please try again later." },
       { status: 502 }
     );
   }

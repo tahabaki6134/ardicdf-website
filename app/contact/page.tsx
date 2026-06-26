@@ -43,8 +43,8 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="Contact"
-            title="Bring Us a Space, an Object, or an Impossible Detail."
-            copy="For custom environments, sculptural objects, architectural decor, branded experiences, and large-scale fabrication projects, start with a conversation."
+            title="Start a Project with a Design & Fabrication Partner."
+            copy="For international and Turkey-based clients planning themed environments, sculptural objects, architectural decor, brand installations, or large-scale fabrication, share the brief and our team will define the next production step."
           />
 
           <div className="bg-white p-8 shadow-soft md:p-12">
@@ -113,9 +113,15 @@ export default function ContactPage() {
                 Design & Fabrication Studio
               </p>
               <p className="mt-4 text-xl leading-8 text-ink/70">
-                Integrated design, digital production, sculptural fabrication, finishing, and
-                installation coordination from Istanbul.
+                Integrated design, CNC production, sculptural fabrication, finishing, and
+                installation coordination for Turkey-based and international project teams.
               </p>
+              <Link
+                href="mailto:taaha.baaki@gmail.com"
+                className="mt-6 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+              >
+                taaha.baaki@gmail.com
+              </Link>
             </div>
           </div>
         </div>
@@ -141,16 +147,16 @@ export default function ContactPage() {
               Start Your Project
             </p>
             <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-ink md:text-5xl">
-              Start with the requirement. We will shape the production path.
+              Tell us what needs to be built.
             </h2>
             <p className="mt-7 max-w-xl leading-8 text-ink/60">
               From concept development to fabrication, finishing, and installation, Ardıç
               delivers complete design and production solutions under one roof.
             </p>
             <p className="mt-6 max-w-xl leading-8 text-ink/60">
-              Tell us about your project, environment, installation, sculpture, architectural
-              feature, or fabrication requirement. Our team will review your inquiry and get
-              back to you.
+              Share the project location, approximate scope, required objects or environments,
+              and any timing or installation constraints. Our team will review your enquiry and
+              respond with the right next step.
             </p>
           </div>
 

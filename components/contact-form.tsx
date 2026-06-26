@@ -3,10 +3,12 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
 const projectTypes = [
-  "Thematic Environment",
-  "Sculptural Object",
+  "Theme Park / Entertainment",
+  "Hospitality / Retail Environment",
   "Architectural Decor",
+  "Sculpture / Character Production",
   "Brand Installation",
+  "CNC / Mold / Composite Production",
   "Large-Scale Fabrication",
   "Other"
 ];
@@ -18,6 +20,8 @@ const initialForm = {
   email: "",
   phone: "",
   projectType: "",
+  projectLocation: "",
+  projectScope: "",
   message: ""
 };
 
@@ -56,7 +60,7 @@ export function ContactForm() {
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok || data.ok !== true) {
-        throw new Error(data.error || "Unable to send your inquiry right now.");
+        throw new Error(data.error || "Unable to send your project enquiry right now.");
       }
 
       setForm(initialForm);
@@ -67,7 +71,7 @@ export function ContactForm() {
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Unable to send your inquiry right now."
+          : "Unable to send your project enquiry right now."
       );
     }
   }
@@ -89,10 +93,11 @@ export function ContactForm() {
       {status === "success" ? (
         <div className="border border-bronze/30 bg-porcelain p-6">
           <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-            Inquiry Received
+            Project Enquiry Received
           </p>
           <p className="mt-4 leading-7 text-ink/70">
-            Thank you. Our team has received your inquiry and will respond shortly.
+            Thank you. Our team has received your project enquiry and will review the
+            brief shortly.
           </p>
           <a
             href="https://wa.me/905436268969"
@@ -114,7 +119,7 @@ export function ContactForm() {
       <div className="grid gap-5 md:grid-cols-2">
         <label className="block">
           <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-            Full Name
+            Name
           </span>
           <input
             name="fullName"
@@ -160,7 +165,7 @@ export function ContactForm() {
 
         <label className="block">
           <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-            Phone Number
+            Phone / WhatsApp
           </span>
           <input
             name="phone"
@@ -173,31 +178,60 @@ export function ContactForm() {
         </label>
       </div>
 
+      <div className="grid gap-5 md:grid-cols-2">
+        <label className="block">
+          <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
+            Project Type
+          </span>
+          <select
+            name="projectType"
+            required
+            value={form.projectType}
+            onChange={updateField}
+            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition focus:border-bronze"
+          >
+            <option value="" disabled>
+              Select a project type
+            </option>
+            {projectTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
+            Project Location
+          </span>
+          <input
+            name="projectLocation"
+            type="text"
+            autoComplete="address-level2"
+            value={form.projectLocation}
+            onChange={updateField}
+            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+          />
+        </label>
+      </div>
+
       <label className="block">
         <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-          Project Type
+          Project Size / Scope
         </span>
-        <select
-          name="projectType"
-          required
-          value={form.projectType}
+        <input
+          name="projectScope"
+          type="text"
+          value={form.projectScope}
           onChange={updateField}
-          className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition focus:border-bronze"
-        >
-          <option value="" disabled>
-            Select a project type
-          </option>
-          {projectTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
+          className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+        />
       </label>
 
       <label className="block">
         <span className="text-xs font-semibold uppercase tracking-brand text-bronze">
-          Message
+          Project Brief / Message
         </span>
         <textarea
           name="message"
