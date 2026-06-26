@@ -75,6 +75,18 @@ export default function PrivacyPage() {
 
             <section className="bg-porcelain p-7 md:p-9">
               <h2 className="font-display text-3xl leading-tight text-ink">
+                Website Analytics
+              </h2>
+              <p className="mt-5 leading-8 text-ink/65">
+                We may use lightweight website interaction analytics to understand which pages and
+                contact paths are useful to visitors. These analytics are used to improve the
+                website experience and do not include project form messages, names, email
+                addresses, phone numbers, or WhatsApp numbers.
+              </p>
+            </section>
+
+            <section className="bg-porcelain p-7 md:p-9">
+              <h2 className="font-display text-3xl leading-tight text-ink">
                 Communication Channels
               </h2>
               <p className="mt-5 leading-8 text-ink/65">

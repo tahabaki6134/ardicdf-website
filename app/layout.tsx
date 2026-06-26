@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import { ConversionTracking } from "@/components/conversion-tracking";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { brand } from "@/lib/content";
@@ -145,6 +147,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <ConversionTracking />
+        <Analytics />
       </body>
     </html>
   );

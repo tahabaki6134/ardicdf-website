@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useState } from "react";
+import { trackConversion } from "@/components/conversion-tracking";
 
 const projectTypes = [
   "Theme Park / Entertainment",
@@ -121,6 +122,7 @@ export function ContactForm() {
       setError("");
       setFieldErrors({});
       setStatus("success");
+      trackConversion("contact_form_success");
     } catch (submitError) {
       setStatus("error");
       setError(
