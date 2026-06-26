@@ -3,13 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { brand, navigation } from "@/lib/content";
 
 export function Header() {
   const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/95 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-ink/10 bg-porcelain/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 md:px-8 md:py-5">
         <Link href="/" className="group flex min-w-0 items-center gap-4 md:gap-5" aria-label="ARDIÇ home">
           <Image
@@ -51,24 +55,61 @@ export function Header() {
         </nav>
         <Link
           href="/contact"
-          className="hidden border border-bronze px-4 py-2 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain sm:inline-block"
+          className="hidden border border-bronze px-4 py-2 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain lg:inline-block"
         >
           Start a Project
         </Link>
+        <button
+          type="button"
+          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          className="flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 border border-ink/15 text-ink transition hover:border-bronze hover:text-bronze lg:hidden"
+        >
+          <span
+            className={`h-px w-5 bg-current transition ${
+              mobileMenuOpen ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`h-px w-5 bg-current transition ${mobileMenuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`h-px w-5 bg-current transition ${
+              mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
+        </button>
       </div>
       <nav
-        className="flex gap-5 overflow-x-auto border-t border-ink/10 px-5 py-3 text-base tracking-[0.02em] lg:hidden"
+        id="mobile-navigation"
+        className={`border-t border-ink/10 bg-porcelain px-5 py-5 shadow-soft transition lg:hidden ${
+          mobileMenuOpen ? "block" : "hidden"
+        }`}
         aria-label="Mobile navigation"
       >
-        {navigation.map((item) => (
+        <div className="mx-auto grid max-w-7xl gap-1">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMobileMenu}
+              className={`border-b border-ink/10 py-4 font-display text-2xl leading-none transition ${
+                pathname === item.href ? "text-bronze" : "text-ink hover:text-bronze"
+              }`}
+            >
+              {item.mobileLabel ?? item.label}
+            </Link>
+          ))}
           <Link
-            key={item.href}
-            href={item.href}
-            className={pathname === item.href ? "shrink-0 text-bronze" : "shrink-0 text-ink/70"}
+            href="/contact"
+            onClick={closeMobileMenu}
+            className="mt-5 inline-flex w-fit border border-bronze px-5 py-3 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain"
           >
-            {item.mobileLabel ?? item.label}
+            Start a Project
           </Link>
-        ))}
+        </div>
       </nav>
     </header>
   );
