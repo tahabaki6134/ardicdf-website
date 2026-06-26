@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Live Atelier | Ardıç Design & Fabrication",
+  title: "Live Atelier",
   description:
-    "A future live window into Ardıç's fabrication process, CNC production, sculptural work, finishing, coating, painting, and installation preparation."
+    "Live Atelier is a future live window into Ardıç's fabrication process, CNC production, sculptural work, finishing, coating, painting, and installation preparation.",
+  alternates: {
+    canonical: "/live"
+  },
+  openGraph: {
+    title: "Live Atelier",
+    description:
+      "A future live view into workshop culture, CNC fabrication, sculptural production, finishing, coating, painting, and installation preparation.",
+    url: "/live"
+  }
 };
 
 const liveStreamUrl = process.env.NEXT_PUBLIC_LIVE_STREAM_URL?.trim();

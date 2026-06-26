@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Ardıç Design & Fabrication, an EPSLAM company combining architectural thinking, family production experience, sculpture, CNC/EPS/XPS processing, molds, casting, and installation.",
+  alternates: {
+    canonical: "/about"
+  },
+  openGraph: {
+    title: "About",
+    description:
+      "A design and fabrication studio built on long-term production experience, workshop infrastructure, and integrated project delivery.",
+    url: "/about"
+  }
+};
 
 const approach = [
   {

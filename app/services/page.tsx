@@ -1,7 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Design and fabrication services for brand installations, architectural decor, sculptures, artworks, thematic spaces, CNC production, finishing, and installation.",
+  alternates: {
+    canonical: "/services"
+  },
+  openGraph: {
+    title: "Services",
+    description:
+      "Premium project services spanning design direction, CNC fabrication, sculptural production, architectural decor, and site-ready installation.",
+    url: "/services"
+  }
+};
 
 const serviceImages: Record<string, string> = {
   "Brand Installations": "/services/brand-nyx-bottle.jpeg",

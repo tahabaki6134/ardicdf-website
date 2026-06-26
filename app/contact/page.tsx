@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { SectionHeading } from "@/components/section-heading";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Ardıç Design & Fabrication for themed environments, sculptural objects, architectural decor, brand installations, CNC/EPS/XPS fabrication, and international project enquiries.",
+  alternates: {
+    canonical: "/contact"
+  },
+  openGraph: {
+    title: "Contact",
+    description:
+      "Start a project enquiry with Ardıç for custom environments, sculptural fabrication, architectural features, brand experiences, and production under one roof.",
+    url: "/contact"
+  }
+};
 
 const contactRows = [
   [

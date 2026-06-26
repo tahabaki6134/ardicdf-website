@@ -29,8 +29,16 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
   }
 
   return {
-    title: `${category.title} | Ardıç Design & Fabrication`,
-    description: category.description
+    title: category.title,
+    description: category.description,
+    alternates: {
+      canonical: `/works/${category.slug}`
+    },
+    openGraph: {
+      title: category.title,
+      description: category.description,
+      url: `/works/${category.slug}`
+    }
   };
 }
 

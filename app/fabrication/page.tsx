@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Fabrication",
+  description:
+    "Ardıç fabrication capabilities include CNC routing, EPS/XPS foam processing, sculpture production, decorative architectural elements, mold manufacturing, polyester casting, finishing, and installation.",
+  alternates: {
+    canonical: "/fabrication"
+  },
+  openGraph: {
+    title: "Fabrication",
+    description:
+      "Integrated workshop infrastructure for CNC production, EPS/XPS shaping, sculptural fabrication, molds, casting, finishing, painting, assembly, and installation.",
+    url: "/fabrication"
+  }
+};
 
 const capabilities = [
   {

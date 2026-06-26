@@ -6,9 +6,27 @@ import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ardicdf-website.vercel.app"),
-  title: `${brand.name} | ${brand.tagline}`,
+  title: {
+    default: `${brand.name} | ${brand.tagline}`,
+    template: `%s | ${brand.name}`
+  },
   description:
-    "Architectural luxury design and fabrication studio creating brand installations, decor, sculptures, artworks, and thematic spaces.",
+    "Ardıç Design & Fabrication is an EPSLAM company creating themed environments, sculptural fabrication, architectural decor, CNC and EPS/XPS foam production for international projects.",
+  keywords: [
+    "design and fabrication studio",
+    "themed environments",
+    "sculptural fabrication",
+    "architectural decor",
+    "CNC fabrication",
+    "EPS foam fabrication",
+    "XPS foam fabrication",
+    "brand installations",
+    "Ardıç Design & Fabrication",
+    "EPSLAM"
+  ],
+  alternates: {
+    canonical: "/"
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -24,8 +42,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${brand.name} | ${brand.tagline}`,
     description:
-      "Premium architectural design and fabrication for brand installations, decor, sculptures, artworks, and thematic spaces.",
+      "Design and fabrication studio for themed environments, sculptural works, architectural decor, CNC/EPS/XPS production, and international project delivery.",
     type: "website",
+    url: "/",
+    siteName: brand.name,
+    locale: "en_US",
     images: [
       {
         url: "/og-image.png",
@@ -39,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brand.name} | ${brand.tagline}`,
     description:
-      "Premium architectural design and fabrication for memorable spaces and objects.",
+      "Themed environments, sculptural fabrication, architectural decor, and CNC/EPS/XPS production for memorable built experiences.",
     images: ["/og-image.png"]
   }
 };

@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
+
+export const metadata: Metadata = {
+  title: "Works",
+  description:
+    "Explore Ardıç Design & Fabrication portfolio categories across themed spaces, sculptures, architectural decor, brand installations, facade ornaments, molds, and polyester casting.",
+  alternates: {
+    canonical: "/works"
+  },
+  openGraph: {
+    title: "Works",
+    description:
+      "Selected portfolio categories across sculpture, decor, thematic fabrication, brand installations, and custom production systems.",
+    url: "/works"
+  }
+};
 
 const worksCategories = [
   {

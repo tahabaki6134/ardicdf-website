@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { brand, capabilities, heroSlides, services, works } from "@/lib/content";
 import { HomeHeroSlider } from "@/components/home-hero-slider";
 import { SectionHeading } from "@/components/section-heading";
 import { WorkCard } from "@/components/work-card";
+
+export const metadata: Metadata = {
+  title: "Design & Fabrication Studio for Themed Environments",
+  description:
+    "Ardıç Design & Fabrication creates themed environments, sculptural installations, architectural decor, brand experiences, and CNC/EPS/XPS fabrication for international projects.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "Design & Fabrication Studio for Themed Environments",
+    description:
+      "An EPSLAM company delivering design, fabrication, finishing, painting, assembly, and installation for memorable built experiences.",
+    url: "/"
+  }
+};
 
 export default function Home() {
   return (
