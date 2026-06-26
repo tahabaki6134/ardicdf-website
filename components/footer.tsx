@@ -30,6 +30,9 @@ export function Footer() {
                 {item.footerLabel ?? item.label}
               </Link>
             ))}
+            <Link href="/privacy" className="text-porcelain/55 transition hover:text-bronze">
+              Privacy Policy
+            </Link>
           </div>
         </div>
         <div>

@@ -4,8 +4,77 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { brand } from "@/lib/content";
 
+const siteUrl = "https://ardicdf.com";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Ardıç Design & Fabrication",
+      alternateName: "Ardıç Mimarlık",
+      url: siteUrl,
+      logo: `${siteUrl}/logo.svg`,
+      description:
+        "Ardıç Design & Fabrication is an EPSLAM company creating themed environments, sculptural fabrication, architectural decor, CNC and EPS/XPS foam production for international projects.",
+      parentOrganization: {
+        "@type": "Organization",
+        name: "EPSLAM"
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+905436268969",
+        contactType: "project enquiries",
+        areaServed: "Worldwide",
+        availableLanguage: ["English", "Turkish"]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#localbusiness`,
+      name: "Ardıç Design & Fabrication",
+      url: siteUrl,
+      image: `${siteUrl}/og-image.png`,
+      telephone: "+905436268969",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Karadeniz Caddesi No:131",
+        addressLocality: "Ataşehir",
+        addressRegion: "Istanbul",
+        addressCountry: "TR"
+      },
+      parentOrganization: {
+        "@id": `${siteUrl}/#organization`
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#services`,
+      name: "Design and Fabrication Services",
+      provider: {
+        "@id": `${siteUrl}/#organization`
+      },
+      areaServed: "Worldwide",
+      serviceType: [
+        "Themed environments",
+        "Sculptural fabrication",
+        "Architectural decor",
+        "Brand installations",
+        "CNC fabrication",
+        "EPS and XPS foam fabrication",
+        "Mold manufacturing",
+        "Polyester casting",
+        "Finishing and installation"
+      ],
+      description:
+        "Integrated design, CNC production, EPS/XPS processing, sculpture, mold production, polyester casting, finishing, painting, assembly, and installation under one roof."
+    }
+  ]
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ardicdf.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${brand.name} | ${brand.tagline}`,
     template: `%s | ${brand.name}`
@@ -69,6 +138,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Header />
         {children}
         <Footer />
