@@ -25,19 +25,64 @@ const initialForm = {
   message: ""
 };
 
+type FormField = keyof typeof initialForm;
+type FieldErrors = Partial<Record<FormField, string>>;
+
+function validateForm(form: typeof initialForm) {
+  const errors: FieldErrors = {};
+
+  if (!form.fullName.trim()) {
+    errors.fullName = "Please add your name.";
+  }
+
+  if (!form.email.trim()) {
+    errors.email = "Please add your email address.";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+    errors.email = "Please enter a valid email address.";
+  }
+
+  if (!form.projectType) {
+    errors.projectType = "Please select a project type.";
+  }
+
+  if (!form.message.trim()) {
+    errors.message = "Please add a short project brief.";
+  }
+
+  return errors;
+}
+
 export function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   const updateField = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
+    const fieldName = event.target.name as FormField;
     setForm((current) => ({
       ...current,
-      [event.target.name]: event.target.value
+      [fieldName]: event.target.value
     }));
+    setFieldErrors((current) => {
+      if (!current[fieldName]) {
+        return current;
+      }
+
+      const next = { ...current };
+      delete next[fieldName];
+      return next;
+    });
   };
+
+  const controlClass = (field: FormField, extra = "") =>
+    `mt-3 w-full border px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze ${
+      fieldErrors[field] ? "border-bronze bg-white" : "border-ink/10 bg-porcelain"
+    } ${extra}`;
+
+  const errorId = (field: FormField) => (fieldErrors[field] ? `${field}-error` : undefined);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -47,6 +92,15 @@ export function ContactForm() {
 
     setStatus("submitting");
     setError("");
+    setFieldErrors({});
+
+    const validationErrors = validateForm(form);
+    if (Object.keys(validationErrors).length > 0) {
+      setFieldErrors(validationErrors);
+      setStatus("error");
+      setError("Please complete the highlighted required fields before sending.");
+      return;
+    }
 
     try {
       const response = await fetch("/api/contact", {
@@ -65,6 +119,7 @@ export function ContactForm() {
 
       setForm(initialForm);
       setError("");
+      setFieldErrors({});
       setStatus("success");
     } catch (submitError) {
       setStatus("error");
@@ -77,7 +132,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-5 bg-white p-8 shadow-soft md:p-10">
+    <form onSubmit={handleSubmit} noValidate className="grid gap-5 bg-white p-8 shadow-soft md:p-10">
       <label className="hidden" aria-hidden="true">
         Company website
         <input
@@ -128,8 +183,15 @@ export function ContactForm() {
             required
             value={form.fullName}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+            aria-invalid={Boolean(fieldErrors.fullName)}
+            aria-describedby={errorId("fullName")}
+            className={controlClass("fullName")}
           />
+          {fieldErrors.fullName ? (
+            <p id="fullName-error" className="mt-2 text-sm leading-6 text-bronze">
+              {fieldErrors.fullName}
+            </p>
+          ) : null}
         </label>
 
         <label className="block">
@@ -142,7 +204,7 @@ export function ContactForm() {
             autoComplete="organization"
             value={form.company}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+            className={controlClass("company")}
           />
         </label>
       </div>
@@ -159,8 +221,15 @@ export function ContactForm() {
             required
             value={form.email}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+            aria-invalid={Boolean(fieldErrors.email)}
+            aria-describedby={errorId("email")}
+            className={controlClass("email")}
           />
+          {fieldErrors.email ? (
+            <p id="email-error" className="mt-2 text-sm leading-6 text-bronze">
+              {fieldErrors.email}
+            </p>
+          ) : null}
         </label>
 
         <label className="block">
@@ -173,7 +242,7 @@ export function ContactForm() {
             autoComplete="tel"
             value={form.phone}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+            className={controlClass("phone")}
           />
         </label>
       </div>
@@ -188,7 +257,9 @@ export function ContactForm() {
             required
             value={form.projectType}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition focus:border-bronze"
+            aria-invalid={Boolean(fieldErrors.projectType)}
+            aria-describedby={errorId("projectType")}
+            className={controlClass("projectType")}
           >
             <option value="" disabled>
               Select a project type
@@ -199,6 +270,11 @@ export function ContactForm() {
               </option>
             ))}
           </select>
+          {fieldErrors.projectType ? (
+            <p id="projectType-error" className="mt-2 text-sm leading-6 text-bronze">
+              {fieldErrors.projectType}
+            </p>
+          ) : null}
         </label>
 
         <label className="block">
@@ -211,7 +287,7 @@ export function ContactForm() {
             autoComplete="address-level2"
             value={form.projectLocation}
             onChange={updateField}
-            className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+            className={controlClass("projectLocation")}
           />
         </label>
       </div>
@@ -225,7 +301,7 @@ export function ContactForm() {
           type="text"
           value={form.projectScope}
           onChange={updateField}
-          className="mt-3 w-full border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+          className={controlClass("projectScope")}
         />
       </label>
 
@@ -240,8 +316,15 @@ export function ContactForm() {
           maxLength={3000}
           value={form.message}
           onChange={updateField}
-          className="mt-3 w-full resize-none border border-ink/10 bg-porcelain px-4 py-4 text-ink outline-none transition placeholder:text-ink/35 focus:border-bronze"
+          aria-invalid={Boolean(fieldErrors.message)}
+          aria-describedby={errorId("message")}
+          className={controlClass("message", "resize-none")}
         />
+        {fieldErrors.message ? (
+          <p id="message-error" className="mt-2 text-sm leading-6 text-bronze">
+            {fieldErrors.message}
+          </p>
+        ) : null}
       </label>
 
       <button

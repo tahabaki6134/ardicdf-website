@@ -35,7 +35,9 @@ export function Footer() {
         <div>
           <p className="text-xs uppercase tracking-brand text-porcelain/50">Contact</p>
           <div className="mt-5 space-y-3 text-porcelain/75">
-            <p>{brand.phone}</p>
+            <Link href="tel:+905436268969" className="block transition hover:text-bronze">
+              {brand.phone}
+            </Link>
             <p>{brand.location}</p>
           </div>
         </div>

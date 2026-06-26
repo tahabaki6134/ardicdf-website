@@ -90,7 +90,12 @@ export default function LiveAtelierPage() {
           </div>
           <div className="grid gap-px bg-ink/10 sm:grid-cols-2">
             {processItems.map((item, index) => (
-              <article key={item} className="min-h-40 bg-porcelain p-7">
+              <article
+                key={item}
+                className={`min-h-40 bg-porcelain p-7 ${
+                  index === processItems.length - 1 ? "sm:col-span-2" : ""
+                }`}
+              >
                 <p className="font-display text-4xl leading-none text-bronze/75">
                   {`${index + 1}`.padStart(2, "0")}
                 </p>

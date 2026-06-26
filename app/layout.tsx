@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ardicdf-website.vercel.app"),
+  metadataBase: new URL("https://ardicdf.com"),
   title: {
     default: `${brand.name} | ${brand.tagline}`,
     template: `%s | ${brand.name}`
