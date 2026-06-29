@@ -4,6 +4,7 @@ import "./globals.css";
 import { ConversionTracking } from "@/components/conversion-tracking";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button";
 import { brand } from "@/lib/content";
 
 const siteUrl = "https://ardicdf.com";
@@ -147,6 +148,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <FloatingWhatsAppButton />
         <ConversionTracking />
         <Analytics />
       </body>

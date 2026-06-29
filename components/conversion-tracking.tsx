@@ -14,6 +14,12 @@ export function trackConversion(eventName: string, properties?: EventProperties)
 }
 
 function linkLocation(link: HTMLAnchorElement) {
+  const explicitLocation = link.dataset.trackLocation;
+
+  if (explicitLocation) {
+    return explicitLocation;
+  }
+
   if (link.closest("header")) {
     return "header";
   }
