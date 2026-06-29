@@ -6,7 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://ardicdf.com/sitemap.xml",
-    host: "https://ardicdf.com"
+    sitemap: "https://www.ardicdf.com/sitemap.xml"
   };
 }

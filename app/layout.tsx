@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button";
 import { brand } from "@/lib/content";
 
-const siteUrl = "https://ardicdf.com";
+const siteUrl = "https://www.ardicdf.com";
 
 const structuredData = {
   "@context": "https://schema.org",

@@ -41,6 +41,7 @@ export default function ServicesPage() {
           <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
             <SectionHeading
               eyebrow="Services"
+              headingTag="h1"
               title="Design services shaped around lasting presence."
               copy="As an EPSLAM company, Ardıç supports clients from early spatial ideas to finished physical work, balancing aesthetic ambition with buildable detail, fabrication logic, and installation planning."
             />

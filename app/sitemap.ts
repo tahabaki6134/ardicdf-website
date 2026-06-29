@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { portfolioCategories } from "@/lib/content";
 
-const siteUrl = "https://ardicdf.com";
+const siteUrl = "https://www.ardicdf.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

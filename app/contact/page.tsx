@@ -59,6 +59,7 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="Contact"
+            headingTag="h1"
             title="Start a Project with a Design & Fabrication Partner."
             copy="For international and Turkey-based clients planning themed environments, sculptural objects, architectural decor, brand installations, or large-scale fabrication, share the brief and our team will define the next production step."
           />

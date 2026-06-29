@@ -82,6 +82,7 @@ export default function WorksPage() {
           <div className="grid gap-10 border-b border-ink/10 pb-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <SectionHeading
               eyebrow="Works"
+              headingTag="h1"
               title="Selected works across sculpture, decor, and thematic fabrication."
               copy="Ardıç Design & Fabrication delivers custom physical works from concept development to production, finishing, and on-site execution."
             />
