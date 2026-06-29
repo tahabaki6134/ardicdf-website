@@ -1,7 +1,26 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useState } from "react";
+import Script from "next/script";
+import { ChangeEvent, FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { trackConversion } from "@/components/conversion-tracking";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          theme?: "light" | "dark" | "auto";
+          callback?: (token: string) => void;
+          "expired-callback"?: () => void;
+          "error-callback"?: () => void;
+        }
+      ) => string;
+      reset: (widgetId?: string) => void;
+    };
+  }
+}
 
 const projectTypes = [
   "Theme Park / Entertainment",
@@ -25,6 +44,8 @@ const initialForm = {
   projectScope: "",
   message: ""
 };
+
+const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 type FormField = keyof typeof initialForm;
 type FieldErrors = Partial<Record<FormField, string>>;
@@ -58,6 +79,44 @@ export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState("");
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string>();
+
+  const resetTurnstile = useCallback(() => {
+    setTurnstileToken("");
+    if (turnstileWidgetId.current && window.turnstile) {
+      window.turnstile.reset(turnstileWidgetId.current);
+    }
+  }, []);
+
+  const renderTurnstile = useCallback(() => {
+    if (!turnstileSiteKey || !turnstileRef.current || !window.turnstile || turnstileWidgetId.current) {
+      return;
+    }
+
+    turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+      sitekey: turnstileSiteKey,
+      theme: "light",
+      callback: (token) => {
+        setTurnstileToken(token);
+        setTurnstileError("");
+      },
+      "expired-callback": () => {
+        setTurnstileToken("");
+        setTurnstileError("Please complete the verification again.");
+      },
+      "error-callback": () => {
+        setTurnstileToken("");
+        setTurnstileError("Verification could not be completed. Please try again.");
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    renderTurnstile();
+  }, [renderTurnstile]);
 
   const updateField = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -103,13 +162,29 @@ export function ContactForm() {
       return;
     }
 
+    if (!turnstileSiteKey) {
+      setStatus("error");
+      setError("Verification is not configured. Please contact us by WhatsApp or phone.");
+      return;
+    }
+
+    if (!turnstileToken) {
+      setTurnstileError("Please complete the verification before sending.");
+      setStatus("error");
+      setError("Please complete the verification before sending.");
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify({
+          ...form,
+          turnstileToken
+        })
       });
 
       const data = await response.json().catch(() => ({}));
@@ -122,6 +197,7 @@ export function ContactForm() {
       setError("");
       setFieldErrors({});
       setStatus("success");
+      resetTurnstile();
       trackConversion("contact_form_success");
     } catch (submitError) {
       setStatus("error");
@@ -130,11 +206,18 @@ export function ContactForm() {
           ? submitError.message
           : "Unable to send your project enquiry right now."
       );
+      resetTurnstile();
     }
   }
 
   return (
     <form onSubmit={handleSubmit} noValidate className="grid gap-5 bg-white p-8 shadow-soft md:p-10">
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+        strategy="afterInteractive"
+        onLoad={renderTurnstile}
+      />
+
       <label className="hidden" aria-hidden="true">
         Company website
         <input
@@ -324,10 +407,17 @@ export function ContactForm() {
         />
         {fieldErrors.message ? (
           <p id="message-error" className="mt-2 text-sm leading-6 text-bronze">
-            {fieldErrors.message}
+          {fieldErrors.message}
           </p>
         ) : null}
       </label>
+
+      <div>
+        <div ref={turnstileRef} className="min-h-[65px]" />
+        {turnstileError ? (
+          <p className="mt-2 text-sm leading-6 text-bronze">{turnstileError}</p>
+        ) : null}
+      </div>
 
       <button
         type="submit"

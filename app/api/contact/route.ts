@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 const RESEND_API_URL = "https://api.resend.com/emails";
+const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 const NOTIFICATION_EMAIL = "taaha.baaki@gmail.com";
 const FROM_EMAIL =
   process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Design & Fabrication <onboarding@resend.dev>";
@@ -27,6 +28,7 @@ type InquiryPayload = {
   projectLocation?: unknown;
   projectScope?: unknown;
   message?: unknown;
+  turnstileToken?: unknown;
 };
 
 function clean(value: unknown) {
@@ -114,6 +116,55 @@ async function sendEmail(payload: {
   }
 }
 
+async function verifyTurnstile(token: string, remoteIp: string) {
+  if (!process.env.TURNSTILE_SECRET_KEY) {
+    return {
+      ok: false,
+      error: "Verification service is not configured."
+    };
+  }
+
+  if (!token) {
+    return {
+      ok: false,
+      error: "Please complete the verification before sending."
+    };
+  }
+
+  const body = new FormData();
+  body.append("secret", process.env.TURNSTILE_SECRET_KEY);
+  body.append("response", token);
+
+  if (remoteIp) {
+    body.append("remoteip", remoteIp);
+  }
+
+  try {
+    const response = await fetch(TURNSTILE_VERIFY_URL, {
+      method: "POST",
+      body
+    });
+    const result = (await response.json().catch(() => null)) as
+      | { success?: boolean }
+      | null;
+
+    if (!response.ok || result?.success !== true) {
+      return {
+        ok: false,
+        error: "Verification failed. Please try again."
+      };
+    }
+
+    return { ok: true };
+  } catch (error) {
+    console.error("Turnstile verification error:", error);
+    return {
+      ok: false,
+      error: "Verification could not be completed. Please try again."
+    };
+  }
+}
+
 export async function POST(request: Request) {
   let payload: InquiryPayload;
 
@@ -132,7 +183,8 @@ export async function POST(request: Request) {
     projectType: clean(payload.projectType),
     projectLocation: clean(payload.projectLocation),
     projectScope: clean(payload.projectScope),
-    message: clean(payload.message)
+    message: clean(payload.message),
+    turnstileToken: clean(payload.turnstileToken)
   };
 
   if (inquiry.companyWebsite) {
@@ -157,6 +209,16 @@ export async function POST(request: Request) {
       { error: "Please keep your message under 3000 characters." },
       { status: 400 }
     );
+  }
+
+  const remoteIp =
+    request.headers.get("cf-connecting-ip") ||
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    "";
+  const turnstile = await verifyTurnstile(inquiry.turnstileToken, remoteIp);
+
+  if (!turnstile.ok) {
+    return NextResponse.json({ error: turnstile.error }, { status: 400 });
   }
 
   if (looksLikeSpam(inquiry)) {
