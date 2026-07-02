@@ -108,6 +108,8 @@ export const getPortfolioImageSrc = (image: PortfolioImage) =>
 export const getPortfolioImageAlt = (image: PortfolioImage, fallback: string) =>
   typeof image === "string" ? fallback : image.alt;
 
+const portfolioImage = (path: string) => path;
+
 const portfolioImageSet = (slug: string, count: number) =>
   Array.from(
     { length: count },
@@ -124,6 +126,7 @@ type PortfolioCategoryInput = {
   intro: string[];
   images: PortfolioImage[];
   coverImage?: string;
+  coverImages?: PortfolioImage[];
   coverPosition?: string;
   alt?: string;
   featured?: boolean;
@@ -145,6 +148,12 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "The gallery includes fabricated animals, landscape accents, and themed destination pieces produced through sculptural and production workflows."
     ],
     images: portfolioImageSet("safari-experiences", 9),
+    coverImages: [
+      portfolioImage("/projects/portfolio/safari-experiences/safari-experiences-03.jpeg"),
+      portfolioImage("/projects/portfolio/safari-experiences/safari-experiences-04.jpeg"),
+      portfolioImage("/projects/portfolio/safari-experiences/safari-experiences-07.jpeg"),
+      portfolioImage("/projects/portfolio/safari-experiences/safari-experiences-09.jpeg")
+    ],
     coverPosition: "50% 45%",
     alt: "Safari experience portfolio category cover image",
     featured: true,
@@ -167,6 +176,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Each piece is treated as a physical storytelling object, moving from shaping and fabrication through surface detail and finishing."
     ],
     images: portfolioImageSet("sculptures-characters", 14),
+    coverImages: [
+      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-01.jpeg"),
+      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-02.jpeg"),
+      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-04.jpeg"),
+      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-09.jpeg"),
+      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-14.jpeg")
+    ],
     featured: true,
     published: true
   },
@@ -192,6 +208,16 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         description:
           "A refined interior feature using an irregular stone-like form as a sculptural focal point."
       }
+    ],
+    coverImages: [
+      {
+        src: "/projects/portfolio/artificial-rock-organic-forms/organic-stone-feature-lounge-interior-01.png",
+        alt: "Organic stone wall feature with warm backlighting in a premium lounge interior"
+      },
+      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-04.jpeg"),
+      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-05.jpeg"),
+      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-06.jpeg"),
+      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-02.jpeg")
     ],
     coverPosition: "50% 50%",
     alt: "Artificial rock and organic forms portfolio category cover image",
@@ -231,6 +257,16 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
           "A classical relief composition with sculpted columns, mountain scenery, and an eagle motif."
       }
     ],
+    coverImages: [
+      {
+        src: "/projects/portfolio/historical-thematic-environments/eagle-relief-wall-with-decorative-columns-01.png",
+        alt: "Eagle relief wall with decorative columns for a classical thematic interior"
+      },
+      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-04.jpeg"),
+      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-08.jpeg"),
+      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-10.jpeg"),
+      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-28.jpeg")
+    ],
     featured: true,
     published: true
   },
@@ -248,6 +284,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "The gallery highlights machining, foam work, component preparation, and production logic before finishing and installation."
     ],
     images: portfolioImageSet("cnc-manufacturing-processes", 12),
+    coverImages: [
+      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"),
+      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-02.jpeg"),
+      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-04.jpeg"),
+      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-07.jpeg"),
+      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-09.jpeg")
+    ],
     coverPosition: "50% 50%",
     alt: "CNC manufacturing process portfolio category cover image",
     featured: true,
@@ -267,6 +310,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "These images document composite-ready forms, coated surfaces, molded pieces, and production details that support larger installations."
     ],
     images: portfolioImageSet("molds-composite-production", 10),
+    coverImages: [
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-01.jpeg"),
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-04.jpeg"),
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-05.jpeg"),
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-07.jpeg"),
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-10.jpeg")
+    ],
     coverPosition: "50% 50%",
     alt: "Molds and composite production portfolio category cover image",
     featured: true,
@@ -319,6 +369,22 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
           "A realistic oversized burger object fabricated for promotional and retail presentation."
       }
     ],
+    coverImages: [
+      {
+        src: "/projects/portfolio/commercial-brand-installations/ardic-branded-spherical-reception-display-01.png",
+        alt: "Large spherical reception display object in an Ardic branded premium lobby"
+      },
+      portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-01.jpeg"),
+      portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-06.jpeg"),
+      {
+        src: "/projects/portfolio/commercial-brand-installations/illuminated-sculptural-wings-brand-installation-01.png",
+        alt: "Illuminated sculptural red wings installed as a commercial interior feature wall"
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/oversized-green-tennis-ball-display-01.png",
+        alt: "Oversized green tennis ball display objects arranged in an outdoor production area"
+      }
+    ],
     featured: true,
     published: true
   }
@@ -328,6 +394,10 @@ export const portfolioCategories = portfolioCategoryData.map((category, index) =
   ...category,
   number: `${index + 1}`.padStart(2, "0"),
   coverImage: category.coverImage ?? getPortfolioImageSrc(category.images[0]),
+  coverImages: (category.coverImages ?? [category.coverImage ?? category.images[0]]).map((image, imageIndex) => ({
+    src: getPortfolioImageSrc(image),
+    alt: getPortfolioImageAlt(image, category.alt ?? `${category.title} cover image ${imageIndex + 1}`)
+  })),
   coverPosition: category.coverPosition ?? "50% 50%",
   alt: category.alt ?? `${category.title} portfolio category cover image`,
   imageCount: category.images.length

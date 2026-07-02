@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { RotatingCoverImage } from "@/components/rotating-cover-image";
 import { SectionHeading } from "@/components/section-heading";
 import { portfolioCategories } from "@/lib/content";
 
@@ -43,20 +43,20 @@ export default function WorksPage() {
               <article key={category.title} className="group bg-porcelain transition hover:bg-white">
                 <a href={category.href} className="flex min-h-full flex-col">
                   <div className="relative aspect-[4/3] overflow-hidden bg-ink">
-                    <Image
-                      src={category.coverImage}
-                      alt={category.alt}
-                      fill
-                      sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                      style={{ objectPosition: category.coverPosition }}
+                    <RotatingCoverImage
+                      images={category.coverImages}
+                      position={category.coverPosition}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent opacity-70" />
+                    <div className="absolute left-5 top-5 border border-white/25 bg-ink/55 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-brand text-white backdrop-blur-sm">
+                      {category.imageCount} Project Visuals
+                    </div>
                   </div>
                   <div className="flex min-h-72 flex-col border border-ink/10 p-7 md:p-8">
-                    <p className="text-sm font-semibold uppercase tracking-brand text-bronze">
-                      {category.number}
-                    </p>
+                    <div className="flex items-center justify-between gap-4 text-sm font-semibold uppercase tracking-brand text-bronze">
+                      <p>{category.number}</p>
+                      <p>{category.imageCount} Images</p>
+                    </div>
                     <h2 className="mt-7 max-w-lg font-display text-3xl leading-tight text-ink md:text-4xl">
                       {category.title}
                     </h2>
