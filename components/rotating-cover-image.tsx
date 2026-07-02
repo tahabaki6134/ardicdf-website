@@ -35,7 +35,7 @@ export function RotatingCoverImage({ images, position }: RotatingCoverImageProps
         setIsFadingPrevious(false);
         return (currentIndex + 1) % images.length;
       });
-    }, 5600);
+    }, 4000);
 
     return () => window.clearInterval(interval);
   }, [images.length]);

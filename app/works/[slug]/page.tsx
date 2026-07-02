@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PortfolioLightbox } from "@/components/portfolio-lightbox";
 import { SectionHeading } from "@/components/section-heading";
 import { getPortfolioImageAlt, getPortfolioImageSrc, portfolioCategories } from "@/lib/content";
 
@@ -48,6 +48,11 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
   if (!category) {
     notFound();
   }
+
+  const galleryImages = category.images.map((image, index) => ({
+    src: getPortfolioImageSrc(image),
+    alt: getPortfolioImageAlt(image, `${category.title} gallery image ${index + 1}`)
+  }));
 
   return (
     <main>
@@ -96,29 +101,7 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
               </div>
             </div>
 
-            <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
-              {category.images.map((image, index) => {
-                const src = getPortfolioImageSrc(image);
-                const alt = getPortfolioImageAlt(
-                  image,
-                  `${category.title} gallery image ${index + 1}`
-                );
-
-                return (
-                  <article key={src} className="bg-porcelain p-3">
-                    <div className="relative aspect-[4/3] bg-white">
-                      <Image
-                        src={src}
-                        alt={alt}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-contain"
-                      />
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
+            <PortfolioLightbox images={galleryImages} />
           </section>
         </div>
       </section>
