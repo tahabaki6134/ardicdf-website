@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SectionHeading } from "@/components/section-heading";
-import { portfolioCategories } from "@/lib/content";
+import { getPortfolioImageAlt, getPortfolioImageSrc, portfolioCategories } from "@/lib/content";
 
 type CategoryPageProps = {
   params: {
@@ -100,19 +100,27 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
             </div>
 
             <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
-              {category.images.map((image, index) => (
-                <article key={image} className="bg-porcelain p-3">
-                  <div className="relative aspect-[4/3] bg-white">
-                    <Image
-                      src={image}
-                      alt={`${category.title} gallery image ${index + 1}`}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-contain"
-                    />
-                  </div>
-                </article>
-              ))}
+              {category.images.map((image, index) => {
+                const src = getPortfolioImageSrc(image);
+                const alt = getPortfolioImageAlt(
+                  image,
+                  `${category.title} gallery image ${index + 1}`
+                );
+
+                return (
+                  <article key={src} className="bg-porcelain p-3">
+                    <div className="relative aspect-[4/3] bg-white">
+                      <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-contain"
+                      />
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </section>
         </div>

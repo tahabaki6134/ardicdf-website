@@ -93,6 +93,21 @@ export const works = [
   }
 ];
 
+export type PortfolioImage =
+  | string
+  | {
+      src: string;
+      alt: string;
+      title?: string;
+      description?: string;
+    };
+
+export const getPortfolioImageSrc = (image: PortfolioImage) =>
+  typeof image === "string" ? image : image.src;
+
+export const getPortfolioImageAlt = (image: PortfolioImage, fallback: string) =>
+  typeof image === "string" ? fallback : image.alt;
+
 const portfolioImageSet = (slug: string, count: number) =>
   Array.from(
     { length: count },
@@ -107,7 +122,7 @@ type PortfolioCategoryInput = {
   href: string;
   introHeading: string;
   intro: string[];
-  images: string[];
+  images: PortfolioImage[];
   coverImage?: string;
   coverPosition?: string;
   alt?: string;
@@ -168,7 +183,16 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Artificial Rock & Organic Forms includes scenic rock surfaces, fantasy mushroom houses, carved reliefs, and organic structures shaped for themed environments.",
       "The work combines sculptural modeling, coatings, textures, and fabrication logic to create durable natural and fantasy forms."
     ],
-    images: portfolioImageSet("artificial-rock-organic-forms", 10),
+    images: [
+      ...portfolioImageSet("artificial-rock-organic-forms", 10),
+      {
+        src: "/projects/portfolio/artificial-rock-organic-forms/organic-stone-feature-lounge-interior-01.png",
+        alt: "Organic stone wall feature with warm backlighting in a premium lounge interior",
+        title: "Organic Stone Lounge Feature",
+        description:
+          "A refined interior feature using an irregular stone-like form as a sculptural focal point."
+      }
+    ],
     coverPosition: "50% 50%",
     alt: "Artificial rock and organic forms portfolio category cover image",
     featured: true,
@@ -190,7 +214,23 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Historical & Thematic Environments gathers Roman columns, carved inscriptions, tiled arches, facade pieces, and heritage-inspired spatial elements.",
       "These works combine reference-driven design, CNC production, hand finishing, and scenic installation for cultural and destination settings."
     ],
-    images: portfolioImageSet("historical-thematic-environments", 28),
+    images: [
+      ...portfolioImageSet("historical-thematic-environments", 28),
+      {
+        src: "/projects/portfolio/historical-thematic-environments/white-ornamental-architectural-arch-production-01.png",
+        alt: "White ornamental architectural arch element produced for a thematic interior",
+        title: "Ornamental Architectural Arch",
+        description:
+          "A large-scale decorative arch form prepared as a sculptural architectural element."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/eagle-relief-wall-with-decorative-columns-01.png",
+        alt: "Eagle relief wall with decorative columns for a classical thematic interior",
+        title: "Eagle Relief Wall",
+        description:
+          "A classical relief composition with sculpted columns, mountain scenery, and an eagle motif."
+      }
+    ],
     featured: true,
     published: true
   },
@@ -248,7 +288,37 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Commercial & Brand Installations includes retail displays, cosmetics-focused objects, storefront pieces, and commercial interiors produced for public-facing experiences.",
       "The work balances brand visibility, fabrication quality, and durable execution across display, decor, and installation formats."
     ],
-    images: portfolioImageSet("commercial-brand-installations", 12),
+    images: [
+      ...portfolioImageSet("commercial-brand-installations", 12),
+      {
+        src: "/projects/portfolio/commercial-brand-installations/ardic-branded-spherical-reception-display-01.png",
+        alt: "Large spherical reception display object in an Ardic branded premium lobby",
+        title: "Branded Spherical Reception Display",
+        description:
+          "A polished sculptural display object developed as a striking branded lobby centerpiece."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/oversized-green-tennis-ball-display-01.png",
+        alt: "Oversized green tennis ball display objects arranged in an outdoor production area",
+        title: "Oversized Tennis Ball Display Objects",
+        description:
+          "Large-scale sports-themed display objects produced for a commercial presentation environment."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/illuminated-sculptural-wings-brand-installation-01.png",
+        alt: "Illuminated sculptural red wings installed as a commercial interior feature wall",
+        title: "Illuminated Sculptural Wings",
+        description:
+          "A dramatic wall-mounted sculptural installation designed for a high-impact commercial interior."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/giant-burger-display-object-01.png",
+        alt: "Giant burger sculpture produced as a commercial brand display object",
+        title: "Giant Burger Display Object",
+        description:
+          "A realistic oversized burger object fabricated for promotional and retail presentation."
+      }
+    ],
     featured: true,
     published: true
   }
@@ -257,7 +327,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
 export const portfolioCategories = portfolioCategoryData.map((category, index) => ({
   ...category,
   number: `${index + 1}`.padStart(2, "0"),
-  coverImage: category.coverImage ?? category.images[0],
+  coverImage: category.coverImage ?? getPortfolioImageSrc(category.images[0]),
   coverPosition: category.coverPosition ?? "50% 50%",
   alt: category.alt ?? `${category.title} portfolio category cover image`,
   imageCount: category.images.length
