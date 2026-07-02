@@ -16,7 +16,7 @@ type RotatingCoverImageProps = {
 export function RotatingCoverImage({ images, position }: RotatingCoverImageProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
-  const [isFadingPrevious, setIsFadingPrevious] = useState(false);
+  const [isShowingActive, setIsShowingActive] = useState(true);
 
   useEffect(() => {
     if (images.length < 2) {
@@ -32,7 +32,7 @@ export function RotatingCoverImage({ images, position }: RotatingCoverImageProps
     const interval = window.setInterval(() => {
       setActiveIndex((currentIndex) => {
         setPreviousIndex(currentIndex);
-        setIsFadingPrevious(false);
+        setIsShowingActive(false);
         return (currentIndex + 1) % images.length;
       });
     }, 4000);
@@ -45,7 +45,7 @@ export function RotatingCoverImage({ images, position }: RotatingCoverImageProps
       return;
     }
 
-    const frame = window.requestAnimationFrame(() => setIsFadingPrevious(true));
+    const frame = window.requestAnimationFrame(() => setIsShowingActive(true));
     const timeout = window.setTimeout(() => setPreviousIndex(null), 1100);
 
     return () => {
@@ -66,9 +66,7 @@ export function RotatingCoverImage({ images, position }: RotatingCoverImageProps
           alt=""
           fill
           sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className={`object-cover transition duration-1000 ease-out group-hover:scale-[1.03] ${
-            isFadingPrevious ? "opacity-0" : "opacity-100"
-          }`}
+          className="object-cover opacity-100 transition duration-1000 ease-in-out group-hover:scale-[1.03]"
           style={{ objectPosition: position }}
           aria-hidden
         />
@@ -79,7 +77,9 @@ export function RotatingCoverImage({ images, position }: RotatingCoverImageProps
         alt={activeImage.alt}
         fill
         sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-        className="object-cover opacity-100 transition duration-1000 ease-out group-hover:scale-[1.03]"
+        className={`object-cover transition duration-1000 ease-in-out group-hover:scale-[1.03] ${
+          previousImage && !isShowingActive ? "opacity-0" : "opacity-100"
+        }`}
         style={{ objectPosition: position }}
       />
     </>
