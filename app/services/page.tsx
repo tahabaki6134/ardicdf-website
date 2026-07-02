@@ -23,14 +23,16 @@ const serviceImages: Record<string, string> = {
   "Brand Installations": "/services/brand-nyx-bottle.jpeg",
   "Architectural Decor": "/services/architectural-decor-columns.jpeg",
   "Sculptures & Artworks": "/services/sculpture-elephant-front.jpeg",
-  "Thematic Spaces": "/services/thematic-spongebob-patrick.jpeg"
+  "Thematic Spaces": "/services/thematic-spongebob-patrick.jpeg",
+  "Industrial 3D Printing": "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"
 };
 
 const serviceImagePositions: Record<string, string> = {
   "Brand Installations": "50% 45%",
   "Architectural Decor": "50% 42%",
   "Sculptures & Artworks": "50% 35%",
-  "Thematic Spaces": "48% 45%"
+  "Thematic Spaces": "48% 45%",
+  "Industrial 3D Printing": "50% 42%"
 };
 
 export default function ServicesPage() {

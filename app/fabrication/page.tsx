@@ -118,7 +118,7 @@ const scaleStats = [
   "12+ Years of Manufacturing Experience",
   "600 m² Indoor Facility",
   "400 m² Outdoor Production Area",
-  "5 Industrial 3D Printers",
+  "6 Industrial 3D Printers",
   "Multiple CNC Production Systems",
   "In-House Sculpture Team",
   "End-to-End Project Delivery"
@@ -221,6 +221,46 @@ export default function FabricationPage() {
                     →
                   </span>
                 )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-ink/10 bg-white/45 px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+              Additive Manufacturing
+            </p>
+            <h2 className="mt-7 max-w-2xl font-display text-4xl leading-tight text-ink md:text-5xl">
+              Large-Format Industrial 3D Printing
+            </h2>
+            <p className="mt-7 max-w-2xl leading-8 text-ink/65">
+              Our in-house 3D printing capacity includes two 80×80×80 cm machines,
+              three 40×40×40 cm machines, and one 100×100×100 cm machine. This setup
+              enables us to produce custom prototypes, sculptural forms, architectural
+              details, molds, display objects, and large-scale design components with
+              precision and flexibility.
+            </p>
+            <p className="mt-6 max-w-xl leading-8 text-ink/60">
+              From concept models to large-format fabrication components, our 3D printing
+              workflow supports both design development and final production needs.
+            </p>
+          </div>
+
+          <div className="grid gap-px bg-ink/10 sm:grid-cols-3">
+            {[
+              { value: "2", label: "80×80×80 cm Machines" },
+              { value: "3", label: "40×40×40 cm Machines" },
+              { value: "1", label: "100×100×100 cm Machine" }
+            ].map((item) => (
+              <article key={item.label} className="flex min-h-52 flex-col bg-porcelain p-7 md:p-8">
+                <p className="font-display text-5xl leading-none text-bronze">{item.value}</p>
+                <div className="mt-8 h-px w-12 bg-bronze" />
+                <h3 className="mt-6 text-sm font-semibold uppercase leading-6 tracking-[0.14em] text-ink">
+                  {item.label}
+                </h3>
               </article>
             ))}
           </div>

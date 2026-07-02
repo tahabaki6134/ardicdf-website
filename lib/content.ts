@@ -36,6 +36,11 @@ export const services = [
     title: "Thematic Spaces",
     description:
       "Narrative-driven environments for commercial, cultural, and leisure destinations, built with scenic fabrication and installation coordination."
+  },
+  {
+    title: "Industrial 3D Printing",
+    description:
+      "Large-format 3D printing for prototypes, molds, sculptural forms, architectural components, and custom display objects using 80×80×80 cm, 40×40×40 cm, and 100×100×100 cm production capacity."
   }
 ];
 
