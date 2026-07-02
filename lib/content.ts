@@ -116,6 +116,9 @@ const portfolioImageSet = (slug: string, count: number) =>
     (_, index) => `/projects/portfolio/${slug}/${slug}-${`${index + 1}`.padStart(2, "0")}.jpeg`
   );
 
+const portfolioImageSequence = (slug: string, indexes: number[]) =>
+  indexes.map((index) => `/projects/portfolio/${slug}/${slug}-${`${index}`.padStart(2, "0")}.jpeg`);
+
 type PortfolioCategoryInput = {
   title: string;
   slug: string;
@@ -175,13 +178,22 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Sculptures & Characters covers standalone figures, mascots, decorative objects, and special props built for themed environments, retail moments, and entertainment spaces.",
       "Each piece is treated as a physical storytelling object, moving from shaping and fabrication through surface detail and finishing."
     ],
-    images: portfolioImageSet("sculptures-characters", 14),
+    images: [
+      ...portfolioImageSequence("sculptures-characters", [1, 2, 3, 4, 9, 10, 11, 12, 13]),
+      {
+        src: "/projects/portfolio/sculptures-characters/historical-thematic-environments-28.jpeg",
+        alt: "Abstract faceted sculptural form displayed in a workshop interior",
+        title: "Abstract Faceted Sculptural Form",
+        description:
+          "A standalone geometric sculptural form produced as a decorative physical object."
+      }
+    ],
     coverImages: [
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-01.jpeg"),
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-02.jpeg"),
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-04.jpeg"),
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-09.jpeg"),
-      portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-14.jpeg")
+      portfolioImage("/projects/portfolio/sculptures-characters/historical-thematic-environments-28.jpeg")
     ],
     featured: true,
     published: true
@@ -200,7 +212,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "The work combines sculptural modeling, coatings, textures, and fabrication logic to create durable natural and fantasy forms."
     ],
     images: [
-      ...portfolioImageSet("artificial-rock-organic-forms", 10),
+      ...portfolioImageSequence("artificial-rock-organic-forms", [1, 2, 3, 4, 5, 6, 7, 9, 10]),
       {
         src: "/projects/portfolio/artificial-rock-organic-forms/organic-stone-feature-lounge-interior-01.png",
         alt: "Organic stone wall feature with warm backlighting in a premium lounge interior",
@@ -241,7 +253,17 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "These works combine reference-driven design, CNC production, hand finishing, and scenic installation for cultural and destination settings."
     ],
     images: [
-      ...portfolioImageSet("historical-thematic-environments", 28),
+      ...portfolioImageSequence("historical-thematic-environments", [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+        22, 23, 24, 27
+      ]),
+      {
+        src: "/projects/portfolio/historical-thematic-environments/artificial-rock-organic-forms-08.jpeg",
+        alt: "Green twisted decorative column form for a thematic architectural environment",
+        title: "Green Decorative Column Form",
+        description:
+          "A twisted green column-like form suited to decorative architectural and thematic settings."
+      },
       {
         src: "/projects/portfolio/historical-thematic-environments/white-ornamental-architectural-arch-production-01.png",
         alt: "White ornamental architectural arch element produced for a thematic interior",
@@ -339,8 +361,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       },
       portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-04.jpeg"),
       portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-08.jpeg"),
-      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-10.jpeg"),
-      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-28.jpeg")
+      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-10.jpeg")
     ],
     featured: true,
     published: true
@@ -384,13 +405,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "Molds & Composite Production shows the practical fabrication stages used to turn shaped references into repeatable, durable parts.",
       "These images document composite-ready forms, coated surfaces, molded pieces, and production details that support larger installations."
     ],
-    images: portfolioImageSet("molds-composite-production", 10),
+    images: portfolioImageSequence("molds-composite-production", [1, 2, 3, 4, 5, 6, 7, 8, 9]),
     coverImages: [
       portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-01.jpeg"),
       portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-04.jpeg"),
       portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-05.jpeg"),
       portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-07.jpeg"),
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-10.jpeg")
+      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-09.jpeg")
     ],
     coverPosition: "50% 50%",
     alt: "Molds and composite production portfolio category cover image",
@@ -442,6 +463,62 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         title: "Giant Burger Display Object",
         description:
           "A realistic oversized burger object fabricated for promotional and retail presentation."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-05.jpeg",
+        alt: "Assorted oversized fruit display props produced for commercial presentation",
+        title: "Oversized Fruit Display Props",
+        description:
+          "A group of fruit display objects fabricated as promotional commercial props."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-06.jpeg",
+        alt: "Oversized meat display props produced for a commercial food presentation",
+        title: "Oversized Meat Display Props",
+        description:
+          "Large food-themed display props created for commercial visual merchandising."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-07.jpeg",
+        alt: "Oversized bread display props produced for commercial food presentation",
+        title: "Oversized Bread Display Props",
+        description:
+          "Food-themed display objects fabricated for promotional or retail presentation."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-08.jpeg",
+        alt: "Oversized carrot display object produced as a commercial food prop",
+        title: "Oversized Carrot Display Object",
+        description:
+          "A large food prop shaped and finished for commercial display use."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-14.jpeg",
+        alt: "Oversized burger prop in workshop production for a commercial food display",
+        title: "Burger Display Prop Production",
+        description:
+          "A commercial food display prop shown during workshop production."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/historical-thematic-environments-25.jpeg",
+        alt: "EPSLAM branded decorative storefront arch produced for a commercial installation",
+        title: "EPSLAM Branded Storefront Arch",
+        description:
+          "A branded decorative arch element produced as part of a commercial installation."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/historical-thematic-environments-26.jpeg",
+        alt: "EPSLAM branded decorative display object produced for a commercial environment",
+        title: "EPSLAM Branded Display Object",
+        description:
+          "A freestanding branded decorative object fabricated for a commercial setting."
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/molds-composite-production-10.jpeg",
+        alt: "Finished oversized cosmetic bottle display props for a commercial brand presentation",
+        title: "Cosmetic Bottle Display Props",
+        description:
+          "Finished oversized cosmetic bottle objects produced for brand-focused commercial display."
       }
     ],
     coverImages: [
@@ -458,6 +535,10 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       {
         src: "/projects/portfolio/commercial-brand-installations/oversized-green-tennis-ball-display-01.png",
         alt: "Oversized green tennis ball display objects arranged in an outdoor production area"
+      },
+      {
+        src: "/projects/portfolio/commercial-brand-installations/historical-thematic-environments-25.jpeg",
+        alt: "EPSLAM branded decorative storefront arch produced for a commercial installation"
       }
     ],
     featured: true,
