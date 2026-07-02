@@ -94,9 +94,6 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
                   Category image archive.
                 </h2>
               </div>
-              <p className="max-w-md leading-7 text-ink/55">
-                Uploaded portfolio imagery organized by category.
-              </p>
             </div>
 
             <div className="mt-10 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
