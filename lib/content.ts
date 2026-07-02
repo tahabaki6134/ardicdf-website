@@ -255,12 +255,87 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         title: "Eagle Relief Wall",
         description:
           "A classical relief composition with sculpted columns, mountain scenery, and an eagle motif."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/ornamental-white-column-shaft-relief-01.png",
+        alt: "Ornamental white column shaft with carved relief details for a thematic interior",
+        title: "Ornamental Column Shaft",
+        description:
+          "A tall decorative column component with carved relief bands and a twisted central shaft."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/green-marble-twisted-column-form-01.png",
+        alt: "Green marble-effect twisted column form produced as a decorative architectural element",
+        title: "Green Twisted Column Form",
+        description:
+          "A sculptural twisted column form finished with a polished green stone-effect surface."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/decorative-white-column-capital-01.png",
+        alt: "Decorative white column capital with classical leaf ornamentation",
+        title: "Decorative Column Capital",
+        description:
+          "A classical column capital form with raised ornamental leaf detailing for architectural decor."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/classical-white-tiered-fountain-01.png",
+        alt: "Classical white tiered fountain form produced as a decorative architectural object",
+        title: "Classical Tiered Fountain",
+        description:
+          "A white three-tier fountain form produced for decorative architectural and thematic settings."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/classical-white-tiered-fountain-02.png",
+        alt: "Tall white classical tiered fountain with shell-like bowl details",
+        title: "Tall Classical Fountain",
+        description:
+          "A taller fountain variation with stacked shell-like bowls and classical decorative proportions."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/spiral-white-decorative-vase-01.png",
+        alt: "White spiral decorative vase form produced for architectural display",
+        title: "Spiral Decorative Vase",
+        description:
+          "A large white vase form with subtle spiral fluting for refined decorative environments."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/fluted-white-sculptural-vase-01.png",
+        alt: "Tall white fluted sculptural vase with vertical ribbed geometry",
+        title: "Fluted Sculptural Vase",
+        description:
+          "A tall sculptural vase form with vertical fluting and a narrow waist profile."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/classical-white-decorative-urn-01.png",
+        alt: "Classical white decorative urn form with rounded body and flared neck",
+        title: "Classical Decorative Urn",
+        description:
+          "A classical urn-like display form with a rounded body and flared upper neck."
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/classical-white-baluster-vase-01.png",
+        alt: "White baluster vase form with classical rounded profile",
+        title: "Classical Baluster Vase",
+        description:
+          "A white baluster-style decorative vase form with a textured sculptural surface."
       }
     ],
     coverImages: [
       {
         src: "/projects/portfolio/historical-thematic-environments/eagle-relief-wall-with-decorative-columns-01.png",
         alt: "Eagle relief wall with decorative columns for a classical thematic interior"
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/ornamental-white-column-shaft-relief-01.png",
+        alt: "Ornamental white column shaft with carved relief details for a thematic interior"
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/decorative-white-column-capital-01.png",
+        alt: "Decorative white column capital with classical leaf ornamentation"
+      },
+      {
+        src: "/projects/portfolio/historical-thematic-environments/green-marble-twisted-column-form-01.png",
+        alt: "Green marble-effect twisted column form produced as a decorative architectural element"
       },
       portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-04.jpeg"),
       portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-08.jpeg"),
