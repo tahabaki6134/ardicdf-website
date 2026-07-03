@@ -12,7 +12,6 @@ export const navigation = [
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/fabrication", label: "Fabrication" },
-  { href: "/references", label: "References" },
   { href: "/live", label: "Live", mobileLabel: "Live Atelier", footerLabel: "Live Atelier" },
   { href: "/contact", label: "Contact" }
 ];
