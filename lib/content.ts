@@ -24,6 +24,12 @@ type ConceptCollection = {
   image?: string;
   imageAlt?: string;
   imageCaption: string;
+  galleryImages?: {
+    src: string;
+    alt: string;
+    caption: string;
+    position?: string;
+  }[];
   adaptableElements: string[];
 };
 
@@ -38,6 +44,32 @@ export const conceptCollections: ConceptCollection[] = [
       "Olive Lounge Concept interior with olive green seating and warm wood atmosphere",
     imageCaption:
       "Olive green seating, walnut surfaces, bronze accents, smoked glass, and warm indirect lighting.",
+    galleryImages: [
+      {
+        src: "/projects/concepts/olive-lounge-concept-detail-chair-01.png",
+        alt: "Olive Lounge Concept close-up of olive green sculptural lounge seating with walnut background",
+        caption: "Olive green seating detail",
+        position: "50% 48%"
+      },
+      {
+        src: "/projects/concepts/olive-lounge-concept-detail-table-01.png",
+        alt: "Olive Lounge Concept smoked glass table with bronze frame, walnut flooring, and warm accessories",
+        caption: "Smoked glass and bronze lounge table",
+        position: "50% 52%"
+      },
+      {
+        src: "/projects/concepts/olive-lounge-concept-sculptural-mirror-01.png",
+        alt: "Olive Lounge Concept sculptural wall mirror with warm backlighting, walnut panels, and stone console",
+        caption: "Sculptural mirror and textured wall feature",
+        position: "50% 50%"
+      },
+      {
+        src: "/projects/concepts/olive-lounge-concept-material-palette-01.png",
+        alt: "Olive Lounge Concept material palette with olive fabric, walnut wood, bronze metal, stone and smoked glass",
+        caption: "Material palette with olive fabric, walnut, bronze, stone, and glass",
+        position: "50% 50%"
+      }
+    ],
     adaptableElements: [
       "Olive green seating group",
       "Sculptural wall mirror",
@@ -58,6 +90,38 @@ export const conceptCollections: ConceptCollection[] = [
       "Futuristic Pod Concept interior with sculptural metallic pod and warm ambient lighting",
     imageCaption:
       "A sculptural metallic pod language for reception, retail, exhibition, and brand environments.",
+    galleryImages: [
+      {
+        src: "/projects/concepts/futuristic-pod-concept-material-palette-01.png",
+        alt: "Futuristic Pod Concept material palette with metallic shell, walnut wood, stone and glass finishes",
+        caption: "Material palette with metallic shell, walnut, stone, bronze, and glass",
+        position: "50% 50%"
+      },
+      {
+        src: "/projects/concepts/futuristic-pod-concept-detail-shell-01.png",
+        alt: "Futuristic Pod Concept close-up of glossy metallic pod shell and warm walnut interior lighting",
+        caption: "Glossy shell and walnut interior detail",
+        position: "50% 50%"
+      },
+      {
+        src: "/projects/concepts/futuristic-pod-concept-detail-counter-01.png",
+        alt: "Futuristic Pod Concept reception counter with curved metallic shell and warm hidden lighting",
+        caption: "Curved reception counter and hidden lighting",
+        position: "50% 50%"
+      },
+      {
+        src: "/projects/concepts/futuristic-pod-concept-interior-02.png",
+        alt: "Futuristic Pod Concept interior with sculptural metallic pod and ambient lighting in a premium lobby",
+        caption: "Full pod concept in a premium lobby setting",
+        position: "50% 50%"
+      },
+      {
+        src: "/projects/concepts/futuristic-pod-concept-presentation-01.png",
+        alt: "Futuristic Pod Concept presentation visual with metallic pod, dark stone flooring and brand atmosphere",
+        caption: "Presentation view for commercial and thematic interiors",
+        position: "50% 50%"
+      }
+    ],
     adaptableElements: [
       "Sculptural pod structure",
       "Glossy metallic gray shell",

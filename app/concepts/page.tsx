@@ -181,6 +181,43 @@ export default function ConceptsPage() {
                     ))}
                   </div>
                 </div>
+
+                {concept.galleryImages?.length ? (
+                  <div className="border-t border-ink/10 p-6 md:p-8 lg:col-span-2">
+                    <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                          Concept Gallery
+                        </p>
+                        <h3 className="mt-3 font-display text-3xl leading-tight text-ink">
+                          Additional concept visuals
+                        </h3>
+                      </div>
+                      <p className="text-xs font-semibold uppercase tracking-brand text-ink/45">
+                        {concept.galleryImages.length} Images
+                      </p>
+                    </div>
+                    <div className="grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+                      {concept.galleryImages.map((image) => (
+                        <figure key={image.src} className="bg-porcelain">
+                          <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                              className="object-cover transition duration-700 hover:scale-[1.015]"
+                              style={{ objectPosition: image.position ?? "50% 50%" }}
+                            />
+                          </div>
+                          <figcaption className="border border-t-0 border-ink/10 bg-white/50 px-5 py-4 text-xs font-semibold uppercase leading-6 tracking-[0.12em] text-ink/55">
+                            {image.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>
