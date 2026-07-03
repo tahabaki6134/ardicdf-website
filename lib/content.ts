@@ -9,11 +9,111 @@ export const brand = {
 export const navigation = [
   { href: "/", label: "Home" },
   { href: "/works", label: "Works" },
+  { href: "/concepts", label: "Concepts" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/fabrication", label: "Fabrication" },
   { href: "/live", label: "Live", mobileLabel: "Live Atelier", footerLabel: "Live Atelier" },
   { href: "/contact", label: "Contact" }
+];
+
+type ConceptCollection = {
+  number: string;
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  imageCaption: string;
+  adaptableElements: string[];
+};
+
+export const conceptCollections: ConceptCollection[] = [
+  {
+    number: "SC-001",
+    title: "Olive Lounge Concept",
+    description:
+      "A warm and refined lounge concept built around olive green seating, walnut wood tones, bronze accents, textured stone surfaces, smoked glass, and ambient lighting. This concept can be adapted for private lounges, boutique commercial interiors, hotel waiting areas, reception zones, and thematic hospitality spaces.",
+    image: "/projects/concepts/olive-lounge-concept-interior-01.png",
+    imageAlt:
+      "Olive Lounge Concept interior with olive green seating and warm wood atmosphere",
+    imageCaption:
+      "Olive green seating, walnut surfaces, bronze accents, smoked glass, and warm indirect lighting.",
+    adaptableElements: [
+      "Olive green seating group",
+      "Sculptural wall mirror",
+      "Walnut wood surfaces",
+      "Bronze metal details",
+      "Smoked / clear glass",
+      "Warm indirect lighting",
+      "Textured stone or plaster wall features"
+    ]
+  },
+  {
+    number: "SC-002",
+    title: "Futuristic Pod Concept",
+    description:
+      "A futuristic commercial and thematic interior concept centered around a sculptural pod form, glossy metallic shell finishes, warm walnut interior surfaces, dark stone flooring, smoked glass, and atmospheric lighting. This concept can be adapted for reception areas, experience rooms, luxury retail spaces, themed lounges, exhibition areas, and brand environments.",
+    image: "/projects/concepts/futuristic-pod-concept-interior-01.png",
+    imageAlt:
+      "Futuristic Pod Concept interior with sculptural metallic pod and warm ambient lighting",
+    imageCaption:
+      "A sculptural metallic pod language for reception, retail, exhibition, and brand environments.",
+    adaptableElements: [
+      "Sculptural pod structure",
+      "Glossy metallic gray shell",
+      "Walnut wood interior surfaces",
+      "Dark stone floor finish",
+      "Bronze metal accents",
+      "Smoked / clear glass",
+      "Ambient hidden lighting",
+      "Custom reception or display counter"
+    ]
+  },
+  {
+    number: "SC-003",
+    title: "Custom Thematic Interior Elements",
+    description:
+      "A flexible concept category for custom-made thematic objects and interior pieces such as sculptural chairs, statement mirrors, decorative wall objects, display units, art pieces, and architectural details. Each element can be redesigned according to the client's room, brand, scale, and atmosphere.",
+    imageCaption:
+      "A flexible concept family for sculptural furniture, mirrors, display objects, reliefs, and brand-specific interior pieces.",
+    adaptableElements: [
+      "Custom chairs and seating forms",
+      "Sculptural mirrors",
+      "Wall art and relief surfaces",
+      "Thematic display objects",
+      "Decorative furniture pieces",
+      "Brand-specific interior elements",
+      "Lighting-integrated sculptural details"
+    ]
+  }
+];
+
+export const conceptProcess = [
+  {
+    number: "01",
+    title: "Select a Concept Direction",
+    copy: "Choose a signature concept or visual direction that fits your desired atmosphere."
+  },
+  {
+    number: "02",
+    title: "Adapt It to Your Space",
+    copy: "We refine dimensions, materials, lighting, furniture, and sculptural details according to your room or commercial area."
+  },
+  {
+    number: "03",
+    title: "Design Development",
+    copy: "We prepare the adapted design language, material direction, and production logic."
+  },
+  {
+    number: "04",
+    title: "In-House Manufacturing",
+    copy: "Approved elements are produced through our fabrication workflow, including CNC, EPS/XPS shaping, sculptural finishing, 3D printing, molds, coatings, and assembly where needed."
+  },
+  {
+    number: "05",
+    title: "Delivery and Installation Support",
+    copy: "The final concept elements are prepared for site integration, installation, or project delivery depending on the scope."
+  }
 ];
 
 export const services = [
