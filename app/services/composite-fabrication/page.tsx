@@ -355,6 +355,12 @@ export default function CompositeFabricationPage() {
               surface-finishing, and painting stages. The route is selected for the specific
               component rather than applying every process to every project.
             </p>
+            <Link
+              href="/services/large-format-3d-printing"
+              className="mt-8 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+            >
+              Explore Large-Format 3D Printing →
+            </Link>
           </div>
 
           <div>

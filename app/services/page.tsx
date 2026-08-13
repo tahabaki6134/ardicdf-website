@@ -39,11 +39,17 @@ const serviceImagePositions: Record<string, string> = {
 };
 
 const serviceImageAlts: Record<string, string> = {
+  "Industrial 3D Printing":
+    "Large digitally produced master form in the Ardıç fabrication workshop",
   "Composite Fabrication & Mold Making":
     "CNC-shaped master pattern prepared for composite mold production"
 };
 
 const serviceLinks: Record<string, { href: string; label: string }> = {
+  "Industrial 3D Printing": {
+    href: "/services/large-format-3d-printing",
+    label: "Explore Large-Format 3D Printing"
+  },
   "Thematic Spaces": {
     href: "/services/themed-environment-fabrication",
     label: "Explore Themed Environment Fabrication"
@@ -60,7 +66,18 @@ const compositeService = {
     "Molds, masters, plugs, fiberglass / GRP, polyester casting, carbon fiber lamination, polyurethane, and custom composite components for prototype, architectural, marine, and specialist fabrication projects."
 };
 
-const servicesPageItems = [...services, compositeService];
+const servicesPageItems = [
+  ...services.map((service) =>
+    service.title === "Industrial 3D Printing"
+      ? {
+          ...service,
+          description:
+            "Large-format additive manufacturing for modular oversized objects, prototypes, mold masters, tooling patterns, and technical, architectural, or sculptural components."
+        }
+      : service
+  ),
+  compositeService
+];
 
 export default function ServicesPage() {
   return (

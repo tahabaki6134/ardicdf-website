@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/concepts",
     "/services",
     "/services/composite-fabrication",
+    "/services/large-format-3d-printing",
     "/services/themed-environment-fabrication",
     "/about",
     "/fabrication",
