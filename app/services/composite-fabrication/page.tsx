@@ -412,6 +412,14 @@ export default function CompositeFabricationPage() {
                 </h3>
                 <div className="mt-5 h-px w-12 bg-bronze" />
                 <p className="mt-6 text-sm leading-7 text-ink/60">{capability.copy}</p>
+                {capability.number === "05" ? (
+                  <Link
+                    href="/services/cnc-foam-polyurethane-machining"
+                    className="mt-auto pt-7 text-xs font-semibold uppercase leading-6 tracking-brand text-bronze transition hover:text-ink"
+                  >
+                    Explore CNC Foam Machining →
+                  </Link>
+                ) : null}
               </article>
             ))}
           </div>

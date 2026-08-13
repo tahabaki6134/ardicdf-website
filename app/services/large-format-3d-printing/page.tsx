@@ -711,6 +711,12 @@ export default function LargeFormat3DPrintingPage() {
               according to which route best serves the geometry, scale, finish, quantity, and
               intended use.
             </p>
+            <Link
+              href="/services/cnc-foam-polyurethane-machining"
+              className="mt-8 inline-flex border border-bronze px-5 py-3 text-xs font-semibold uppercase tracking-brand text-ink transition hover:bg-bronze hover:text-porcelain"
+            >
+              Explore CNC Foam Machining →
+            </Link>
           </div>
 
           <ul className="grid gap-px bg-ink/10 sm:grid-cols-2">

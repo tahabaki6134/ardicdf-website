@@ -26,7 +26,9 @@ const serviceImages: Record<string, string> = {
   "Thematic Spaces": "/services/thematic-spongebob-patrick.jpeg",
   "Industrial 3D Printing": "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg",
   "Composite Fabrication & Mold Making":
-    "/projects/portfolio/molds-composite-production/molds-composite-production-03.jpeg"
+    "/projects/portfolio/molds-composite-production/molds-composite-production-03.jpeg",
+  "CNC Foam & Polyurethane Machining":
+    "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-03.jpeg"
 };
 
 const serviceImagePositions: Record<string, string> = {
@@ -35,14 +37,17 @@ const serviceImagePositions: Record<string, string> = {
   "Sculptures & Artworks": "50% 35%",
   "Thematic Spaces": "48% 45%",
   "Industrial 3D Printing": "50% 42%",
-  "Composite Fabrication & Mold Making": "50% 58%"
+  "Composite Fabrication & Mold Making": "50% 58%",
+  "CNC Foam & Polyurethane Machining": "50% 50%"
 };
 
 const serviceImageAlts: Record<string, string> = {
   "Industrial 3D Printing":
     "Large digitally produced master form in the Ardıç fabrication workshop",
   "Composite Fabrication & Mold Making":
-    "CNC-shaped master pattern prepared for composite mold production"
+    "CNC-shaped master pattern prepared for composite mold production",
+  "CNC Foam & Polyurethane Machining":
+    "CNC-machined decorative master in the fabrication workshop"
 };
 
 const serviceLinks: Record<string, { href: string; label: string }> = {
@@ -57,6 +62,10 @@ const serviceLinks: Record<string, { href: string; label: string }> = {
   "Composite Fabrication & Mold Making": {
     href: "/services/composite-fabrication",
     label: "Explore Composite Fabrication"
+  },
+  "CNC Foam & Polyurethane Machining": {
+    href: "/services/cnc-foam-polyurethane-machining",
+    label: "Explore CNC Foam Machining"
   }
 };
 
@@ -64,6 +73,12 @@ const compositeService = {
   title: "Composite Fabrication & Mold Making",
   description:
     "Molds, masters, plugs, fiberglass / GRP, polyester casting, carbon fiber lamination, polyurethane, and custom composite components for prototype, architectural, marine, and specialist fabrication projects."
+};
+
+const cncMachiningService = {
+  title: "CNC Foam & Polyurethane Machining",
+  description:
+    "CNC machining for EPS/XPS, polyurethane, masters, plugs, patterns, large sculptural forms, architectural components, and mold-production workflows."
 };
 
 const servicesPageItems = [
@@ -76,7 +91,8 @@ const servicesPageItems = [
         }
       : service
   ),
-  compositeService
+  compositeService,
+  cncMachiningService
 ];
 
 export default function ServicesPage() {
