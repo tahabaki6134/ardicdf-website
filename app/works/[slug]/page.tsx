@@ -5,6 +5,8 @@ import { PortfolioLightbox } from "@/components/portfolio-lightbox";
 import { SectionHeading } from "@/components/section-heading";
 import { getPortfolioImageAlt, getPortfolioImageSrc, portfolioCategories } from "@/lib/content";
 
+const siteUrl = "https://www.ardicdf.com";
+
 type CategoryPageProps = {
   params: {
     slug: string;
@@ -53,9 +55,37 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
     src: getPortfolioImageSrc(image),
     alt: getPortfolioImageAlt(image, `${category.title} gallery image ${index + 1}`)
   }));
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Works",
+        item: `${siteUrl}/works`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: category.title,
+        item: `${siteUrl}/works/${category.slug}`
+      }
+    ]
+  };
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
       <section className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <Link
@@ -68,6 +98,7 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
           <div className="mt-10">
             <SectionHeading
               eyebrow="Portfolio Gallery"
+              headingTag="h1"
               title={category.title}
               copy={category.description}
             />

@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/references"
   },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true
+    }
+  },
   openGraph: {
     title: "References | Ardıç Design & Fabrication",
     description:

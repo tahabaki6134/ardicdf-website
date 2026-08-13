@@ -3,16 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: {
+    absolute: "About Ardıç | International Design & Fabrication"
+  },
   description:
-    "Learn about Ardıç Design & Fabrication, an EPSLAM company combining architectural thinking, family production experience, sculpture, CNC/EPS/XPS processing, molds, casting, and installation.",
+    "Learn about Ardıç Design & Fabrication, an Istanbul-based EPSLAM company combining family production experience, design, CNC fabrication, sculpture, molds, casting, finishing, and project delivery.",
   alternates: {
     canonical: "/about"
   },
   openGraph: {
-    title: "About",
+    title: "About Ardıç | International Design & Fabrication",
     description:
-      "A design and fabrication studio built on long-term production experience, workshop infrastructure, and integrated project delivery.",
+      "An Istanbul-based design and fabrication company built on family production experience, EPSLAM infrastructure, workshop capability, and integrated project delivery.",
     url: "/about"
   }
 };

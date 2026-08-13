@@ -5,16 +5,18 @@ import { services } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: {
+    absolute: "International Fabrication Services | Ardıç"
+  },
   description:
-    "Design and fabrication services for brand installations, architectural decor, sculptures, artworks, thematic spaces, CNC production, finishing, and installation.",
+    "International fabrication services for scenic projects, themed environments, CNC foam and polyurethane machining, composites, molds, and large-format 3D printing.",
   alternates: {
     canonical: "/services"
   },
   openGraph: {
-    title: "Services",
+    title: "International Fabrication Services | Ardıç",
     description:
-      "Premium project services spanning design direction, CNC fabrication, sculptural production, architectural decor, and site-ready installation.",
+      "Integrated fabrication services from Istanbul for scenic and themed environments, CNC machining, composites, molds, and large-format additive production.",
     url: "/services"
   }
 };
@@ -120,8 +122,8 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="Services"
               headingTag="h1"
-              title="Design services shaped around lasting presence."
-              copy="As an EPSLAM company, Ardıç supports clients from early spatial ideas to finished physical work, balancing aesthetic ambition with buildable detail, fabrication logic, and installation planning."
+              title="International Fabrication Services for Complex Custom Projects"
+              copy="As an EPSLAM company, Ardıç coordinates scenic fabrication, themed environments, CNC foam and polyurethane machining, composites, molds, and large-format 3D printing from development through production-ready finishing."
             />
 
             <div className="relative min-h-[340px] overflow-hidden border border-ink/10 bg-ink shadow-soft md:min-h-[460px]">

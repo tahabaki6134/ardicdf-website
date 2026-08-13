@@ -4,16 +4,18 @@ import { SectionHeading } from "@/components/section-heading";
 import { portfolioCategories } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Works",
+  title: {
+    absolute: "Scenic, Sculpture & Custom Fabrication Works | Ardıç"
+  },
   description:
-    "Explore Ardıç Design & Fabrication portfolio categories across themed spaces, sculptures, architectural decor, brand installations, facade ornaments, molds, and polyester casting.",
+    "Explore selected Ardıç fabrication work across scenic environments, sculpture, architectural decor, brand installations, CNC production, molds, and composite systems.",
   alternates: {
     canonical: "/works"
   },
   openGraph: {
-    title: "Works",
+    title: "Scenic, Sculpture & Custom Fabrication Works | Ardıç",
     description:
-      "Selected portfolio categories across sculpture, decor, thematic fabrication, brand installations, and custom production systems.",
+      "Selected completed fabrication work and production categories across scenic, sculptural, architectural, branded, CNC, mold, and composite applications.",
     url: "/works"
   }
 };
@@ -29,12 +31,12 @@ export default function WorksPage() {
             <SectionHeading
               eyebrow="Works"
               headingTag="h1"
-              title="Selected works across sculpture, decor, and thematic fabrication."
-              copy="Ardıç Design & Fabrication delivers custom physical works from concept development to production, finishing, and on-site execution."
+              title="Scenic, Sculptural & Custom Fabrication Works"
+              copy="Selected completed fabrication work across scenic environments, sculpture, architectural decor, brand installations, CNC production, molds, and composite systems."
             />
             <p className="max-w-xl text-base leading-8 text-ink/60 md:text-lg">
-              The portfolio brings together project categories shaped through sculptural craftsmanship,
-              architectural detailing, brand-focused fabrication, and workshop-led production systems.
+              This archive focuses on physical production and fabrication outcomes. Exploratory
+              design concepts and development studies are presented separately in Concepts.
             </p>
           </div>
 

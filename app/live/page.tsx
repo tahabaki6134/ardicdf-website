@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/live"
   },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true
+    }
+  },
   openGraph: {
     title: "Live Atelier",
     description:

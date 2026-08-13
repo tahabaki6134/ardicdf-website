@@ -5,16 +5,18 @@ import { SectionHeading } from "@/components/section-heading";
 import { conceptCollections, conceptProcess } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Signature Concepts",
+  title: {
+    absolute: "Custom Concepts & Sculptural Design | Ardıç"
+  },
   description:
-    "Original Ardıç Design & Fabrication concept interiors, sculptural objects, seating groups, mirrors, pods, thematic elements, and custom-made design pieces adapted to client spaces.",
+    "Explore Ardıç design concepts and development studies for sculptural objects, custom interiors, furniture, thematic elements, and adaptable spatial ideas.",
   alternates: {
     canonical: "/concepts"
   },
   openGraph: {
-    title: "Signature Concepts",
+    title: "Custom Concepts & Sculptural Design | Ardıç",
     description:
-      "Explore original concept lines by Ardıç Design & Fabrication, adapted to your space and manufactured in-house.",
+      "Original design concepts and development studies for adaptable interiors, sculptural objects, furniture, and thematic spatial elements.",
     url: "/concepts"
   }
 };
@@ -38,12 +40,14 @@ export default function ConceptsPage() {
               Signature Concepts
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-ink/65">
-              Original design concepts adapted to your space and manufactured in-house.
+              Original design concepts and development studies prepared for adaptation and
+              potential in-house fabrication.
             </p>
             <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
               Ardıç Design & Fabrication develops original concept interiors,
               sculptural objects, seating groups, mirrors, thematic elements, and
-              custom-made design pieces. Each concept can be adapted to the dimensions,
+              custom-made design pieces. These are exploratory concept and development studies,
+              rather than a record of completed client commissions. Each direction can be adapted to the dimensions,
               atmosphere, and functional needs of your own space, then produced through
               our in-house fabrication workflow.
             </p>
