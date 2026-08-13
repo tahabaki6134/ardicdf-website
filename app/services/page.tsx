@@ -35,6 +35,13 @@ const serviceImagePositions: Record<string, string> = {
   "Industrial 3D Printing": "50% 42%"
 };
 
+const serviceLinks: Record<string, { href: string; label: string }> = {
+  "Thematic Spaces": {
+    href: "/services/themed-environment-fabrication",
+    label: "Explore Themed Environment Fabrication"
+  }
+};
+
 export default function ServicesPage() {
   return (
     <main>
@@ -112,6 +119,14 @@ export default function ServicesPage() {
                       <p className="mt-6 text-base leading-7 text-ink/65 md:text-lg md:leading-8">
                         {service.description}
                       </p>
+                      {serviceLinks[service.title] ? (
+                        <Link
+                          href={serviceLinks[service.title].href}
+                          className="mt-7 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+                        >
+                          {serviceLinks[service.title].label} →
+                        </Link>
+                      ) : null}
                     </div>
                   </div>
                 </div>
