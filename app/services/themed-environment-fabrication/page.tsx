@@ -246,6 +246,12 @@ export default function ThemedEnvironmentFabricationPage() {
               helping each element retain its intended scale, character, finish, and assembly
               logic.
             </p>
+            <Link
+              href="/services/scenic-fabrication"
+              className="mt-8 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+            >
+              Explore Scenic Fabrication →
+            </Link>
           </div>
 
           <ul className="grid gap-px bg-ink/10 sm:grid-cols-2" aria-label="Themed fabrication capabilities">

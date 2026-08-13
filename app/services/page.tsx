@@ -28,7 +28,9 @@ const serviceImages: Record<string, string> = {
   "Composite Fabrication & Mold Making":
     "/projects/portfolio/molds-composite-production/molds-composite-production-03.jpeg",
   "CNC Foam & Polyurethane Machining":
-    "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-03.jpeg"
+    "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-03.jpeg",
+  "Scenic Fabrication & Large-Scale Props":
+    "/projects/portfolio/commercial-brand-installations/illuminated-sculptural-wings-brand-installation-01.png"
 };
 
 const serviceImagePositions: Record<string, string> = {
@@ -38,7 +40,8 @@ const serviceImagePositions: Record<string, string> = {
   "Thematic Spaces": "48% 45%",
   "Industrial 3D Printing": "50% 42%",
   "Composite Fabrication & Mold Making": "50% 58%",
-  "CNC Foam & Polyurethane Machining": "50% 50%"
+  "CNC Foam & Polyurethane Machining": "50% 50%",
+  "Scenic Fabrication & Large-Scale Props": "62% 50%"
 };
 
 const serviceImageAlts: Record<string, string> = {
@@ -47,7 +50,9 @@ const serviceImageAlts: Record<string, string> = {
   "Composite Fabrication & Mold Making":
     "CNC-shaped master pattern prepared for composite mold production",
   "CNC Foam & Polyurethane Machining":
-    "CNC-machined decorative master in the fabrication workshop"
+    "CNC-machined decorative master in the fabrication workshop",
+  "Scenic Fabrication & Large-Scale Props":
+    "Illuminated sculptural wing installation within a finished interior"
 };
 
 const serviceLinks: Record<string, { href: string; label: string }> = {
@@ -66,6 +71,10 @@ const serviceLinks: Record<string, { href: string; label: string }> = {
   "CNC Foam & Polyurethane Machining": {
     href: "/services/cnc-foam-polyurethane-machining",
     label: "Explore CNC Foam Machining"
+  },
+  "Scenic Fabrication & Large-Scale Props": {
+    href: "/services/scenic-fabrication",
+    label: "Explore Scenic Fabrication"
   }
 };
 
@@ -81,6 +90,12 @@ const cncMachiningService = {
     "CNC machining for EPS/XPS, polyurethane, masters, plugs, patterns, large sculptural forms, architectural components, and mold-production workflows."
 };
 
+const scenicFabricationService = {
+  title: "Scenic Fabrication & Large-Scale Props",
+  description:
+    "Large props, scenic environments, sculptures, artificial rockwork, branded objects, and architectural features produced through CNC, 3D printing, composites, woodworking, and hand finishing."
+};
+
 const servicesPageItems = [
   ...services.map((service) =>
     service.title === "Industrial 3D Printing"
@@ -92,7 +107,8 @@ const servicesPageItems = [
       : service
   ),
   compositeService,
-  cncMachiningService
+  cncMachiningService,
+  scenicFabricationService
 ];
 
 export default function ServicesPage() {

@@ -327,6 +327,14 @@ export default function FabricationPage() {
                     Explore Composite Fabrication →
                   </Link>
                 ) : null}
+                {capability.number === "10" ? (
+                  <Link
+                    href="/services/scenic-fabrication"
+                    className="mt-auto pt-7 text-xs font-semibold uppercase leading-6 tracking-brand text-bronze transition hover:text-ink"
+                  >
+                    Explore Scenic Fabrication →
+                  </Link>
+                ) : null}
               </article>
             ))}
           </div>

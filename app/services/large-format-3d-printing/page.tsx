@@ -268,6 +268,12 @@ const relatedCapabilities = [
     href: "/services/themed-environment-fabrication"
   },
   {
+    eyebrow: "Scenic Production",
+    title: "Scenic Fabrication & Large-Scale Props",
+    copy: "International fabrication for oversized objects, sculptural features, props, brand installations, and experiential environments.",
+    href: "/services/scenic-fabrication"
+  },
+  {
     eyebrow: "Workshop Process",
     title: "CNC Manufacturing Processes",
     copy: "View public production-stage work across digitally shaped masters, components, and fabrication preparation.",

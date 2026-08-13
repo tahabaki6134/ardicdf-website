@@ -592,6 +592,12 @@ export default function CncFoamPolyurethaneMachiningPage() {
             <h2 className="mt-7 max-w-2xl font-display text-4xl leading-tight text-ink md:text-5xl">
               CNC production across masters, spatial forms, and custom fabrication.
             </h2>
+            <Link
+              href="/services/scenic-fabrication"
+              className="mt-7 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+            >
+              Explore Scenic Fabrication →
+            </Link>
           </div>
           <ul className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {applications.map((item, index) => (
