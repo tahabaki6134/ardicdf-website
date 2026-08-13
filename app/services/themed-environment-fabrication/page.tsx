@@ -246,12 +246,20 @@ export default function ThemedEnvironmentFabricationPage() {
               helping each element retain its intended scale, character, finish, and assembly
               logic.
             </p>
-            <Link
-              href="/services/scenic-fabrication"
-              className="mt-8 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
-            >
-              Explore Scenic Fabrication →
-            </Link>
+            <div className="mt-8 flex flex-col items-start gap-4">
+              <Link
+                href="/works/modular-artificial-rock-concert-environment"
+                className="inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+              >
+                Read the Modular Artificial Rock Concert Environment Case Study →
+              </Link>
+              <Link
+                href="/services/scenic-fabrication"
+                className="inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink"
+              >
+                Explore Scenic Fabrication →
+              </Link>
+            </div>
           </div>
 
           <ul className="grid gap-px bg-ink/10 sm:grid-cols-2" aria-label="Themed fabrication capabilities">

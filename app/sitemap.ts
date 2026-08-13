@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "", lastModified: "2026-08-13" },
     { path: "/works", lastModified: "2026-08-13" },
+    {
+      path: "/works/modular-artificial-rock-concert-environment",
+      lastModified: "2026-08-14"
+    },
     { path: "/concepts", lastModified: "2026-08-13" },
     { path: "/services", lastModified: "2026-08-13" },
     { path: "/services/cnc-foam-polyurethane-machining", lastModified: "2026-08-13" },

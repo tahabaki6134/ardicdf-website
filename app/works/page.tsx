@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { RotatingCoverImage } from "@/components/rotating-cover-image";
 import { SectionHeading } from "@/components/section-heading";
 import { portfolioCategories } from "@/lib/content";
@@ -39,6 +41,41 @@ export default function WorksPage() {
               design concepts and development studies are presented separately in Concepts.
             </p>
           </div>
+
+          <article className="mt-16 border border-ink/10 bg-ink text-porcelain shadow-soft">
+            <Link
+              href="/works/modular-artificial-rock-concert-environment"
+              className="group grid lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch"
+            >
+              <div className="relative aspect-video overflow-hidden bg-ink lg:aspect-auto lg:min-h-[520px]">
+                <Image
+                  src="/works/modular-artificial-rock-concert-environment/concert-rock-environment-hero.jpeg"
+                  alt="Ardıç modular artificial-rock concert environment at full scale"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  className="object-cover transition duration-700 group-hover:scale-[1.015]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+              </div>
+              <div className="flex min-h-96 flex-col p-7 md:p-10 lg:p-12">
+                <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                  Featured Completed Case Study
+                </p>
+                <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-porcelain md:text-5xl">
+                  Modular Artificial Rock Concert Environment
+                </h2>
+                <div className="mt-6 h-px w-14 bg-bronze" />
+                <p className="mt-7 max-w-xl leading-8 text-porcelain/65">
+                  See how an oversized EPS foam scenic environment was fabricated as transportable
+                  rockwork modules, finished for visual continuity, and assembled on site.
+                </p>
+                <span className="mt-auto pt-10 text-xs font-semibold uppercase tracking-brand text-bronze transition group-hover:text-porcelain">
+                  Read the Case Study &rarr;
+                </span>
+              </div>
+            </Link>
+          </article>
 
           <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2 xl:grid-cols-3">
             {worksCategories.map((category) => (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortfolioLightbox } from "@/components/portfolio-lightbox";
@@ -119,6 +120,41 @@ export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
               ))}
             </div>
           </div>
+
+          {category.slug === "artificial-rock-organic-forms" ? (
+            <section className="mt-16 border border-ink/10 bg-ink text-porcelain shadow-soft">
+              <Link
+                href="/works/modular-artificial-rock-concert-environment"
+                className="group grid lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch"
+              >
+                <div className="relative aspect-video overflow-hidden bg-ink lg:aspect-auto lg:min-h-[440px]">
+                  <Image
+                    src="/works/modular-artificial-rock-concert-environment/concert-rock-environment-hero.jpeg"
+                    alt="Completed Ardıç modular artificial-rock environment showing the finished scenic surface"
+                    fill
+                    sizes="(min-width: 1024px) 54vw, 100vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.015]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+                </div>
+                <div className="flex min-h-80 flex-col p-7 md:p-10">
+                  <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                    Completed Fabrication Case Study
+                  </p>
+                  <h2 className="mt-7 max-w-lg font-display text-4xl leading-tight text-porcelain">
+                    Modular Artificial Rock Concert Environment
+                  </h2>
+                  <p className="mt-6 max-w-xl leading-8 text-porcelain/65">
+                    Follow the project from EPS foam workshop modules to a full-scale scenic rock
+                    environment assembled in its completed setting.
+                  </p>
+                  <span className="mt-auto pt-9 text-xs font-semibold uppercase tracking-brand text-bronze transition group-hover:text-porcelain">
+                    Read the Case Study &rarr;
+                  </span>
+                </div>
+              </Link>
+            </section>
+          ) : null}
 
           <section className="mt-16">
             <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">

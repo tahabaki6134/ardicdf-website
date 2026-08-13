@@ -681,9 +681,14 @@ export default function ScenicFabricationPage() {
                 <span key={item} className="border border-ink/15 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-ink/65">{item}</span>
               ))}
             </div>
-            <Link href="/works/artificial-rock-organic-forms" className="mt-8 inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink">
-              View Artificial Rock &amp; Organic Forms →
-            </Link>
+            <div className="mt-8 flex flex-col items-start gap-4">
+              <Link href="/works/modular-artificial-rock-concert-environment" className="inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink">
+                Read the Modular Artificial Rock Concert Environment Case Study →
+              </Link>
+              <Link href="/works/artificial-rock-organic-forms" className="inline-flex text-xs font-semibold uppercase tracking-brand text-bronze transition hover:text-ink">
+                View Artificial Rock &amp; Organic Forms →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
