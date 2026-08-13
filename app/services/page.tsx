@@ -62,6 +62,30 @@ export default function ServicesPage() {
             </div>
           </div>
 
+          <section className="mt-16 border-y border-bronze/35 bg-white/65 px-6 py-10 shadow-soft md:px-10 md:py-12">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
+                  CONFIDENTIAL PROJECTS · NDA PROTECTED
+                </p>
+                <h2 className="mt-5 max-w-xl font-display text-3xl leading-tight text-ink md:text-5xl">
+                  What you see is only part of what we build.
+                </h2>
+              </div>
+              <div className="border-l border-ink/10 pl-0 lg:pl-10">
+                <p className="text-lg leading-8 text-ink/70">
+                  Much of our work is confidential. Many commissioned projects are
+                  protected by non-disclosure agreements, so our public portfolio
+                  represents only a limited selection of our actual production capabilities.
+                </p>
+                <p className="mt-6 text-sm font-semibold uppercase leading-7 tracking-brand text-bronze">
+                  Private project references and relevant production experience can be
+                  discussed where contractually permitted.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <div className="mt-16 grid gap-px bg-ink/10 lg:grid-cols-2 lg:auto-rows-fr">
             {services.map((service, index) => (
               <article key={service.title} className="h-full bg-porcelain">
