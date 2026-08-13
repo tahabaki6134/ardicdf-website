@@ -24,7 +24,9 @@ const serviceImages: Record<string, string> = {
   "Architectural Decor": "/services/architectural-decor-columns.jpeg",
   "Sculptures & Artworks": "/services/sculpture-elephant-front.jpeg",
   "Thematic Spaces": "/services/thematic-spongebob-patrick.jpeg",
-  "Industrial 3D Printing": "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"
+  "Industrial 3D Printing": "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg",
+  "Composite Fabrication & Mold Making":
+    "/projects/portfolio/molds-composite-production/molds-composite-production-03.jpeg"
 };
 
 const serviceImagePositions: Record<string, string> = {
@@ -32,15 +34,33 @@ const serviceImagePositions: Record<string, string> = {
   "Architectural Decor": "50% 42%",
   "Sculptures & Artworks": "50% 35%",
   "Thematic Spaces": "48% 45%",
-  "Industrial 3D Printing": "50% 42%"
+  "Industrial 3D Printing": "50% 42%",
+  "Composite Fabrication & Mold Making": "50% 58%"
+};
+
+const serviceImageAlts: Record<string, string> = {
+  "Composite Fabrication & Mold Making":
+    "CNC-shaped master pattern prepared for composite mold production"
 };
 
 const serviceLinks: Record<string, { href: string; label: string }> = {
   "Thematic Spaces": {
     href: "/services/themed-environment-fabrication",
     label: "Explore Themed Environment Fabrication"
+  },
+  "Composite Fabrication & Mold Making": {
+    href: "/services/composite-fabrication",
+    label: "Explore Composite Fabrication"
   }
 };
+
+const compositeService = {
+  title: "Composite Fabrication & Mold Making",
+  description:
+    "Molds, masters, plugs, fiberglass / GRP, polyester casting, carbon fiber lamination, polyurethane, and custom composite components for prototype, architectural, marine, and specialist fabrication projects."
+};
+
+const servicesPageItems = [...services, compositeService];
 
 export default function ServicesPage() {
   return (
@@ -94,13 +114,13 @@ export default function ServicesPage() {
           </section>
 
           <div className="mt-16 grid gap-px bg-ink/10 lg:grid-cols-2 lg:auto-rows-fr">
-            {services.map((service, index) => (
+            {servicesPageItems.map((service, index) => (
               <article key={service.title} className="h-full bg-porcelain">
                 <div className="grid h-full md:grid-cols-[0.9fr_1.1fr]">
                   <div className="relative min-h-64 overflow-hidden bg-ink md:min-h-full">
                     <Image
                       src={serviceImages[service.title]}
-                      alt={`${service.title} service visual`}
+                      alt={serviceImageAlts[service.title] ?? `${service.title} service visual`}
                       fill
                       sizes="(min-width: 1024px) 28vw, (min-width: 768px) 45vw, 100vw"
                       className="object-cover transition duration-700 hover:scale-[1.015]"
