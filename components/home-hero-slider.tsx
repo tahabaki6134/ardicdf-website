@@ -51,24 +51,32 @@ export function HomeHeroSlider({ slides }: HomeHeroSliderProps) {
           className="mt-5 font-display"
           style={{
             fontSize: "clamp(2.2rem, 3.8vw, 4.6rem)",
-            lineHeight: "1",
-            maxWidth: "900px"
+            lineHeight: "1.02",
+            maxWidth: "1050px"
           }}
         >
-          <span className="block md:whitespace-nowrap">Designing Extraordinary Spaces.</span>
-          <span className="block md:whitespace-nowrap">Fabricating Memorable Experiences.</span>
+          International Design &amp; Fabrication for Extraordinary Spaces &amp; Custom Objects
         </h1>
-        <div className="mt-8 flex max-w-4xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <p className="max-w-2xl text-base leading-7 text-porcelain/82 md:text-lg md:leading-8">
-            Design, fabrication and installation of themed environments, sculptures and
-            architectural experiences.
+        <div className="mt-8 flex max-w-6xl flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
+          <p className="max-w-3xl text-base leading-7 text-porcelain/82 md:text-lg md:leading-8">
+            Themed environments, scenic fabrication, large-scale props, CNC foam and
+            polyurethane machining, composites, molds and large-format 3D printing — produced
+            in Istanbul for international projects.
           </p>
-          <Link
-            href="/works"
-            className="w-fit bg-porcelain px-6 py-4 text-xs font-semibold uppercase tracking-brand text-ink transition hover:bg-bronze hover:text-porcelain"
-          >
-            VIEW PROJECTS
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/works"
+              className="w-fit bg-porcelain px-6 py-4 text-xs font-semibold uppercase tracking-brand text-ink transition hover:bg-bronze hover:text-porcelain"
+            >
+              VIEW PROJECTS
+            </Link>
+            <Link
+              href="/contact"
+              className="w-fit border border-porcelain/45 px-6 py-4 text-xs font-semibold uppercase tracking-brand text-porcelain transition hover:border-bronze hover:bg-bronze"
+            >
+              DISCUSS A PROJECT
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-3">
