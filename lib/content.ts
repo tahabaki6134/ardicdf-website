@@ -6,14 +6,20 @@ export const brand = {
   location: "Karadeniz Caddesi No:131, Ferhatpaşa, Ataşehir, Istanbul, Turkey"
 };
 
-export const navigation = [
+type NavigationItem = {
+  href: string;
+  label: string;
+  mobileLabel?: string;
+  footerLabel?: string;
+};
+
+export const navigation: NavigationItem[] = [
   { href: "/", label: "Home" },
   { href: "/works", label: "Works" },
   { href: "/concepts", label: "Concepts" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/fabrication", label: "Fabrication" },
-  { href: "/live", label: "Live", mobileLabel: "Live Atelier", footerLabel: "Live Atelier" },
   { href: "/contact", label: "Contact" }
 ];
 
@@ -216,7 +222,7 @@ export const heroSlides = [
   },
   {
     image: "/home/brand-story-lobby.jpeg",
-    alt: "Dark premium lobby with natural rock forms and Ardic wall branding",
+    alt: "Dark premium lobby with natural rock forms and Ardıç wall branding",
     label: "Built to Be Remembered"
   },
   {
@@ -607,7 +613,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       ...portfolioImageSet("commercial-brand-installations", 12),
       {
         src: "/projects/portfolio/commercial-brand-installations/ardic-branded-spherical-reception-display-01.png",
-        alt: "Large spherical reception display object in an Ardic branded premium lobby",
+        alt: "Large spherical reception display object in an Ardıç branded premium lobby",
         title: "Branded Spherical Reception Display",
         description:
           "A polished sculptural display object developed as a striking branded lobby centerpiece."
@@ -693,7 +699,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
     coverImages: [
       {
         src: "/projects/portfolio/commercial-brand-installations/ardic-branded-spherical-reception-display-01.png",
-        alt: "Large spherical reception display object in an Ardic branded premium lobby"
+        alt: "Large spherical reception display object in an Ardıç branded premium lobby"
       },
       portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-01.jpeg"),
       portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-06.jpeg"),

@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "References | Ardıç Design Factory"
+    absolute: "References | Ardıç Design & Fabrication"
   },
   description:
-    "Explore the completed projects, clients, and business references of Ardıç Design Factory.",
+    "Explore the completed projects, clients, and business references of Ardıç Design & Fabrication.",
   alternates: {
     canonical: "/references"
   },
   openGraph: {
-    title: "References | Ardıç Design Factory",
+    title: "References | Ardıç Design & Fabrication",
     description:
-      "Explore the completed projects, clients, and business references of Ardıç Design Factory.",
+      "Explore the completed projects, clients, and business references of Ardıç Design & Fabrication.",
     url: "/references"
   }
 };

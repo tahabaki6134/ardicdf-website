@@ -16,11 +16,10 @@ const structuredData = {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "Ardıç Design & Fabrication",
-      alternateName: "Ardıç Mimarlık",
       url: siteUrl,
       logo: `${siteUrl}/logo.svg`,
       description:
-        "Ardıç Design & Fabrication is an EPSLAM company creating themed environments, sculptural fabrication, architectural decor, CNC and EPS/XPS foam production for international projects.",
+        "Ardıç Design & Fabrication is an Istanbul-based international custom fabrication company within EPSLAM, producing themed environments and scenic installations through CNC EPS/XPS and polyurethane machining and casting, fiberglass/GRP and carbon fiber composites, polyester molds, large-format 3D printing, sculpture, woodworking, prototypes, and multi-material production.",
       parentOrganization: {
         "@type": "Organization",
         name: "EPSLAM"
@@ -42,7 +41,7 @@ const structuredData = {
       telephone: "+905436268969",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Karadeniz Caddesi No:131",
+        streetAddress: "Karadeniz Caddesi No:131, Ferhatpaşa",
         addressLocality: "Ataşehir",
         addressRegion: "Istanbul",
         addressCountry: "TR"
@@ -60,18 +59,25 @@ const structuredData = {
       },
       areaServed: "Worldwide",
       serviceType: [
-        "Themed environments",
-        "Sculptural fabrication",
-        "Architectural decor",
-        "Brand installations",
-        "CNC fabrication",
-        "EPS and XPS foam fabrication",
-        "Mold manufacturing",
-        "Polyester casting",
-        "Finishing and installation"
+        "Themed environment fabrication",
+        "Scenic fabrication",
+        "Large-scale props",
+        "CNC foam machining",
+        "EPS / XPS CNC machining",
+        "Polyurethane machining and casting",
+        "Composite fabrication",
+        "Mold making",
+        "Fiberglass / GRP fabrication",
+        "Polyester molding and casting",
+        "Carbon fiber lamination",
+        "Large-format 3D printing",
+        "Prototype fabrication",
+        "Sculpture fabrication",
+        "Custom wood fabrication",
+        "Multi-material fabrication"
       ],
       description:
-        "Integrated design, CNC production, EPS/XPS processing, sculpture, mold production, polyester casting, finishing, painting, assembly, and installation under one roof."
+        "An integrated workflow for digital development, CNC and additive production, polyurethane and composite fabrication, mold making, sculpture, woodworking, finishing, painting, assembly, and project preparation."
     }
   ]
 };
@@ -83,16 +89,18 @@ export const metadata: Metadata = {
     template: `%s | ${brand.name}`
   },
   description:
-    "Ardıç Design & Fabrication is an EPSLAM company creating themed environments, sculptural fabrication, architectural decor, CNC and EPS/XPS foam production for international projects.",
+    "Ardıç Design & Fabrication is an Istanbul-based international custom fabrication company working across CNC machining, composites, molds, large-format 3D printing, scenic production, sculpture, polyurethane and multi-material fabrication.",
   keywords: [
-    "design and fabrication studio",
-    "themed environments",
-    "sculptural fabrication",
-    "architectural decor",
-    "CNC fabrication",
-    "EPS foam fabrication",
-    "XPS foam fabrication",
-    "brand installations",
+    "international fabrication",
+    "custom fabrication",
+    "CNC foam machining",
+    "EPS XPS machining",
+    "composite fabrication",
+    "mold making",
+    "large-format 3D printing",
+    "scenic fabrication",
+    "themed environment fabrication",
+    "prototype fabrication",
     "Ardıç Design & Fabrication",
     "EPSLAM"
   ],
@@ -114,7 +122,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${brand.name} | ${brand.tagline}`,
     description:
-      "Design and fabrication studio for themed environments, sculptural works, architectural decor, CNC/EPS/XPS production, and international project delivery.",
+      "International custom fabrication from Istanbul across CNC machining, composites, molds, large-format 3D printing, scenic production, sculpture, polyurethane, and multi-material projects.",
     type: "website",
     url: "/",
     siteName: brand.name,
@@ -132,7 +140,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brand.name} | ${brand.tagline}`,
     description:
-      "Themed environments, sculptural fabrication, architectural decor, and CNC/EPS/XPS production for memorable built experiences.",
+      "International custom fabrication across CNC machining, composites, molds, large-format 3D printing, scenic production, sculpture, and multi-material projects.",
     images: ["/og-image.png"]
   }
 };

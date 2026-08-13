@@ -7,14 +7,14 @@ import { conceptCollections, conceptProcess } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Signature Concepts",
   description:
-    "Original Ardic Design & Fabrication concept interiors, sculptural objects, seating groups, mirrors, pods, thematic elements, and custom-made design pieces adapted to client spaces.",
+    "Original Ardıç Design & Fabrication concept interiors, sculptural objects, seating groups, mirrors, pods, thematic elements, and custom-made design pieces adapted to client spaces.",
   alternates: {
     canonical: "/concepts"
   },
   openGraph: {
     title: "Signature Concepts",
     description:
-      "Explore original concept lines by Ardic Design & Fabrication, adapted to your space and manufactured in-house.",
+      "Explore original concept lines by Ardıç Design & Fabrication, adapted to your space and manufactured in-house.",
     url: "/concepts"
   }
 };
@@ -41,7 +41,7 @@ export default function ConceptsPage() {
               Original design concepts adapted to your space and manufactured in-house.
             </p>
             <p className="mt-8 max-w-xl text-base leading-8 text-ink/65 md:text-lg md:leading-9">
-              Ardic Design & Fabrication develops original concept interiors,
+              Ardıç Design & Fabrication develops original concept interiors,
               sculptural objects, seating groups, mirrors, thematic elements, and
               custom-made design pieces. Each concept can be adapted to the dimensions,
               atmosphere, and functional needs of your own space, then produced through
@@ -123,7 +123,7 @@ export default function ConceptsPage() {
               title="Original concept lines prepared for adaptation."
             />
             <p className="max-w-xl leading-8 text-ink/60">
-              Each Signature Concept begins as an Ardic design language, then becomes a
+              Each Signature Concept begins as an Ardıç design language, then becomes a
               tailored proposal for the dimensions, function, atmosphere, materials, and
               production needs of a real space.
             </p>

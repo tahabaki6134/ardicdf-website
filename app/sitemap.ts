@@ -16,7 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/themed-environment-fabrication",
     "/about",
     "/fabrication",
-    "/live",
     "/contact",
     "/privacy"
   ];

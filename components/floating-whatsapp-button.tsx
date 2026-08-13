@@ -1,5 +1,5 @@
 const whatsappUrl =
-  "https://wa.me/905436268969?text=Hello%20Ardic%2C%20I%20would%20like%20to%20discuss%20a%20design%20and%20fabrication%20project";
+  "https://wa.me/905436268969?text=Hello%20Ard%C4%B1%C3%A7%2C%20I%20would%20like%20to%20discuss%20a%20design%20and%20fabrication%20project";
 
 export function FloatingWhatsAppButton() {
   return (
@@ -7,7 +7,7 @@ export function FloatingWhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noreferrer"
-      aria-label="Contact Ardic Design and Fabrication on WhatsApp"
+      aria-label="Contact Ardıç Design & Fabrication on WhatsApp"
       data-track-location="floating"
       className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full border border-bronze/70 bg-porcelain text-ink shadow-[0_18px_55px_rgba(17,17,17,0.28)] transition duration-300 hover:-translate-y-0.5 hover:border-bronze hover:bg-bronze hover:text-porcelain focus:outline-none focus:ring-2 focus:ring-bronze focus:ring-offset-2 focus:ring-offset-porcelain sm:bottom-7 sm:right-7 sm:h-auto sm:w-auto sm:gap-3 sm:rounded-full sm:px-6 sm:py-4"
     >
