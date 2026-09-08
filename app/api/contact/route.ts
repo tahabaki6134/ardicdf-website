@@ -1,143 +1,46 @@
 import { NextResponse } from "next/server";
+import {
+  fieldLabels,
+  initialEnquiry,
+  validateEnquiry,
+  type Enquiry,
+  type EnquiryField
+} from "@/lib/enquiry";
+import { getIndustry } from "@/lib/industries";
+import { getProject, MAX_SELECTED_PROJECTS, parseSelectedProjects } from "@/lib/projects";
 
-const RESEND_API_URL = "https://api.resend.com/emails";
-const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
-const NOTIFICATION_EMAIL = "taaha.baaki@gmail.com";
-const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL?.trim() || "Ardıç Design & Fabrication <onboarding@resend.dev>";
-
-const MAX_MESSAGE_LENGTH = 3000;
-const MAX_LINK_COUNT = 2;
-const FIELD_LIMITS = {
-  fullName: 120,
-  company: 160,
-  email: 254,
-  phone: 80,
-  country: 100,
-  projectType: 120,
-  projectLocation: 180,
-  approximateDimensions: 160,
-  quantity: 80,
-  targetDeliveryDate: 40,
-  materialPreference: 300,
-  installationSupport: 120,
-  budgetRange: 80,
-  confidentiality: 120,
-  referenceLink: 1000
-} as const;
-const SPAM_PHRASES = [
-  "graphic design",
-  "branding refresh",
-  "seo",
-  "marketing services",
-  "we noticed your website",
-  "boost your brand",
-  "rank on google"
-];
-
-type InquiryPayload = {
-  fullName?: unknown;
-  company?: unknown;
-  companyWebsite?: unknown;
-  email?: unknown;
-  phone?: unknown;
-  country?: unknown;
-  projectType?: unknown;
-  projectLocation?: unknown;
-  approximateDimensions?: unknown;
-  quantity?: unknown;
-  targetDeliveryDate?: unknown;
-  materialPreference?: unknown;
-  installationSupport?: unknown;
-  budgetRange?: unknown;
-  confidentiality?: unknown;
-  referenceLink?: unknown;
-  message?: unknown;
-  turnstileToken?: unknown;
-};
-
-type Inquiry = {
-  fullName: string;
-  company: string;
-  companyWebsite: string;
-  email: string;
-  phone: string;
-  country: string;
-  projectType: string;
-  projectLocation: string;
-  approximateDimensions: string;
-  quantity: string;
-  targetDeliveryDate: string;
-  materialPreference: string;
-  installationSupport: string;
-  budgetRange: string;
-  confidentiality: string;
-  referenceLink: string;
-  message: string;
-  turnstileToken: string;
-};
-
-function clean(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function isValidEmail(value: string) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function countLinks(value: string) {
-  return (value.match(/https?:\/\/|www\.|[a-z0-9-]+\.[a-z]{2,}/gi) || []).length;
-}
-
-function looksLikeSpam(inquiry: Inquiry) {
-  if (inquiry.companyWebsite) {
-    return true;
-  }
-
-  const combined = [
-    inquiry.fullName,
-    inquiry.company,
-    inquiry.email,
-    inquiry.phone,
-    inquiry.country,
-    inquiry.projectType,
-    inquiry.projectLocation,
-    inquiry.approximateDimensions,
-    inquiry.quantity,
-    inquiry.targetDeliveryDate,
-    inquiry.materialPreference,
-    inquiry.installationSupport,
-    inquiry.budgetRange,
-    inquiry.confidentiality,
-    inquiry.message
-  ]
-    .join(" ")
-    .toLowerCase();
-
-  if (countLinks(inquiry.message) > MAX_LINK_COUNT) {
-    return true;
-  }
-
-  return SPAM_PHRASES.some((phrase) => combined.includes(phrase));
-}
-
-function escapeHtml(value: string) {
-  return value
+const clean = (value: unknown) => (typeof value === "string" ? value.trim() : "");
+const escapeHtml = (value: string) =>
+  value
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
-}
+const safeSubject = (value: string) => value.replace(/[\r\n]+/g, " ").slice(0, 160);
 
-function safeSubjectPart(value: string) {
-  return value.replace(/[\r\n]+/g, " ").slice(0, 160);
-}
-
-function findLimitExceeded(inquiry: Inquiry) {
-  return (Object.keys(FIELD_LIMITS) as Array<keyof typeof FIELD_LIMITS>).find(
-    (field) => inquiry[field].length > FIELD_LIMITS[field]
-  );
+async function verifyTurnstile(token: string, remoteIp: string) {
+  if (!process.env.TURNSTILE_SECRET_KEY)
+    return { ok: false, error: "Verification service is not configured." };
+  if (!token || token.length > 4096)
+    return { ok: false, error: "Please complete the verification before sending." };
+  const body = new FormData();
+  body.append("secret", process.env.TURNSTILE_SECRET_KEY);
+  body.append("response", token);
+  if (remoteIp) body.append("remoteip", remoteIp);
+  try {
+    const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body,
+      signal: AbortSignal.timeout(15000)
+    });
+    const result = await response.json().catch(() => null);
+    if (!response.ok || result?.success !== true)
+      return { ok: false, error: "Verification failed. Please try again." };
+    return { ok: true };
+  } catch {
+    return { ok: false, error: "Verification could not be completed. Please try again." };
+  }
 }
 
 async function sendEmail(payload: {
@@ -147,14 +50,17 @@ async function sendEmail(payload: {
   text: string;
   replyTo?: string;
 }) {
-  const response = await fetch(RESEND_API_URL, {
+  const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
+    signal: AbortSignal.timeout(15000),
     headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      Authorization: "Bearer " + process.env.RESEND_API_KEY,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      from: FROM_EMAIL,
+      from:
+        process.env.RESEND_FROM_EMAIL?.trim() ||
+        "Ardıç Design & Fabrication <onboarding@resend.dev>",
       to: payload.to,
       subject: payload.subject,
       html: payload.html,
@@ -162,229 +68,142 @@ async function sendEmail(payload: {
       reply_to: payload.replyTo
     })
   });
-
-  if (!response.ok) {
-    const errorText = await response.text().catch(() => "");
-    throw new Error(`Resend request failed (${response.status}): ${errorText}`);
-  }
-}
-
-async function verifyTurnstile(token: string, remoteIp: string) {
-  if (!process.env.TURNSTILE_SECRET_KEY) {
-    return {
-      ok: false,
-      error: "Verification service is not configured."
-    };
-  }
-
-  if (!token) {
-    return {
-      ok: false,
-      error: "Please complete the verification before sending."
-    };
-  }
-
-  const body = new FormData();
-  body.append("secret", process.env.TURNSTILE_SECRET_KEY);
-  body.append("response", token);
-
-  if (remoteIp) {
-    body.append("remoteip", remoteIp);
-  }
-
-  try {
-    const response = await fetch(TURNSTILE_VERIFY_URL, {
-      method: "POST",
-      body
-    });
-    const result = (await response.json().catch(() => null)) as
-      | { success?: boolean }
-      | null;
-
-    if (!response.ok || result?.success !== true) {
-      return {
-        ok: false,
-        error: "Verification failed. Please try again."
-      };
-    }
-
-    return { ok: true };
-  } catch (error) {
-    console.error("Turnstile verification error:", error);
-    return {
-      ok: false,
-      error: "Verification could not be completed. Please try again."
-    };
-  }
+  if (!response.ok)
+    throw new Error("Email provider rejected the request (" + response.status + ").");
 }
 
 export async function POST(request: Request) {
-  let payload: InquiryPayload;
-
+  let payload: Record<string, unknown>;
   try {
-    payload = await request.json();
+    const value: unknown = await request.json();
+    if (!value || typeof value !== "object" || Array.isArray(value))
+      throw new Error("Invalid body");
+    payload = value as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const inquiry: Inquiry = {
-    fullName: clean(payload.fullName),
-    company: clean(payload.company),
-    companyWebsite: clean(payload.companyWebsite),
-    email: clean(payload.email),
-    phone: clean(payload.phone),
-    country: clean(payload.country),
-    projectType: clean(payload.projectType),
-    projectLocation: clean(payload.projectLocation),
-    approximateDimensions: clean(payload.approximateDimensions),
-    quantity: clean(payload.quantity),
-    targetDeliveryDate: clean(payload.targetDeliveryDate),
-    materialPreference: clean(payload.materialPreference),
-    installationSupport: clean(payload.installationSupport),
-    budgetRange: clean(payload.budgetRange),
-    confidentiality: clean(payload.confidentiality),
-    referenceLink: clean(payload.referenceLink),
-    message: clean(payload.message),
-    turnstileToken: clean(payload.turnstileToken)
-  };
+  const inquiry = Object.fromEntries(
+    Object.keys(initialEnquiry).map((key) => [key, clean(payload[key])])
+  ) as Enquiry;
+  if (inquiry.companyWebsite)
+    return NextResponse.json(
+      { error: "Unable to process this enquiry. Please reload and try again." },
+      { status: 400 }
+    );
 
-  if (inquiry.companyWebsite) {
-    return NextResponse.json({ ok: true });
-  }
+  const errors = validateEnquiry(inquiry);
+  if (Object.keys(errors).length)
+    return NextResponse.json(
+      { error: "Please check your enquiry details.", fields: errors },
+      { status: 400 }
+    );
+  if (inquiry.industry && !getIndustry(inquiry.industry))
+    return NextResponse.json({ error: "Please choose a sector from the list." }, { status: 400 });
 
+  const rawSelection = payload.selectedProjects;
   if (
-    !inquiry.fullName ||
-    !inquiry.email ||
-    !isValidEmail(inquiry.email) ||
-    !inquiry.projectType ||
-    !inquiry.message
+    rawSelection !== undefined &&
+    (!Array.isArray(rawSelection) ||
+      rawSelection.length > MAX_SELECTED_PROJECTS ||
+      rawSelection.some((id) => typeof id !== "string" || !getProject(id)))
   ) {
     return NextResponse.json(
-      { error: "Please add your name, email, project type, and message before sending." },
+      { error: "Please check your selected portfolio examples." },
       { status: 400 }
     );
   }
-
-  if (inquiry.message.length > MAX_MESSAGE_LENGTH) {
-    return NextResponse.json(
-      { error: "Please keep your message under 3000 characters." },
-      { status: 400 }
-    );
-  }
-
-  if (findLimitExceeded(inquiry)) {
-    return NextResponse.json(
-      { error: "One or more fields are longer than the allowed limit." },
-      { status: 400 }
-    );
-  }
+  const selected = parseSelectedProjects(rawSelection);
+  if (!process.env.RESEND_API_KEY)
+    return NextResponse.json({ error: "Email service is not configured." }, { status: 503 });
 
   const remoteIp =
     request.headers.get("cf-connecting-ip") ||
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     "";
-  const turnstile = await verifyTurnstile(inquiry.turnstileToken, remoteIp);
+  const verification = await verifyTurnstile(clean(payload.turnstileToken), remoteIp);
+  if (!verification.ok) return NextResponse.json({ error: verification.error }, { status: 400 });
 
-  if (!turnstile.ok) {
-    return NextResponse.json({ error: turnstile.error }, { status: 400 });
-  }
-
-  if (looksLikeSpam(inquiry)) {
-    return NextResponse.json({ ok: true });
-  }
-
-  if (!process.env.RESEND_API_KEY) {
-    return NextResponse.json(
-      { error: "Email service is not configured." },
-      { status: 500 }
-    );
-  }
-
-  const rows = [
-    ["Name", inquiry.fullName],
-    ["Company", inquiry.company || "-"],
-    ["Email", inquiry.email],
-    ["Phone / WhatsApp", inquiry.phone || "-"],
-    ["Country", inquiry.country || "-"],
-    ["Project Type", inquiry.projectType],
-    ["Project Location", inquiry.projectLocation || "-"],
-    ["Approximate Dimensions", inquiry.approximateDimensions || "-"],
-    ["Quantity", inquiry.quantity || "-"],
-    ["Target Delivery Date", inquiry.targetDeliveryDate || "-"],
-    ["Material / Process Preference", inquiry.materialPreference || "-"],
-    ["Installation / Site Support", inquiry.installationSupport || "-"],
-    ["Budget Range", inquiry.budgetRange || "-"],
-    ["Confidentiality / NDA", inquiry.confidentiality || "-"],
-    ["Drawings / 3D Model / Reference Link", inquiry.referenceLink || "-"],
-    ["Project Brief", inquiry.message]
-  ];
-
-  const notificationText = rows.map(([label, value]) => `${label}: ${value}`).join("\n");
-  const notificationHtml = `
-    <div style="font-family: Arial, sans-serif; color: #111111; line-height: 1.6;">
-      <h1 style="font-family: Georgia, serif; font-size: 28px;">New Ardıç Project RFQ</h1>
-      <table style="border-collapse: collapse; width: 100%;">
-        ${rows
-          .map(
-            ([label, value]) => `
-              <tr>
-                <td style="border-top: 1px solid #e5e0d6; padding: 12px 16px; font-weight: 700; width: 180px;">${escapeHtml(label)}</td>
-                <td style="border-top: 1px solid #e5e0d6; padding: 12px 16px; white-space: pre-wrap;">${escapeHtml(value)}</td>
-              </tr>
-            `
-          )
-          .join("")}
-      </table>
-    </div>
-  `;
-
-  const confirmationText = [
-    "Thank you for contacting Ardıç Design & Fabrication.",
-    "",
-    "We have received your project enquiry and will review the scope, geometry, production requirements and timing.",
-    "",
-    "If additional drawings, 3D models or technical information are required, our team will contact you using the details provided.",
-    "",
-    "For confidential projects, detailed files can be exchanged after the appropriate confidentiality process is agreed."
-  ].join("\n");
-  const confirmationHtml = `
-    <div style="font-family: Arial, sans-serif; color: #111111; line-height: 1.7;">
-      <h1 style="font-family: Georgia, serif; font-size: 28px;">Project Enquiry Received</h1>
-      <p>Thank you for contacting Ardıç Design & Fabrication.</p>
-      <p>We have received your project enquiry and will review the scope, geometry, production requirements and timing.</p>
-      <p>If additional drawings, 3D models or technical information are required, our team will contact you using the details provided.</p>
-      <p>For confidential projects, detailed files can be exchanged after the appropriate confidentiality process is agreed.</p>
-    </div>
-  `;
+  // Verification handles automated requests. Never silently discard a valid
+  // enquiry because its text contains a marketing term or a place such as Seoul.
+  const rows = (Object.keys(initialEnquiry) as EnquiryField[])
+    .filter((key) => key !== "companyWebsite")
+    .map((key) => [
+      fieldLabels[key],
+      key === "industry"
+        ? getIndustry(inquiry.industry)?.shortTitle || "Not specified"
+        : inquiry[key] || "Not specified"
+    ]);
+  rows.push([
+    "Selected portfolio examples",
+    selected.length
+      ? selected
+          .map((id) => getProject(id)!.title + " — https://www.ardicdf.com/works/" + id)
+          .join("\n")
+      : "None selected"
+  ]);
+  const notificationText = rows.map(([label, value]) => label + ": " + value).join("\n\n");
+  const tableRows = rows
+    .map(
+      ([label, value]) =>
+        '<tr><th scope="row" style="padding:12px;text-align:left;vertical-align:top;border-top:1px solid #ddd">' +
+        escapeHtml(label) +
+        '</th><td style="padding:12px;white-space:pre-wrap;border-top:1px solid #ddd">' +
+        escapeHtml(value) +
+        "</td></tr>"
+    )
+    .join("");
+  const notificationHtml =
+    '<div style="font-family:Arial,sans-serif;line-height:1.6;color:#111"><h1>New Ardıç project enquiry</h1><table style="width:100%;border-collapse:collapse">' +
+    tableRows +
+    "</table></div>";
+  const notificationEmail =
+    process.env.CONTACT_NOTIFICATION_EMAIL?.trim() || "taaha.baaki@gmail.com";
 
   try {
     await sendEmail({
-      to: NOTIFICATION_EMAIL,
-      subject: `NEW RFQ · ${safeSubjectPart(inquiry.projectType)} · ${safeSubjectPart(
-        inquiry.company || inquiry.fullName
-      )}`,
+      to: notificationEmail,
+      subject:
+        "NEW RFQ · " +
+        safeSubject(inquiry.projectType) +
+        " · " +
+        safeSubject(inquiry.company || inquiry.fullName),
       html: notificationHtml,
       text: notificationText,
       replyTo: inquiry.email
     });
-  } catch (error) {
-    console.error("Contact form notification email error:", error);
+  } catch {
+    console.error("Contact notification could not be sent.");
     return NextResponse.json(
       { error: "Unable to send your project enquiry right now. Please try again later." },
       { status: 502 }
     );
   }
 
+  const confirmationText = [
+    "Thank you for contacting Ardıç Design & Fabrication.",
+    "Your project enquiry has been sent to our team for review.",
+    "Project type: " + inquiry.projectType,
+    "We will use your contact details to discuss the scope, production requirements and next steps.",
+    "For confidential projects, wait until the appropriate terms are agreed before sharing sensitive drawings or models."
+  ].join("\n\n");
+  let confirmationSent = false;
   try {
     await sendEmail({
       to: inquiry.email,
-      subject: "Ardıç Design & Fabrication — Project Enquiry Received",
-      html: confirmationHtml,
-      text: confirmationText
+      subject: "Ardıç Design & Fabrication — Project enquiry received",
+      html:
+        '<div style="font-family:Arial,sans-serif;line-height:1.7;white-space:pre-wrap">' +
+        escapeHtml(confirmationText) +
+        "</div>",
+      text: confirmationText,
+      replyTo: notificationEmail
     });
-  } catch (error) {
-    console.error("Contact form confirmation email error:", error);
+    confirmationSent = true;
+  } catch {
+    // The team's notification succeeded. Report receipt accurately without
+    // encouraging a duplicate enquiry when the optional confirmation fails.
+    console.error("Contact confirmation could not be sent.");
   }
-
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, confirmationSent });
 }

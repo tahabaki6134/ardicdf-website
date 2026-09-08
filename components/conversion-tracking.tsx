@@ -65,7 +65,7 @@ export function ConversionTracking() {
       }
 
       if (
-        (href === "/contact" || href.endsWith("/contact")) &&
+        /\/contact(?:[?#]|$)/.test(href) &&
         (text.includes("start") ||
           text.includes("discuss") ||
           text.includes("conversation") ||

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { contactEmail } from "@/lib/contact-details";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -24,7 +25,10 @@ const collectedData = [
   "project type",
   "project location",
   "project size or scope",
-  "project message or brief"
+  "project message or brief",
+  "selected portfolio references",
+  "materials, finish, budget and delivery preferences",
+  "drawing or model share links and confidentiality requests"
 ];
 
 export default function PrivacyPage() {
@@ -40,8 +44,8 @@ export default function PrivacyPage() {
           </h1>
           <p className="mt-8 text-lg leading-9 text-ink/65">
             Ardıç Design & Fabrication collects only the information needed to understand and
-            respond to project enquiries. We do not sell submitted enquiry information or use it
-            for unrelated marketing systems.
+            respond to project enquiries. We do not sell submitted enquiry information or use it for
+            unrelated marketing systems.
           </p>
 
           <div className="mt-14 grid gap-px bg-ink/10">
@@ -63,9 +67,7 @@ export default function PrivacyPage() {
             </section>
 
             <section className="bg-porcelain p-7 md:p-9">
-              <h2 className="font-display text-3xl leading-tight text-ink">
-                How We Use It
-              </h2>
+              <h2 className="font-display text-3xl leading-tight text-ink">How We Use It</h2>
               <p className="mt-5 leading-8 text-ink/65">
                 We use enquiry information to review your project request, understand the required
                 design and fabrication scope, contact you about the next steps, and coordinate
@@ -74,39 +76,42 @@ export default function PrivacyPage() {
             </section>
 
             <section className="bg-porcelain p-7 md:p-9">
-              <h2 className="font-display text-3xl leading-tight text-ink">
-                Website Analytics
-              </h2>
+              <h2 className="font-display text-3xl leading-tight text-ink">Website Analytics</h2>
               <p className="mt-5 leading-8 text-ink/65">
                 We may use lightweight website interaction analytics to understand which pages and
                 contact paths are useful to visitors. These analytics are used to improve the
-                website experience and do not include project form messages, names, email
-                addresses, phone numbers, or WhatsApp numbers.
+                website experience and do not include project form messages, names, email addresses,
+                phone numbers, or WhatsApp numbers.
               </p>
             </section>
 
             <section className="bg-porcelain p-7 md:p-9">
               <h2 className="font-display text-3xl leading-tight text-ink">
-                Communication Channels
+                Portfolio Selections & Enquiry Delivery
               </h2>
               <p className="mt-5 leading-8 text-ink/65">
+                Selected portfolio IDs are kept in browser session storage so you can carry them
+                between pages. A selection link contains only those public portfolio IDs. Form text
+                and contact details are held in page memory until you submit; they are not stored in
+                that selection link or browser session storage. Submitted enquiries are sent by
+                email through Resend, and Cloudflare Turnstile verifies form submissions.
+              </p>
+              <p className="mt-5 leading-8 text-ink/65">
                 If you contact us by phone, email, or WhatsApp, communication may continue through
-                the channel you choose. WhatsApp conversations are also subject to WhatsApp&apos;s own
-                privacy practices.
+                the channel you choose. WhatsApp conversations are also subject to WhatsApp&apos;s
+                own privacy practices.
               </p>
             </section>
 
             <section className="bg-porcelain p-7 md:p-9">
-              <h2 className="font-display text-3xl leading-tight text-ink">
-                Contact
-              </h2>
+              <h2 className="font-display text-3xl leading-tight text-ink">Contact</h2>
               <p className="mt-5 leading-8 text-ink/65">
                 For privacy questions or to request removal of enquiry information, contact us at{" "}
                 <Link
-                  href="mailto:taaha.baaki@gmail.com"
+                  href={`mailto:${contactEmail}`}
                   className="font-semibold text-bronze transition hover:text-ink"
                 >
-                  taaha.baaki@gmail.com
+                  {contactEmail}
                 </Link>
                 .
               </p>

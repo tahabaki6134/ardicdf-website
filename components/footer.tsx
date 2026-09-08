@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { brand, navigation } from "@/lib/content";
+import { contactEmail } from "@/lib/contact-details";
 
 export function Footer() {
   return (
@@ -26,10 +27,23 @@ export function Footer() {
           <p className="text-xs uppercase tracking-brand text-porcelain/50">Explore</p>
           <div className="mt-5 grid gap-3">
             {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="text-porcelain/75 hover:text-bronze">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-porcelain/75 hover:text-bronze"
+              >
                 {item.footerLabel ?? item.label}
               </Link>
             ))}
+            <Link href="/industries" className="text-porcelain/75 hover:text-bronze">
+              Industries & application ideas
+            </Link>
+            <Link href="/planning" className="text-porcelain/75 hover:text-bronze">
+              Fabrication planning guide
+            </Link>
+            <Link href="/project-selection" className="text-porcelain/75 hover:text-bronze">
+              My project selection
+            </Link>
             <Link href="/privacy" className="text-porcelain/55 transition hover:text-bronze">
               Privacy Policy
             </Link>
@@ -38,6 +52,12 @@ export function Footer() {
         <div>
           <p className="text-xs uppercase tracking-brand text-porcelain/50">Contact</p>
           <div className="mt-5 space-y-3 text-porcelain/75">
+            <a
+              href={`mailto:${contactEmail}`}
+              className="block break-words transition hover:text-bronze"
+            >
+              {contactEmail}
+            </a>
             <Link href="tel:+905436268969" className="block transition hover:text-bronze">
               {brand.phone}
             </Link>
