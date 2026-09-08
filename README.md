@@ -11,7 +11,7 @@ Install the existing lockfile with `pnpm install --frozen-lockfile`. Copy `.env.
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` enable Cloudflare verification. The site key must permit the hostname being used.
 - `RESEND_API_KEY` enables email delivery. Use a verified production sender in `RESEND_FROM_EMAIL`; the onboarding sender is only a setup fallback.
 - `CONTACT_NOTIFICATION_EMAIL` optionally sets the team's recipient.
-- `NEXT_PUBLIC_CONTACT_EMAIL` optionally changes the visible contact address. Configure and verify a replacement mailbox before changing it.
+- `lib/contact-details.ts` defines the public studio address (`info@ardicdf.com`) used in contact links and structured data. This is independent of the enquiry notification recipient.
 - Public environment variables are included at build time. Configure them on the hosting project before its build.
 
 The endpoint reports success only after the team's notification has been accepted by the email provider. Failure of the separate customer confirmation is reported independently. No live email or verification calls are made by the automated tests.

@@ -97,9 +97,6 @@ export default function ContactPage({
             <a href="tel:+905436268969" className="mt-4 block leading-7">
               Project director: +90 543 626 89 69
             </a>
-            <a href="tel:+905327438441" className="mt-3 block leading-7">
-              Fabrication director: +90 532 743 84 41
-            </a>
             <a
               href="https://wa.me/905436268969"
               target="_blank"
