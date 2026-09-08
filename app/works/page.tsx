@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RotatingCoverImage } from "@/components/rotating-cover-image";
 import { SectionHeading } from "@/components/section-heading";
 import { portfolioCategories } from "@/lib/content";
+import { ProjectsExplorer } from "@/components/projects-explorer";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function WorksPage() {
             </p>
           </div>
 
+          <ProjectsExplorer />
           <article className="mt-16 border border-ink/10 bg-ink text-porcelain shadow-soft">
             <Link
               href="/works/modular-artificial-rock-concert-environment"
@@ -77,9 +79,17 @@ export default function WorksPage() {
             </Link>
           </article>
 
-          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2 xl:grid-cols-3">
+          <h2 className="mt-16 font-display text-4xl">Explore the full image archive.</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-ink/70">
+            Browse workshop photographs, fabrication details and completed pieces by production
+            category.
+          </p>
+          <div className="mt-8 grid gap-px bg-ink/10 md:grid-cols-2 xl:grid-cols-3">
             {worksCategories.map((category) => (
-              <article key={category.title} className="group bg-porcelain transition hover:bg-white">
+              <article
+                key={category.title}
+                className="group bg-porcelain transition hover:bg-white"
+              >
                 <a href={category.href} className="flex min-h-full flex-col">
                   <div className="relative aspect-[4/3] overflow-hidden bg-ink">
                     <RotatingCoverImage

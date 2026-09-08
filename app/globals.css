@@ -37,3 +37,43 @@ body {
     linear-gradient(90deg, rgba(245, 243, 238, 0.08) 1px, transparent 1px);
   background-size: 42px 42px;
 }
+
+@layer components {
+  .page-shell {
+    @apply mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20;
+  }
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-brand text-bronze;
+  }
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 bg-ink px-6 py-3 text-base font-semibold text-porcelain transition hover:bg-bronze disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 border border-ink/25 px-6 py-3 text-base font-semibold transition hover:border-bronze hover:bg-white disabled:opacity-50;
+  }
+  .text-link {
+    @apply text-base font-semibold text-bronze underline decoration-bronze/35 underline-offset-4 transition hover:text-ink;
+  }
+  .field {
+    @apply block min-h-12 w-full min-w-0 rounded-none border border-ink/25 bg-white px-4 py-3 text-base text-ink placeholder:text-ink/50 focus:border-bronze focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-bronze;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #8c6a43;
+  outline-offset: 4px;
+}
+[id] {
+  scroll-margin-top: 7rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

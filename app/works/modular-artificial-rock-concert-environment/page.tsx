@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SelectProjectButton } from "@/components/project-selection-provider";
+import { enquiryHref } from "@/lib/projects";
 
 const siteUrl = "https://www.ardicdf.com";
 const pagePath = "/works/modular-artificial-rock-concert-environment";
@@ -8,8 +10,7 @@ const pageUrl = `${siteUrl}${pagePath}`;
 const pageTitle = "Modular Artificial Rock Concert Environment | Ardıç";
 const pageDescription =
   "A completed modular concert environment fabricated by Ardıç using EPS foam scenic production, realistic artificial-rock finishing and transportable sections assembled on site.";
-const socialTitle =
-  "Modular Artificial Rock Concert Environment | Scenic Fabrication by Ardıç";
+const socialTitle = "Modular Artificial Rock Concert Environment | Scenic Fabrication by Ardıç";
 const socialDescription =
   "See how Ardıç produced an oversized artificial-rock concert environment as transportable EPS foam modules with realistic scenic finishing and on-site assembly.";
 const imageBase = "/works/modular-artificial-rock-concert-environment";
@@ -202,6 +203,15 @@ export default function ModularArtificialRockConcertEnvironmentPage() {
             </figure>
           </div>
 
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href={enquiryHref(["modular-artificial-rock-concert-environment"])}
+              className="button-primary"
+            >
+              Plan a similar project →
+            </Link>
+            <SelectProjectButton id="modular-artificial-rock-concert-environment" />
+          </div>
           <dl className="mt-14 grid gap-px bg-ink/10 md:grid-cols-3">
             {projectFacts.map((fact) => (
               <div key={fact.label} className="bg-porcelain p-6 md:p-8">
@@ -231,8 +241,8 @@ export default function ModularArtificialRockConcertEnvironmentPage() {
               preparing the sections for venue assembly.
             </p>
             <p className="mt-5 max-w-xl leading-8 text-ink/55">
-              The public photographs show the relationship between workshop production and the
-              final assembled form without attributing the surrounding event production to Ardıç.
+              The public photographs show the relationship between workshop production and the final
+              assembled form without attributing the surrounding event production to Ardıç.
             </p>
           </div>
 
@@ -265,10 +275,9 @@ export default function ModularArtificialRockConcertEnvironmentPage() {
               </h2>
               <p className="mt-7 max-w-xl leading-8 text-ink/65">
                 The environment needed to appear as a single, terrain-like construction after
-                assembly. Workshop production, transport, and venue handling also required the
-                work to be divided into manageable sections. The fabrication challenge was to
-                preserve the visual mass and rock character while planning for those practical
-                stages.
+                assembly. Workshop production, transport, and venue handling also required the work
+                to be divided into manageable sections. The fabrication challenge was to preserve
+                the visual mass and rock character while planning for those practical stages.
               </p>
             </article>
 
@@ -551,8 +560,8 @@ export default function ModularArtificialRockConcertEnvironmentPage() {
                 selection of our actual production capabilities.
               </p>
               <p className="mt-6 text-sm font-semibold uppercase leading-7 tracking-brand text-bronze">
-                Private project references and relevant production experience can be discussed
-                where contractually permitted.
+                Private project references and relevant production experience can be discussed where
+                contractually permitted.
               </p>
             </div>
           </div>
@@ -575,7 +584,7 @@ export default function ModularArtificialRockConcertEnvironmentPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href={enquiryHref(["modular-artificial-rock-concert-environment"])}
               className="inline-flex w-fit border border-bronze px-6 py-4 text-xs font-semibold uppercase tracking-brand text-porcelain transition hover:bg-bronze hover:text-ink"
             >
               Discuss a Project

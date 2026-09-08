@@ -6,6 +6,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button";
 import { brand } from "@/lib/content";
+import { ProjectSelectionProvider } from "@/components/project-selection-provider";
+import { contactEmail } from "@/lib/contact-details";
 
 const siteUrl = "https://www.ardicdf.com";
 
@@ -28,6 +30,8 @@ const structuredData = {
         "@type": "ContactPoint",
         telephone: "+905436268969",
         contactType: "project enquiries",
+        email: contactEmail,
+        url: `${siteUrl}/contact`,
         areaServed: "Worldwide",
         availableLanguage: ["English", "Turkish"]
       }
@@ -153,10 +157,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <Header />
-        {children}
-        <Footer />
-        <FloatingWhatsAppButton />
+        <ProjectSelectionProvider>
+          <Header />
+          {children}
+          <Footer />
+          <FloatingWhatsAppButton />
+        </ProjectSelectionProvider>
         <ConversionTracking />
         <Analytics />
       </body>

@@ -46,8 +46,7 @@ export const conceptCollections: ConceptCollection[] = [
     description:
       "A warm and refined lounge concept built around olive green seating, walnut wood tones, bronze accents, textured stone surfaces, smoked glass, and ambient lighting. This concept can be adapted for private lounges, boutique commercial interiors, hotel waiting areas, reception zones, and thematic hospitality spaces.",
     image: "/projects/concepts/olive-lounge-concept-interior-01.png",
-    imageAlt:
-      "Olive Lounge Concept interior with olive green seating and warm wood atmosphere",
+    imageAlt: "Olive Lounge Concept interior with olive green seating and warm wood atmosphere",
     imageCaption:
       "Olive green seating, walnut surfaces, bronze accents, smoked glass, and warm indirect lighting.",
     galleryImages: [
@@ -250,18 +249,21 @@ export const heroSlides = [
 export const works = [
   {
     title: "Monumental Architectural Fabrication",
+    href: "/works/historical-thematic-environments",
     type: "Architectural Environments",
     number: "Project 01",
     image: "/home/featured-entrance-gate.png"
   },
   {
     title: "Custom Experience Objects",
+    href: "/works/sculptures-characters",
     type: "Fantasy & Experience Spaces",
     number: "Project 02",
     image: "/home/featured-vintage-vehicle.png"
   },
   {
     title: "Commercial Sculptures & Brand Experiences",
+    href: "/works/commercial-brand-installations",
     type: "Commercial & Thematic Interiors",
     number: "Project 03",
     image: "/home/featured-burger-sculpture.png"
@@ -368,7 +370,9 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-02.jpeg"),
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-04.jpeg"),
       portfolioImage("/projects/portfolio/sculptures-characters/sculptures-characters-09.jpeg"),
-      portfolioImage("/projects/portfolio/sculptures-characters/historical-thematic-environments-28.jpeg")
+      portfolioImage(
+        "/projects/portfolio/sculptures-characters/historical-thematic-environments-28.jpeg"
+      )
     ],
     featured: true,
     published: true
@@ -401,10 +405,18 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/artificial-rock-organic-forms/organic-stone-feature-lounge-interior-01.png",
         alt: "Organic stone wall feature with warm backlighting in a premium lounge interior"
       },
-      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-04.jpeg"),
-      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-05.jpeg"),
-      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-06.jpeg"),
-      portfolioImage("/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-02.jpeg")
+      portfolioImage(
+        "/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-04.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-05.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-06.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/artificial-rock-organic-forms/artificial-rock-organic-forms-02.jpeg"
+      )
     ],
     coverPosition: "50% 50%",
     alt: "Artificial rock and organic forms portfolio category cover image",
@@ -428,10 +440,10 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       "These works combine reference-driven design, CNC production, hand finishing, and scenic installation for cultural and destination settings."
     ],
     images: [
-      ...portfolioImageSequence("historical-thematic-environments", [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-        22, 23, 24, 27
-      ]),
+      ...portfolioImageSequence(
+        "historical-thematic-environments",
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27]
+      ),
       {
         src: "/projects/portfolio/historical-thematic-environments/artificial-rock-organic-forms-08.jpeg",
         alt: "Green twisted decorative column form for a thematic architectural environment",
@@ -441,10 +453,10 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
       },
       {
         src: "/projects/portfolio/historical-thematic-environments/white-ornamental-architectural-arch-production-01.png",
-        alt: "White ornamental architectural arch element produced for a thematic interior",
-        title: "Ornamental Architectural Arch",
+        alt: "White architectural ornament with symmetrical floral relief on a pedestal",
+        title: "Ornamental Architectural Detail",
         description:
-          "A large-scale decorative arch form prepared as a sculptural architectural element."
+          "A symmetrical sculptural ornament with layered floral forms and a light surface finish."
       },
       {
         src: "/projects/portfolio/historical-thematic-environments/eagle-relief-wall-with-decorative-columns-01.png",
@@ -499,15 +511,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/historical-thematic-environments/fluted-white-sculptural-vase-01.png",
         alt: "Tall white fluted sculptural vase with vertical ribbed geometry",
         title: "Fluted Sculptural Vase",
-        description:
-          "A tall sculptural vase form with vertical fluting and a narrow waist profile."
+        description: "A tall sculptural vase form with vertical fluting and a narrow waist profile."
       },
       {
         src: "/projects/portfolio/historical-thematic-environments/classical-white-decorative-urn-01.png",
         alt: "Classical white decorative urn form with rounded body and flared neck",
         title: "Classical Decorative Urn",
-        description:
-          "A classical urn-like display form with a rounded body and flared upper neck."
+        description: "A classical urn-like display form with a rounded body and flared upper neck."
       },
       {
         src: "/projects/portfolio/historical-thematic-environments/classical-white-baluster-vase-01.png",
@@ -534,9 +544,15 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/historical-thematic-environments/green-marble-twisted-column-form-01.png",
         alt: "Green marble-effect twisted column form produced as a decorative architectural element"
       },
-      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-04.jpeg"),
-      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-08.jpeg"),
-      portfolioImage("/projects/portfolio/historical-thematic-environments/historical-thematic-environments-10.jpeg")
+      portfolioImage(
+        "/projects/portfolio/historical-thematic-environments/historical-thematic-environments-04.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/historical-thematic-environments/historical-thematic-environments-08.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/historical-thematic-environments/historical-thematic-environments-10.jpeg"
+      )
     ],
     featured: true,
     published: true
@@ -556,11 +572,21 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
     ],
     images: portfolioImageSet("cnc-manufacturing-processes", 12),
     coverImages: [
-      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"),
-      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-02.jpeg"),
-      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-04.jpeg"),
-      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-07.jpeg"),
-      portfolioImage("/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-09.jpeg")
+      portfolioImage(
+        "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-02.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-04.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-07.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-09.jpeg"
+      )
     ],
     coverPosition: "50% 50%",
     alt: "CNC manufacturing process portfolio category cover image",
@@ -582,11 +608,21 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
     ],
     images: portfolioImageSequence("molds-composite-production", [1, 2, 3, 4, 5, 6, 7, 8, 9]),
     coverImages: [
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-01.jpeg"),
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-04.jpeg"),
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-05.jpeg"),
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-07.jpeg"),
-      portfolioImage("/projects/portfolio/molds-composite-production/molds-composite-production-09.jpeg")
+      portfolioImage(
+        "/projects/portfolio/molds-composite-production/molds-composite-production-01.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/molds-composite-production/molds-composite-production-04.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/molds-composite-production/molds-composite-production-05.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/molds-composite-production/molds-composite-production-07.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/molds-composite-production/molds-composite-production-09.jpeg"
+      )
     ],
     coverPosition: "50% 50%",
     alt: "Molds and composite production portfolio category cover image",
@@ -643,15 +679,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-05.jpeg",
         alt: "Assorted oversized fruit display props produced for commercial presentation",
         title: "Oversized Fruit Display Props",
-        description:
-          "A group of fruit display objects fabricated as promotional commercial props."
+        description: "A group of fruit display objects fabricated as promotional commercial props."
       },
       {
         src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-06.jpeg",
         alt: "Oversized meat display props produced for a commercial food presentation",
         title: "Oversized Meat Display Props",
-        description:
-          "Large food-themed display props created for commercial visual merchandising."
+        description: "Large food-themed display props created for commercial visual merchandising."
       },
       {
         src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-07.jpeg",
@@ -664,15 +698,13 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-08.jpeg",
         alt: "Oversized carrot display object produced as a commercial food prop",
         title: "Oversized Carrot Display Object",
-        description:
-          "A large food prop shaped and finished for commercial display use."
+        description: "A large food prop shaped and finished for commercial display use."
       },
       {
         src: "/projects/portfolio/commercial-brand-installations/sculptures-characters-14.jpeg",
         alt: "Oversized burger prop in workshop production for a commercial food display",
         title: "Burger Display Prop Production",
-        description:
-          "A commercial food display prop shown during workshop production."
+        description: "A commercial food display prop shown during workshop production."
       },
       {
         src: "/projects/portfolio/commercial-brand-installations/historical-thematic-environments-25.jpeg",
@@ -685,8 +717,7 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/commercial-brand-installations/historical-thematic-environments-26.jpeg",
         alt: "EPSLAM branded decorative display object produced for a commercial environment",
         title: "EPSLAM Branded Display Object",
-        description:
-          "A freestanding branded decorative object fabricated for a commercial setting."
+        description: "A freestanding branded decorative object fabricated for a commercial setting."
       },
       {
         src: "/projects/portfolio/commercial-brand-installations/molds-composite-production-10.jpeg",
@@ -701,8 +732,12 @@ const portfolioCategoryData: PortfolioCategoryInput[] = [
         src: "/projects/portfolio/commercial-brand-installations/ardic-branded-spherical-reception-display-01.png",
         alt: "Large spherical reception display object in an Ardıç branded premium lobby"
       },
-      portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-01.jpeg"),
-      portfolioImage("/projects/portfolio/commercial-brand-installations/commercial-brand-installations-06.jpeg"),
+      portfolioImage(
+        "/projects/portfolio/commercial-brand-installations/commercial-brand-installations-01.jpeg"
+      ),
+      portfolioImage(
+        "/projects/portfolio/commercial-brand-installations/commercial-brand-installations-06.jpeg"
+      ),
       {
         src: "/projects/portfolio/commercial-brand-installations/illuminated-sculptural-wings-brand-installation-01.png",
         alt: "Illuminated sculptural red wings installed as a commercial interior feature wall"
@@ -725,10 +760,15 @@ export const portfolioCategories = portfolioCategoryData.map((category, index) =
   ...category,
   number: `${index + 1}`.padStart(2, "0"),
   coverImage: category.coverImage ?? getPortfolioImageSrc(category.images[0]),
-  coverImages: (category.coverImages ?? [category.coverImage ?? category.images[0]]).map((image, imageIndex) => ({
-    src: getPortfolioImageSrc(image),
-    alt: getPortfolioImageAlt(image, category.alt ?? `${category.title} cover image ${imageIndex + 1}`)
-  })),
+  coverImages: (category.coverImages ?? [category.coverImage ?? category.images[0]]).map(
+    (image, imageIndex) => ({
+      src: getPortfolioImageSrc(image),
+      alt: getPortfolioImageAlt(
+        image,
+        category.alt ?? `${category.title} cover image ${imageIndex + 1}`
+      )
+    })
+  ),
   coverPosition: category.coverPosition ?? "50% 50%",
   alt: category.alt ?? `${category.title} portfolio category cover image`,
   imageCount: category.images.length

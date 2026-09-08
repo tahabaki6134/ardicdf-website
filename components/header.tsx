@@ -3,114 +3,119 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { brand, navigation } from "@/lib/content";
+import { useEffect, useState } from "react";
+import { useProjectSelection } from "./project-selection-provider";
+
+const navigation = [
+  { href: "/works", label: "Works" },
+  { href: "/industries", label: "Industries" },
+  { href: "/services", label: "Services" },
+  { href: "/concepts", label: "Concepts" },
+  { href: "/about", label: "About" }
+];
 
 export function Header() {
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const closeMobileMenu = () => setMobileMenuOpen(false);
-
+  const [open, setOpen] = useState(false);
+  const { selected } = useProjectSelection();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+  function links() {
+    return navigation.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={() => setOpen(false)}
+        aria-current={
+          pathname === item.href || pathname.startsWith(item.href + "/") ? "page" : undefined
+        }
+        className="min-h-11 py-3 text-base font-semibold text-ink/75 transition hover:text-bronze aria-[current=page]:text-bronze"
+      >
+        {item.label}
+      </Link>
+    ));
+  }
   return (
-    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-ink/10 bg-porcelain/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-[1760px] items-center justify-between gap-5 px-5 py-4 md:px-8 md:py-5 2xl:px-10">
-        <Link href="/" className="group flex min-w-0 items-center gap-4 md:gap-5" aria-label="ARDIÇ home">
+    <header
+      className="sticky top-0 z-50 border-b border-ink/15 bg-porcelain/95 backdrop-blur-xl"
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          document.getElementById("menu-toggle")?.focus();
+        }
+      }}
+    >
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-3 md:px-8">
+        <Link
+          href="/"
+          aria-label="Ardıç Design & Fabrication home"
+          onClick={() => setOpen(false)}
+          className="flex min-w-0 items-center gap-3"
+        >
           <Image
             src="/logo-symbol.svg"
             alt=""
-            width={96}
-            height={96}
+            width={60}
+            height={60}
             priority
-            className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20 md:h-24 md:w-24"
+            className="h-12 w-12 shrink-0 md:h-14 md:w-14"
           />
-          <span className="block min-w-0">
-            <span className="block font-display text-3xl leading-none tracking-[0.22em] text-ink sm:text-4xl md:text-5xl">
-              {brand.shortName}
+          <span>
+            <span className="block font-display text-3xl leading-none tracking-[0.15em]">
+              ARDIÇ
             </span>
-            <span className="mt-2 block text-[0.55rem] font-semibold uppercase tracking-[0.32em] text-ink/70 sm:text-[0.65rem] md:text-xs">
-              Design & Fabrication
-            </span>
-            <span className="mt-1 block text-[0.48rem] font-semibold uppercase tracking-[0.28em] text-ink/45 sm:text-[0.56rem] md:text-[0.65rem]">
-              An EPSLAM Company
-            </span>
-            <span className="mt-2 hidden h-px w-20 bg-bronze sm:block" />
+            <span className="mt-1 block text-sm text-ink/70">Design & Fabrication</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-4 xl:gap-5 2xl:gap-8 lg:flex" aria-label="Primary navigation">
-          {navigation.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-[1.0625rem] tracking-[0.02em] transition ${
-                  active ? "text-bronze" : "text-ink/70 hover:text-ink"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        <nav aria-label="Main navigation" className="hidden items-center gap-6 xl:flex">
+          {links()}
         </nav>
-        <Link
-          href="/contact"
-          className="hidden border border-bronze px-4 py-2 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain lg:inline-block"
-        >
-          Start a Project
-        </Link>
-        <button
-          type="button"
-          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-navigation"
-          onClick={() => setMobileMenuOpen((open) => !open)}
-          className="flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 border border-ink/15 text-ink transition hover:border-bronze hover:text-bronze lg:hidden"
-        >
-          <span
-            className={`h-px w-5 bg-current transition ${
-              mobileMenuOpen ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-px w-5 bg-current transition ${mobileMenuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`h-px w-5 bg-current transition ${
-              mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </div>
-      <nav
-        id="mobile-navigation"
-        className={`border-t border-ink/10 bg-porcelain px-5 py-5 shadow-soft transition lg:hidden ${
-          mobileMenuOpen ? "block" : "hidden"
-        }`}
-        aria-label="Mobile navigation"
-      >
-        <div className="mx-auto grid max-w-7xl gap-1">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={closeMobileMenu}
-              className={`border-b border-ink/10 py-4 font-display text-2xl leading-none transition ${
-                pathname === item.href ? "text-bronze" : "text-ink hover:text-bronze"
-              }`}
-            >
-              {item.mobileLabel ?? item.label}
-            </Link>
-          ))}
-          <Link
-            href="/contact"
-            onClick={closeMobileMenu}
-            className="mt-5 inline-flex w-fit border border-bronze px-5 py-3 text-xs font-semibold uppercase tracking-brand text-bronze transition hover:bg-bronze hover:text-porcelain"
-          >
-            Start a Project
+        <div className="flex items-center gap-4">
+          <Link href="/project-selection" className="hidden py-3 text-sm font-semibold sm:block">
+            Selection ({selected.length})
           </Link>
+          <Link href="/contact" className="button-primary hidden lg:inline-flex">
+            Start a project →
+          </Link>
+          <button
+            id="menu-toggle"
+            type="button"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            onClick={() => setOpen(!open)}
+            className="min-h-11 border border-ink/25 px-3 text-sm font-semibold xl:hidden"
+          >
+            {open ? "Close" : "Menu"}
+          </button>
         </div>
-      </nav>
+      </div>
+      {open && (
+        <nav
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          className="grid max-h-[75dvh] overflow-y-auto border-t border-ink/15 px-5 py-4 xl:hidden"
+        >
+          {links()}
+          <Link className="py-3 font-semibold" onClick={() => setOpen(false)} href="/planning">
+            Planning guide
+          </Link>
+          <Link
+            className="py-3 font-semibold"
+            onClick={() => setOpen(false)}
+            href="/project-selection"
+          >
+            My selection ({selected.length})
+          </Link>
+          <Link
+            className="button-primary mt-3 justify-self-start"
+            href="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Start a project →
+          </Link>
+        </nav>
+      )}
     </header>
   );
 }

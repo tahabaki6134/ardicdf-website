@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { PortfolioLightbox } from "@/components/portfolio-lightbox";
 import { SectionHeading } from "@/components/section-heading";
 import { getPortfolioImageAlt, getPortfolioImageSrc, portfolioCategories } from "@/lib/content";
+import { getProject, projects } from "@/lib/projects";
+import { ProjectDetail } from "@/components/project-detail";
 
 const siteUrl = "https://www.ardicdf.com";
 
@@ -19,12 +21,29 @@ function getCategory(slug: string) {
 }
 
 export function generateStaticParams() {
-  return portfolioCategories.map((category) => ({
+  return [
+    ...portfolioCategories,
+    ...projects
+      .filter((project) => project.id !== "modular-artificial-rock-concert-environment")
+      .map((project) => ({ slug: project.id }))
+  ].map((category) => ({
     slug: category.slug
   }));
 }
 
 export function generateMetadata({ params }: CategoryPageProps): Metadata {
+  const project = getProject(params.slug);
+  if (project)
+    return {
+      title: project.title,
+      description: project.description,
+      alternates: { canonical: `/works/${project.id}` },
+      openGraph: {
+        title: project.title,
+        description: project.description,
+        url: `/works/${project.id}`
+      }
+    };
   const category = getCategory(params.slug);
 
   if (!category) {
@@ -46,6 +65,8 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
 }
 
 export default function PortfolioCategoryPage({ params }: CategoryPageProps) {
+  const project = getProject(params.slug);
+  if (project) return <ProjectDetail project={project} />;
   const category = getCategory(params.slug);
 
   if (!category) {
