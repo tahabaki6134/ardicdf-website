@@ -1,5 +1,6 @@
 "use client";
 
+import { getMethod } from "@/lib/manufacturing";
 import Script from "next/script";
 import Link from "next/link";
 import { FormEvent, useEffect, useRef, useState } from "react";
@@ -46,12 +47,19 @@ const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export function ContactForm({
   initialSelected = null,
-  initialIndustry = ""
+  initialIndustry = "",
+  initialMethod = "",
+  initialAlternative = ""
 }: {
   initialSelected?: string[] | null;
   initialIndustry?: string;
+  initialMethod?: string;
+  initialAlternative?: string;
 }) {
-  const [form, setForm] = useState<Enquiry>({ ...initialEnquiry, industry: initialIndustry });
+  const chosenMethod = getMethod(initialMethod)?.copy.en.title ?? "";
+  const chosenAlternative = getMethod(initialAlternative)?.copy.en.title ?? "";
+  const methodPreference = [chosenMethod, chosenAlternative].filter(Boolean).join(" / ");
+  const [form, setForm] = useState<Enquiry>({ ...initialEnquiry, industry: initialIndustry, projectType: chosenMethod, materialPreference: methodPreference });
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState<EnquiryErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
@@ -260,7 +268,8 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={submit} noValidate className="min-w-0 border border-ink/15 bg-white p-5 md:p-9">
+    <form id="brief" onSubmit={submit} noValidate className="min-w-0 border border-ink/15 bg-white p-5 md:p-9">
+      {methodPreference && <p className="mb-6 border-l-4 border-bronze bg-smoke/30 p-4 text-base leading-7"><strong>Methods for your enquiry:</strong> {methodPreference}. You can adjust these in the form.</p>}
       {siteKey && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"

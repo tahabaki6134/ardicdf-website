@@ -1,3 +1,4 @@
+import { manufacturingMethods } from "./manufacturing";
 export const initialEnquiry = {
   fullName: "",
   company: "",
@@ -54,7 +55,7 @@ export const fieldLabels: Record<EnquiryField, string> = {
   email: "Email",
   phone: "Phone / WhatsApp",
   country: "Your country",
-  projectType: "Project type",
+  projectType: "Manufacturing method",
   industry: "Sector",
   intendedUse: "Use & setting",
   projectLocation: "Project destination",
@@ -97,25 +98,8 @@ export const enquirySteps: { title: string; fields: EnquiryField[] }[] = [
 ];
 
 export const projectTypes = [
-  "Scenic Fabrication / Large-Scale Props",
-  "Brand Activation / Exhibition",
-  "Themed Environment Fabrication",
-  "Architectural Decor",
-  "Sculpture / Character Production",
-  "Artificial Rock / Organic Forms",
-  "CNC Foam / EPS / XPS Machining",
-  "Polyurethane Machining / Casting",
-  "Composite Fabrication / Mold Making",
-  "Fiberglass / GRP / Polyester",
-  "Carbon Fiber Lamination",
-  "Large-Format 3D Printing",
-  "Molds / Masters / Plugs / Tooling",
-  "Industrial Prototype / Product Development",
-  "Wood Fabrication / CNC Woodworking",
-  "UAV / USV Prototype Development",
-  "Multi-Material Custom Fabrication",
-  "Not sure yet — please advise",
-  "Other"
+  ...manufacturingMethods.map(method => method.copy.en.title),
+  "Not sure yet — please advise", "Other"
 ];
 
 export const budgetRanges = [

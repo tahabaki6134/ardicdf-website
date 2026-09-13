@@ -1,3 +1,4 @@
+import { getMethod } from "@/lib/manufacturing";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 export default function ContactPage({
   searchParams
 }: {
-  searchParams: { selected?: string | string[]; industry?: string | string[] };
+  searchParams: { selected?: string | string[]; industry?: string | string[]; method?: string | string[]; alternative?: string | string[] };
 }) {
   const initialSelected =
     searchParams.selected === undefined ? null : parseSelectedProjects(searchParams.selected);
@@ -46,6 +47,8 @@ export default function ContactPage({
     typeof searchParams.industry === "string" && getIndustry(searchParams.industry)
       ? searchParams.industry
       : "";
+  const initialMethod = typeof searchParams.method === "string" && getMethod(searchParams.method) ? searchParams.method : "";
+  const initialAlternative = typeof searchParams.alternative === "string" && getMethod(searchParams.alternative) && searchParams.alternative !== initialMethod ? searchParams.alternative : "";
   return (
     <main className="page-shell">
       <div className="mb-10 max-w-4xl">
@@ -60,9 +63,11 @@ export default function ContactPage({
       </div>
       <div className="grid items-start gap-10 lg:grid-cols-[1.6fr_0.8fr]">
         <ContactForm
-          key={`${initialIndustry}:${initialSelected?.join(",") ?? "session"}`}
+          key={`${initialMethod}:${initialAlternative}:${initialIndustry}:${initialSelected?.join(",") ?? "session"}`}
           initialSelected={initialSelected}
           initialIndustry={initialIndustry}
+          initialMethod={initialMethod}
+          initialAlternative={initialAlternative}
         />
         <aside className="space-y-8 lg:sticky lg:top-28">
           <section className="border-t border-ink/20 pt-6">

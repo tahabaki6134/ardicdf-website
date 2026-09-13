@@ -44,6 +44,7 @@ export function Footer() {
             <Link href="/project-selection" className="text-porcelain/75 hover:text-bronze">
               My project selection
             </Link>
+            <a href="https://ardicdf.com.tr" className="text-porcelain/75 hover:text-bronze">Türkçe site</a>
             <Link href="/privacy" className="text-porcelain/55 transition hover:text-bronze">
               Privacy Policy
             </Link>

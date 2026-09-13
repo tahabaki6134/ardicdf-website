@@ -1,3 +1,5 @@
+import { manufacturingMethods, methodPath, comparePath } from "@/lib/manufacturing";
+import { manufacturingLanguage as lang } from "@/lib/manufacturing-site";
 import type { MetadataRoute } from "next";
 import { portfolioCategories } from "@/lib/content";
 import { projects } from "@/lib/projects";
@@ -7,7 +9,7 @@ const siteUrl = "https://www.ardicdf.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    { path: "", lastModified: "2026-09-08" },
+    { path: "", lastModified: "2026-09-13" },
     { path: "/works", lastModified: "2026-09-08" },
     { path: "/industries", lastModified: "2026-09-08" },
     { path: "/planning", lastModified: "2026-09-08" },
@@ -16,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2026-09-08"
     },
     { path: "/concepts", lastModified: "2026-08-13" },
-    { path: "/services", lastModified: "2026-08-13" },
+    { path: "/services", lastModified: "2026-09-13" },
     { path: "/services/cnc-foam-polyurethane-machining", lastModified: "2026-08-13" },
     { path: "/services/composite-fabrication", lastModified: "2026-08-13" },
     { path: "/services/large-format-3d-printing", lastModified: "2026-08-13" },
@@ -29,6 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
+    { url: `${siteUrl}${comparePath(lang)}`, lastModified: "2026-09-13", changeFrequency: "monthly" as const, priority: 0.85 },
+    ...manufacturingMethods.map(method => ({ url: `${siteUrl}${methodPath(method, lang)}`, lastModified: "2026-09-13", changeFrequency: "monthly" as const, priority: 0.9 })),
     ...staticRoutes.map((route) => ({
       url: `${siteUrl}${route.path}`,
       lastModified: route.lastModified,
