@@ -79,3 +79,7 @@ body {
 }
 
 .method-comparison td, .method-comparison th { overflow-wrap: anywhere; }
+
+img { max-width: 100%; }
+main { min-width: 0; }
+@media (max-width: 639px) { .page-shell { padding-top: 2.5rem; padding-bottom: 2.5rem; } .eyebrow { font-size: 0.6875rem; letter-spacing: 0.12em; } }

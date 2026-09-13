@@ -25,3 +25,8 @@ Epoxy resin casting is a distinct method with stable ID `epoxy`. Casting is dist
 The wood/CNC route includes complete fitted and freestanding furniture, from an individual solid timber door to a cabinet with carcass, drawers and hardware. The home, services, wood and fabrication pages describe design development, shop drawings, production, finishing, delivery and installation of furniture, exterior facade elements and custom fabrication packages. Turnkey scope is tied to those defined work packages, not general building renovation. Existing method IDs and indexed URLs remain stable. The category grid adapts to odd/even method counts.
 
 Validation for this update does not send a real enquiry: the request authorizes site content publication, not test emails. Use the existing mocked contact tests and inspect comparison-prefilled fields without submission.
+
+
+## Visual and enquiry refresh · 2026-09-13
+
+The home page leads with a short offer and an existing completed-project photograph. Eight method cards keep the material taxonomy; where no verified material-specific photograph exists, labeled process illustrations are used. Technical costs and limits stay on method detail and comparison pages. Complete furniture and facade scope is summarized on home and expanded in the workshop. About focuses on the established team. Live workshop content is removed; `/live` redirects to `/fabrication`, and the placeholder references page redirects to `/works`. Both forms use the same bilingual short layout, preserve compared methods, and support bounded email attachments.

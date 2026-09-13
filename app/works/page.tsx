@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { RotatingCoverImage } from "@/components/rotating-cover-image";
 import { SectionHeading } from "@/components/section-heading";
 import { portfolioCategories } from "@/lib/content";
@@ -28,57 +26,21 @@ const worksCategories = portfolioCategories.filter((category) => category.publis
 export default function WorksPage() {
   return (
     <main>
-      <section className="px-5 py-20 md:px-8 md:py-28">
+      <section className="px-5 py-10 md:px-8 md:py-14">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 border-b border-ink/10 pb-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <SectionHeading
               eyebrow="Works"
               headingTag="h1"
-              title="Scenic, Sculptural & Custom Fabrication Works"
-              copy="Selected completed fabrication work across scenic environments, sculpture, architectural decor, brand installations, CNC production, molds, and composite systems."
+              title="Selected fabrication projects."
+              copy="Finished objects, architectural details and scenic installations from our production archive."
             />
             <p className="max-w-xl text-base leading-8 text-ink/60 md:text-lg">
-              This archive focuses on physical production and fabrication outcomes. Exploratory
-              design concepts and development studies are presented separately in Concepts.
+              See the form, surface and assembly of our work. Each project is developed for its own dimensions, materials and use.
             </p>
           </div>
 
           <ProjectsExplorer />
-          <article className="mt-16 border border-ink/10 bg-ink text-porcelain shadow-soft">
-            <Link
-              href="/works/modular-artificial-rock-concert-environment"
-              className="group grid lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch"
-            >
-              <div className="relative aspect-video overflow-hidden bg-ink lg:aspect-auto lg:min-h-[520px]">
-                <Image
-                  src="/works/modular-artificial-rock-concert-environment/concert-rock-environment-hero.jpeg"
-                  alt="Ardıç modular artificial-rock concert environment at full scale"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 58vw, 100vw"
-                  className="object-cover transition duration-700 group-hover:scale-[1.015]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
-              </div>
-              <div className="flex min-h-96 flex-col p-7 md:p-10 lg:p-12">
-                <p className="text-xs font-semibold uppercase tracking-brand text-bronze">
-                  Featured Completed Case Study
-                </p>
-                <h2 className="mt-7 max-w-xl font-display text-4xl leading-tight text-porcelain md:text-5xl">
-                  Modular Artificial Rock Concert Environment
-                </h2>
-                <div className="mt-6 h-px w-14 bg-bronze" />
-                <p className="mt-7 max-w-xl leading-8 text-porcelain/65">
-                  See how an oversized EPS foam scenic environment was fabricated as transportable
-                  rockwork modules, finished for visual continuity, and assembled on site.
-                </p>
-                <span className="mt-auto pt-10 text-xs font-semibold uppercase tracking-brand text-bronze transition group-hover:text-porcelain">
-                  Read the Case Study &rarr;
-                </span>
-              </div>
-            </Link>
-          </article>
-
           <h2 className="mt-16 font-display text-4xl">Explore the full image archive.</h2>
           <p className="mt-4 max-w-2xl leading-7 text-ink/70">
             Browse workshop photographs, fabrication details and completed pieces by production

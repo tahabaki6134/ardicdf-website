@@ -6,6 +6,7 @@ export type Project = {
   alt: string;
   description: string;
   details: string[];
+  facts?: { label: string; value: string }[];
   briefChecklist: string[];
   industries: string[];
   services: { label: string; href: string }[];
@@ -37,6 +38,7 @@ export const projects: Project[] = [
   },
   {
     id: "cosmetic-bottle-display-props",
+    facts: [{"label": "Work shown", "value": "Oversized product-shaped display objects"}, {"label": "Visible finish", "value": "Coloured surfaces and applied brand graphics"}, {"label": "Components", "value": "Bottle profiles, caps and display details"}],
     title: "Cosmetic bottle display props",
     category: "Brand & retail props",
     image: "/projects/portfolio/commercial-brand-installations/molds-composite-production-10.jpeg",
@@ -60,6 +62,7 @@ export const projects: Project[] = [
   },
   {
     id: "giant-burger-display-prop",
+    facts: [{"label": "Work shown", "value": "Oversized sculptural food display"}, {"label": "Detail", "value": "Individually shaped ingredient layers"}, {"label": "Visible finish", "value": "Textured and coloured surfaces"}],
     title: "Giant burger display prop",
     category: "Brand & retail props",
     image: "/projects/portfolio/commercial-brand-installations/sculptures-characters-14.jpeg",
@@ -80,6 +83,7 @@ export const projects: Project[] = [
   },
   {
     id: "classical-decorative-columns",
+    facts: [{"label": "Work shown", "value": "A pair of decorative architectural columns"}, {"label": "Detail", "value": "Fluted shafts, scroll capitals and bases"}, {"label": "Visible finish", "value": "Coordinated stone-effect surface"}],
     title: "Classical decorative columns",
     category: "Architectural decor",
     image:
@@ -107,6 +111,7 @@ export const projects: Project[] = [
   },
   {
     id: "ornamental-elephant-sculpture",
+    facts: [{"label": "Work shown", "value": "Ornamental elephant-head sculpture"}, {"label": "Detail", "value": "Relief decoration and curved tusks"}, {"label": "Visible finish", "value": "White sculptural surface"}],
     title: "Ornamental elephant sculpture",
     category: "Sculpture & characters",
     image: "/services/sculpture-elephant-front.jpeg",
@@ -127,6 +132,7 @@ export const projects: Project[] = [
   },
   {
     id: "decorative-entrance-arch",
+    facts: [{"label": "Work shown", "value": "Custom ornamental storefront surround"}, {"label": "Detail", "value": "Shaped arch profile and decorative relief"}, {"label": "Stage shown", "value": "Site installation"}],
     title: "Decorative entrance arch",
     category: "Architectural decor",
     image:

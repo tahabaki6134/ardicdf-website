@@ -1,3 +1,4 @@
+import { parseAttachments, type EnquiryAttachment } from "@/lib/enquiry-attachments";
 import { NextResponse } from "next/server";
 import {
   fieldLabels,
@@ -49,6 +50,7 @@ async function sendEmail(payload: {
   html: string;
   text: string;
   replyTo?: string;
+  attachments?: EnquiryAttachment[];
 }) {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -65,7 +67,8 @@ async function sendEmail(payload: {
       subject: payload.subject,
       html: payload.html,
       text: payload.text,
-      reply_to: payload.replyTo
+      reply_to: payload.replyTo,
+      attachments: payload.attachments
     })
   });
   if (!response.ok)
@@ -75,7 +78,9 @@ async function sendEmail(payload: {
 export async function POST(request: Request) {
   let payload: Record<string, unknown>;
   try {
-    const value: unknown = await request.json();
+    const body = await request.text();
+    if (Buffer.byteLength(body) > 3 * 1024 * 1024) return NextResponse.json({ error: "Please keep attached files under 2 MB in total." }, { status: 413 });
+    const value: unknown = JSON.parse(body);
     if (!value || typeof value !== "object" || Array.isArray(value))
       throw new Error("Invalid body");
     payload = value as Record<string, unknown>;
@@ -83,9 +88,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
+  let attachments: EnquiryAttachment[];
+  try { attachments = parseAttachments(payload.attachments); }
+  catch { return NextResponse.json({ error: "Attach up to 3 PDF, JPG, PNG or WebP files, 2 MB total. Check the files or use a share link." }, { status: 400 }); }
+
   const inquiry = Object.fromEntries(
     Object.keys(initialEnquiry).map((key) => [key, clean(payload[key])])
   ) as Enquiry;
+  if (!inquiry.materialPreference && payload.projectScope) inquiry.materialPreference = clean(payload.projectScope);
   if (inquiry.companyWebsite)
     return NextResponse.json(
       { error: "Unable to process this enquiry. Please reload and try again." },
@@ -142,6 +152,7 @@ export async function POST(request: Request) {
           .join("\n")
       : "None selected"
   ]);
+  if (attachments.length) rows.push(["Attached files", attachments.map(file => file.filename).join("; ")]);
   const notificationText = rows.map(([label, value]) => label + ": " + value).join("\n\n");
   const tableRows = rows
     .map(
@@ -170,7 +181,8 @@ export async function POST(request: Request) {
         safeSubject(inquiry.company || inquiry.fullName),
       html: notificationHtml,
       text: notificationText,
-      replyTo: inquiry.email
+      replyTo: inquiry.email,
+      attachments
     });
   } catch {
     console.error("Contact notification could not be sent.");

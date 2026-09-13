@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { getMethod } from "@/lib/manufacturing";
+import { languageRoute } from "@/lib/language-route";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useProjectSelection } from "./project-selection-provider";
@@ -28,7 +30,7 @@ export function Header() {
         href={item.href}
         onClick={() => setOpen(false)}
         aria-current={
-          pathname === item.href || pathname.startsWith(item.href + "/") ? "page" : undefined
+          pathname === item.href || pathname.startsWith(item.href + "/") || (item.href === "/services" && (pathname.startsWith("/manufacturing/") || pathname.startsWith("/imalat/"))) ? "page" : undefined
         }
         className="min-h-11 py-3 text-base font-semibold text-ink/75 transition hover:text-bronze aria-[current=page]:text-bronze"
       >
@@ -46,12 +48,12 @@ export function Header() {
         }
       }}
     >
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-3 md:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-4 py-2.5 md:px-8">
         <Link
           href="/"
           aria-label="Ardıç Design & Fabrication home"
           onClick={() => setOpen(false)}
-          className="flex min-w-0 items-center gap-3"
+          className="flex min-w-0 items-center gap-2"
         >
           <Image
             src="/logo-symbol.svg"
@@ -59,22 +61,23 @@ export function Header() {
             width={60}
             height={60}
             priority
-            className="h-12 w-12 shrink-0 md:h-14 md:w-14"
+            className="h-9 w-9 shrink-0 md:h-12 md:w-12"
           />
           <span>
-            <span className="block font-display text-3xl leading-none tracking-[0.15em]">
+            <span className="block font-display text-2xl leading-none tracking-[0.12em] md:text-3xl">
               ARDIÇ
             </span>
-            <span className="mt-1 block text-sm text-ink/70">Design & Fabrication</span>
+            <span className="mt-1 block text-[10px] text-ink/70 md:text-xs">Design & Fabrication</span>
           </span>
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-6 xl:flex">
           {links()}
         </nav>
-        <div className="flex items-center gap-4">
-          <Link href="/project-selection" className="hidden py-3 text-sm font-semibold sm:block">
+        <div className="flex items-center gap-2 md:gap-3">
+          <a href={languageRoute(pathname, "en")} onClick={event => { const source = new URL(window.location.href); const target = new URL(languageRoute(pathname, "en")); for (const key of ["method", "alternative", "left", "right"]) { const value = source.searchParams.get(key); if (value && getMethod(value)) target.searchParams.set(key, value); } event.currentTarget.href = target.href; }} hrefLang="tr" aria-label="Türkçe" className="inline-flex min-h-11 min-w-11 items-center justify-center text-xs font-semibold text-bronze">TR</a>
+          {selected.length > 0 && <Link href="/project-selection" className="hidden py-3 text-sm font-semibold xl:block">
             Selection ({selected.length})
-          </Link>
+          </Link>}
           <Link href="/contact" className="button-primary hidden lg:inline-flex">
             Start a project →
           </Link>

@@ -1,2 +1,2 @@
-// Public studio address, shared by contact links and structured data.
+// Public contact address shared by both language versions.
 export const contactEmail = "info@ardicdf.com";

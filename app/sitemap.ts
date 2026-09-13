@@ -10,7 +10,7 @@ const siteUrl = "https://www.ardicdf.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "", lastModified: "2026-09-13" },
-    { path: "/works", lastModified: "2026-09-08" },
+    { path: "/works", lastModified: "2026-09-13" },
     { path: "/industries", lastModified: "2026-09-08" },
     { path: "/planning", lastModified: "2026-09-08" },
     {
@@ -24,10 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/services/large-format-3d-printing", lastModified: "2026-08-13" },
     { path: "/services/scenic-fabrication", lastModified: "2026-08-13" },
     { path: "/services/themed-environment-fabrication", lastModified: "2026-08-13" },
-    { path: "/about", lastModified: "2026-08-13" },
+    { path: "/about", lastModified: "2026-09-13" },
     { path: "/fabrication", lastModified: "2026-09-13" },
-    { path: "/contact", lastModified: "2026-09-08" },
-    { path: "/privacy", lastModified: "2026-09-08" }
+    { path: "/contact", lastModified: "2026-09-13" },
+    { path: "/privacy", lastModified: "2026-09-13" }
   ];
 
   return [
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((project) => project.id !== "modular-artificial-rock-concert-environment")
       .map((project) => ({
         url: `${siteUrl}/works/${project.id}`,
-        lastModified: "2026-09-08",
+        lastModified: "2026-09-13",
         changeFrequency: "monthly" as const,
         priority: 0.8
       })),
