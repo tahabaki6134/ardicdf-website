@@ -394,16 +394,8 @@ export function ContactForm({
         {step === 2 && (
           <>
             {field("materialPreference", {
-              options: [
-                "Not sure — please advise",
-                "CNC foam / EPS / XPS",
-                "Polyurethane",
-                "Fiberglass / GRP / composites",
-                "Large-format 3D printing",
-                "Wood / multi-material",
-                "Other — described in brief"
-              ],
-              hint: "A preference is optional. We can review a suitable production route."
+              placeholder: "e.g. Carbon fiber, with fiberglass as an alternative",
+              hint: "Keep or edit the methods from your comparison, add another material, or leave this open for our advice."
             })}
             {field("targetFinish", {
               placeholder: "e.g. stone effect, matte colour, gloss or textured",
