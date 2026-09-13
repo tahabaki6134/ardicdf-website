@@ -48,7 +48,8 @@ export default function PrivacyPage() {
             unrelated marketing systems.
           </p>
 
-          <div className="mt-14 grid gap-px bg-ink/10">
+          <p className="mt-6 max-w-3xl leading-8 text-ink/70">Drawings and photos you attach are sent with your enquiry to our team through our email service. They are not published on the website.</p>
+      <div className="mt-14 grid gap-px bg-ink/10">
             <section className="bg-porcelain p-7 md:p-9">
               <h2 className="font-display text-3xl leading-tight text-ink">
                 Information We Receive

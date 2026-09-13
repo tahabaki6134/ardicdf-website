@@ -21,9 +21,9 @@ The endpoint reports success only after the team's notification has been accepte
 - `lib/projects.ts` defines six curated portfolio examples using existing photographs. Five have new detail pages; the original concert rockwork case study keeps its URL.
 - `lib/industries.ts` defines six sector pages and prospective applications. These applications are not claims of completed commissions.
 - `lib/planning.ts` supplies the planning guide and its matching FAQ structured data.
-- Visitors can filter work, select up to six examples, share a selection link and carry it into the four-step enquiry.
+- Visitors can filter work, select up to six examples, share a selection link and carry it into the short enquiry form.
 - Only public portfolio IDs are stored in session storage or share links. Personal and project form text stays in page memory until submission.
-- File references use a share-link field; there is no direct file upload or instant pricing calculator.
+- Visitors can attach up to three PDF/JPG/PNG/WebP files (2 MB total); larger CAD files use a share-link field. Validated file bytes are attached only to the team notification. There is no instant pricing calculator.
 - Keep all existing gallery and service URLs. Update `app/sitemap.ts` when publishing substantive content changes.
 
 Do not invent client names, dimensions, lead times, certifications or materials when extending the portfolio. Add these details only when verified project records are available. New project/sector pages have page-specific metadata and structured data; search or AI recommendations are not guaranteed.

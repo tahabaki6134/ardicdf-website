@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { comparisonFields, fieldNames, manufacturingMethods, methodPath, comparePath, type Language, type ManufacturingMethod } from "@/lib/manufacturing";
 import { manufacturingOrigins } from "@/lib/manufacturing-site";
+import { SelectedWork } from "@/components/selected-work";
+import { MethodVisual } from "@/components/method-visual";
+import { showcase, showcaseHref } from "@/lib/site-showcase";
 import { ProjectDelivery } from "@/components/project-delivery";
 
 export function CostContext({ lang }: { lang: Language }) {
@@ -10,22 +13,15 @@ export function CostContext({ lang }: { lang: Language }) {
     : "Costs are general guidance, not quotations or a fixed ranking. Compare the same size, quantity, delivered finish and use. Tooling, coatings, frames and shipping can change the total."}</p>;
 }
 
-export function MethodGrid({ lang }: { lang: Language }) {
+export function MethodGrid({ lang, compact = false }: { lang: Language; compact?: boolean }) {
   const tr = lang === "tr";
-  return <div className="mt-8 grid gap-px border border-ink/15 bg-ink/15 md:grid-cols-2">
-    {manufacturingMethods.map((method, index) => {
-      const copy = method.copy[lang];
-      return <article key={method.id} className={`flex flex-col bg-porcelain p-6 md:p-8 ${manufacturingMethods.length % 2 === 1 && index === manufacturingMethods.length - 1 ? "md:col-span-2" : ""}`}>
-        <div className="flex flex-wrap items-start justify-between gap-3 text-sm">
-          <span className="font-semibold text-bronze">0{index + 1}</span>
-          <span className="border border-ink/15 px-3 py-1">{copy.costLabel}</span>
-        </div>
-        <h3 className="mt-5 font-display text-3xl leading-tight"><Link href={methodPath(method, lang)} className="hover:text-bronze">{copy.title}</Link></h3>
-        <p className="mt-3 text-lg leading-7">{copy.summary}</p>
-        <p className="mt-4 max-w-2xl text-base leading-7 text-ink/70"><span className="font-semibold text-ink">{tr ? "Dikkate alın: " : "Consider: "}</span>{copy.limits[0]}</p>
-        <Link href={methodPath(method, lang)} className="text-link mt-6 inline-block self-start">{tr ? "Maliyet, detay ve kullanım" : "Cost, detail & applications"}<span aria-hidden="true"> →</span></Link>
-      </article>;
-    })}
+  const names = tr ? ["Strafor", "Cam elyaf", "Karbon fiber", "3D baskı", "Poliüretan", "Epoksi döküm", "Kalıp ve model", "Ahşap ve mobilya"] : ["EPS / XPS foam", "Fiberglass", "Carbon fiber", "3D printing", "Polyurethane", "Epoxy casting", "Molds & patterns", "Wood & furniture"];
+  return <div className="mt-7 grid grid-cols-2 gap-x-4 gap-y-7 lg:grid-cols-4 lg:gap-x-6">
+    {manufacturingMethods.map((method, index) => <article key={method.id} className="min-w-0">
+      <Link href={methodPath(method, lang)} className="group block"><MethodVisual id={method.id} lang={lang} /><h3 className="mt-3 font-display text-xl leading-tight transition group-hover:text-bronze md:text-2xl">{names[index]} <span className="text-bronze" aria-hidden="true">↗</span></h3></Link>
+      {!compact && <p className="mt-3 text-sm leading-6 text-ink/70">{method.copy[lang].summary}</p>}
+      <p className="mt-2 text-xs leading-5 text-ink/65">{method.copy[lang].costLabel}</p>
+    </article>)}
   </div>;
 }
 
@@ -55,36 +51,32 @@ export function MethodApplications({ lang }: { lang: Language }) {
 }
 
 export function ManufacturingHome({ lang }: { lang: Language }) {
-  const tr = lang === "tr";
+  const tr = lang === "tr", hero = showcase[0];
   return <main>
-    <section className="mx-auto grid max-w-[1440px] gap-8 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
+    <section className="mx-auto grid max-w-[1440px] gap-6 px-5 pb-8 pt-6 md:px-8 md:py-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
       <div>
-        <p className="eyebrow">{tr ? "İstanbul’da özel imalat · ARDIÇ" : "Custom manufacturing in Istanbul · ARDIÇ"}</p>
-        <h1 className="mt-5 max-w-3xl font-display text-5xl leading-[1.08] tracking-tight md:text-6xl">{tr ? "Doğru imalat." : "The right process."}<br /><span className="text-bronze">{tr ? "Ne alacağınız belli." : "Know what you’re getting."}</span></h1>
-        <p className="mt-6 max-w-xl text-lg leading-8 text-ink/75">{tr ? "Strafor, cam elyaf, karbon fiber, 3D baskı, poliüretan, epoksi döküm, kalıp ve ahşap/CNC. Bütçenize, detay beklentinize ve kullanım yerine göre üretim yöntemini seçin." : "Foam, fiberglass, carbon fiber, 3D printing, polyurethane, epoxy casting, molds and wood/CNC. Choose a manufacturing route around your budget, detail and intended use."}</p>
-        <p className="mt-4 max-w-xl text-base leading-7 text-ink/75">{tr ? "Sabit ve hareketli mobilya, dış cephe elemanları ve özel imalatta projelendirmeden montajlı teslime uzanan üretim." : "Fitted and freestanding furniture, facade elements and custom fabrication, from design development to installed completion."} <Link href="#project-delivery" className="underline underline-offset-4 hover:text-bronze">{tr ? "Komple proje kapsamımız" : "Our complete project scope"}</Link></p>
-        <div className="mt-7 flex flex-wrap gap-3"><Link href="#methods" className="button-primary">{tr ? "İmalat yöntemleri" : "Explore manufacturing"}</Link><Link href={comparePath(lang)} className="button-secondary">{tr ? "Yöntemleri karşılaştır" : "Compare methods"}</Link></div>
-        <p className="mt-5 max-w-xl text-sm leading-6 text-ink/70">{tr ? "Malzemeden emin değil misiniz? Ölçü, kullanım yeri ve referansınızı paylaşın; seçenekleri birlikte değerlendirelim." : "Not sure about materials? Share dimensions, the setting and a reference so we can review the options with you."}</p>
-        <Link href="/contact" className="text-link mt-4 inline-block">{tr ? "Projem için yöntem önerisi al" : "Get guidance for my project"}</Link>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.13em] text-bronze">{tr ? "ARDIÇ · İstanbul’da özel üretim" : "ARDIÇ · Bespoke fabrication in Istanbul"}</p>
+        <h1 className="mt-4 font-display text-[clamp(2.25rem,6.7vw,3.75rem)] leading-[1.07] tracking-tight">{tr ? "Özel üretim." : "Made for your project."}<br /><span className="text-bronze">{tr ? "Projeden montaja." : "Design to installation."}</span></h1>
+        <p className="mt-4 max-w-lg text-base leading-7 text-ink/75 md:mt-6 md:text-lg md:leading-8">{tr ? "Mobilya, cephe elemanları ve özel tasarım ürünleri; doğru malzeme, atölye üretimi ve yerinde montajla tamamlıyoruz." : "Bespoke furniture, facade elements and custom objects, brought together through material expertise, workshop fabrication and installation."}</p>
+        <div className="mt-5 flex flex-wrap gap-3 md:mt-7"><Link href="/contact#brief" className="inline-flex min-h-12 items-center justify-center bg-ink px-4 py-3 text-sm font-semibold text-porcelain transition hover:bg-bronze">{tr ? "Proje gönder" : "Send your project"} →</Link><Link href="#methods" className="inline-flex min-h-12 items-center justify-center border border-ink/25 px-4 py-3 text-sm font-semibold transition hover:bg-white">{tr ? "İmalat yöntemleri" : "Explore methods"}</Link></div>
       </div>
-      <figure>
-        <div className="relative aspect-[4/3] overflow-hidden bg-ink"><Image src="/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-01.jpeg" alt={tr ? "ARDIÇ atölyesinde birleştirilmiş büyük köpük araç formu" : "Large assembled foam vehicle form in the ARDIÇ workshop"} fill priority sizes="(min-width: 1024px) 46vw, 100vw" className="object-cover" /></div>
-        <figcaption className="border-b border-ink/15 py-3 text-sm leading-6 text-ink/70">{tr ? "Atölyeden · Son yüzey işlemlerinden önce şekillendirilmiş köpük form." : "From the workshop · A shaped foam form before the final surface finish."}</figcaption>
-      </figure>
+      <Link href={showcaseHref(hero, lang)} className="group block min-w-0">
+        <figure><div className="relative aspect-[16/10] overflow-hidden bg-ink lg:aspect-[6/5]"><Image src={hero.image} alt={hero[lang].alt} fill priority sizes="(min-width: 1024px) 54vw, 100vw" className="object-cover" style={{objectPosition: "50% 65%"}} /></div><figcaption className="flex items-center justify-between gap-3 border-b border-ink/15 py-3 text-xs leading-5 text-ink/70"><span>{hero[lang].title} · {tr ? "Tamamlanmış uygulama" : "Completed installation"}</span><span aria-hidden="true">↗</span></figcaption></figure>
+      </Link>
     </section>
-    <section id="methods" className="page-shell border-t border-ink/15">
-      <div className="flex flex-wrap items-end justify-between gap-5"><div><p className="eyebrow">{tr ? "Malzeme ve yöntem" : "Materials & methods"}</p><h2 className="mt-3 font-display text-4xl md:text-5xl">{tr ? "Neyle üretmek istiyorsunuz?" : "What should it be made with?"}</h2></div><Link href={comparePath(lang)} className="text-link">{tr ? "Yan yana karşılaştır" : "Compare side by side"}</Link></div>
-      <MethodGrid lang={lang} /><CostContext lang={lang} />
+    <section id="methods" className="page-shell border-y border-ink/15">
+      <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">{tr ? "8 imalat yöntemi" : "8 manufacturing methods"}</p><h2 className="mt-3 font-display text-3xl md:text-5xl">{tr ? "Projenize uygun malzeme." : "The material for your idea."}</h2></div><Link href={comparePath(lang)} className="text-link">{tr ? "Maliyet ve performansı karşılaştır" : "Compare cost & performance"} →</Link></div>
+      <MethodGrid lang={lang} compact /><p className="mt-6 max-w-3xl text-sm leading-6 text-ink/65">{tr ? "Maliyet seviyeleri genel yönlendirmedir. Ölçü, adet, son yüzey ve montaj kapsamına göre teklif hazırlıyoruz." : "Cost levels are a guide. Your dimensions, quantity, finish and installation scope determine the quotation."}</p>
     </section>
-    <ProjectDelivery lang={lang} />
-    <MethodApplications lang={lang} />
-    <section className="page-shell grid items-start gap-8 md:grid-cols-2"><div><p className="eyebrow">{tr ? "Üretimden örnekler" : "See the work"}</p><h2 className="mt-3 font-display text-4xl">{tr ? "Yöntemden bitmiş ürüne." : "From process to finished piece."}</h2><p className="mt-5 text-lg leading-8 text-ink/75">{tr ? "Heykel, rölyef ve dekor çalışmalarını uygulama örnekleri olarak inceleyin. Kendi projenizin malzeme ve yüzey tarifini ayrıca netleştirelim." : "Explore sculptures, reliefs and display work as application examples. We define the material and finish for your own project separately."}</p></div><div className="grid gap-3"><Link href="/works" className="button-secondary justify-between">{tr ? "Proje arşivi" : "Project archive"}<span aria-hidden="true">→</span></Link><Link href="/fabrication" className="button-secondary justify-between">{tr ? "Atölye ve üretim süreci" : "Workshop & production"}<span aria-hidden="true">→</span></Link><Link href="/contact" className="button-primary justify-between">{tr ? "Projem için teklif iste" : "Request a project quote"}<span aria-hidden="true">→</span></Link></div></section>
+    <SelectedWork lang={lang} />
+    <ProjectDelivery lang={lang} compact />
+    <section className="page-shell flex flex-wrap items-center justify-between gap-7"><div><p className="eyebrow">{tr ? "Projenizi konuşalım" : "Start with your idea"}</p><h2 className="mt-3 font-display text-3xl md:text-4xl">{tr ? "Bir çizim, fotoğraf veya fikirle başlayın." : "A drawing, a photo or an idea."}</h2><p className="mt-4 max-w-2xl leading-7 text-ink/70">{tr ? "Malzemeyi henüz seçmediyseniz kullanım yerini ve yaklaşık ölçüyü paylaşın; birlikte netleştirelim." : "Share the setting and approximate dimensions. We can help you choose the material and production route."}</p></div><Link href="/contact#brief" className="button-primary">{tr ? "Projem için teklif iste" : "Request a project quote"} →</Link></section>
   </main>;
 }
 
 export function ManufacturingIndex({ lang }: { lang: Language }) {
   const tr = lang === "tr";
-  return <main><section className="page-shell"><p className="eyebrow">{tr ? "İmalat rehberi" : "Manufacturing guide"}</p><h1 className="mt-4 max-w-4xl font-display text-5xl leading-tight md:text-6xl">{tr ? "Önce yöntemi tanıyın." : "Understand the process first."}</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-ink/75">{tr ? "Her malzemenin güçlü yanı ve sınırı farklı. Maliyet, detay, dayanım ve son yüzeyi inceleyerek projeniz için seçenekleri daraltın." : "Every material has strengths and limits. Use cost, detail, durability and the delivered surface to narrow down the options for your project."}</p><div className="mt-6 flex flex-wrap gap-3"><Link href={comparePath(lang)} className="button-primary">{tr ? "İki yöntemi karşılaştır" : "Compare two methods"}</Link><Link href="/contact" className="button-secondary">{tr ? "Seçim için destek al" : "Ask for guidance"}</Link></div><MethodGrid lang={lang} /><CostContext lang={lang} /></section><ProjectDelivery lang={lang} /><MethodApplications lang={lang} /></main>;
+  return <main><section className="page-shell"><p className="eyebrow">{tr ? "İmalat rehberi" : "Manufacturing guide"}</p><h1 className="mt-4 max-w-4xl font-display text-5xl leading-tight md:text-6xl">{tr ? "İmalat yöntemlerini keşfedin." : "Explore the manufacturing methods."}</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-ink/75">{tr ? "Her malzemenin güçlü yanı ve sınırı farklı. Maliyet, detay, dayanım ve son yüzeyi inceleyerek projeniz için seçenekleri daraltın." : "Every material has strengths and limits. Use cost, detail, durability and the delivered surface to narrow down the options for your project."}</p><div className="mt-6 flex flex-wrap gap-3"><Link href={comparePath(lang)} className="button-primary">{tr ? "İki yöntemi karşılaştır" : "Compare two methods"}</Link><Link href="/contact" className="button-secondary">{tr ? "Seçim için destek al" : "Ask for guidance"}</Link></div><MethodGrid lang={lang} /><CostContext lang={lang} /></section><MethodApplications lang={lang} /></main>;
 }
 
 export function ManufacturingDetail({ method, lang }: { method: ManufacturingMethod; lang: Language }) {
@@ -104,6 +96,7 @@ export function ManufacturingDetail({ method, lang }: { method: ManufacturingMet
       <div><p className="eyebrow">{copy.costLabel}</p><h1 className="mt-4 max-w-4xl font-display text-5xl leading-tight md:text-6xl">{copy.title}</h1><p className="mt-5 text-xl leading-8">{copy.summary}</p><p className="mt-5 max-w-3xl text-lg leading-8 text-ink/75">{copy.intro}</p></div>
       <div className="flex flex-col justify-end gap-3"><Link href={`/contact?method=${method.id}#brief`} className="button-primary">{tr ? "Bu yöntemle teklif iste" : "Request a quote for this method"}</Link><Link href={`${comparePath(lang)}?left=${method.id}&right=${method.id === "glass" ? "carbon" : "glass"}`} className="button-secondary">{tr ? "Başka yöntemle karşılaştır" : "Compare another method"}</Link></div>
     </section>
+    <section className="mt-8"><MethodVisual id={method.id} lang={lang} detail /></section>
     {copy.processes && <section className="border-b border-ink/15 py-10">
       <h2 className="font-display text-3xl">{tr ? "Karbon fiberde kullandığımız yöntemler" : "Our carbon fiber manufacturing processes"}</h2>
       <p className="mt-4 max-w-4xl leading-8 text-ink/75">{tr ? "Elle serme vakumsuz tamamlanabilir veya vakum torbalamayla desteklenebilir. İnfüzyonda ise reçine, başta kuru serilmiş elyafa vakum altında girer. Seçimi parçanın ihtiyacına göre yaparız." : "Hand layup can be completed without vacuum or followed by vacuum bagging. With infusion, resin enters initially dry reinforcement under vacuum. We choose according to the part's requirements."}</p>

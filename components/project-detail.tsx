@@ -74,6 +74,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           <figcaption className="mt-3 text-sm leading-6 text-ink/70">{project.alt}.</figcaption>
         </figure>
       </div>
+      {project.facts && <section aria-label="Project record" className="mt-10 border-y border-ink/15 py-6"><dl className="grid gap-6 sm:grid-cols-3">{project.facts.map(fact => <div key={fact.label}><dt className="text-xs font-semibold uppercase tracking-wider text-bronze">{fact.label}</dt><dd className="mt-2 leading-7 text-ink/75">{fact.value}</dd></div>)}</dl></section>}
       <div className="mt-16 grid gap-12 border-y border-ink/15 py-12 md:grid-cols-2">
         <section>
           <h2 className="font-display text-3xl">Form & finish</h2>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Language } from "@/lib/manufacturing";
 
-export function ProjectDelivery({ lang, contained = false }: { lang: Language; contained?: boolean }) {
+export function ProjectDelivery({ lang, contained = false, compact = false }: { lang: Language; contained?: boolean; compact?: boolean }) {
   const tr = lang === "tr";
   const areas = tr ? [
     { title: "Sabit mobilya", text: "Dolap, gardırop, depolama ünitesi, karşılama bankosu ve mekâna özel doğramaları gövde, kapak, raf, çekmece ve donanımlarıyla tamamlıyoruz." },
@@ -25,6 +25,14 @@ export function ProjectDelivery({ lang, contained = false }: { lang: Language; c
     ["Finishing & checks", "Veneer, product paint or clear finish, followed by dimensional, fit and function checks."],
     ["Delivery & installation", "Packing, transport planning, site assembly and handover of the agreed work."]
   ];
+
+  if (compact) return <section id="project-delivery" className="border-y border-ink/15 bg-smoke/25"><div className="page-shell">
+    <p className="eyebrow">{tr ? "Komple proje üretimi" : "Complete project fabrication"}</p>
+    <h2 className="mt-3 max-w-3xl font-display text-3xl leading-tight md:text-5xl">{tr ? "Masif kapaktan komple dolaba." : "From a timber door to a complete cabinet."}</h2>
+    <p className="mt-5 max-w-3xl text-lg leading-8 text-ink/75">{tr ? "Kapak, gövde, raf, çekmece ve donanımlarıyla tamamlanmış mobilyalar üretiyoruz. Tasarım, imalat, son yüzey ve montajı aynı proje içinde üstleniyoruz." : "We build complete furniture with doors, carcasses, shelves, drawers and hardware, coordinating design, fabrication, finishing and installation within the same project."}</p>
+    <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{areas.map(area => <li key={area.title} className="border-t border-ink/20 pt-4 font-semibold">{area.title}</li>)}</ul>
+    <div className="mt-8 flex flex-wrap gap-5"><Link href="/fabrication#project-delivery" className="text-link">{tr ? "Projeden montaja üretim süreci" : "From design through installation"} →</Link><Link href="/contact#brief" className="text-link">{tr ? "Komple proje için teklif iste" : "Discuss a complete project"} →</Link></div>
+  </div></section>;
 
   return <section id="project-delivery" className={`border-y border-ink/15 ${contained ? "my-12 py-10" : "bg-smoke/25"}`}>
     <div className={contained ? "" : "page-shell"}>
