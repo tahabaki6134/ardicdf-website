@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 import { useProjectSelection } from "./project-selection-provider";
 
 const navigation = [
-  { href: "/works", label: "Works" },
-  { href: "/industries", label: "Industries" },
-  { href: "/services", label: "Services" },
-  { href: "/concepts", label: "Concepts" },
+  { href: "/services", label: "Manufacturing" },
+  { href: "/compare", label: "Compare" },
+  { href: "/works", label: "Projects" },
+  { href: "/fabrication", label: "Workshop" },
   { href: "/about", label: "About" }
 ];
 

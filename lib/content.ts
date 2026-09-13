@@ -17,7 +17,8 @@ export const navigation: NavigationItem[] = [
   { href: "/", label: "Home" },
   { href: "/works", label: "Works" },
   { href: "/concepts", label: "Concepts" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Manufacturing" },
+  { href: "/compare", label: "Compare methods" },
   { href: "/about", label: "About" },
   { href: "/fabrication", label: "Fabrication" },
   { href: "/contact", label: "Contact" }

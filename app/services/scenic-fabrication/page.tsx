@@ -366,6 +366,7 @@ const structuredData = {
 export default function ScenicFabricationPage() {
   return (
     <main>
+      <div className="mx-auto max-w-7xl px-5 pt-8 md:px-8"><Link href="/services" className="text-link">Explore manufacturing methods and cost differences before choosing a process</Link></div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

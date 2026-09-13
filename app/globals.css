@@ -77,3 +77,5 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+.method-comparison td, .method-comparison th { overflow-wrap: anywhere; }
