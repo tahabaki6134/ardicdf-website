@@ -113,6 +113,7 @@ export const budgetRanges = [
   "Prefer to discuss privately"
 ];
 export const installationOptions = [
+  "Design, fabrication, delivery & installation",
   "Fabrication only",
   "Fabrication + delivery preparation",
   "Site assembly support may be required",

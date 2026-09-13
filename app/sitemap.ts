@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/services/scenic-fabrication", lastModified: "2026-08-13" },
     { path: "/services/themed-environment-fabrication", lastModified: "2026-08-13" },
     { path: "/about", lastModified: "2026-08-13" },
-    { path: "/fabrication", lastModified: "2026-08-13" },
+    { path: "/fabrication", lastModified: "2026-09-13" },
     { path: "/contact", lastModified: "2026-09-08" },
     { path: "/privacy", lastModified: "2026-09-08" }
   ];

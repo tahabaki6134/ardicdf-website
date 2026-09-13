@@ -336,7 +336,7 @@ export function ContactForm({
             {field("message", {
               multiline: true,
               placeholder:
-                "Describe the piece or environment, what it should achieve, and any important constraints.",
+                "Describe the component or complete project: for example a solid timber door, a finished cabinet, fitted furniture or facade elements. Include whether design and installation are required.",
               hint: "Up to 3,000 characters. You can add dimensions, files and finish references in the next steps."
             })}
             {!!selectedTitles.length && (

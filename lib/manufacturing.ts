@@ -4,6 +4,7 @@ export type MethodCopy = {
   cost: string; detail: string; mechanical: string; weight: string;
   environment: string; volume: string; finish: string;
   steps: string[]; uses: string[]; drivers: string[]; limits: string[];
+  processes?: { title: string; how: string; fit: string; tradeoff: string }[];
   faqs: { question: string; answer: string }[];
 };
 export type ManufacturingMethod = {
@@ -112,7 +113,7 @@ export const manufacturingMethods: ManufacturingMethod[] = [
     copy: {
       en: {
         title: "Carbon fiber fabrication", summary: "High stiffness with carefully controlled weight.",
-        intro: "We review carbon-fiber part and tooling requests around geometry, loading, weight and the resin system. The laminate and manufacturing route are defined for the project.",
+        intro: "We produce carbon-fiber parts and molds using hand layup, vacuum bagging and vacuum resin infusion. We select the route for the geometry, weight, finish and quantity; these are process options, not three compulsory stages.",
         costLabel: "High relative cost",
         cost: "Fiber, resin, tooling, layup and process control usually cost more than a glass-fiber alternative. Carbon is most useful when the weight or stiffness target earns that investment.",
         detail: "Mold quality controls the surface. Tight corners, visible weave alignment and complex split molds add labor; a carbon appearance alone does not describe the underlying structure.",
@@ -121,7 +122,12 @@ export const manufacturingMethods: ManufacturingMethod[] = [
         environment: "Service temperature depends on the resin and cure, not the fiber name alone. UV finish and isolation from incompatible metal contacts may need specification.",
         volume: "Specialist parts and tools where performance justifies tooling and process costs. Repetition can spread mold setup across more parts.",
         finish: "Visible weave with a specified clear finish, or paint. Cosmetic skins and load-carrying laminates are different specifications.",
-        steps: ["Define the weight, loads, exposure and whether the request is for a part or a mold.", "Plan tooling, fiber orientation, resin and the suitable lamination process.", "Cure to the resin specification, trim and assess the agreed finish and dimensions."],
+        processes: [
+          { title: "Hand layup / wet layup", how: "We place the carbon fabric in the mold and wet it with resin by hand, using brushes or rollers.", fit: "An accessible route for custom shapes, small quantities and work where minimum weight is not the main target.", tradeoff: "Lower equipment setup; resin content and air removal rely closely on workmanship. Vacuum consolidation can be added where needed." },
+          { title: "Vacuum bagging", how: "After wetting the reinforcement, we seal it under a vacuum bag. Atmospheric pressure consolidates the layers while the resin cures.", fit: "Useful when closer control of consolidation and laminate weight is needed after hand layup.", tradeoff: "Adds bagging materials, sealing and setup work. The result depends on the layup, resin and a reliable seal." },
+          { title: "Vacuum resin infusion", how: "We place dry fabric in the mold, seal the bag and draw suitable liquid resin through the reinforcement under vacuum.", fit: "Suitable for shells and panels where the resin flow can be planned for the geometry.", tradeoff: "Requires flow planning, leak checks and infusion consumables. Dry areas and resin flow need control; the process alone does not guarantee strength." }
+        ],
+        steps: ["Define the weight, loads, exposure and whether the request is for a part or a mold.", "Choose hand layup, vacuum bagging or infusion, then prepare the mold, fiber directions and resin.", "Cure to the resin specification, trim and assess the agreed finish and dimensions."],
         uses: ["Lightweight covers and prototype shells", "Stiff panels and custom laminated components", "Molds for carbon parts or carbon-composite tooling"],
         drivers: ["Fiber type, orientation and layer count", "Tool geometry and temperature requirement", "Layup and process control", "Visible weave, trimming and inspection"],
         limits: ["Carbon is not a universal upgrade for impact resistance.", "High-temperature or certified structural work requires a separately agreed process and verification scope."],
@@ -132,7 +138,7 @@ export const manufacturingMethods: ManufacturingMethod[] = [
       },
       tr: {
         title: "Karbon fiber imalatı", summary: "Kontrollü ağırlıkla yüksek rijitlik.",
-        intro: "Karbon fiber parça ve kalıp taleplerini geometri, yük, ağırlık ve reçine sistemiyle birlikte değerlendiriyoruz. Katman yapısı ve üretim yöntemi proje için belirleniyor.",
+        intro: "Karbon fiber parça ve kalıp üretiminde elle serme, vakum torbalama ve vakum infüzyon yöntemlerini kullanıyoruz. Geometri, ağırlık, yüzey ve adede göre uygun yöntemi seçiyoruz; bunlar her ürüne sırayla uygulanan üç zorunlu aşama değildir.",
         costLabel: "Yüksek göreli maliyet",
         cost: "Elyaf, reçine, kalıp, katman yerleştirme ve proses kontrolü genellikle cam elyaf alternatifinden daha maliyetlidir. Ağırlık veya rijitlik hedefi bu yatırımı gerektiriyorsa karbon anlam kazanır.",
         detail: "Yüzeyi kalıp kalitesi belirler. Dar köşeler, görünür dokuma hizası ve karmaşık kalıp ayrımları işçiliği artırır; karbon görünümü tek başına taşıyıcı yapıyı tarif etmez.",
@@ -141,7 +147,12 @@ export const manufacturingMethods: ManufacturingMethod[] = [
         environment: "Çalışma sıcaklığını yalnızca elyaf adı değil, reçine ve kürleme belirler. UV koruması ve uygun olmayan metal temaslarından yalıtım gerekebilir.",
         volume: "Performansın kalıp ve üretim maliyetini haklı çıkardığı özel parçalar ve kalıplar. Tekrarlı üretimde kalıp gideri daha fazla parçaya dağılır.",
         finish: "Belirlenen şeffaf son katla görünür dokuma veya boya. Görsel kaplama ile yük taşıyan karbon laminat farklı tariflerdir.",
-        steps: ["Ağırlığı, yükleri, ortamı ve talebin parça mı kalıp mı olduğunu netleştiririz.", "Kalıbı, elyaf yönlerini, reçineyi ve uygun laminasyon yöntemini planlarız.", "Reçineye uygun kürleme, kenar işleme ve kararlaştırılan ölçü/yüzey kontrolünü yaparız."],
+        processes: [
+          { title: "Elle serme / ıslak yatırma", how: "Karbon kumaşı kalıba yerleştirip reçineyi fırça veya ruloyla elle uygularız.", fit: "Özel formlar, az adetli işler ve en düşük ağırlığın öncelik olmadığı parçalar için değerlendirilebilir.", tradeoff: "Ekipman hazırlığı daha sınırlıdır; reçine miktarı ve havanın uzaklaştırılması işçiliğe bağlıdır. İhtiyaç halinde ardından vakum torbalama uygulanabilir." },
+          { title: "Vakum torbalama", how: "Reçineyle ıslatılmış elyafı sızdırmaz bir torba altında vakuma alırız. Atmosfer basıncı, kürlenme sırasında katmanların sıkışmasını sağlar.", fit: "Elle serme sonrasında katman sıkışmasını ve laminat ağırlığını daha kontrollü yönetmek için kullanılır.", tradeoff: "Torbalama sarfları, sızdırmazlık ve hazırlık işçiliği eklenir. Sonuç; katman yerleşimi, reçine ve vakum sızdırmazlığına bağlıdır." },
+          { title: "Vakum infüzyon", how: "Kuru karbon kumaşı kalıba serer, torbayı kapatır ve uygun sıvı reçineyi vakumla elyafın içinden geçiririz.", fit: "Reçine akışının geometriye göre planlanabildiği kabuk ve panellerde değerlendirilebilir.", tradeoff: "Akış planı, kaçak kontrolü ve infüzyon sarfları gerekir. Kuru bölge ve reçine akışı kontrol edilir; yöntemin adı tek başına dayanım garantisi vermez." }
+        ],
+        steps: ["Ağırlığı, yükleri, ortamı ve talebin parça mı kalıp mı olduğunu netleştiririz.", "Elle serme, vakum torbalama veya infüzyonu seçip kalıbı, elyaf yönlerini ve reçineyi hazırlarız.", "Reçineye uygun kürleme, kenar işleme ve kararlaştırılan ölçü/yüzey kontrolünü yaparız."],
         uses: ["Hafif kapaklar ve prototip kabuklar", "Rijit paneller ve özel laminasyon parçaları", "Karbon parça üretim kalıbı veya karbon kompozit kalıp"],
         drivers: ["Elyaf tipi, yönü ve katman sayısı", "Kalıp geometrisi ve sıcaklık ihtiyacı", "Katman işçiliği ve proses kontrolü", "Görünür dokuma, kesim ve kontrol"],
         limits: ["Karbon, darbe dayanımı için her durumda daha iyi bir seçim değildir.", "Yüksek sıcaklık veya sertifikalı taşıyıcı işler için üretim ve doğrulama kapsamı ayrıca belirlenir."],
@@ -238,6 +249,51 @@ export const manufacturingMethods: ManufacturingMethod[] = [
     }
   },
   {
+    id: "epoxy", slug: { en: "epoxy-resin-casting", tr: "epoksi-recine-dokum" }, portfolio: "/works/molds-composite-production",
+    copy: {
+      en: {
+        title: "Epoxy resin casting", summary: "Clear, coloured or filled castings for objects and furniture.",
+        intro: "We cast epoxy resin into prepared molds and combine it with timber or other compatible materials. Decorative objects, custom components, display pieces and resin furniture details can be supplied individually or within a complete furniture project.",
+        costLabel: "Volume and finish dependent",
+        cost: "Resin volume, mold preparation and finishing drive the quotation. Thick clear castings, multiple pours and polished faces can increase both material cost and workshop time.",
+        detail: "A prepared mold can reproduce fine surface detail. Clear faces also reveal bubbles, inclusions and mold imperfections, so preparation and finishing matter.",
+        mechanical: "A solid resin casting is a different construction from fiber-reinforced epoxy. Resin grade, section shape and supports determine its behaviour; thin edges and attachment points need attention.",
+        weight: "Solid castings can be heavy as volume increases. Cavities, inserts or a mixed-material design can reduce resin use where the geometry allows.",
+        environment: "Heat, sunlight and repeated surface contact affect resin selection and the protective finish. Clear epoxy can change colour under UV exposure; outdoor use needs a suitable complete system.",
+        volume: "Suitable for individual pieces and repeat casting from a mold. Pour limits, cure time and finishing determine the production schedule.",
+        finish: "Clear, translucent, pigmented or filled surfaces with an agreed matte or polished finish. A resin casting does not leave every mold ready for display.",
+        steps: ["Define the colour, transparency, dimensions and resin system; prepare the mold and any inserts.", "Mix and cast within the resin supplier's depth and temperature limits, using staged pours where required.", "Allow the specified cure, demold, machine or polish, and assemble the finished piece."],
+        uses: ["Decorative objects, replicas and custom cast parts", "Clear or coloured display pieces and encapsulated details", "Solid timber and epoxy tabletops, furniture inserts and handles", "Pattern details and project-specific cast components"],
+        drivers: ["Resin volume and casting thickness", "Mold preparation and quantity", "Transparency, pigments, fillers and inserts", "Cure schedule, machining and polishing"],
+        limits: ["Pour depth and cure time depend on the selected resin; a large casting may need staged pours.", "Curing releases heat. Resin choice, casting volume and workshop temperature must be planned together."],
+        faqs: [
+          { question: "Is epoxy casting the same as carbon fiber production?", answer: "Epoxy casting forms the resin itself into a part. In carbon or glass-fiber lamination, the resin binds reinforcing fibers. We select a resin formulated for casting, lamination or infusion as appropriate." },
+          { question: "Can you produce the complete furniture around an epoxy detail?", answer: "Yes. We can manufacture an epoxy insert, handle or tabletop as an individual item, or combine it with the timber structure, hardware and finish in a complete furniture commission. Delivery and installation are defined with the project." }
+        ]
+      },
+      tr: {
+        title: "Epoksi reçine dökümü", summary: "Objeler ve mobilyalar için şeffaf, renkli veya dolgulu dökümler.",
+        intro: "Epoksi reçineyi hazırlanmış kalıplara döküyor; ahşap ve diğer uyumlu malzemelerle birlikte kullanıyoruz. Dekoratif objeler, özel parçalar, teşhir ürünleri ve epoksili mobilya detaylarını tekil olarak veya komple mobilya projesi içinde üretebiliyoruz.",
+        costLabel: "Hacim ve yüzeye bağlı",
+        cost: "Reçine hacmi, kalıp hazırlığı ve son yüzey işçiliği fiyatı belirler. Kalın şeffaf dökümler, aşamalı döküm ve polisajlı yüzeyler malzeme maliyetini ve atölye süresini artırabilir.",
+        detail: "Hazırlanmış kalıptan ince yüzey detayı alınabilir. Şeffaf yüzeyler hava kabarcıklarını, kalıntıları ve kalıp kusurlarını da gösterdiği için hazırlık ve son işlem önemlidir.",
+        mechanical: "Dolu reçine dökümü ile elyaf takviyeli epoksi farklı yapılardır. Davranışı reçine türü, kesit ve taşıyıcılar belirler; ince kenarlar ile bağlantı noktaları ayrıca ele alınır.",
+        weight: "Hacim büyüdükçe dolu döküm ağırlaşabilir. Geometri uygunsa boşluk, iç parça veya farklı malzemelerle birleşim reçine tüketimini azaltabilir.",
+        environment: "Sıcaklık, güneş ve yüzey teması reçine ve koruyucu son kat seçimini etkiler. Şeffaf epokside UV etkisiyle renk değişimi olabilir; dış mekân için uygun bir bütün sistem seçilir.",
+        volume: "Tekil işler ve kalıptan tekrarlı döküm için uygundur. Döküm sınırları, kürlenme ve son işlem süresi üretim takvimini belirler.",
+        finish: "Şeffaf, yarı saydam, pigmentli veya dolgulu yüzey; kararlaştırılan mat ya da polisajlı bitiş. Her reçine dökümü kalıptan teşhire hazır çıkmaz.",
+        steps: ["Renk, şeffaflık, ölçü ve reçine sistemini belirler; kalıbı ve yerleştirilecek parçaları hazırlarız.", "Üreticinin kalınlık ve sıcaklık sınırlarına göre karıştırıp döker, gerekirse aşamalı döküm yaparız.", "Belirlenen kürlenme sonrası kalıptan çıkarır, işler veya polisaj yapar ve ürünü tamamlarız."],
+        uses: ["Dekoratif objeler, replikalar ve özel döküm parçaları", "Şeffaf veya renkli teşhir ürünleri ve içine obje alınmış detaylar", "Masif ahşap ve epoksili masa tablaları, mobilya dolguları ve kulplar", "Model detayları ve projeye özel döküm bileşenleri"],
+        drivers: ["Reçine hacmi ve döküm kalınlığı", "Kalıp hazırlığı ve adet", "Şeffaflık, pigment, dolgu ve gömülecek parçalar", "Kürlenme planı, işleme ve polisaj"],
+        limits: ["Döküm kalınlığı ve kürlenme süresi seçilen reçineye bağlıdır; büyük döküm aşamalar gerektirebilir.", "Kürlenme ısı açığa çıkarır. Reçine seçimi, döküm hacmi ve atölye sıcaklığı birlikte planlanır."],
+        faqs: [
+          { question: "Epoksi dökümü ile karbon fiber imalatı aynı mı?", answer: "Epoksi dökümünde reçinenin kendisini parça hâline getiririz. Karbon veya cam elyaf laminasyonunda reçine, takviye elyaflarını birbirine bağlar. Döküm, laminasyon veya infüzyon için o yönteme uygun formüle edilmiş reçine seçilir." },
+          { question: "Epoksi detayın bulunduğu mobilyayı da komple yapıyor musunuz?", answer: "Evet. Epoksi dolgu, kulp veya masa tablasını tekil üretebilir; ahşap taşıyıcı, donanım ve son yüzeyle birlikte komple mobilyayı da tamamlayabiliriz. Sevkiyat ve montaj kapsamını projeyle birlikte belirleriz." }
+        ]
+      }
+    }
+  },
+  {
     id: "tooling", slug: { en: "molds-patterns", tr: "kalip-model" }, portfolio: "/works/molds-composite-production",
     copy: {
       en: {
@@ -280,8 +336,8 @@ export const manufacturingMethods: ManufacturingMethod[] = [
     id: "wood", slug: { en: "wood-cnc", tr: "ahsap-cnc" }, portfolio: "/works/cnc-manufacturing-processes",
     copy: {
       en: {
-        title: "Wood & CNC fabrication", summary: "Machined panels, solid forms and assembled structures.",
-        intro: "We work with solid wood, MDF and plywood for shaped components, models and assemblies. Board selection, grain, joints and the final finish are planned together.",
+        title: "Wood, CNC & furniture fabrication", summary: "Solid timber components, fitted cabinetry and complete furniture.",
+        intro: "We produce custom components and complete fitted or freestanding furniture in solid wood, MDF and plywood. A solid timber cabinet door can be ordered individually or as part of a complete cabinet with carcass, shelves, drawers, hardware, finish and installation. Our production covers design development through delivery of the finished project.",
         costLabel: "Material and labor dependent",
         cost: "Simple panel parts can be economical. Solid timber, deep 3D machining, intricate joints and furniture-grade finishing can raise cost substantially.",
         detail: "Tool diameter, grain direction and access limit sharp internal corners and deep recesses. Assembly can provide geometry that a single machining setup cannot reach.",
@@ -290,15 +346,18 @@ export const manufacturingMethods: ManufacturingMethod[] = [
         environment: "Specify the board, adhesive, sealing and finish for humidity or exterior exposure. Standard interior MDF is not an exposed outdoor material.",
         volume: "Suitable for individual assemblies or repeat CNC-cut components. Fixtures and repeat cutting can reduce preparation per part.",
         finish: "Paint, veneer, clear finish or a specified texture; substrate and edge preparation affect the result.",
-        steps: ["Choose timber or board and plan joints and machining access.", "CNC-cut or shape the components and assemble them.", "Prepare edges and surfaces, then apply the agreed finish."],
-        uses: ["CNC reliefs and shaped timber parts", "Display components and internal structures", "Wood or MDF masters and patterns"],
-        drivers: ["Timber or panel specification", "Machining depth and tool access", "Joinery and assembly", "Veneer, paint and edge finish"],
+        steps: ["Develop dimensions, shop drawings, timber or board selection, joints and hardware.", "Machine the components, complete joinery and assemble the cabinet or furniture.", "Apply the finish, check fit and function, then pack, deliver and install within the agreed scope."],
+        uses: ["Solid timber doors, CNC reliefs and shaped components", "Complete cabinets, wardrobes, storage walls and fitted furniture", "Freestanding tables, desks, sideboards and custom furniture", "Reception counters, retail displays and project-specific joinery", "Wood or MDF masters and patterns"],
+        drivers: ["Timber or panel specification", "Machining depth and tool access", "Carcass, drawers, hardware and assembly", "Veneer, paint, edge finish, delivery and installation"],
         limits: ["Grain movement and moisture must be considered.", "Tool access can require splitting a deep or undercut form."],
-        faqs: [{ question: "Can wood be combined with composites?", answer: "Yes. A panel or timber structure can support a separate decorative shell. Connections, movement and the different materials' exposure requirements are designed as an assembly." }]
+        faqs: [
+          { question: "Can you make the complete cabinet, including a solid timber door?", answer: "Yes. We can supply the individual door or develop and manufacture the complete cabinet, including the carcass, shelves, drawers, hinges, runners and finish. Drawings, delivery and installation are defined in the project scope; door and carcass materials can differ." },
+          { question: "Can wood be combined with composites?", answer: "Yes. A panel or timber structure can support a separate decorative shell. Connections, movement and the different materials' exposure requirements are designed as an assembly." }
+        ]
       },
       tr: {
-        title: "Ahşap ve CNC imalatı", summary: "İşlenmiş paneller, masif formlar ve birleşimli yapılar.",
-        intro: "Masif ahşap, MDF ve kontrplakla şekilli parçalar, modeller ve montajlı yapılar üretiyoruz. Malzeme, lif yönü, birleşimler ve son yüzeyi birlikte planlıyoruz.",
+        title: "Ahşap, CNC ve mobilya imalatı", summary: "Masif parçalardan sabit ve hareketli mobilyanın tamamına.",
+        intro: "Masif ahşap, MDF ve kontrplakla özel parçalar, sabit ve hareketli mobilyalar üretiyoruz. Masif bir dolap kapağını tek başına veya gövde, raf, çekmece, donanım, yüzey işlemi ve montajıyla komple dolabın parçası olarak sipariş edebilirsiniz. Üretim hattımız projelendirmeden bitmiş projenin teslimine kadar uzanır.",
         costLabel: "Malzeme ve işçiliğe bağlı",
         cost: "Sade panel parçaları ekonomik olabilir. Masif türü, derin 3D işleme, karmaşık birleşimler ve mobilya kalitesinde yüzey maliyeti belirgin artırabilir.",
         detail: "Takım çapı, lif yönü ve erişim; keskin iç köşeleri ve derin oyukları sınırlar. Tek bağlamada işlenemeyen form, parçalara ayrılıp birleştirilebilir.",
@@ -307,11 +366,14 @@ export const manufacturingMethods: ManufacturingMethod[] = [
         environment: "Nem ve dış ortam için plaka, yapıştırıcı, yalıtım ve son kat seçilir. Standart iç mekân MDF'si açık dış ortam malzemesi değildir.",
         volume: "Tekil montajlar veya tekrarlı CNC parçaları için uygundur. Fikstür ve tekrarlı kesim, parça başına hazırlığı azaltabilir.",
         finish: "Boya, kaplama, vernik veya belirlenen doku; altyapı ve kenar hazırlığı sonucu etkiler.",
-        steps: ["Masif veya plakayı seçip birleşimleri ve takım erişimini planlarız.", "CNC kesim veya şekillendirme sonrası parçaları birleştiririz.", "Kenar ve yüzeyleri hazırlayıp kararlaştırılan son katı uygularız."],
-        uses: ["CNC rölyefler ve şekilli masif parçalar", "Teşhir parçaları ve iç taşıyıcı yapılar", "Ahşap veya MDF ana modeller"],
-        drivers: ["Masif veya plaka türü", "İşleme derinliği ve takım erişimi", "Birleştirme ve montaj", "Kaplama, boya ve kenar işçiliği"],
+        steps: ["Ölçüleri, imalat çizimlerini, masif/plaka seçimini, birleşimleri ve donanımı planlarız.", "Parçaları işler, doğrama ve birleştirmeleri tamamlayıp dolap veya mobilyayı monte ederiz.", "Son yüzeyi, ölçü ve işlev kontrollerini tamamlar; belirlenen kapsamda paketleme, sevkiyat ve yerinde montajı yaparız."],
+        uses: ["Masif kapaklar, CNC rölyefler ve şekilli parçalar", "Komple dolap, gardırop, depolama ve sabit mobilyalar", "Masa, sehpa, konsol ve özel tasarım hareketli mobilyalar", "Karşılama bankosu, mağaza teşhir ünitesi ve projeye özel doğrama", "Ahşap veya MDF ana modeller"],
+        drivers: ["Masif veya plaka türü", "İşleme derinliği ve takım erişimi", "Gövde, çekmece, donanım ve birleştirme", "Kaplama, boya, kenar işçiliği, sevkiyat ve montaj"],
         limits: ["Ahşabın çalışması ve nem etkisi dikkate alınır.", "Derin veya ters açılı form, takım erişimi için bölünebilir."],
-        faqs: [{ question: "Ahşap ile kompozit birlikte kullanılabilir mi?", answer: "Evet. Panel veya ahşap yapı ayrı bir dekor kabuğunu taşıyabilir. Bağlantılar, malzeme hareketleri ve ortam gereklilikleri bir bütün olarak tasarlanır." }]
+        faqs: [
+          { question: "Masif kapakla birlikte dolabın tamamını yapıyor musunuz?", answer: "Evet. Tek kapak veya gövde, raf, çekmece, menteşe, ray ve son yüzeyiyle komple dolap üretebiliriz. Çizim, sevkiyat ve yerinde montaj proje kapsamında belirlenir; kapağın ve gövdenin malzemeleri ihtiyaca göre farklı seçilebilir." },
+          { question: "Ahşap ile kompozit birlikte kullanılabilir mi?", answer: "Evet. Panel veya ahşap yapı ayrı bir dekor kabuğunu taşıyabilir. Bağlantılar, malzeme hareketleri ve ortam gereklilikleri bir bütün olarak tasarlanır." }
+        ]
       }
     }
   }
