@@ -1,3 +1,4 @@
+import { ProjectDelivery } from "@/components/project-delivery";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ const siteUrl = "https://www.ardicdf.com";
 const pageUrl = `${siteUrl}/fabrication`;
 const pageTitle = "Multi-Material Fabrication, Composites, CNC & 3D Printing | Ardıç";
 const pageDescription =
-  "Multi-material fabrication in Istanbul for international projects: CNC machining, EPS/XPS and polyurethane, fiberglass/GRP, molds and casting, carbon fiber lamination, large-format 3D printing and custom woodworking.";
+  "Multi-material fabrication in Istanbul for international projects: CNC machining, EPS/XPS and polyurethane, fiberglass/GRP, molds and casting, carbon hand layup, vacuum bagging and infusion, epoxy resin casting, complete furniture and facade fabrication from design to installation.";
 
 export const metadata: Metadata = {
   title: {
@@ -64,8 +65,8 @@ const capabilities = [
   },
   {
     number: "06",
-    title: "Carbon Fiber Lamination & Composite Surface Work",
-    copy: "Carbon fiber lamination and composite surface work integrated into custom forms and specialized composite fabrication where appropriate."
+    title: "Carbon Fiber: Hand Layup, Vacuum Bagging & Infusion",
+    copy: "Carbon parts and molds made by hand layup, vacuum bagging or vacuum resin infusion. The route is selected for each project, with different preparation, resin control and cost requirements."
   },
   {
     number: "07",
@@ -79,11 +80,16 @@ const capabilities = [
   },
   {
     number: "09",
-    title: "Custom Wood Fabrication & CNC Woodworking",
-    copy: "Solid wood, MDF, plywood, and sheet materials shaped into CNC-routed components, timber substructures, custom furniture, displays, scenic elements, molds, patterns, masters, and hybrid assemblies with foam, composites, or 3D prints."
+    title: "Wood, CNC & Complete Furniture",
+    copy: "Solid timber doors and CNC components, complete cabinets, fitted and freestanding furniture, counters and retail displays. Carcasses, drawers, hardware, finishing, delivery and installation can form one coordinated project."
   },
   {
     number: "10",
+    title: "Epoxy Resin Casting",
+    copy: "Clear, coloured and filled epoxy castings, custom objects and timber-resin furniture details. Mold preparation, pour thickness, cure and finishing are planned for the selected resin."
+  },
+  {
+    number: "11",
     title: "Sculpture & Scenic Fabrication",
     copy: "Character figures, organic forms, props, and architectural features developed through sculpting, coating, painting, and detailed hand finishing."
   }
@@ -647,6 +653,7 @@ export default function FabricationPage() {
           </div>
         </div>
       </section>
+    <ProjectDelivery lang="en" />
     </main>
   );
 }

@@ -8,7 +8,7 @@ import { contactEmail } from "@/lib/contact-details";
 
 const pageTitle = "Request a Quote | International Custom Fabrication | Ardıç";
 const pageDescription =
-  "Send your project brief to Ardıç Design & Fabrication in Istanbul. Request fabrication review for CNC, composites, molds, large-format 3D printing, scenic projects, prototypes and custom production.";
+  "Request custom fabrication in Istanbul: epoxy casting, composites, CNC, complete furniture and facade elements. Share your design, production and installation scope.";
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

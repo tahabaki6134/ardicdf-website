@@ -4,7 +4,7 @@ import { manufacturingLanguage as lang } from "@/lib/manufacturing-site";
 
 export const metadata = manufacturingMetadata(
   lang === "tr" ? "İmalat Yöntemleri ve Malzeme Rehberi" : "Manufacturing Methods & Material Guide",
-  lang === "tr" ? "Yedi imalat yönteminin maliyetini, detay sınırlarını ve kullanım alanlarını öğrenin. Strafor, cam elyaf, karbon fiber, 3D baskı ve kalıp üretimi." : "Understand the cost, detail limits and uses of seven manufacturing routes, including foam, fiberglass, carbon fiber, 3D printing and mold making.",
+  lang === "tr" ? "Sekiz imalat yöntemini karşılaştırın: strafor, cam elyaf, karbon fiber, 3D baskı, poliüretan, epoksi döküm, kalıp ve ahşap/mobilya. Komple proje üretimini inceleyin." : "Compare eight methods: foam, fiberglass, carbon fiber, 3D printing, polyurethane, epoxy casting, molds and wood/furniture. Explore complete project fabrication.",
   { en: "/services", tr: "/services" }, lang
 );
 export default function ServicesPage() { return <ManufacturingIndex lang={lang} />; }

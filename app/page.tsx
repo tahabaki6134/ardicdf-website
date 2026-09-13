@@ -4,7 +4,7 @@ import { manufacturingLanguage as lang } from "@/lib/manufacturing-site";
 
 export const metadata = manufacturingMetadata(
   lang === "tr" ? "Strafor, Cam Elyaf, Karbon Fiber ve 3D Baskı İmalatı" : "Foam, Fiberglass, Carbon Fiber & 3D Print Manufacturing",
-  lang === "tr" ? "İstanbul’da özel imalat. Strafor, cam elyaf, karbon fiber, 3D baskı, poliüretan, kalıp ve ahşap yöntemlerini maliyet ve performanslarıyla inceleyin." : "Custom manufacturing from Istanbul. Explore foam, fiberglass, carbon fiber, 3D printing, polyurethane, mold making and woodworking by cost and performance.",
+  lang === "tr" ? "İstanbul’da epoksi döküm, kompozit, 3D baskı ve ahşap imalatı. Sabit ve hareketli mobilya ile dış cephe elemanlarında projeden montajlı teslime üretim." : "Epoxy casting, composites, 3D printing and woodworking in Istanbul. Fitted and freestanding furniture and facade elements, from design to installation.",
   { en: "/", tr: "/" }, lang
 );
 export default function HomePage() { return <ManufacturingHome lang={lang} />; }
