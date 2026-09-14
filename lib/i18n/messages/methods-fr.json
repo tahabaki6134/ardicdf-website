@@ -1,0 +1,279 @@
+{
+  "foam": {
+    "title": "Usinage de mousse EPS / XPS",
+    "summary": "Nous façonnons des volumes, reliefs et modèles en mousse selon l’échelle, la distance de vue et la finition souhaitée.",
+    "costLabel": "Faible coût de départ",
+    "cost": "Les grandes pièces simples et uniques sont souvent économiques. Revêtement, structure et finition fine peuvent représenter l’essentiel du coût final.",
+    "detail": "L’EPS est constitué de billes : les petits détails peuvent s’arracher. L’XPS offre une structure cellulaire plus homogène. Densité et diamètre d’outil restent déterminants.",
+    "mechanical": "La mousse brute se marque facilement. Une coque composite et une ossature modifient les propriétés de l’ensemble.",
+    "weight": "Noyau très léger ; revêtements, structure et fixations ajoutent du poids.",
+    "environment": "Le contact, l’humidité et le soleil nécessitent un système de protection adapté.",
+    "volume": "Grandes pièces uniques ou modèles destinés à un moulage ultérieur.",
+    "finish": "Découpe brute, surface enduite et peinte, ou peau composite compatible.",
+    "steps": [
+      "Choisir la mousse, la densité et le découpage des blocs.",
+      "Usiner ou découper la forme et assembler les sections.",
+      "Préparer la surface et appliquer renforts et finition."
+    ],
+    "uses": [
+      "Grandes sculptures",
+      "Reliefs et lettrages",
+      "Modèles pour moules"
+    ],
+    "drivers": [
+      "Volume et densité",
+      "Petits détails",
+      "Revêtement, ossature et transport"
+    ],
+    "limits": [
+      "Une résine polyester contenant du styrène peut attaquer le polystyrène non protégé. La compatibilité et les arêtes fines doivent être prévues."
+    ],
+    "intro": "Nous façonnons des volumes, reliefs et modèles en mousse selon l’échelle, la distance de vue et la finition souhaitée.",
+    "faqs": []
+  },
+  "glass": {
+    "title": "Fabrication en fibre de verre / PRV",
+    "summary": "Une fibre de verre et une résine adaptée forment une coque sur un modèle, un noyau ou dans un moule.",
+    "costLabel": "Moyen · moule en supplément",
+    "cost": "Le renfort verre coûte généralement moins cher que le carbone. Le coût initial du moule peut être réparti sur plusieurs pièces.",
+    "detail": "La surface reproduit la qualité du modèle et du moule. Dépouilles, plans de joint et accès de stratification doivent être conçus.",
+    "mechanical": "Résistance, rigidité et comportement aux chocs dépendent des couches, de la géométrie, de la résine et des supports.",
+    "weight": "Une coque creuse évite un remplissage massif. À rigidité comparable, elle pèse souvent davantage qu’un stratifié carbone bien conçu.",
+    "environment": "Résine, gelcoat ou peinture, joints et fixations sont choisis pour l’exposition.",
+    "volume": "Coques répétées et décors durables lorsque l’investissement dans le moule se justifie.",
+    "finish": "Gelcoat, peinture ou texture préparée. Les faces avant et arrière peuvent avoir des états de surface différents.",
+    "steps": [
+      "Préparer le modèle, le moule ou le noyau et les séparations.",
+      "Stratifier la fibre avec la résine puis laisser durcir.",
+      "Démouler, détourer, ajouter les fixations et finir."
+    ],
+    "uses": [
+      "Coques de sculptures",
+      "Panneaux et capots",
+      "Mousses renforcées"
+    ],
+    "drivers": [
+      "Modèle et moule",
+      "Surface et nombre de couches",
+      "Quantité et finition"
+    ],
+    "limits": [
+      "Un gelcoat décoratif ne remplace pas un stratifié porteur. Les coques minces nécessitent des supports et zones de fixation adaptés."
+    ],
+    "intro": "Une fibre de verre et une résine adaptée forment une coque sur un modèle, un noyau ou dans un moule.",
+    "faqs": []
+  },
+  "carbon": {
+    "title": "Fabrication en fibre de carbone",
+    "summary": "Pièces et moules en carbone par stratification manuelle, mise sous vide ou infusion. Le choix dépend de la géométrie, du poids, de la finition et de la quantité.",
+    "costLabel": "Coût relatif élevé",
+    "cost": "Fibre, résine, moule, drapage et contrôle du procédé coûtent généralement plus cher qu’une solution en fibre de verre.",
+    "detail": "La qualité du moule, l’alignement du tissu, les rayons serrés et les plans de joint influencent la surface et le travail.",
+    "mechanical": "Le carbone offre une forte rigidité rapportée au poids. Orientation des fibres, rupture fragile et dommages d’impact se traitent séparément.",
+    "weight": "Le gain dépend du stratifié et d’un objectif de dimensionnement équivalent.",
+    "environment": "La tenue en température dépend de la résine et de sa polymérisation. Une protection UV et une isolation de certains contacts métalliques peuvent être nécessaires.",
+    "volume": "Pièces et outillages dont les exigences justifient le coût des matériaux et du moule.",
+    "finish": "Tissu apparent avec finition transparente adaptée ou peinture. Peau décorative et stratifié porteur sont distincts.",
+    "steps": [
+      "Définir pièce ou moule, charges et températures.",
+      "Choisir procédé, moule, orientations de fibres et résine.",
+      "Polymériser, détourer et contrôler dimensions et finition convenues."
+    ],
+    "uses": [
+      "Capots légers",
+      "Panneaux rigides",
+      "Moules et prototypes"
+    ],
+    "drivers": [
+      "Type et couches de fibres",
+      "Géométrie et température du moule",
+      "Procédé et tissu apparent"
+    ],
+    "limits": [
+      "Le carbone n’est pas systématiquement plus résistant aux chocs. Un moule pour pièces carbone et un moule fabriqué en carbone sont deux demandes différentes."
+    ],
+    "intro": "Pièces et moules en carbone par stratification manuelle, mise sous vide ou infusion. Le choix dépend de la géométrie, du poids, de la finition et de la quantité.",
+    "faqs": [],
+    "processes": [
+      {
+        "title": "Stratification manuelle / au contact",
+        "how": "Le tissu carbone est posé dans le moule puis imprégné de résine à la main.",
+        "fit": "Pour les formes spécifiques et petites quantités lorsque le poids minimal n’est pas prioritaire.",
+        "tradeoff": "Préparation plus simple ; taux de résine et élimination de l’air dépendent du soin de mise en œuvre."
+      },
+      {
+        "title": "Mise sous vide",
+        "how": "Après imprégnation, le stratifié est placé sous une bâche étanche ; la pression atmosphérique compacte les couches pendant le durcissement.",
+        "fit": "Pour mieux maîtriser la compaction et le poids après stratification manuelle.",
+        "tradeoff": "Consommables et travail d’étanchéité supplémentaires. Le vide doit rester fiable."
+      },
+      {
+        "title": "Infusion sous vide",
+        "how": "Le tissu sec est disposé dans le moule étanche ; une résine adaptée traverse le renfort sous l’effet du vide.",
+        "fit": "Pour des coques et panneaux dont l’écoulement de résine peut être prévu.",
+        "tradeoff": "Plan d’écoulement, contrôle des fuites et consommables d’infusion sont nécessaires. Zones sèches et répartition de résine doivent être surveillées."
+      }
+    ]
+  },
+  "printing": {
+    "title": "Impression 3D grand format",
+    "summary": "Des modèles numériques deviennent des prototypes, modèles maîtres et grandes formes, imprimés en une pièce ou en modules assemblés.",
+    "costLabel": "Selon la géométrie",
+    "cost": "Le moule de production est souvent évité pour une pièce unique. Temps d’impression, matière, supports et finition déterminent le coût.",
+    "detail": "Diamètre de buse, hauteur de couche et orientation limitent les détails. Couches et joints peuvent nécessiter une reprise.",
+    "mechanical": "La résistance dépend du polymère, des parois, du remplissage et de l’adhésion entre couches. Assemblages et inserts sont prévus.",
+    "weight": "Parois et remplissage modulent le poids ; ossatures et renforts s’y ajoutent.",
+    "environment": "Le polymère doit convenir à la chaleur, au soleil et à l’humidité. Le PLA standard n’est pas une solution extérieure universelle.",
+    "volume": "Pièces uniques, formes évolutives et petites séries ; modèles imprimés pour un moulage ultérieur.",
+    "finish": "Couches visibles ou surface enduite et peinte ; revêtement composite si spécifié.",
+    "steps": [
+      "Vérifier le modèle et les séparations.",
+      "Choisir matière, orientation et paramètres.",
+      "Imprimer, assembler et réaliser la finition."
+    ],
+    "uses": [
+      "Prototypes",
+      "Modèles maîtres",
+      "Grandes formes décoratives"
+    ],
+    "drivers": [
+      "Volume et durée d’impression",
+      "Supports et découpage",
+      "Reprises et assemblage"
+    ],
+    "limits": [
+      "La surface n’est pas automatiquement lisse. Une pièce peut être moins résistante entre les couches."
+    ],
+    "intro": "Des modèles numériques deviennent des prototypes, modèles maîtres et grandes formes, imprimés en une pièce ou en modules assemblés.",
+    "faqs": []
+  },
+  "pu": {
+    "title": "Polyuréthane : usinage et coulée",
+    "summary": "Usinage de matériaux PU pour modèles ou coulée de résines adaptées dans des moules. Mousse et systèmes de coulée compacts sont des matériaux distincts.",
+    "costLabel": "Moyen · selon le système",
+    "cost": "Densité, résine, moule et quantité influencent le prix.",
+    "detail": "Les matériaux denses se prêtent aux détails usinés. En coulée, le moule, la fluidité et l’évacuation de l’air déterminent le résultat.",
+    "mechanical": "Les propriétés varient fortement selon le PU. Son nom seul ne définit ni la dureté ni la résistance.",
+    "weight": "Densité et construction déterminent le poids. Un PU coulé n’est pas forcément une mousse légère.",
+    "environment": "La tenue à la chaleur, à l’humidité et aux UV dépend du système choisi.",
+    "volume": "Modèles, prototypes et pièces coulées répétées selon le moule et la matière.",
+    "finish": "Surface usinée, démoulée ou préparée et peinte selon le besoin.",
+    "steps": [
+      "Choisir le système PU et le moule.",
+      "Usiner ou doser, mélanger et couler.",
+      "Laisser durcir, démouler et reprendre."
+    ],
+    "uses": [
+      "Modèles maîtres",
+      "Pièces décoratives coulées",
+      "Prototypes"
+    ],
+    "drivers": [
+      "Densité et quantité de matière",
+      "Travail du moule",
+      "Finition et série"
+    ],
+    "limits": [
+      "Dosage, humidité et chaleur de réaction dépendent du système. Produits expansifs et non expansifs ne sont pas interchangeables."
+    ],
+    "intro": "Usinage de matériaux PU pour modèles ou coulée de résines adaptées dans des moules. Mousse et systèmes de coulée compacts sont des matériaux distincts.",
+    "faqs": []
+  },
+  "epoxy": {
+    "title": "Coulée de résine époxy",
+    "summary": "Nous coulons des résines époxy adaptées dans des moules et les associons au bois ou à des inclusions décoratives.",
+    "costLabel": "Selon le volume et la finition",
+    "cost": "Volume de résine, moule, gestion des bulles et polissage influencent le coût. Une coulée transparente exige une préparation soignée.",
+    "detail": "Le moule transmet les détails. Transparence et qualité de surface dépendent de la résine, de la mise en œuvre et de la finition.",
+    "mechanical": "Une résine coulée non renforcée n’est pas un stratifié verre ou carbone. Charges et comportement fragile doivent être évalués.",
+    "weight": "Les coulées massives sont relativement lourdes ; section et inclusions déterminent la masse.",
+    "environment": "Chaleur et UV peuvent modifier couleur et propriétés. Système et protection sont choisis selon l’usage.",
+    "volume": "Pièces uniques et petites séries ; le temps de durcissement influe sur l’occupation du moule.",
+    "finish": "Transparent, pigmenté, poncé ou poli selon la résine et le résultat convenu.",
+    "steps": [
+      "Étancher le moule et préparer les inclusions.",
+      "Doser, mélanger et couler selon les prescriptions de la résine.",
+      "Laisser durcir, démouler, poncer et polir."
+    ],
+    "uses": [
+      "Plateaux bois-résine",
+      "Objets décoratifs",
+      "Pièces coulées et inclusions"
+    ],
+    "drivers": [
+      "Volume de résine",
+      "Transparence et pigments",
+      "Moule, ponçage et polissage"
+    ],
+    "limits": [
+      "L’épaisseur de coulée, la température et le durcissement suivent la fiche technique. Les gros volumes peuvent nécessiter plusieurs coulées ",
+      " chaleur de réaction et bulles doivent être maîtrisées."
+    ],
+    "intro": "Nous coulons des résines époxy adaptées dans des moules et les associons au bois ou à des inclusions décoratives.",
+    "faqs": []
+  },
+  "tooling": {
+    "title": "Moules, modèles maîtres et gabarits",
+    "summary": "Nous concevons modèle et moule en fonction de la matière finale, du démoulage et de la quantité à produire.",
+    "costLabel": "Investissement initial dans le moule",
+    "cost": "Le coût de l’outillage précède la première pièce et peut être réparti sur une série.",
+    "detail": "La qualité du modèle maître se retrouve dans le moule et les pièces suivantes.",
+    "mechanical": "Matériau, construction et supports du moule doivent résister à la pression et à la température du procédé.",
+    "weight": "Poids et dimensions doivent permettre manutention, stockage et production.",
+    "environment": "Compatibilité résine, démoulant et température de polymérisation sont définis en amont.",
+    "volume": "Moulage unique ou production répétée avec un outillage adapté.",
+    "finish": "Surface de moule convenue, plans de joint et zones de démoulage définis.",
+    "steps": [
+      "Préciser pièce, matière et quantité.",
+      "Développer modèle maître, plans de joint et démoulage.",
+      "Fabriquer le moule et effectuer les contrôles convenus."
+    ],
+    "uses": [
+      "Moules composites",
+      "Modèles maîtres",
+      "Gabarits et moules de coulée"
+    ],
+    "drivers": [
+      "Dimensions et divisions",
+      "Exigence de surface",
+      "Température et répétitions"
+    ],
+    "limits": [
+      "Un moule pour pièces carbone n’est pas nécessairement en carbone. Précision et durée d’usage sont à définir pour le projet."
+    ],
+    "intro": "Nous concevons modèle et moule en fonction de la matière finale, du démoulage et de la quantité à produire.",
+    "faqs": []
+  },
+  "wood": {
+    "title": "Bois, CNC et mobilier",
+    "summary": "D’une porte en bois massif au meuble complet : usinage, caisson, quincaillerie, finition et pose sont coordonnés.",
+    "costLabel": "Selon la matière et la main-d’œuvre",
+    "cost": "Essence, bois massif ou panneaux, quincaillerie et travail de finition déterminent le prix.",
+    "detail": "Accès d’outil, rayon de fraise, fil du bois et mouvements du matériau limitent formes et détails.",
+    "mechanical": "Assemblages, sections, caisson et fixations déterminent la résistance.",
+    "weight": "Matière, sections et quincaillerie déterminent le poids du meuble.",
+    "environment": "Humidité et température agissent sur le bois. L’extérieur nécessite une construction et une finition adaptées.",
+    "volume": "Meubles uniques, agencements et pièces répétées ; le CNC facilite la répétabilité géométrique.",
+    "finish": "Bois massif, placage ou panneaux adaptés, avec vernis, huile ou finition convenue.",
+    "steps": [
+      "Définir mesures, matériaux et plans d’exécution.",
+      "Usiner les pièces, assembler caisson et quincaillerie.",
+      "Terminer la surface, vérifier les ajustements et poser si prévu."
+    ],
+    "uses": [
+      "Meubles de rangement complets",
+      "Comptoirs, tables et tables d’appoint",
+      "Mobilier sur mesure et détails de façade"
+    ],
+    "drivers": [
+      "Choix du bois et des panneaux",
+      "Quincaillerie et assemblages",
+      "Finition, livraison et pose"
+    ],
+    "limits": [
+      "Une porte commandée peut s’intégrer à un meuble complet. Les matériaux de porte et de caisson sont choisis séparément selon l’usage et le budget."
+    ],
+    "intro": "D’une porte en bois massif au meuble complet : usinage, caisson, quincaillerie, finition et pose sont coordonnés.",
+    "faqs": []
+  }
+}

@@ -1,3 +1,7 @@
+import { dictionary } from "@/lib/i18n/dictionary";
+import { isLocale, localeNames, direction } from "@/lib/i18n/locales";
+import { validateLocalized } from "@/lib/i18n/validation";
+import { pagePath } from "@/lib/i18n/routes";
 import { parseAttachments, type EnquiryAttachment } from "@/lib/enquiry-attachments";
 import { NextResponse } from "next/server";
 import {
@@ -76,21 +80,26 @@ async function sendEmail(payload: {
 }
 
 export async function POST(request: Request) {
+  const requestedLanguage = request.headers.get("X-ARDIC-Language");
+  let locale = isLocale(requestedLanguage) ? requestedLanguage : "en" as const;
+  let t = dictionary(locale);
   let payload: Record<string, unknown>;
   try {
     const body = await request.text();
-    if (Buffer.byteLength(body) > 3 * 1024 * 1024) return NextResponse.json({ error: "Please keep attached files under 2 MB in total." }, { status: 413 });
+    if (Buffer.byteLength(body) > 3 * 1024 * 1024) return NextResponse.json({ error: t.error_files }, { status: 413 });
     const value: unknown = JSON.parse(body);
     if (!value || typeof value !== "object" || Array.isArray(value))
       throw new Error("Invalid body");
     payload = value as Record<string, unknown>;
   } catch {
-    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+    return NextResponse.json({ error: t.error_request }, { status: 400 });
   }
 
+  if (payload.language !== undefined && !isLocale(payload.language)) return NextResponse.json({ error: t.error_request }, { status: 400 });
+  if (isLocale(payload.language)) { locale = payload.language; t = dictionary(locale); }
   let attachments: EnquiryAttachment[];
   try { attachments = parseAttachments(payload.attachments); }
-  catch { return NextResponse.json({ error: "Attach up to 3 PDF, JPG, PNG or WebP files, 2 MB total. Check the files or use a share link." }, { status: 400 }); }
+  catch { return NextResponse.json({ error: t.error_files }, { status: 400 }); }
 
   const inquiry = Object.fromEntries(
     Object.keys(initialEnquiry).map((key) => [key, clean(payload[key])])
@@ -98,18 +107,18 @@ export async function POST(request: Request) {
   if (!inquiry.materialPreference && payload.projectScope) inquiry.materialPreference = clean(payload.projectScope);
   if (inquiry.companyWebsite)
     return NextResponse.json(
-      { error: "Unable to process this enquiry. Please reload and try again." },
+      { error: t.error_request },
       { status: 400 }
     );
 
-  const errors = validateEnquiry(inquiry);
+  const errors = validateLocalized(inquiry, t, payload.language !== undefined);
   if (Object.keys(errors).length)
     return NextResponse.json(
-      { error: "Please check your enquiry details.", fields: errors },
+      { error: t.error_details, fields: errors },
       { status: 400 }
     );
   if (inquiry.industry && !getIndustry(inquiry.industry))
-    return NextResponse.json({ error: "Please choose a sector from the list." }, { status: 400 });
+    return NextResponse.json({ error: t.error_details }, { status: 400 });
 
   const rawSelection = payload.selectedProjects;
   if (
@@ -119,20 +128,20 @@ export async function POST(request: Request) {
       rawSelection.some((id) => typeof id !== "string" || !getProject(id)))
   ) {
     return NextResponse.json(
-      { error: "Please check your selected portfolio examples." },
+      { error: t.error_details },
       { status: 400 }
     );
   }
   const selected = parseSelectedProjects(rawSelection);
   if (!process.env.RESEND_API_KEY)
-    return NextResponse.json({ error: "Email service is not configured." }, { status: 503 });
+    return NextResponse.json({ error: t.error_unavailable }, { status: 503 });
 
   const remoteIp =
     request.headers.get("cf-connecting-ip") ||
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     "";
   const verification = await verifyTurnstile(clean(payload.turnstileToken), remoteIp);
-  if (!verification.ok) return NextResponse.json({ error: verification.error }, { status: 400 });
+  if (!verification.ok) return NextResponse.json({ error: process.env.TURNSTILE_SECRET_KEY ? t.error_verification : t.error_unavailable }, { status: 400 });
 
   // Verification handles automated requests. Never silently discard a valid
   // enquiry because its text contains a marketing term or a place such as Seoul.
@@ -144,11 +153,13 @@ export async function POST(request: Request) {
         ? getIndustry(inquiry.industry)?.shortTitle || "Not specified"
         : inquiry[key] || "Not specified"
     ]);
+  rows.push(["Customer language", localeNames[locale] + " (" + locale + ")"]);
+  rows.push(["Country code", inquiry.country || "Not specified"]);
   rows.push([
     "Selected portfolio examples",
     selected.length
       ? selected
-          .map((id) => getProject(id)!.title + " — https://www.ardicdf.com/works/" + id)
+          .map((id) => getProject(id)!.title + " — https://www.ardicdf.com" + pagePath(locale, { kind: "project", id }))
           .join("\n")
       : "None selected"
   ]);
@@ -187,25 +198,19 @@ export async function POST(request: Request) {
   } catch {
     console.error("Contact notification could not be sent.");
     return NextResponse.json(
-      { error: "Unable to send your project enquiry right now. Please try again later." },
+      { error: t.error_send },
       { status: 502 }
     );
   }
 
-  const confirmationText = [
-    "Thank you for contacting Ardıç Design & Fabrication.",
-    "Your project enquiry has been sent to our team for review.",
-    "Project type: " + inquiry.projectType,
-    "We will use your contact details to discuss the scope, production requirements and next steps.",
-    "For confidential projects, wait until the appropriate terms are agreed before sharing sensitive drawings or models."
-  ].join("\n\n");
+  const confirmationText = [t.thanks, t.success_body, t.projectType + ": " + inquiry.projectType, t.nda_note].join("\n\n");
   let confirmationSent = false;
   try {
     await sendEmail({
       to: inquiry.email,
-      subject: "Ardıç Design & Fabrication — Project enquiry received",
+      subject: "Ardıç Design & Fabrication — " + t.confirmation_subject,
       html:
-        '<div style="font-family:Arial,sans-serif;line-height:1.7;white-space:pre-wrap">' +
+        '<div lang="' + locale + '" dir="' + direction(locale) + '" style="font-family:Arial,sans-serif;line-height:1.7;white-space:pre-wrap">' +
         escapeHtml(confirmationText) +
         "</div>",
       text: confirmationText,

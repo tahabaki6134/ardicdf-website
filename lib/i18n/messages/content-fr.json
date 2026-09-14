@@ -1,0 +1,129 @@
+{
+  "projects": {
+    "modular-artificial-rock-concert-environment": {
+      "title": "Décor rocheux modulaire de concert",
+      "description": "Un décor de rochers artificiels en modules EPS transportables, assemblés en paysage continu autour de la scène. Le projet relie la fabrication en atelier à l’installation achevée dans l’arène."
+    },
+    "cosmetic-bottle-display-props": {
+      "title": "Présentoirs en forme de flacons cosmétiques",
+      "description": "Des emballages agrandis deviennent le point focal d’un espace de marque. Profils de flacons, bouchons façonnés, surfaces colorées et graphismes rendent les produits reconnaissables."
+    },
+    "giant-burger-display-prop": {
+      "title": "Burger géant pour présentation",
+      "description": "Un décor alimentaire sculpté avec des couches d’ingrédients façonnées séparément, des textures et une mise en couleur. La photo d’atelier montre l’assemblage et le traitement de surface."
+    },
+    "classical-decorative-columns": {
+      "title": "Colonnes décoratives classiques",
+      "description": "Deux colonnes décoratives à fûts cannelés, chapiteaux à volutes et bases. Les détails architecturaux répétés sont unifiés par une finition effet pierre."
+    },
+    "ornamental-elephant-sculpture": {
+      "title": "Sculpture d’éléphant ornementale",
+      "description": "Une tête d’éléphant sculptée avec des défenses courbes et des reliefs ornementaux. La surface blanche révèle les motifs et les volumes superposés."
+    },
+    "decorative-entrance-arch": {
+      "title": "Arche d’entrée décorative",
+      "description": "Un encadrement ornemental façonné donne son caractère à l’entrée du commerce. La photo de pose montre l’arche claire positionnée devant la façade sombre."
+    }
+  },
+  "archives": {
+    "safari-experiences": {
+      "title": "Fabrications sur le thème du safari"
+    },
+    "sculptures-characters": {
+      "title": "Sculptures et personnages"
+    },
+    "artificial-rock-organic-forms": {
+      "title": "Rochers artificiels et formes organiques"
+    },
+    "historical-thematic-environments": {
+      "title": "Éléments architecturaux et thématiques"
+    },
+    "cnc-manufacturing-processes": {
+      "title": "Procédés de fabrication CNC"
+    },
+    "molds-composite-production": {
+      "title": "Moules et fabrication composite"
+    },
+    "commercial-brand-installations": {
+      "title": "Installations commerciales et de marque"
+    }
+  },
+  "industries": {
+    "retail-brand-activations": {
+      "title": "Commerce et activations de marque",
+      "description": "Répliques de produits agrandies, présentoirs sur mesure, comptoirs et éléments de marque. Identité visuelle, durée d’usage, contact du public et dimensions de transport sont étudiés ensemble."
+    },
+    "events-exhibitions": {
+      "title": "Événements et expositions",
+      "description": "Formes scéniques, présentoirs d’exposition et espaces photo. La fabrication tient compte de la modularité, des accès, des créneaux de montage et du réemploi."
+    },
+    "museums-themed-attractions": {
+      "title": "Musées et espaces thématiques",
+      "description": "Sculptures, figures animales, reliefs et éléments de paysage. Détails vus de près, entretien, fixations et accès du public sont étudiés dans le projet."
+    },
+    "hospitality-architectural-decor": {
+      "title": "Hôtellerie et décor architectural",
+      "description": "Mobilier intégré et indépendant, banques d’accueil, colonnes et détails de façade. Dimensions, interfaces de matériaux, finition et raccordements de pose sont coordonnés."
+    },
+    "film-television": {
+      "title": "Cinéma et télévision",
+      "description": "Décors de studio, grands accessoires et formes spécifiques. Angles de vue, éclairage, manipulation, transport et ordre de montage guident le travail."
+    },
+    "prototypes-display-models": {
+      "title": "Prototypes et modèles de présentation",
+      "description": "Modèles pour valider une forme, présenter un projet ou préparer une fabrication. CNC, impression ou moulage sont choisis selon l’objectif, les tolérances, la finition et le nombre d’exemplaires."
+    }
+  },
+  "concepts": {
+    "SC-001": {
+      "title": "Concept de salon vert olive",
+      "description": "Une piste de conception associant assises vert olive, tons noyer, détails bronze, verre fumé et lumière chaude."
+    },
+    "SC-002": {
+      "title": "Concept de capsule futuriste",
+      "description": "Une idée d’accueil ou de présentation autour d’une capsule sculpturale, d’une coque métallique, de détails intérieurs en bois et d’un éclairage dissimulé."
+    },
+    "SC-003": {
+      "title": "Éléments intérieurs thématiques sur mesure",
+      "description": "Assises sculpturales, miroirs, reliefs et objets de marque peuvent être développés selon l’espace et son atmosphère."
+    }
+  },
+  "team": [
+    {
+      "name": "Yusuf Baki",
+      "initials": "YB",
+      "photo": null,
+      "role": "Dirigeant et directeur de fabrication"
+    },
+    {
+      "name": "Taha Baki",
+      "initials": "TB",
+      "photo": null,
+      "role": "Architecture, stratégie et développement de projets"
+    },
+    {
+      "name": "Şiba Baki",
+      "initials": "SB",
+      "photo": null,
+      "role": "Design intérieur et présentation"
+    },
+    {
+      "name": "Rasim Gül",
+      "initials": "RG",
+      "photo": null,
+      "role": "Arts visuels et techniques de surface"
+    },
+    {
+      "name": "Gençağa Dilli",
+      "initials": "GD",
+      "photo": null,
+      "role": "Sculpteur"
+    },
+    {
+      "name": "Fatih Dilli",
+      "initials": "FD",
+      "photo": "/team/fatih-dilli.png",
+      "role": "Peintre et finitions spéciales"
+    }
+  ]
+}

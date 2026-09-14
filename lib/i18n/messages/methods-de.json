@@ -1,0 +1,279 @@
+{
+  "foam": {
+    "title": "EPS-/XPS-Schaumbearbeitung",
+    "summary": "Große Formen aus leichtem Schaum, passend zu Maßstab, Betrachtungsabstand und Oberflächenanforderung.",
+    "costLabel": "Geringe Einstiegskosten",
+    "cost": "Große, einfache Einzelstücke sind oft wirtschaftlich. Beschichtung, Unterkonstruktion und feine Oberflächen erhöhen den Endpreis.",
+    "detail": "EPS besteht aus Perlen; kleine Kanten und feine Strukturen können ausbrechen. XPS bietet eine gleichmäßigere Zellstruktur. Dichte und Werkzeugdurchmesser bleiben entscheidend.",
+    "mechanical": "Unbeschichteter Schaum ist druckempfindlich. Eine Verbundschale und ein Tragwerk verändern die Eigenschaften des gesamten Bauteils.",
+    "weight": "Sehr leichter Kern; Beschichtung, Rahmen und Befestigung bringen zusätzliches Gewicht.",
+    "environment": "Für Feuchte, Sonne und Berührung braucht es ein geeignetes Schutzsystem.",
+    "volume": "Für große Einzelstücke; fertige Modelle können auch als Grundlage für Serienformen dienen.",
+    "finish": "Roh geschnitten, gespachtelt und lackiert oder mit einer geeigneten Verbundschale.",
+    "steps": [
+      "Schaumart, Dichte und Blockaufteilung festlegen.",
+      "Form fräsen oder schneiden und Segmente verbinden.",
+      "Oberfläche, Verstärkung und Beschichtung ausführen."
+    ],
+    "uses": [
+      "Große Skulpturen",
+      "Reliefs und Schriftzüge",
+      "Urmodelle für Formen"
+    ],
+    "drivers": [
+      "Volumen und Dichte",
+      "Feine Details",
+      "Beschichtung, Rahmen und Transportmaße"
+    ],
+    "limits": [
+      "Styrolhaltiges Polyesterharz kann ungeschütztes Polystyrol angreifen. Materialverträglichkeit und dünne Kanten müssen eingeplant werden."
+    ],
+    "intro": "Große Formen aus leichtem Schaum, passend zu Maßstab, Betrachtungsabstand und Oberflächenanforderung.",
+    "faqs": []
+  },
+  "glass": {
+    "title": "Glasfaserverbund / GFK",
+    "summary": "Glasfasern und ein geeignetes Harz bilden belastbare Schalen auf einem Modell, Kern oder in einer Form.",
+    "costLabel": "Mittel · Formkosten zusätzlich",
+    "cost": "Glasfasern sind meist günstiger als Carbon. Eine neue Form verursacht Anfangskosten, die sich auf mehrere Teile verteilen lassen.",
+    "detail": "Die Sichtfläche folgt der Qualität von Urmodell und Form. Entformung, Trennfugen und Zugang für das Laminieren müssen passen.",
+    "mechanical": "Festigkeit, Steifigkeit und Stoßverhalten hängen von Laminataufbau, Geometrie, Harz und Tragwerk ab.",
+    "weight": "Hohle Schalen sparen Füllmaterial. Für gleiche Steifigkeit ist meist mehr Gewicht als bei einem gut ausgelegten Carbonlaminat nötig.",
+    "environment": "Harz, Gelcoat oder Lack, Fugen und Befestigungen werden für die Umgebung gewählt.",
+    "volume": "Geeignet für wiederkehrende Schalen und robuste Dekorationsobjekte, wenn der Formenaufwand sinnvoll ist.",
+    "finish": "Gelcoat, Lack oder strukturierte Oberfläche. Vorder- und Rückseite können unterschiedlich ausfallen.",
+    "steps": [
+      "Urmodell, Form oder Kern und Teilung vorbereiten.",
+      "Glasfasern mit Harz laminieren und aushärten.",
+      "Entformen, beschneiden, Befestigungen und Oberfläche fertigstellen."
+    ],
+    "uses": [
+      "Skulpturenschalen",
+      "Paneele und Abdeckungen",
+      "Verstärkte Schaumformen"
+    ],
+    "drivers": [
+      "Urmodell und Form",
+      "Fläche und Lagenaufbau",
+      "Stückzahl und Oberflächenqualität"
+    ],
+    "limits": [
+      "Ein dekorativer Gelcoat ersetzt kein tragendes Laminat. Dünne Schalen benötigen geeignete Stütz- und Befestigungsbereiche."
+    ],
+    "intro": "Glasfasern und ein geeignetes Harz bilden belastbare Schalen auf einem Modell, Kern oder in einer Form.",
+    "faqs": []
+  },
+  "carbon": {
+    "title": "Carbonfaser-Fertigung",
+    "summary": "Carbonbauteile und Formen im Handlaminat, Vakuumsackverfahren oder per Vakuuminfusion. Wir wählen das Verfahren nach Geometrie, Gewicht, Oberfläche und Stückzahl.",
+    "costLabel": "Hohe relative Kosten",
+    "cost": "Fasern, Harz, Form, Lagenaufbau und Prozesskontrolle sind meist teurer als bei GFK. Carbon lohnt sich bei passenden Gewichts- oder Steifigkeitszielen.",
+    "detail": "Formqualität, Gewebeausrichtung, enge Radien und Trennfugen bestimmen Oberfläche und Arbeitsaufwand.",
+    "mechanical": "Carbon bietet hohe spezifische Steifigkeit. Faserorientierung, sprödes Versagen und Stoßschäden müssen gesondert betrachtet werden.",
+    "weight": "Gewichtsvorteile hängen vom Laminataufbau und einem gleichwertigen Auslegungsziel ab.",
+    "environment": "Temperaturbeständigkeit folgt Harz und Aushärtung. UV-Schutz und Isolation gegenüber ungeeigneten Metallkontakten können nötig sein.",
+    "volume": "Für Bauteile und Werkzeuge, deren Anforderungen Material- und Formkosten rechtfertigen.",
+    "finish": "Sichtgewebe mit geeignetem Klarlack oder Lackierung. Dekorative Decklagen und tragende Laminate sind unterschiedlich.",
+    "steps": [
+      "Bauteil oder Form, Belastungen und Temperaturbedarf klären.",
+      "Verfahren, Form, Faserrichtungen und Harz bestimmen.",
+      "Aushärten, beschneiden und vereinbarte Maße und Oberfläche prüfen."
+    ],
+    "uses": [
+      "Leichte Gehäuse",
+      "Steife Paneele",
+      "Formen und Prototypen"
+    ],
+    "drivers": [
+      "Fasertyp und Lagen",
+      "Formgeometrie und Temperatur",
+      "Prozess und Sichtgewebe"
+    ],
+    "limits": [
+      "Carbon ist nicht grundsätzlich schlagfester. Eine Form für Carbonteile und eine aus Carbon gefertigte Form sind unterschiedliche Anforderungen."
+    ],
+    "intro": "Carbonbauteile und Formen im Handlaminat, Vakuumsackverfahren oder per Vakuuminfusion. Wir wählen das Verfahren nach Geometrie, Gewicht, Oberfläche und Stückzahl.",
+    "faqs": [],
+    "processes": [
+      {
+        "title": "Handlaminat / Nasslaminieren",
+        "how": "Das Carbongewebe wird in die Form gelegt und von Hand mit Harz getränkt.",
+        "fit": "Für Sonderformen und kleine Stückzahlen, wenn minimales Gewicht nicht das Hauptziel ist.",
+        "tradeoff": "Geringerer Einrichtungsaufwand; Harzanteil und Luftentfernung hängen stark von der Ausführung ab."
+      },
+      {
+        "title": "Vakuumsackverfahren",
+        "how": "Das bereits getränkte Laminat wird unter einem dichten Vakuumsack während der Aushärtung verdichtet.",
+        "fit": "Für eine gezieltere Verdichtung und Gewichtskontrolle nach dem Handlaminieren.",
+        "tradeoff": "Zusätzliche Verbrauchsmaterialien und Abdichtarbeit. Ein zuverlässiges Vakuum ist erforderlich."
+      },
+      {
+        "title": "Vakuuminfusion",
+        "how": "Trockenes Gewebe wird in die Form gelegt und abgedichtet; geeignetes Harz wird durch Unterdruck durch die Fasern gezogen.",
+        "fit": "Für Schalen und Paneele mit planbarem Harzfluss.",
+        "tradeoff": "Fließplanung, Dichtheitsprüfung und Infusionsmaterialien sind nötig. Trockene Stellen und Harzverteilung müssen kontrolliert werden."
+      }
+    ]
+  },
+  "printing": {
+    "title": "Großformatiger 3D-Druck",
+    "summary": "Digitale Modelle werden schichtweise zu Prototypen, Urmodellen und großen Formen aufgebaut; bei Bedarf in verbundenen Segmenten.",
+    "costLabel": "Geometrieabhängig",
+    "cost": "Bei Einzelstücken entfällt oft die Produktionsform. Druckzeit, Material, Stützen und Nacharbeit bestimmen den Aufwand.",
+    "detail": "Düsendurchmesser, Schichthöhe und Orientierung begrenzen Details. Schichtlinien und Fugen erfordern gegebenenfalls Nacharbeit.",
+    "mechanical": "Festigkeit hängt von Polymer, Wandstärke, Füllung und Schichthaftung ab. Verbindungen und Einleger werden mitgeplant.",
+    "weight": "Wände und Füllstruktur steuern das Gewicht; Rahmen und Verstärkungen kommen hinzu.",
+    "environment": "Das Polymer muss zu Wärme, Sonne und Feuchte passen. Standard-PLA ist keine pauschale Außenlösung.",
+    "volume": "Für Einzelstücke, wechselnde Formen und kleine Serien; gedruckte Urmodelle können in den Formenbau übergehen.",
+    "finish": "Sichtbare Druckschichten oder gespachtelte und lackierte Flächen; Verbundbeschichtung nach Vereinbarung.",
+    "steps": [
+      "Modell und Teilung prüfen.",
+      "Material, Orientierung und Druckparameter bestimmen.",
+      "Drucken, verbinden und Oberfläche ausarbeiten."
+    ],
+    "uses": [
+      "Prototypen",
+      "Urmodelle",
+      "Große Dekorationsformen"
+    ],
+    "drivers": [
+      "Druckvolumen und Zeit",
+      "Stützen und Teilung",
+      "Nacharbeit und Montage"
+    ],
+    "limits": [
+      "Die Oberfläche ist nicht automatisch glatt. Bauteile können quer zu den Schichten schwächer sein."
+    ],
+    "intro": "Digitale Modelle werden schichtweise zu Prototypen, Urmodellen und großen Formen aufgebaut; bei Bedarf in verbundenen Segmenten.",
+    "faqs": []
+  },
+  "pu": {
+    "title": "Polyurethan: Bearbeitung und Guss",
+    "summary": "PU-Modellmaterialien werden gefräst oder geeignete Gießharze in Formen verarbeitet. Schaum und kompakte Gießsysteme sind getrennte Werkstoffe.",
+    "costLabel": "Mittel · systemabhängig",
+    "cost": "Dichte, Harzsystem, Formaufwand und Stückzahl beeinflussen den Preis.",
+    "detail": "Dichte Modellmaterialien lassen sich fein bearbeiten. Beim Guss bestimmen Form, Fließverhalten und Entlüftung das Detail.",
+    "mechanical": "Eigenschaften unterscheiden sich stark zwischen PU-Systemen. Materialname allein beschreibt weder Härte noch Belastbarkeit.",
+    "weight": "Dichte und Formaufbau bestimmen das Gewicht. Ein PU-Gussteil ist nicht automatisch ein Leichtschaum.",
+    "environment": "Wärme-, Feuchte- und UV-Verhalten müssen zum gewählten System passen.",
+    "volume": "Modelle, Prototypen und wiederholte Gussteile, abhängig von Form und Material.",
+    "finish": "Bearbeitet, entformt oder mit vereinbarter Oberflächenvorbereitung und Lackierung.",
+    "steps": [
+      "Passendes PU-System und Form wählen.",
+      "Fräsen oder dosiert mischen und gießen.",
+      "Aushärten, entformen und nacharbeiten."
+    ],
+    "uses": [
+      "Urmodelle",
+      "Dekorative Gussteile",
+      "Prototypen"
+    ],
+    "drivers": [
+      "Dichte und Materialmenge",
+      "Formaufwand",
+      "Nacharbeit und Stückzahl"
+    ],
+    "limits": [
+      "Mischungsverhältnis, Feuchte und Reaktionswärme sind systemabhängig. Schäumende und nicht schäumende Produkte sind nicht austauschbar."
+    ],
+    "intro": "PU-Modellmaterialien werden gefräst oder geeignete Gießharze in Formen verarbeitet. Schaum und kompakte Gießsysteme sind getrennte Werkstoffe.",
+    "faqs": []
+  },
+  "epoxy": {
+    "title": "Epoxidharzguss",
+    "summary": "Wir gießen geeignete Epoxidharze in Formen oder kombinieren sie mit Holz und dekorativen Einlagen.",
+    "costLabel": "Volumen- und oberflächenabhängig",
+    "cost": "Harzvolumen, Form, Blasenbehandlung und Polieren beeinflussen die Kosten. Transparente Sichtgüsse benötigen besonders sorgfältige Vorbereitung.",
+    "detail": "Die Form bildet Details ab. Transparenz und Oberflächengüte hängen von Harz, Verarbeitung und Nacharbeit ab.",
+    "mechanical": "Unverstärktes Gussharz ist kein Carbon- oder Glasfaserlaminat. Belastung und sprödes Verhalten sind gesondert zu prüfen.",
+    "weight": "Kompakte Güsse sind vergleichsweise schwer; Querschnitt und Einlagen bestimmen die Masse.",
+    "environment": "Wärme und UV können Farbe und Eigenschaften verändern. System und Schutzschicht werden nach Einsatz gewählt.",
+    "volume": "Einzelstücke und Kleinserien; Aushärtezeit beeinflusst die Belegung der Form.",
+    "finish": "Transparent, pigmentiert, geschliffen oder poliert, abhängig von Harz und vereinbartem Ergebnis.",
+    "steps": [
+      "Form abdichten und Einlagen vorbereiten.",
+      "Nach Harzvorgaben dosieren, mischen und gießen.",
+      "Aushärten, entformen, schleifen und polieren."
+    ],
+    "uses": [
+      "Holz-Harz-Tischplatten",
+      "Dekorative Objekte",
+      "Gussteile und Einlagen"
+    ],
+    "drivers": [
+      "Harzvolumen",
+      "Transparenz und Pigmente",
+      "Form, Schleifen und Polieren"
+    ],
+    "limits": [
+      "Gießhöhe, Temperatur und Aushärtung folgen dem Harzdatenblatt. Große Volumen können mehrere Gießgänge erfordern",
+      " Reaktionswärme und Blasen müssen kontrolliert werden."
+    ],
+    "intro": "Wir gießen geeignete Epoxidharze in Formen oder kombinieren sie mit Holz und dekorativen Einlagen.",
+    "faqs": []
+  },
+  "tooling": {
+    "title": "Formen, Urmodelle und Lehren",
+    "summary": "Wir entwickeln das Urmodell und die Form passend zum späteren Material, Entformungsweg und Produktionsumfang.",
+    "costLabel": "Anfängliche Forminvestition",
+    "cost": "Formaufwand fällt vor dem ersten Teil an und kann sich bei Wiederholungen verteilen.",
+    "detail": "Die Qualität des Urmodells prägt die Form und alle späteren Abgüsse.",
+    "mechanical": "Formmaterial, Aufbau und Abstützung müssen Fertigungsdruck und Temperatur vertragen.",
+    "weight": "Gewicht und Größe müssen Handhabung, Lagerung und Fertigung zulassen.",
+    "environment": "Harzverträglichkeit, Trennmittel und Aushärtetemperatur werden vorab festgelegt.",
+    "volume": "Für Einzelabformungen oder wiederholte Produktion mit passendem Werkzeugkonzept.",
+    "finish": "Vereinbarte Formoberfläche mit definierten Trennfugen und Entformungsflächen.",
+    "steps": [
+      "Bauteil, Material und Stückzahl klären.",
+      "Urmodell, Teilung und Entformung entwickeln.",
+      "Form bauen und vereinbarte Kontrollen durchführen."
+    ],
+    "uses": [
+      "Composite-Formen",
+      "Urmodelle",
+      "Lehren und Gussformen"
+    ],
+    "drivers": [
+      "Größe und Teilung",
+      "Oberflächenanforderung",
+      "Temperatur und Wiederholungen"
+    ],
+    "limits": [
+      "Eine Form für Carbonteile muss nicht selbst aus Carbon bestehen. Erforderliche Genauigkeit und Nutzungsdauer sind projektbezogen festzulegen."
+    ],
+    "intro": "Wir entwickeln das Urmodell und die Form passend zum späteren Material, Entformungsweg und Produktionsumfang.",
+    "faqs": []
+  },
+  "wood": {
+    "title": "Holz, CNC und Möbelbau",
+    "summary": "Von einer Massivholztür bis zum kompletten Möbel: Zuschnitt, CNC-Bearbeitung, Korpus, Beschläge, Oberfläche und Montage werden gemeinsam geplant.",
+    "costLabel": "Material- und arbeitsabhängig",
+    "cost": "Holzart, Massivholz oder Plattenmaterial, Beschläge und Oberflächenarbeit bestimmen den Preis.",
+    "detail": "Werkzeugzugang, Fräserradius, Faserverlauf und Materialbewegung begrenzen Form und Details.",
+    "mechanical": "Verbindungen, Querschnitte, Korpusaufbau und Befestigung bestimmen die Belastbarkeit.",
+    "weight": "Material, Querschnitte und Beschläge steuern das Gewicht des fertigen Möbels.",
+    "environment": "Feuchte und Temperatur beeinflussen Holz. Außenanwendungen benötigen eine passende Konstruktion und Oberfläche.",
+    "volume": "Einzelmöbel, Einbauten und wiederholte Teile; CNC kann gleichbleibende Geometrien unterstützen.",
+    "finish": "Massivholz, Furnier oder geeignete Platten mit vereinbartem Lack, Öl oder anderer Oberfläche.",
+    "steps": [
+      "Aufmaß, Material und Werkstattzeichnungen festlegen.",
+      "Teile bearbeiten, Korpus und Beschläge montieren.",
+      "Oberfläche, Passung und gegebenenfalls Einbau abschließen."
+    ],
+    "uses": [
+      "Komplette Schränke",
+      "Theken, Tische und Beistelltische",
+      "Sondermöbel und Fassadendetails"
+    ],
+    "drivers": [
+      "Holz und Plattenwahl",
+      "Beschläge und Verbindungen",
+      "Oberfläche, Lieferung und Montage"
+    ],
+    "limits": [
+      "Eine bestellte Tür kann Teil eines kompletten Möbels sein. Tür- und Korpusmaterial werden passend zu Nutzung und Budget getrennt gewählt."
+    ],
+    "intro": "Von einer Massivholztür bis zum kompletten Möbel: Zuschnitt, CNC-Bearbeitung, Korpus, Beschläge, Oberfläche und Montage werden gemeinsam geplant.",
+    "faqs": []
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "projects": {
+    "modular-artificial-rock-concert-environment": {
+      "title": "Modulare Felskulisse für ein Konzert",
+      "description": "Eine künstliche Felslandschaft aus transportierbaren EPS-Modulen, die rund um die Konzertbühne zusammengefügt wurden. Das Projekt zeigt den Weg von der Werkstattfertigung bis zum fertigen Aufbau in der Arena."
+    },
+    "cosmetic-bottle-display-props": {
+      "title": "Übergroße Kosmetikflaschen für Displays",
+      "description": "Vergrößerte Verpackungsformen als Blickfang im Markenauftritt. Flaschenkonturen, geformte Verschlüsse, farbige Oberflächen und aufgebrachte Grafiken machen das Produkt erkennbar."
+    },
+    "giant-burger-display-prop": {
+      "title": "Übergroßes Burger-Display",
+      "description": "Ein plastisches Lebensmittel-Display mit einzeln geformten Zutatenlagen, strukturierten Flächen und Bemalung. Das Werkstattfoto zeigt Zusammenbau und Oberflächenbehandlung."
+    },
+    "classical-decorative-columns": {
+      "title": "Klassische Dekorsäulen",
+      "description": "Ein Paar Dekorsäulen mit kannelierten Schäften, Volutenkapitellen und Sockeln. Wiederkehrende architektonische Details werden durch eine abgestimmte Steinoptik verbunden."
+    },
+    "ornamental-elephant-sculpture": {
+      "title": "Ornamentale Elefantenskulptur",
+      "description": "Eine Elefantenkopf-Skulptur mit markanten gebogenen Stoßzähnen und ornamentalen Reliefs. Die weiße Oberfläche hebt Muster und plastische Schichtung hervor."
+    },
+    "decorative-entrance-arch": {
+      "title": "Dekorativer Eingangsbogen",
+      "description": "Ein geformter, ornamentaler Rahmen prägt den Ladeneingang. Das Montagefoto zeigt den hellen Bogen beim Einsetzen vor der dunkleren Fassade."
+    }
+  },
+  "archives": {
+    "safari-experiences": {
+      "title": "Safari-Themenwelten"
+    },
+    "sculptures-characters": {
+      "title": "Skulpturen und Figuren"
+    },
+    "artificial-rock-organic-forms": {
+      "title": "Kunstfelsen und organische Formen"
+    },
+    "historical-thematic-environments": {
+      "title": "Architektur- und Themenelemente"
+    },
+    "cnc-manufacturing-processes": {
+      "title": "CNC-Fertigungsprozesse"
+    },
+    "molds-composite-production": {
+      "title": "Formen- und Verbundfertigung"
+    },
+    "commercial-brand-installations": {
+      "title": "Gewerbe- und Markeninstallationen"
+    }
+  },
+  "industries": {
+    "retail-brand-activations": {
+      "title": "Einzelhandel und Markeninszenierung",
+      "description": "Übergroße Produktmodelle, individuelle Displays, Theken und Markenelemente. Gestaltung, Einsatzdauer, Besucherkontakt und Transportmaße werden gemeinsam betrachtet."
+    },
+    "events-exhibitions": {
+      "title": "Events und Messen",
+      "description": "Bühnenformen, Messedisplays und Fotokulissen. Modularität, Zugang, Montagezeit und Wiederverwendung bestimmen die Fertigungsplanung."
+    },
+    "museums-themed-attractions": {
+      "title": "Museen und Themenattraktionen",
+      "description": "Skulpturen, Tierfiguren, Reliefs und Landschaftselemente. Nahsichtdetails, Pflege, Befestigungen und Besucherzugang werden projektspezifisch bewertet."
+    },
+    "hospitality-architectural-decor": {
+      "title": "Hotellerie und Architekturdekoration",
+      "description": "Einbau- und freistehende Möbel, Empfangstheken, Säulen und Fassadendetails. Maße, Materialübergänge, Oberflächen und Montageanschlüsse werden gemeinsam geplant."
+    },
+    "film-television": {
+      "title": "Film und Fernsehen",
+      "description": "Studiokulissen, große Requisiten und Sonderformen. Blickwinkel, Licht, Handhabung, Transport und Aufbaufolge bestimmen die Umsetzung."
+    },
+    "prototypes-display-models": {
+      "title": "Prototypen und Präsentationsmodelle",
+      "description": "Modelle zur Formprüfung, Präsentation oder weiteren Fertigung. CNC, Druck oder Abformung werden nach Zweck, Toleranzen, Oberfläche und Stückzahl gewählt."
+    }
+  },
+  "concepts": {
+    "SC-001": {
+      "title": "Lounge-Konzept in Olivgrün",
+      "description": "Eine Gestaltungsrichtung mit olivgrünen Sitzmöbeln, Nussbaumtönen, Bronzedetails, Rauchglas und warmem Licht."
+    },
+    "SC-002": {
+      "title": "Futuristisches Kapselkonzept",
+      "description": "Ein Empfangs- oder Displaykonzept mit plastischer Kapsel, metallischer Außenfläche, warmen Holzdetails innen und verdeckter Beleuchtung."
+    },
+    "SC-003": {
+      "title": "Individuelle Themenelemente für Innenräume",
+      "description": "Plastische Sitzmöbel, Spiegel, Reliefs und Markenobjekte lassen sich passend zu Raum und Atmosphäre entwickeln."
+    }
+  },
+  "team": [
+    {
+      "name": "Yusuf Baki",
+      "initials": "YB",
+      "photo": null,
+      "role": "Inhaber und Fertigungsleitung"
+    },
+    {
+      "name": "Taha Baki",
+      "initials": "TB",
+      "photo": null,
+      "role": "Architektur, Strategie und Projektentwicklung"
+    },
+    {
+      "name": "Şiba Baki",
+      "initials": "SB",
+      "photo": null,
+      "role": "Innenraumgestaltung und Präsentation"
+    },
+    {
+      "name": "Rasim Gül",
+      "initials": "RG",
+      "photo": null,
+      "role": "Bildende Kunst und Oberflächentechniken"
+    },
+    {
+      "name": "Gençağa Dilli",
+      "initials": "GD",
+      "photo": null,
+      "role": "Bildhauer"
+    },
+    {
+      "name": "Fatih Dilli",
+      "initials": "FD",
+      "photo": "/team/fatih-dilli.png",
+      "role": "Kunstmaler und Spezialoberflächen"
+    }
+  ]
+}

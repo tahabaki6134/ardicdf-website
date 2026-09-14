@@ -1,0 +1,129 @@
+{
+  "projects": {
+    "modular-artificial-rock-concert-environment": {
+      "title": "Modular rock concert environment",
+      "description": "An artificial-rock environment made as transportable EPS modules and assembled into a continuous landscape around the concert stage. The project follows workshop production through to the completed arena setting."
+    },
+    "cosmetic-bottle-display-props": {
+      "title": "Cosmetic bottle display props",
+      "description": "Oversized packaging forms create a focal point for a branded setting. Bottle profiles, shaped caps, coloured surfaces and applied graphics make the products recognisable."
+    },
+    "giant-burger-display-prop": {
+      "title": "Giant burger display prop",
+      "description": "A sculptural food display with individually shaped ingredient layers, textured surfaces and paint. The workshop photograph shows the assembled composition and surface treatment."
+    },
+    "classical-decorative-columns": {
+      "title": "Classical decorative columns",
+      "description": "A pair of decorative columns with fluted shafts, scroll capitals and bases. Repeated architectural details are unified by a coordinated stone-effect finish."
+    },
+    "ornamental-elephant-sculpture": {
+      "title": "Ornamental elephant sculpture",
+      "description": "An elephant-head sculpture with prominent curved tusks and ornamental relief. The white surface highlights the patterned detail and layered sculptural form."
+    },
+    "decorative-entrance-arch": {
+      "title": "Decorative entrance arch",
+      "description": "A shaped ornamental surround defines the storefront entrance. The installation photograph shows the light-coloured arch being positioned against the darker facade."
+    }
+  },
+  "archives": {
+    "safari-experiences": {
+      "title": "Safari-themed fabrication"
+    },
+    "sculptures-characters": {
+      "title": "Sculptures & characters"
+    },
+    "artificial-rock-organic-forms": {
+      "title": "Artificial rock & organic forms"
+    },
+    "historical-thematic-environments": {
+      "title": "Architectural & themed elements"
+    },
+    "cnc-manufacturing-processes": {
+      "title": "CNC manufacturing processes"
+    },
+    "molds-composite-production": {
+      "title": "Molds & composite production"
+    },
+    "commercial-brand-installations": {
+      "title": "Commercial & brand installations"
+    }
+  },
+  "industries": {
+    "retail-brand-activations": {
+      "title": "Retail & brand activations",
+      "description": "Oversized product replicas, bespoke displays, counters and brand elements. Visual identity, display duration, visitor contact and shipping dimensions are considered together."
+    },
+    "events-exhibitions": {
+      "title": "Events & exhibitions",
+      "description": "Scenic forms, exhibition displays and photo settings. Production is planned around modularity, access, installation windows and reuse."
+    },
+    "museums-themed-attractions": {
+      "title": "Museums & themed attractions",
+      "description": "Sculptures, animal figures, reliefs and landscape elements. Close-view detail, maintenance, fixings and visitor access are assessed within the project."
+    },
+    "hospitality-architectural-decor": {
+      "title": "Hospitality & architectural decor",
+      "description": "Fitted and freestanding furniture, reception counters, columns and facade details. Dimensions, material interfaces, finish and installation connections are planned together."
+    },
+    "film-television": {
+      "title": "Film & television",
+      "description": "Studio scenery, oversized camera-facing props and custom forms. Viewing angles, lighting, handling, portability and assembly sequence guide the work."
+    },
+    "prototypes-display-models": {
+      "title": "Prototypes & display models",
+      "description": "Models for form review, presentation or subsequent manufacturing. CNC, printing or molding is selected for the purpose, tolerances, finish and number of copies."
+    }
+  },
+  "concepts": {
+    "SC-001": {
+      "title": "Olive lounge concept",
+      "description": "A design direction combining olive seating, walnut tones, bronze details, smoked glass and warm lighting."
+    },
+    "SC-002": {
+      "title": "Futuristic pod concept",
+      "description": "A reception or display concept built around a sculptural pod, metallic outer surface, warm timber interior details and concealed lighting."
+    },
+    "SC-003": {
+      "title": "Custom thematic interior elements",
+      "description": "Sculptural seating, mirrors, reliefs and branded objects can be developed around the space and its atmosphere."
+    }
+  },
+  "team": [
+    {
+      "name": "Yusuf Baki",
+      "initials": "YB",
+      "photo": null,
+      "role": "Owner & fabrication director"
+    },
+    {
+      "name": "Taha Baki",
+      "initials": "TB",
+      "photo": null,
+      "role": "Architecture, strategy & project development"
+    },
+    {
+      "name": "Şiba Baki",
+      "initials": "SB",
+      "photo": null,
+      "role": "Interior design & presentation"
+    },
+    {
+      "name": "Rasim Gül",
+      "initials": "RG",
+      "photo": null,
+      "role": "Visual arts & surface techniques"
+    },
+    {
+      "name": "Gençağa Dilli",
+      "initials": "GD",
+      "photo": null,
+      "role": "Sculptor"
+    },
+    {
+      "name": "Fatih Dilli",
+      "initials": "FD",
+      "photo": "/team/fatih-dilli.png",
+      "role": "Painter & special finishes"
+    }
+  ]
+}
