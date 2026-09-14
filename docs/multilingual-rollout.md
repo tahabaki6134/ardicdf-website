@@ -9,7 +9,7 @@ The existing `ardicdf-website` Next.js/Vercel project now contains six language 
 - `/tr` is an internal rendering prefix, excluded from public links and the sitemap. Its pages carry the unprefixed Turkish canonical URL. Do not add a redirect on this internal render target: it can loop when a hosting proxy follows a middleware rewrite.
 - Existing English-only `/manufacturing/...` and `/compare` addresses redirect to their `/en/...` versions. Legacy service articles redirect to the relevant manufacturing or application page. Shared old paths retain their subject with Turkish as the default; English counterparts remain under `/en`.
 - `/live` remains removed and redirects to the workshop. `/references` redirects to projects.
-- The separate `.com.tr` repository has a companion redirect change. Apply it only after the multilingual `.com` production deployment is verified. Existing Turkish path names and query parameters are retained in the redirect.
+- The user clarified on 2026-09-14 that `.com.tr` must remain an independent Turkish website for the domestic market. Do not redirect its pages, sitemap or robots to `.com`, and do not change the domestic site's content or contact setup as part of international-site work. The former companion redirect was reversed. The six-language international site remains on `.com`.
 - There is no IP/country-based language redirect. Country and language are independent. `x-default` points to English; each ordinary page has six reciprocal language alternatives.
 
 ## Content ownership

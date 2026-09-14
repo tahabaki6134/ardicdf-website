@@ -77,7 +77,7 @@ test('legacy links retain meaning and Turkish root paths rewrite without changin
   assert.equal(route('/ar/references').headers.get('location'),siteOrigin+'/ar/works');
   assert.equal(route('/services/composite-fabrication').headers.get('location'),siteOrigin+'/en/manufacturing/fiberglass-grp');
   assert.equal(route('/tr/imalat/epoksi-recine-dokum').headers.get('location'),null);
-  assert.equal(route('/contact?method=epoxy','https://www.ardicdf.com.tr').headers.get('location'),siteOrigin+'/contact?method=epoxy');
+  assert.equal(route('/contact?method=epoxy','https://www.ardicdf.com.tr').headers.get('location'),null);
   assert.equal(resolvePage('ar',['qa']),undefined);
 });
 
