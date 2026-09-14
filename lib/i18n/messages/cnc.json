@@ -1,0 +1,194 @@
+{
+  "tr": {
+    "title": "CNC işleme",
+    "summary": "EPS, XPS, poliüretan model malzemesi ve ahşapta dijital çizime göre kesim ve frezeleme.",
+    "costLabel": "Geometri ve süreye bağlı",
+    "cost": "Malzeme, takım yolu, kaba ve ince işleme süresi ile son yüzey maliyeti belirler.",
+    "detail": "Takım çapı, erişim ve eksen sayısı detayı sınırlar. Her iç bükey geometri tek bağlamada işlenemez.",
+    "mechanical": "Dayanım, CNC işleminden değil seçilen malzeme, kesit ve bağlantılardan gelir.",
+    "weight": "Ağırlığı malzeme yoğunluğu ve kalan kesit belirler.",
+    "environment": "Son kullanım, malzeme ve koruyucu yüzeye göre değerlendirilir.",
+    "volume": "Tek parça, model ve tekrarlı elemanlarda uygulanabilir.",
+    "finish": "Takım izli ham yüzey veya zımpara ve son yüzey uygulaması.",
+    "steps": [
+      "Çizim, malzeme ve bağlamayı planlarız.",
+      "Kaba ve ince işlemeyi uygularız.",
+      "Ölçü, birleşim ve yüzeyi tamamlarız."
+    ],
+    "uses": [
+      "Rölyefler",
+      "Kalıp modelleri",
+      "Mobilya parçaları"
+    ],
+    "drivers": [
+      "Malzeme ve stok",
+      "Takım erişimi ve süre",
+      "Tekrar bağlama ve son yüzey"
+    ],
+    "limits": [
+      "Dar iç köşeler takım yarıçapını taşır. Takımın ulaşamadığı bölgeler için parçalama, farklı bağlama veya ek yöntem gerekir."
+    ],
+    "intro": "EPS, XPS, poliüretan model malzemesi ve ahşapta dijital çizime göre kesim ve frezeleme.",
+    "faqs": []
+  },
+  "en": {
+    "title": "CNC machining",
+    "summary": "Digital cutting and milling of EPS, XPS, polyurethane model stock and wood.",
+    "costLabel": "Geometry and time dependent",
+    "cost": "Material, toolpaths, roughing, finishing time and surface treatment determine cost.",
+    "detail": "Tool diameter, access and available axes limit detail. Not every concave geometry can be machined in one setup.",
+    "mechanical": "Strength comes from the material, sections and joints, not from CNC machining itself.",
+    "weight": "Material density and the remaining section determine weight.",
+    "environment": "End use is assessed against the material and protective finish.",
+    "volume": "Suitable for individual parts, patterns and repeated elements.",
+    "finish": "Visible tool marks or sanding and an agreed finish.",
+    "steps": [
+      "Plan drawings, stock and workholding.",
+      "Rough and finish-machine.",
+      "Check dimensions, joints and surface."
+    ],
+    "uses": [
+      "Reliefs",
+      "Mold patterns",
+      "Furniture components"
+    ],
+    "drivers": [
+      "Material and stock",
+      "Tool access and machining time",
+      "New setups and finish"
+    ],
+    "limits": [
+      "Inside corners retain the tool radius. Inaccessible regions may need split parts, another setup or a complementary process."
+    ],
+    "intro": "Digital cutting and milling of EPS, XPS, polyurethane model stock and wood.",
+    "faqs": []
+  },
+  "de": {
+    "title": "CNC-Bearbeitung",
+    "summary": "Digitaler Zuschnitt und Fräsen von EPS, XPS, PU-Modellmaterial und Holz.",
+    "costLabel": "Geometrie- und zeitabhängig",
+    "cost": "Material, Werkzeugwege, Schruppen, Schlichten und Oberflächenarbeit bestimmen den Preis.",
+    "detail": "Werkzeugdurchmesser, Zugang und verfügbare Achsen begrenzen Details. Nicht jede konkave Form ist in einer Aufspannung erreichbar.",
+    "mechanical": "Festigkeit entsteht durch Material, Querschnitte und Verbindungen, nicht durch CNC allein.",
+    "weight": "Dichte und verbleibender Querschnitt bestimmen das Gewicht.",
+    "environment": "Der Einsatz wird nach Material und Schutzoberfläche beurteilt.",
+    "volume": "Für Einzelteile, Urmodelle und wiederholte Elemente.",
+    "finish": "Sichtbare Frässpuren oder geschliffene und vereinbarte Oberfläche.",
+    "steps": [
+      "Zeichnung, Material und Aufspannung planen.",
+      "Schruppen und Schlichten.",
+      "Maße, Verbindungen und Oberfläche prüfen."
+    ],
+    "uses": [
+      "Reliefs",
+      "Formmodelle",
+      "Möbelteile"
+    ],
+    "drivers": [
+      "Material und Rohteil",
+      "Werkzeugzugang und Zeit",
+      "Umspannen und Oberfläche"
+    ],
+    "limits": [
+      "Innenecken behalten den Werkzeugradius. Unerreichbare Bereiche erfordern Teilungen, andere Aufspannungen oder ergänzende Verfahren."
+    ],
+    "intro": "Digitaler Zuschnitt und Fräsen von EPS, XPS, PU-Modellmaterial und Holz.",
+    "faqs": []
+  },
+  "fr": {
+    "title": "Usinage CNC",
+    "summary": "Découpe et fraisage numériques d’EPS, d’XPS, de matériaux PU pour modèles et de bois.",
+    "costLabel": "Selon la géométrie et le temps",
+    "cost": "Matière, parcours d’outil, ébauche, finition d’usinage et traitement de surface déterminent le coût.",
+    "detail": "Diamètre d’outil, accès et axes disponibles limitent les détails. Toutes les formes concaves ne se traitent pas en une prise.",
+    "mechanical": "La résistance vient du matériau, des sections et des assemblages, pas du CNC en lui-même.",
+    "weight": "Densité et section restante déterminent le poids.",
+    "environment": "L’usage est évalué selon le matériau et la protection de surface.",
+    "volume": "Pièces uniques, modèles et éléments répétés.",
+    "finish": "Traces d’outil visibles ou ponçage et finition convenue.",
+    "steps": [
+      "Préparer dessin, matière et bridage.",
+      "Réaliser ébauche et finition.",
+      "Contrôler dimensions, assemblages et surface."
+    ],
+    "uses": [
+      "Reliefs",
+      "Modèles de moules",
+      "Composants de mobilier"
+    ],
+    "drivers": [
+      "Matière et brut",
+      "Accès et temps d’usinage",
+      "Reprises de bridage et finition"
+    ],
+    "limits": [
+      "Les angles intérieurs conservent le rayon de l’outil. Une zone inaccessible peut nécessiter une division, un autre bridage ou un procédé complémentaire."
+    ],
+    "intro": "Découpe et fraisage numériques d’EPS, d’XPS, de matériaux PU pour modèles et de bois.",
+    "faqs": []
+  },
+  "ru": {
+    "title": "Обработка на ЧПУ",
+    "summary": "Цифровая резка и фрезеровка EPS, XPS, модельного полиуретана и дерева.",
+    "costLabel": "Зависит от геометрии и времени",
+    "cost": "Цену определяют материал, траектории, черновая и чистовая обработка и отделка.",
+    "detail": "Детализацию ограничивают диаметр инструмента, доступ и оси станка. Не всякую вогнутую форму можно обработать за одну установку.",
+    "mechanical": "Прочность обеспечивают материал, сечения и соединения, а не сам факт обработки на ЧПУ.",
+    "weight": "Вес зависит от плотности и оставшегося сечения.",
+    "environment": "Применение оценивается по материалу и защитной отделке.",
+    "volume": "Для единичных деталей, моделей и повторяющихся элементов.",
+    "finish": "Следы инструмента или шлифовка и согласованная отделка.",
+    "steps": [
+      "Планируем чертёж, заготовку и крепление.",
+      "Выполняем черновую и чистовую обработку.",
+      "Проверяем размеры, стыки и поверхность."
+    ],
+    "uses": [
+      "Рельефы",
+      "Модели для форм",
+      "Мебельные детали"
+    ],
+    "drivers": [
+      "Материал и заготовка",
+      "Доступ инструмента и время",
+      "Переустановки и отделка"
+    ],
+    "limits": [
+      "Во внутренних углах остаётся радиус фрезы. Недоступным зонам могут потребоваться деление, другая установка или дополнительный способ обработки."
+    ],
+    "intro": "Цифровая резка и фрезеровка EPS, XPS, модельного полиуретана и дерева.",
+    "faqs": []
+  },
+  "ar": {
+    "title": "التشغيل باستخدام CNC",
+    "summary": "قطع وتفريز رقمي لمواد EPS وXPS وPU الخاصة بالنماذج والخشب.",
+    "costLabel": "تعتمد على الهندسة والوقت",
+    "cost": "تحدد المادة ومسارات الأداة والتشغيل الخشن والنهائي ومعالجة السطح التكلفة.",
+    "detail": "يحد قطر الأداة ووصولها والمحاور المتاحة من التفاصيل. لا يمكن تشغيل كل شكل مقعّر بتثبيت واحد.",
+    "mechanical": "تأتي المقاومة من المادة والمقاطع والوصلات، وليس من CNC بحد ذاته.",
+    "weight": "تحدد الكثافة والمقطع المتبقي الوزن.",
+    "environment": "يُقيّم الاستخدام وفق المادة وطبقة الحماية.",
+    "volume": "للقطع الفردية والنماذج والعناصر المتكررة.",
+    "finish": "آثار أداة ظاهرة أو صنفرة وتشطيب متفق عليه.",
+    "steps": [
+      "نخطط للرسم والخامة والتثبيت.",
+      "نجري التشغيل الخشن والنهائي.",
+      "نفحص الأبعاد والوصلات والسطح."
+    ],
+    "uses": [
+      "زخارف بارزة",
+      "نماذج قوالب",
+      "مكونات أثاث"
+    ],
+    "drivers": [
+      "المادة والخامة",
+      "وصول الأداة ووقت التشغيل",
+      "إعادة التثبيت والتشطيب"
+    ],
+    "limits": [
+      "تحتفظ الزوايا الداخلية بنصف قطر الأداة. قد تتطلب المناطق غير المتاحة تقسيم القطعة أو تثبيتاً آخر أو طريقة مكمّلة."
+    ],
+    "intro": "قطع وتفريز رقمي لمواد EPS وXPS وPU الخاصة بالنماذج والخشب.",
+    "faqs": []
+  }
+}

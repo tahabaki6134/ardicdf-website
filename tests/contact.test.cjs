@@ -94,7 +94,7 @@ test("contact delivery and input boundaries", async (t) => {
     assert.equal(notification.reply_to, "client@example.com");
     assert.match(notification.text, /Seoul/);
     assert.ok(notification.text.includes(projects[1].title));
-    assert.ok(notification.text.includes("https://www.ardicdf.com/works/" + projects[1].id));
+    assert.ok(notification.text.includes("https://www.ardicdf.com/en/works/" + projects[1].id));
   });
   await t.test("HTML in a brief is escaped in notifications", async () => {
     const result = await submit({

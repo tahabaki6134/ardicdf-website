@@ -1,0 +1,129 @@
+{
+  "projects": {
+    "modular-artificial-rock-concert-environment": {
+      "title": "Modüler konser kaya dekoru",
+      "description": "Taşınabilir EPS modüllerle üretilen yapay kaya dekoru, konser sahnesi çevresinde devamlı bir peyzaj oluşturacak şekilde birleştirildi. Atölye üretiminden tamamlanmış arena uygulamasına uzanan bir örnek."
+    },
+    "cosmetic-bottle-display-props": {
+      "title": "Büyük kozmetik şişesi teşhirleri",
+      "description": "Ambalaj biçimini büyüterek marka alanının odak noktasına dönüştüren teşhirler. Şişe profilleri, kapak ayrıntıları, renkli yüzeyler ve uygulanan grafikler ürünün tanınmasını sağlar."
+    },
+    "giant-burger-display-prop": {
+      "title": "Büyük burger teşhir heykeli",
+      "description": "Ayrı şekillendirilmiş malzeme katmanları, dokulu yüzeyler ve boyayla oluşturulan büyük bir yiyecek heykeli. Atölye fotoğrafı parçaların birleşimini ve yüzey uygulamasını gösterir."
+    },
+    "classical-decorative-columns": {
+      "title": "Klasik dekoratif kolonlar",
+      "description": "Yivli gövdeler, kıvrımlı başlıklar ve kaidelerle oluşturulmuş iki dekoratif kolon. Tekrarlanan mimari ayrıntılar taş efektli son yüzeyle bütünleşir."
+    },
+    "ornamental-elephant-sculpture": {
+      "title": "Rölyefli fil heykeli",
+      "description": "Belirgin kıvrımlı dişler ve yüzey rölyefleriyle tamamlanmış fil başı heykeli. Beyaz yüzey, desenli ayrıntıları ve katmanlı heykelsi formu görünür kılar."
+    },
+    "decorative-entrance-arch": {
+      "title": "Dekoratif giriş kemeri",
+      "description": "Mağaza girişini tanımlayan özel biçimli ve rölyefli kemer. Uygulama fotoğrafında açık renkli parçanın koyu cephe önüne yerleştirilmesi görülür."
+    }
+  },
+  "archives": {
+    "safari-experiences": {
+      "title": "Safari temalı üretimler"
+    },
+    "sculptures-characters": {
+      "title": "Heykeller ve karakterler"
+    },
+    "artificial-rock-organic-forms": {
+      "title": "Yapay kaya ve organik formlar"
+    },
+    "historical-thematic-environments": {
+      "title": "Mimari ve tematik elemanlar"
+    },
+    "cnc-manufacturing-processes": {
+      "title": "CNC üretim süreçleri"
+    },
+    "molds-composite-production": {
+      "title": "Kalıp ve kompozit üretimi"
+    },
+    "commercial-brand-installations": {
+      "title": "Ticari ve marka uygulamaları"
+    }
+  },
+  "industries": {
+    "retail-brand-activations": {
+      "title": "Mağaza ve marka uygulamaları",
+      "description": "Büyük ürün maketleri, özel teşhirler, bankolar ve marka elemanları. Görsel kimlik, kullanım süresi, ziyaretçi teması ve sevkiyat ölçüleri birlikte ele alınır."
+    },
+    "events-exhibitions": {
+      "title": "Etkinlik ve fuarlar",
+      "description": "Sahne formları, fuar teşhirleri ve fotoğraf alanları. Modülerlik, erişim, montaj penceresi ve yeniden kullanım ihtiyacına göre üretim planı hazırlanır."
+    },
+    "museums-themed-attractions": {
+      "title": "Müze ve tematik alanlar",
+      "description": "Heykel, hayvan figürü, rölyef ve peyzaj elemanları. Yakından görülecek detaylar, bakım, sabitleme ve ziyaretçi erişimi proje kapsamında değerlendirilir."
+    },
+    "hospitality-architectural-decor": {
+      "title": "Otel, restoran ve mimari dekor",
+      "description": "Sabit ve hareketli mobilya, karşılama bankoları, kolonlar ve cephe detayları. Ölçü, malzeme birleşimleri, son yüzey ve montaj arayüzleri birlikte planlanır."
+    },
+    "film-television": {
+      "title": "Film ve televizyon",
+      "description": "Stüdyo dekorları, kamera önünde kullanılacak büyük objeler ve özel formlar. Görüş açısı, ışık, dokunma, taşınabilirlik ve kurulum sırası dikkate alınır."
+    },
+    "prototypes-display-models": {
+      "title": "Prototip ve sunum modelleri",
+      "description": "Form değerlendirme, sunum ve sonraki imalata temel olacak modeller. Amaç, gerekli tolerans, yüzey ve tekrar adedine göre CNC, baskı veya kalıp süreci seçilir."
+    }
+  },
+  "concepts": {
+    "SC-001": {
+      "title": "Zeytin yeşili lounge konsepti",
+      "description": "Zeytin yeşili oturma grubu, ceviz tonları, bronz ayrıntılar, füme cam ve sıcak aydınlatmayı bir araya getiren tasarım yönü."
+    },
+    "SC-002": {
+      "title": "Fütüristik kapsül konsepti",
+      "description": "Heykelsi kapsül formu, metalik dış yüzey, sıcak ahşap iç detaylar ve gizli aydınlatma etrafında gelişen karşılama veya teşhir fikri."
+    },
+    "SC-003": {
+      "title": "Özel tematik iç mekân elemanları",
+      "description": "Heykelsi oturma elemanları, aynalar, rölyefler ve marka objeleri; mekânın ölçüsüne ve atmosferine göre birlikte geliştirilebilir."
+    }
+  },
+  "team": [
+    {
+      "name": "Yusuf Baki",
+      "initials": "YB",
+      "photo": null,
+      "role": "Kurucu ve üretim yönetimi"
+    },
+    {
+      "name": "Taha Baki",
+      "initials": "TB",
+      "photo": null,
+      "role": "Mimari, strateji ve proje geliştirme"
+    },
+    {
+      "name": "Şiba Baki",
+      "initials": "SB",
+      "photo": null,
+      "role": "İç mekân tasarımı ve sunum"
+    },
+    {
+      "name": "Rasim Gül",
+      "initials": "RG",
+      "photo": null,
+      "role": "Görsel sanatlar ve yüzey uygulamaları"
+    },
+    {
+      "name": "Gençağa Dilli",
+      "initials": "GD",
+      "photo": null,
+      "role": "Heykeltıraş"
+    },
+    {
+      "name": "Fatih Dilli",
+      "initials": "FD",
+      "photo": "/team/fatih-dilli.png",
+      "role": "Ressam ve özel boya uygulamaları"
+    }
+  ]
+}

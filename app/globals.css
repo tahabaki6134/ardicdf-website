@@ -82,4 +82,17 @@ body {
 
 img { max-width: 100%; }
 main { min-width: 0; }
+body { overflow-wrap: break-word; }
+select { text-overflow: ellipsis; }
+.home-shell { padding-top: 2.5rem; }
+.skip-link { position: absolute; inset-inline-start: 1rem; top: -8rem; z-index: 100; padding: .75rem 1rem; background: #111; color: #fff; }
+.skip-link:focus { top: .5rem; }
+.floating-contact { position: fixed; z-index: 40; bottom: 1.25rem; inset-inline-end: 1.25rem; display: flex; gap: .65rem; align-items: center; min-height: 3rem; padding: .75rem 1.1rem; border: 1px solid #8c6a43; border-radius: 3rem; background: #f5f3ee; box-shadow: 0 8px 24px #1112; font-size: .75rem; }
+html[dir="rtl"] .font-display { font-family: Tahoma, Arial, sans-serif; line-height: 1.5; }
+html[dir="rtl"] .eyebrow { letter-spacing: 0; }
+html[dir="rtl"] input[type="email"], html[dir="rtl"] input[type="url"], html[dir="rtl"] input[type="tel"] { text-align: left; }
+@media (max-width: 639px) { .home-shell { padding-top: 1.75rem; } .home-intro h1 { font-size: 2.35rem; } .home-intro .button-primary, .home-intro .button-secondary { padding-inline: 1rem; font-size: .875rem; } .floating-contact { padding: .6rem .8rem; inset-inline-end: .75rem; bottom: .75rem; } .floating-contact span:last-child { display: none; } .language-select { max-width: 6rem; } }
+@media (max-width: 359px) { header .language-select { max-width: 4.75rem; padding-inline: .2rem; } #menu-toggle { padding-inline: .4rem; } }
 @media (max-width: 639px) { .page-shell { padding-top: 2.5rem; padding-bottom: 2.5rem; } .eyebrow { font-size: 0.6875rem; letter-spacing: 0.12em; } }
+
+@media (max-width:359px) { .brand-name { font-size:1.3rem; letter-spacing:.08em; } header .language-select { max-width:4.5rem; } }

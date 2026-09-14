@@ -1,11 +1,3 @@
 import type { MetadataRoute } from "next";
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: "*",
-      allow: "/"
-    },
-    sitemap: "https://www.ardicdf.com/sitemap.xml"
-  };
-}
+import { siteOrigin } from "@/lib/i18n/locales";
+export default function robots(): MetadataRoute.Robots { return { rules: { userAgent: "*", allow: "/", disallow: process.env.VERCEL_ENV === "preview" ? ["/"] : ["/api/", "/review.html", "/tr/"] }, sitemap: siteOrigin + "/sitemap.xml" }; }

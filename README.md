@@ -35,3 +35,7 @@ Run `pnpm lint`, `node --test tests/contact.test.cjs` and `pnpm build`.
 Tests exercise the actual contact route against mocked providers, including the former Seoul/SEO false-positive, invalid input, HTML escaping, verification failure, notification failure, optional confirmation failure and selection validation. They also check curated asset paths.
 
 Before releasing on the production branch, review the preview and verify real form delivery with the hosting project's configured Turnstile and Resend credentials. A passing local build does not verify those external service settings.
+
+## Multilingual preview
+
+Six editions now share the existing project: Turkish at unprefixed addresses and English, German, French, Russian and Arabic under language paths. See [the rollout guide](docs/multilingual-rollout.md) for redirects, country-page rules, content editing, enquiry configuration and release checks. The public preview review screen is `/review.html`.
