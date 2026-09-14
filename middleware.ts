@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isLocale, prefix, siteOrigin, type Locale } from "./lib/i18n/locales";
+import { resolvePage } from "./lib/i18n/routes";
+import { notFoundHtml } from "./lib/i18n/not-found";
 
 const legacyServices: Record<string, string> = {
   "cnc-foam-polyurethane-machining": "manufacturing/cnc",
@@ -31,6 +33,9 @@ export function middleware(request: NextRequest) {
   if (!prefixed && (parts[0] === "manufacturing" || parts[0] === "compare")) {
     url.pathname = "/en/" + parts.join("/");
     return NextResponse.redirect(url, 308);
+  }
+  if (!resolvePage(locale, parts)) {
+    return new NextResponse(notFoundHtml(locale), { status: 404, headers: { "Content-Type": "text/html; charset=utf-8", "X-Robots-Tag": "noindex, follow" } });
   }
   if (!prefixed) {
     url.pathname = "/tr" + (url.pathname === "/" ? "" : url.pathname);
