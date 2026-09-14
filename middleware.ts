@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { isLocale, prefix, siteOrigin, type Locale } from "./lib/i18n/locales";
+import { isLocale, prefix, type Locale } from "./lib/i18n/locales";
 import { resolvePage } from "./lib/i18n/routes";
 import { notFoundHtml } from "./lib/i18n/not-found";
 
@@ -13,9 +13,6 @@ const legacyServices: Record<string, string> = {
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const parts = url.pathname.split("/").filter(Boolean);
-  if (url.hostname === "ardicdf.com.tr" || url.hostname === "www.ardicdf.com.tr") {
-    return NextResponse.redirect(new URL(url.pathname + url.search, siteOrigin), 308);
-  }
   const prefixed = isLocale(parts[0]);
   const locale: Locale = prefixed ? parts.shift() as Locale : "tr";
   if (["live", "references"].includes(parts[0])) {
