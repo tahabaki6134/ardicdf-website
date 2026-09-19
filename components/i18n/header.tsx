@@ -32,7 +32,7 @@ export function LocaleHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
     window.location.assign(target.href);
   }
   const nav: { kind: Page["kind"]; label: string }[] = [{ kind: "services", label: t.nav_services }, { kind: "compare", label: t.nav_compare }, { kind: "works", label: t.nav_works }, { kind: "workshop", label: t.nav_workshop }, { kind: "about", label: t.nav_about }];
-  const links = nav.map(item => <Link key={item.kind} href={pagePath(locale, item)} aria-current={currentPage?.kind === item.kind || (item.kind === "services" && currentPage?.kind === "method") ? "page" : undefined} className="min-h-11 py-3 font-semibold text-ink/75 hover:text-bronze aria-[current=page]:text-bronze">{item.label}</Link>);
+  const links = nav.map(item => <Link key={item.kind} href={pagePath(locale, item)} aria-current={currentPage?.kind === item.kind ? "page" : (item.kind === "services" && currentPage?.kind === "method") || (item.kind === "works" && ["project", "archive"].includes(currentPage?.kind ?? "")) ? "location" : undefined} className="min-h-11 py-3 font-semibold text-ink/75 hover:text-bronze aria-[current=page]:text-bronze aria-[current=location]:text-bronze">{item.label}</Link>);
   return <header className="sticky top-0 z-50 border-b border-ink/15 bg-porcelain/95 backdrop-blur-xl" onKeyDown={e => { if (e.key === "Escape") { setOpen(false); document.getElementById("menu-toggle")?.focus(); } }}>
     <a href="#main-content" className="skip-link">{t.skip}</a>
     <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-4 py-2.5 md:px-8">

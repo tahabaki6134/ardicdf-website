@@ -104,8 +104,8 @@ test('all languages share one verified notification path and localize customer r
 
 test('FARMASI gallery, translations, enquiry selection and sharing metadata stay in sync',()=>{
   const project=projects.find(p=>p.id==='farmasi-boss-trip');
-  assert.equal(project.gallery.length,2);
-  assert.equal(new Set(project.gallery.map(image=>image.src)).size,2);
+  assert.equal(project.gallery.length,3);
+  assert.equal(new Set(project.gallery.map(image=>image.src)).size,3);
   assert.equal(project.gallery[0].src,project.image);
   for(const image of project.gallery) {
     assert.ok(fs.existsSync(path.join(root,'public',image.src)),image.src);
