@@ -12,7 +12,7 @@ export const routeMethodIds = [...manufacturingMethods.map(m => m.id), "cnc"];
 const projectIds = ["farmasi-boss-trip", "modular-artificial-rock-concert-environment", "cosmetic-bottle-display-props", "giant-burger-display-prop", "classical-decorative-columns", "ornamental-elephant-sculpture", "decorative-entrance-arch"];
 const archiveIds = ["safari-experiences", "sculptures-characters", "artificial-rock-organic-forms", "historical-thematic-environments", "cnc-manufacturing-processes", "molds-composite-production", "commercial-brand-installations"];
 const industryIds = ["retail-brand-activations", "events-exhibitions", "museums-themed-attractions", "hospitality-architectural-decor", "film-television", "prototypes-display-models"];
-import { locales, prefix, isLocale, type Locale } from "./locales";
+import { locales, prefix, homePath, isLocale, type Locale } from "./locales";
 import { countryPages } from "./country-pages";
 
 export type Page = { kind: "home" | "services" | "compare" | "works" | "about" | "workshop" | "contact" | "privacy" | "concepts" | "planning" | "industries" | "selection" | "method" | "project" | "archive" | "industry" | "country"; id?: string };
@@ -36,14 +36,15 @@ export function pagePath(locale: Locale, page: Page) {
   if (page.kind === "project" || page.kind === "archive") segment = `works/${page.id}`;
   if (page.kind === "industry") segment = `industries/${page.id}`;
   if (page.kind === "country") segment = page.id!.toLowerCase();
-  return segment ? `${prefix(locale)}/${segment}` : prefix(locale) || "/";
+  return segment ? `${prefix(locale)}/${segment}` : homePath(locale);
 }
 export function resolvePage(locale: Locale, slug: string[] = []) {
-  const url = slug.length ? `${prefix(locale)}/${slug.join("/")}` : prefix(locale) || "/";
+  const url = slug.length ? `${prefix(locale)}/${slug.join("/")}` : homePath(locale);
   return allPages.find(page => pageLocales(page).includes(locale) && pagePath(locale, page) === url);
 }
 export function parsePublicPath(pathname: string): { locale: Locale; page?: Page } {
   const parts = pathname.split("/").filter(Boolean);
+  if (!parts.length) return { locale: "en", page: { kind: "home" } };
   const locale: Locale = isLocale(parts[0]) ? parts.shift() as Locale : "tr";
   return { locale, page: resolvePage(locale, parts) };
 }
