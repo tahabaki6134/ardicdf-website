@@ -24,7 +24,7 @@ const {POST} = require('../app/api/contact/route.ts');
 const {middleware} = require('../middleware.ts');
 const {NextRequest} = require('next/server');
 
-test('six complete dictionaries, technical content and original photographs', () => {
+test('six complete dictionaries, technical content and portfolio assets', () => {
   const keys = Object.keys(dictionary('en')).sort();
   assert.equal(new Set(targetCountries).size,24);
   assert.equal(countryPages.length,0,'Do not publish speculative country pages');
@@ -47,6 +47,38 @@ test('six complete dictionaries, technical content and original photographs', ()
   for(const c of conceptCollections) for(const image of [c.image,...(c.galleryImages||[]).map(i=>i.src)].filter(Boolean)) assert.ok(fs.existsSync(path.join(root,'public',image)),image);
 });
 
+test('all localized contact links are measured independently of button wording',()=>{
+  const {conversionForHref}=require('../lib/conversion-events.ts');
+  for(const locale of locales) {
+    const contact=pagePath(locale,{kind:'contact'});
+    for(const suffix of ['', '#brief', '?selected=sculptural-reception-interior#brief']) {
+      assert.equal(conversionForHref(contact+suffix,siteOrigin+'/en'),'start_project_click');
+    }
+    assert.equal(conversionForHref(pagePath(locale,{kind:'home'}),siteOrigin),null);
+  }
+  assert.equal(conversionForHref('mailto:info@ardicdf.com',siteOrigin),'email_click');
+  assert.equal(conversionForHref('https://wa.me/905436268969',siteOrigin),'whatsapp_click');
+  assert.equal(conversionForHref('https://other.example/contact',siteOrigin),null);
+  assert.equal(conversionForHref('/en/contact-details',siteOrigin),null);
+});
+
+test('reception project has complete localized evidence, valid routes and enquiry selection',()=>{
+  const id='sculptural-reception-interior', project=projects.find(p=>p.id===id);
+  const {parseSelectedProjects}=require('../lib/projects.ts');
+  const delivery=require('../lib/i18n/messages/delivery.json');
+  assert.equal(project.gallery.length,3);
+  for(const item of project.gallery) assert.ok(fs.existsSync(path.join(root,'public',item.src)));
+  assert.deepEqual(parseSelectedProjects(id),[id]);
+  for(const locale of locales) {
+    const copy=localizedContent(locale).projects[id];
+    assert.equal(copy.gallery.length,3);assert.equal(copy.facts.length,3);assert.ok(copy.note);
+    assert.equal(delivery[locale].steps.length,6);assert.equal(delivery[locale].faqs.length,4);
+    const page={kind:'project',id};
+    assert.deepEqual(parsePublicPath(pagePath(locale,page)).page,page);
+    assert.equal(pageMetadata(locale,{kind:'home'}).openGraph.images[0].url,siteOrigin+project.image);
+  }
+});
+
 test('canonical URLs and reciprocal language alternates resolve to equivalent pages',()=>{
   const urls=new Set();
   for(const locale of locales) for(const page of allPages) {
@@ -60,7 +92,7 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
     assert.equal(meta.alternates.languages['x-default'],siteOrigin+pagePath('en',page));
     assert.ok(meta.title&&meta.description);
   }
-  assert.equal(urls.size,246);
+  assert.equal(urls.size,252);
   for(const m of manufacturingMethods) {
     assert.equal(pagePath('tr',{kind:'method',id:m.id}),methodPath(m,'tr'));
     assert.equal(pagePath('en',{kind:'method',id:m.id}),'/en'+methodPath(m,'en'));

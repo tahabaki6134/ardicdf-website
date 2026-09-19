@@ -1,0 +1,266 @@
+{
+  "en": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · Bespoke project fabrication",
+      "hero_title": "From a single piece",
+      "hero_accent": "to a complete project.",
+      "hero_intro": "Bespoke furniture, sculptural interiors and facade elements for projects across Europe and beyond. Design development, fabrication and delivery, with installation planned for your site.",
+      "hero_seo_title": "Bespoke Furniture & Project Fabrication for Europe",
+      "footer_note": "An EPSLAM company. Design, digital fabrication and workshop craft.",
+      "international_title": "Planning your project from abroad.",
+      "international_intro": "Production is based in Istanbul, Türkiye. For projects in Europe, Russia and the Gulf, we agree the drawings, finish, packing, destination and installation responsibilities before production.",
+      "nav_planning": "Project & delivery guide",
+      "planning_intro": "A clear brief makes an international project easier to plan. Share what you need, where it will be used and where it should arrive; the quotation can then define the manufacturing and delivery scope.",
+      "guide_eyebrow": "Working together across borders",
+      "guide_steps": "From your brief to delivery",
+      "guide_questions": "Before you send your project",
+      "guide_link": "How your project is planned",
+      "project_facts": "The work shown",
+      "related_title": "From method to finished form",
+      "related_intro": "Explore the documented project or workshop photographs alongside the manufacturing guide.",
+      "referenceLink": "Link to a large drawing, 3D model or reference (optional)"
+    },
+    "steps": [
+      {"title": "Brief & destination", "body": "Send a sketch, drawing or photo, approximate dimensions, quantity, intended use and delivery city. Tell us the required date and any access or installation constraints."},
+      {"title": "Technical scope & quotation", "body": "We review the material, manufacturing route, finish and interfaces. The quotation sets out the agreed work, delivery scope, currency and any exclusions."},
+      {"title": "Drawings & finish approval", "body": "Agree the dimensions, colours, fixing details and approval checkpoints. Where a sample or prototype is needed, its scope, cost and timing are included in the planning."},
+      {"title": "Fabrication & checks", "body": "Production follows the agreed specification. We define the dimensional and finish checks and the photographs or video needed for remote review before packing."},
+      {"title": "Packing & transport", "body": "Packing, module sizes and handling are planned for the route and site access. The quotation clarifies transport, insurance, customs arrangements and who handles unloading."},
+      {"title": "Installation & handover", "body": "A fabrication-only package, delivery or on-site installation can be discussed. Fixings, local trades, access, assembly information and responsibilities are agreed for the project."}
+    ],
+    "faqs": [
+      {"question": "Where is the project manufactured?", "answer": "Our production base is in Ataşehir, Istanbul, Türkiye. European projects are coordinated from this workshop; delivery and any site work are scoped for the destination."},
+      {"question": "What is included in delivery?", "answer": "The written quotation specifies the delivery point and responsibilities. Packing, freight, insurance, customs, taxes, unloading and installation must be checked against that scope; there is no single delivery price for every project."},
+      {"question": "How is the schedule agreed?", "answer": "Share the required delivery or opening date. Drawings, approvals, samples, production, transport and any site access window are considered together before a programme is confirmed."},
+      {"question": "Can I send large CAD files?", "answer": "Yes, add a share link in the enquiry form for larger drawings or 3D models. Direct attachments accept PDF, JPG, PNG and WebP, up to 3 files and 2 MB total. If confidentiality requires an NDA, send a general outline first."}
+    ],
+    "project": {
+      "title": "Sculptural reception & wall elements",
+      "description": "A blue reception counter with a flowing profile, paired with silver-grey sculptural wall elements. The photographs show the relationship between furniture, repeated vertical forms and the surrounding interior.",
+      "facts": [{"label": "Elements shown", "value": "Reception counter and sculptural wall elements"}, {"label": "Form", "value": "Flowing counter front and repeated vertical profiles"}, {"label": "Visible finish", "value": "Glossy blue and silver-grey surfaces"}],
+      "details": ["The reception counter and wall elements are presented as a coordinated interior fabrication package. The wide view shows their relationship; the closer views show the curves, junctions and surface reflections.", "For a similar project, share a measured plan, counter requirements, wall dimensions and finish references. Materials, internal structure, access, service openings and installation are specified for the individual brief."],
+      "gallery": [{"alt": "Blue sculptural reception counter in front of silver-grey vertical wall elements", "caption": "Reception counter and wall elements · A coordinated interior composition."}, {"alt": "Wide view of silver-grey wall panels with flowing vertical curves", "caption": "Wall composition · Flowing profiles and their relationship to the room."}, {"alt": "Close view of curved silver-grey wall panels and surface reflections", "caption": "Surface detail · Curves, junctions and natural light reflections."}],
+      "note": "Project photographs retouched for presentation: installation personnel, tools and temporary packaging have been removed."
+    }
+  },
+  "tr": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · Projeye özel imalat",
+      "hero_title": "Tek parçadan",
+      "hero_accent": "bütün bir projeye.",
+      "hero_intro": "Avrupa ve diğer pazarlardaki projeler için özel mobilya, heykelsi iç mekân elemanları ve cephe imalatı. Projelendirme, üretim ve teslimat; ihtiyaca göre yerinde montaj.",
+      "hero_seo_title": "Avrupa Projeleri İçin Özel Mobilya ve İmalat",
+      "footer_note": "Bir EPSLAM şirketi. Tasarım, dijital üretim ve atölye ustalığı.",
+      "international_title": "Yurt dışından projenizi birlikte planlayalım.",
+      "international_intro": "Üretim merkezimiz İstanbul, Türkiye’dedir. Avrupa, Rusya ve Körfez projelerinde çizimleri, yüzeyi, paketlemeyi, teslimat adresini ve montaj sorumluluklarını üretimden önce netleştiriyoruz.",
+      "nav_planning": "Proje ve teslimat rehberi",
+      "planning_intro": "Net bir iş tanımı, yurt dışı projesini planlamayı kolaylaştırır. İhtiyacınızı, kullanım yerini ve teslimat adresini paylaşın; üretim ve teslimat kapsamını teklifte birlikte netleştirelim.",
+      "guide_eyebrow": "Yurt dışı projelerinde çalışma süreci",
+      "guide_steps": "İlk talepten teslimata",
+      "guide_questions": "Projenizi göndermeden önce",
+      "guide_link": "Projenizi nasıl planlıyoruz?",
+      "project_facts": "Görsellerdeki işin kapsamı",
+      "related_title": "Yöntemden bitmiş ürüne",
+      "related_intro": "İmalat açıklamalarıyla birlikte ilgili proje veya atölye fotoğraflarını inceleyin.",
+      "referenceLink": "Büyük çizim, 3D model veya referans bağlantısı (isteğe bağlı)"
+    },
+    "steps": [
+      {"title": "İhtiyaç ve teslimat yeri", "body": "Eskiz, çizim veya fotoğrafla birlikte yaklaşık ölçü, adet, kullanım amacı ve teslimat şehrini paylaşın. Hedef tarihi, erişim ve montaj kısıtlarını belirtin."},
+      {"title": "Teknik kapsam ve teklif", "body": "Malzeme, üretim yöntemi, yüzey ve birleşimleri değerlendiriyoruz. Yapılacak işler, teslimat kapsamı, para birimi ve hariçler teklifte belirtilir."},
+      {"title": "Çizim ve yüzey onayı", "body": "Ölçüleri, renkleri, bağlantı detaylarını ve onay aşamalarını netleştiriyoruz. Numune veya prototip gerekiyorsa kapsamı, bedeli ve süresi planlamaya dahil edilir."},
+      {"title": "Üretim ve kontroller", "body": "Üretim, üzerinde anlaşılan teknik tanıma göre ilerler. Ölçü ve yüzey kontrolleri ile paketleme öncesi uzaktan inceleme için gereken fotoğraf veya videolar belirlenir."},
+      {"title": "Paketleme ve nakliye", "body": "Ambalaj, modül ölçüleri ve taşıma biçimi güzergâha ve saha erişimine göre planlanır. Nakliye, sigorta, gümrük işlemleri ve boşaltma sorumluluğu teklifte netleştirilir."},
+      {"title": "Montaj ve teslim", "body": "Yalnızca imalat, teslimat veya yerinde montaj kapsamları değerlendirilebilir. Bağlantılar, yerel ekipler, erişim, kurulum bilgileri ve sorumluluklar projeye göre kararlaştırılır."}
+    ],
+    "faqs": [
+      {"question": "Üretim nerede yapılıyor?", "answer": "Üretim merkezimiz İstanbul Ataşehir’dedir. Avrupa projeleri bu atölyeden koordine edilir; teslimat ve gerekiyorsa saha çalışması varış noktasına göre kapsamlandırılır."},
+      {"question": "Teslimata neler dahil?", "answer": "Teslimat noktası ve sorumluluklar yazılı teklifte belirtilir. Paketleme, taşıma, sigorta, gümrük, vergiler, boşaltma ve montajın bu kapsamda olup olmadığı kontrol edilir; her proje için tek bir sabit teslimat bedeli yoktur."},
+      {"question": "İş takvimi nasıl belirleniyor?", "answer": "Hedef teslim veya açılış tarihini paylaşın. Çizim, onay, numune, üretim, nakliye ve varsa saha erişim aralığı birlikte değerlendirilerek takvim netleştirilir."},
+      {"question": "Büyük CAD dosyası gönderebilir miyim?", "answer": "Büyük çizimleri ve 3D modelleri teklif formundaki paylaşım bağlantısı alanından iletebilirsiniz. Doğrudan ekler PDF, JPG, PNG ve WebP biçiminde en fazla 3 dosya ve toplam 2 MB olabilir. Gizlilik sözleşmesi gerekiyorsa önce genel bir açıklama paylaşın."}
+    ],
+    "project": {
+      "title": "Heykelsi banko ve duvar elemanları",
+      "description": "Akıcı forma sahip mavi banko ile gümüş gri heykelsi duvar elemanları. Fotoğraflar mobilyayı, tekrarlanan düşey formları ve çevreleyen mekânı birlikte gösteriyor.",
+      "facts": [{"label": "Görünen elemanlar", "value": "Karşılama bankosu ve heykelsi duvar elemanları"}, {"label": "Form", "value": "Dalgalı banko önü ve tekrarlanan düşey profiller"}, {"label": "Görünen yüzey", "value": "Parlak mavi ve gümüş gri yüzeyler"}],
+      "details": ["Banko ve duvar elemanları, birbiriyle uyumlu iç mekân imalatı olarak sunuluyor. Geniş açı birlikte oluşturdukları görünümü; yakın planlar kıvrımları, birleşimleri ve yüzey yansımalarını gösteriyor.", "Benzer bir iş için ölçülü plan, bankonun kullanım ihtiyaçları, duvar ölçüleri ve yüzey referanslarını paylaşın. Malzeme, iç taşıyıcı, erişim, servis boşlukları ve montaj projeye özel belirlenir."],
+      "gallery": [{"alt": "Gümüş gri düşey duvar elemanlarının önünde mavi heykelsi karşılama bankosu", "caption": "Banko ve duvar elemanları · Birlikte ele alınan iç mekân imalatı."}, {"alt": "Akıcı düşey kıvrımlara sahip gümüş gri duvar panellerinin geniş görünümü", "caption": "Duvar kompozisyonu · Akıcı profiller ve mekânla ilişkileri."}, {"alt": "Gümüş gri kıvrımlı duvar panellerinde yüzey ve ışık yansımalarının yakın görünümü", "caption": "Yüzey detayı · Kıvrımlar, birleşimler ve doğal ışık yansımaları."}],
+      "note": "Proje fotoğrafları sunum için rötuşlandı; montaj personeli, aletler ve geçici ambalajlar kaldırıldı."
+    }
+  },
+  "de": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · Projektbezogene Sonderfertigung",
+      "hero_title": "Vom Einzelstück",
+      "hero_accent": "zum Gesamtprojekt.",
+      "hero_intro": "Maßmöbel, plastische Raumelemente und Fassadenelemente für Projekte in Europa und darüber hinaus. Planung, Fertigung und Lieferung – mit Montage nach Projektumfang.",
+      "hero_seo_title": "Maßmöbel und Sonderfertigung für Projekte in Europa",
+      "footer_note": "Ein EPSLAM-Unternehmen. Design, digitale Fertigung und Handwerk.",
+      "international_title": "Ihr Projekt aus dem Ausland planen.",
+      "international_intro": "Unser Fertigungsstandort liegt in Istanbul, Türkei. Für Projekte in Europa, Russland und den Golfstaaten stimmen wir Zeichnungen, Oberflächen, Verpackung, Lieferort und Montagezuständigkeiten vor der Produktion ab.",
+      "nav_planning": "Projekt & Lieferung",
+      "planning_intro": "Eine klare Aufgabenbeschreibung erleichtert internationale Projekte. Beschreiben Sie die benötigten Elemente, ihren Einsatzort und das Lieferziel; daraus entwickeln wir den Fertigungs- und Lieferumfang des Angebots.",
+      "guide_eyebrow": "Grenzüberschreitend zusammenarbeiten",
+      "guide_steps": "Von der Anfrage bis zur Lieferung",
+      "guide_questions": "Vor Ihrer Projektanfrage",
+      "guide_link": "So planen wir Ihr Projekt",
+      "project_facts": "Die gezeigten Arbeiten",
+      "related_title": "Vom Verfahren zur fertigen Form",
+      "related_intro": "Ergänzend zum Fertigungsleitfaden zeigen wir passende Projekt- oder Werkstattaufnahmen.",
+      "referenceLink": "Link zu einer großen Zeichnung, einem 3D-Modell oder einer Referenz (optional)"
+    },
+    "steps": [
+      {"title": "Aufgabe & Lieferort", "body": "Senden Sie Skizzen, Zeichnungen oder Fotos mit ungefähren Maßen, Stückzahl, Einsatzzweck und Lieferstadt. Nennen Sie den Wunschtermin sowie Zugangsbeschränkungen und Montagebedingungen."},
+      {"title": "Technischer Umfang & Angebot", "body": "Wir prüfen Material, Fertigungsverfahren, Oberfläche und Schnittstellen. Das Angebot hält Leistungen, Lieferumfang, Währung und Ausschlüsse fest."},
+      {"title": "Zeichnungen & Freigabe", "body": "Maße, Farben, Befestigungen und Freigabeschritte werden abgestimmt. Falls Muster oder Prototypen erforderlich sind, werden Umfang, Kosten und Termine eingeplant."},
+      {"title": "Fertigung & Prüfung", "body": "Die Fertigung folgt der vereinbarten Spezifikation. Maß- und Oberflächenprüfungen sowie Fotos oder Videos zur Fernabnahme vor dem Verpacken werden im Projekt festgelegt."},
+      {"title": "Verpackung & Transport", "body": "Verpackung, Modulgrößen und Handhabung werden auf Transportweg und Zugang abgestimmt. Das Angebot klärt Fracht, Versicherung, Zollabwicklung und Zuständigkeit für das Entladen."},
+      {"title": "Montage & Übergabe", "body": "Reine Fertigung, Lieferung oder eine Montage vor Ort können vereinbart werden. Befestigungen, örtliche Gewerke, Zugang, Montageunterlagen und Zuständigkeiten werden projektspezifisch geklärt."}
+    ],
+    "faqs": [
+      {"question": "Wo wird gefertigt?", "answer": "Unser Fertigungsstandort befindet sich in Ataşehir, Istanbul, Türkei. Von dort koordinieren wir europäische Projekte; Lieferung und mögliche Arbeiten vor Ort werden für das jeweilige Ziel geplant."},
+      {"question": "Was ist in der Lieferung enthalten?", "answer": "Lieferpunkt und Zuständigkeiten stehen im schriftlichen Angebot. Verpackung, Fracht, Versicherung, Zoll, Steuern, Entladung und Montage sind anhand dieses Umfangs zu prüfen. Einen einheitlichen Lieferpreis für alle Projekte gibt es nicht."},
+      {"question": "Wie wird der Zeitplan festgelegt?", "answer": "Teilen Sie uns den gewünschten Liefer- oder Eröffnungstermin mit. Zeichnungen, Freigaben, Muster, Fertigung, Transport und verfügbare Montagezeiten werden gemeinsam berücksichtigt, bevor der Ablauf bestätigt wird."},
+      {"question": "Kann ich große CAD-Dateien senden?", "answer": "Für größere Zeichnungen und 3D-Modelle können Sie im Anfrageformular einen Freigabelink angeben. Direkt anhängen lassen sich bis zu 3 PDF-, JPG-, PNG- oder WebP-Dateien mit insgesamt 2 MB. Wenn eine Geheimhaltungsvereinbarung erforderlich ist, genügt zunächst eine allgemeine Beschreibung."}
+    ],
+    "project": {
+      "title": "Skulpturale Empfangstheke und Wandelemente",
+      "description": "Eine blaue Empfangstheke mit fließendem Profil, kombiniert mit silbergrauen plastischen Wandelementen. Die Aufnahmen zeigen das Zusammenspiel von Möbel, wiederkehrenden vertikalen Formen und Innenraum.",
+      "facts": [{"label": "Gezeigte Elemente", "value": "Empfangstheke und plastische Wandelemente"}, {"label": "Form", "value": "Geschwungene Thekenfront und vertikale Profile"}, {"label": "Sichtbare Oberfläche", "value": "Glänzendes Blau und Silbergrau"}],
+      "details": ["Theke und Wandelemente bilden eine aufeinander abgestimmte Innenraumfertigung. Die Gesamtansicht zeigt ihr Zusammenspiel, die Nahaufnahmen zeigen Rundungen, Übergänge und Lichtreflexe.", "Für eine ähnliche Anfrage benötigen wir einen bemaßten Grundriss, funktionale Anforderungen an die Theke, Wandmaße und Oberflächenreferenzen. Material, Unterkonstruktion, Zugänge, Serviceöffnungen und Montage werden für das jeweilige Projekt festgelegt."],
+      "gallery": [{"alt": "Blaue skulpturale Empfangstheke vor silbergrauen vertikalen Wandelementen", "caption": "Theke und Wandelemente · Eine abgestimmte Innenraumkomposition."}, {"alt": "Gesamtansicht silbergrauer Wandpaneele mit fließenden vertikalen Rundungen", "caption": "Wandgestaltung · Fließende Profile im räumlichen Zusammenhang."}, {"alt": "Nahaufnahme geschwungener silbergrauer Wandpaneele und ihrer Lichtreflexe", "caption": "Oberflächendetail · Rundungen, Übergänge und natürliche Reflexe."}],
+      "note": "Projektfotos für die Präsentation retuschiert: Montagepersonal, Werkzeuge und vorübergehende Verpackungen wurden entfernt."
+    }
+  },
+  "fr": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · Fabrication sur mesure",
+      "hero_title": "D’une pièce unique",
+      "hero_accent": "au projet complet.",
+      "hero_intro": "Mobilier sur mesure, éléments sculpturaux et éléments de façade pour vos projets en Europe et au-delà. Études, fabrication et livraison, avec une pose définie selon le chantier.",
+      "hero_seo_title": "Mobilier et fabrication sur mesure pour l’Europe",
+      "footer_note": "Une société d’EPSLAM. Conception, fabrication numérique et savoir-faire d’atelier.",
+      "international_title": "Planifier votre projet à distance.",
+      "international_intro": "Notre site de production se trouve à Istanbul, en Turquie. Pour les projets en Europe, en Russie et dans le Golfe, nous définissons plans, finitions, emballage, destination et responsabilités de pose avant la fabrication.",
+      "nav_planning": "Projet et livraison",
+      "planning_intro": "Un besoin bien défini facilite un projet international. Précisez les éléments à réaliser, leur usage et leur destination ; le devis pourra alors détailler la fabrication et la livraison.",
+      "guide_eyebrow": "Collaborer au-delà des frontières",
+      "guide_steps": "De votre demande à la livraison",
+      "guide_questions": "Avant de nous présenter votre projet",
+      "guide_link": "Comment votre projet est organisé",
+      "project_facts": "Les éléments présentés",
+      "related_title": "Du procédé à la forme réalisée",
+      "related_intro": "Consultez les vues de projet ou d’atelier en complément du guide de fabrication.",
+      "referenceLink": "Lien vers un dessin volumineux, un modèle 3D ou une référence (facultatif)"
+    },
+    "steps": [
+      {"title": "Besoin et destination", "body": "Transmettez un croquis, un plan ou une photo, les dimensions approximatives, les quantités, l’usage et la ville de livraison. Indiquez la date souhaitée et les contraintes d’accès ou de pose."},
+      {"title": "Périmètre technique et devis", "body": "Nous étudions les matériaux, les procédés, les finitions et les interfaces. Le devis précise les prestations, la livraison, la devise et les exclusions."},
+      {"title": "Plans et validation des finitions", "body": "Dimensions, couleurs, fixations et étapes de validation sont définies ensemble. Si un échantillon ou un prototype est nécessaire, son périmètre, son coût et son délai sont intégrés au planning."},
+      {"title": "Fabrication et contrôles", "body": "La fabrication suit les spécifications convenues. Nous définissons les contrôles dimensionnels et de finition ainsi que les photos ou vidéos nécessaires à une vérification à distance avant emballage."},
+      {"title": "Emballage et transport", "body": "L’emballage, les dimensions des modules et la manutention sont adaptés au trajet et aux accès. Le devis précise le transport, l’assurance, les formalités douanières et la responsabilité du déchargement."},
+      {"title": "Pose et réception", "body": "Fabrication seule, livraison ou pose sur site peuvent être étudiées. Fixations, intervenants locaux, accès, documents de montage et responsabilités sont définis pour chaque projet."}
+    ],
+    "faqs": [
+      {"question": "Où la fabrication est-elle réalisée ?", "answer": "Notre site de production est situé à Ataşehir, Istanbul, en Turquie. Nous y coordonnons les projets européens ; la livraison et les éventuelles interventions sur site sont étudiées selon la destination."},
+      {"question": "Que comprend la livraison ?", "answer": "Le devis écrit précise le point de livraison et les responsabilités. Emballage, transport, assurance, douane, taxes, déchargement et pose doivent être vérifiés dans ce périmètre. Il n’existe pas de prix de livraison unique pour tous les projets."},
+      {"question": "Comment le calendrier est-il établi ?", "answer": "Indiquez la date de livraison ou d’ouverture souhaitée. Plans, validations, échantillons, fabrication, transport et créneaux d’accès au chantier sont pris en compte avant de confirmer le calendrier."},
+      {"question": "Puis-je transmettre des fichiers CAO volumineux ?", "answer": "Ajoutez un lien de partage dans le formulaire pour les plans et modèles 3D volumineux. Les pièces jointes acceptent les formats PDF, JPG, PNG et WebP, jusqu’à 3 fichiers et 2 Mo au total. Si un accord de confidentialité est nécessaire, commencez par une description générale."}
+    ],
+    "project": {
+      "title": "Banque d’accueil et éléments muraux sculpturaux",
+      "description": "Une banque d’accueil bleue aux lignes fluides, associée à des éléments muraux sculpturaux gris argenté. Les photographies montrent le dialogue entre mobilier, formes verticales répétées et espace intérieur.",
+      "facts": [{"label": "Éléments présentés", "value": "Banque d’accueil et éléments muraux sculpturaux"}, {"label": "Formes", "value": "Façade de comptoir ondulée et profils verticaux"}, {"label": "Finition visible", "value": "Surfaces brillantes bleues et gris argenté"}],
+      "details": ["Le comptoir et les éléments muraux constituent un ensemble d’agencement coordonné. La vue générale montre leur relation ; les vues rapprochées détaillent les courbes, les jonctions et les reflets.", "Pour une demande similaire, transmettez un plan coté, les besoins fonctionnels du comptoir, les dimensions des murs et des références de finition. Matériaux, structure interne, accès, ouvertures techniques et pose sont définis selon le projet."],
+      "gallery": [{"alt": "Banque d’accueil sculpturale bleue devant des éléments muraux verticaux gris argenté", "caption": "Comptoir et éléments muraux · Une composition intérieure coordonnée."}, {"alt": "Vue générale des panneaux muraux gris argenté aux courbes verticales fluides", "caption": "Composition murale · Des profils fluides intégrés à l’espace."}, {"alt": "Vue rapprochée des courbes et reflets des panneaux muraux gris argenté", "caption": "Détail de surface · Courbes, jonctions et reflets naturels."}],
+      "note": "Photographies du projet retouchées pour la présentation : personnel de montage, outils et emballages temporaires retirés."
+    }
+  },
+  "ru": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · Изготовление по индивидуальным проектам",
+      "hero_title": "От одной детали",
+      "hero_accent": "до целого проекта.",
+      "hero_intro": "Мебель на заказ, скульптурные элементы интерьера и фасадные детали для проектов в Европе и других регионах. Проектирование, изготовление и доставка; монтаж — по согласованному объёму работ.",
+      "hero_seo_title": "Мебель на заказ и комплексное изготовление для Европы",
+      "footer_note": "Компания EPSLAM. Дизайн, цифровое производство и мастерство.",
+      "international_title": "Как организовать проект из другой страны.",
+      "international_intro": "Наша производственная база находится в Стамбуле, Турция. Для проектов в Европе, России и странах Персидского залива до начала производства согласуем чертежи, отделку, упаковку, место доставки и ответственность за монтаж.",
+      "nav_planning": "Проект и доставка",
+      "planning_intro": "Чёткое задание помогает спланировать международный проект. Опишите необходимые изделия, условия использования и место доставки — на этой основе мы определим объём производства и доставки в предложении.",
+      "guide_eyebrow": "Работа с зарубежными заказчиками",
+      "guide_steps": "От заявки до доставки",
+      "guide_questions": "Перед отправкой проекта",
+      "guide_link": "Как мы планируем ваш проект",
+      "project_facts": "Что представлено на фотографиях",
+      "related_title": "От технологии к готовой форме",
+      "related_intro": "Посмотрите фотографии проекта или мастерской вместе с описанием технологии изготовления.",
+      "referenceLink": "Ссылка на большой чертёж, 3D-модель или референс (необязательно)"
+    },
+    "steps": [
+      {"title": "Задание и место доставки", "body": "Отправьте эскиз, чертёж или фотографию, примерные размеры, количество, назначение и город доставки. Укажите желаемую дату и ограничения по доступу или монтажу."},
+      {"title": "Техническое задание и предложение", "body": "Мы рассматриваем материалы, технологию, отделку и сопряжения. В предложении фиксируются согласованные работы, условия доставки, валюта и исключения."},
+      {"title": "Чертежи и согласование отделки", "body": "Согласуем размеры, цвета, крепления и этапы утверждения. Если нужен образец или прототип, его объём, стоимость и сроки включаются в план."},
+      {"title": "Изготовление и проверка", "body": "Производство ведётся по согласованной спецификации. Определяем проверки размеров и отделки, а также фотографии или видео для удалённого осмотра перед упаковкой."},
+      {"title": "Упаковка и перевозка", "body": "Упаковка, размеры модулей и погрузочные операции планируются с учётом маршрута и доступа на объект. В предложении уточняются перевозка, страхование, таможенное оформление и ответственность за разгрузку."},
+      {"title": "Монтаж и передача", "body": "Можно обсудить только изготовление, изготовление с доставкой или монтаж на объекте. Крепления, местные подрядчики, доступ, сборочные материалы и обязанности согласуются по проекту."}
+    ],
+    "faqs": [
+      {"question": "Где выполняется производство?", "answer": "Наша производственная база находится в Аташехире, Стамбул, Турция. Отсюда координируются европейские проекты; доставка и возможные работы на объекте планируются для конкретного места назначения."},
+      {"question": "Что входит в доставку?", "answer": "В письменном предложении указываются пункт доставки и обязанности сторон. Упаковку, перевозку, страхование, таможню, налоги, разгрузку и монтаж нужно проверять по этому объёму. Единой цены доставки для всех проектов нет."},
+      {"question": "Как согласуются сроки?", "answer": "Сообщите желаемую дату доставки или открытия. До подтверждения графика учитываются чертежи, согласования, образцы, производство, транспорт и доступное время для работ на объекте."},
+      {"question": "Можно отправить большие CAD-файлы?", "answer": "Для больших чертежей и 3D-моделей добавьте ссылку в форму заявки. Вложения принимаются в PDF, JPG, PNG и WebP: до 3 файлов общим объёмом 2 МБ. Если требуется соглашение о конфиденциальности, сначала пришлите общее описание."}
+    ],
+    "project": {
+      "title": "Скульптурная стойка ресепшен и стеновые элементы",
+      "description": "Синяя стойка ресепшен с плавным профилем в сочетании с серебристо-серыми скульптурными стеновыми элементами. Фотографии показывают взаимосвязь мебели, повторяющихся вертикальных форм и интерьера.",
+      "facts": [{"label": "Представленные элементы", "value": "Стойка ресепшен и скульптурные стеновые элементы"}, {"label": "Форма", "value": "Волнообразный фасад стойки и вертикальные профили"}, {"label": "Видимая отделка", "value": "Глянцевые синие и серебристо-серые поверхности"}],
+      "details": ["Стойка и стеновые элементы представлены как согласованный комплект изделий для интерьера. Общий вид показывает композицию, крупные планы — изгибы, стыки и отражения света.", "Для похожего проекта пришлите обмерный план, функциональные требования к стойке, размеры стен и образцы желаемой отделки. Материалы, внутренний каркас, доступ, технологические отверстия и монтаж определяются для конкретного задания."],
+      "gallery": [{"alt": "Синяя скульптурная стойка ресепшен перед серебристо-серыми вертикальными стеновыми элементами", "caption": "Стойка и стеновые элементы · Единая интерьерная композиция."}, {"alt": "Общий вид серебристо-серых стеновых панелей с плавными вертикальными изгибами", "caption": "Стеновая композиция · Плавные профили в интерьере."}, {"alt": "Крупный план изгибов и отражений на серебристо-серых стеновых панелях", "caption": "Деталь поверхности · Изгибы, стыки и естественные отражения."}],
+      "note": "Фотографии проекта отретушированы для презентации: монтажники, инструменты и временная упаковка удалены."
+    }
+  },
+  "ar": {
+    "interface": {
+      "hero_eyebrow": "ARDIÇ · تصنيع مخصص للمشاريع",
+      "hero_title": "من قطعة واحدة",
+      "hero_accent": "إلى مشروع متكامل.",
+      "hero_intro": "أثاث حسب الطلب وعناصر داخلية نحتية وعناصر واجهات لمشاريع في أوروبا وخارجها. تطوير التصميم والتصنيع والتسليم، مع تحديد أعمال التركيب وفق متطلبات الموقع.",
+      "hero_seo_title": "أثاث حسب الطلب وتصنيع متكامل للمشاريع في أوروبا",
+      "footer_note": "إحدى شركات EPSLAM. تصميم وتصنيع رقمي وحرفية الورشة.",
+      "international_title": "خطط لمشروعك معنا من خارج تركيا.",
+      "international_intro": "يقع مركز إنتاجنا في إسطنبول، تركيا. لمشاريع أوروبا وروسيا ودول الخليج، نتفق على الرسومات والتشطيبات والتغليف ووجهة التسليم ومسؤوليات التركيب قبل بدء الإنتاج.",
+      "nav_planning": "دليل المشروع والتسليم",
+      "planning_intro": "يساعد الوصف الواضح على تخطيط المشروع الدولي. أخبرنا بالعناصر المطلوبة واستخدامها ووجهة التسليم، ليحدد عرض السعر نطاق التصنيع والتسليم.",
+      "guide_eyebrow": "التعاون في المشاريع الدولية",
+      "guide_steps": "من طلبك الأول إلى التسليم",
+      "guide_questions": "قبل إرسال مشروعك",
+      "guide_link": "كيف نخطط لمشروعك",
+      "project_facts": "العناصر الظاهرة في الصور",
+      "related_title": "من طريقة التصنيع إلى الشكل النهائي",
+      "related_intro": "اطلع على صور المشروع أو الورشة إلى جانب شرح طريقة التصنيع.",
+      "referenceLink": "رابط لرسومات كبيرة أو نموذج ثلاثي الأبعاد أو مرجع (اختياري)"
+    },
+    "steps": [
+      {"title": "المتطلبات ووجهة التسليم", "body": "أرسل مخططاً أو رسماً أو صورة مع الأبعاد التقريبية والكمية والاستخدام ومدينة التسليم. حدد الموعد المطلوب وأي قيود على الوصول أو التركيب."},
+      {"title": "النطاق الفني وعرض السعر", "body": "نراجع المواد وطريقة التصنيع والتشطيب والوصلات. يوضح العرض الأعمال المتفق عليها ونطاق التسليم والعملة والبنود المستثناة."},
+      {"title": "الرسومات واعتماد التشطيب", "body": "نتفق على الأبعاد والألوان والتثبيت ومراحل الاعتماد. وعند الحاجة إلى عينة أو نموذج أولي، تدرج تفاصيله وتكلفته ومدته ضمن الخطة."},
+      {"title": "التصنيع والفحص", "body": "يسير التصنيع وفق المواصفات المتفق عليها. نحدد فحوص الأبعاد والتشطيب والصور أو مقاطع الفيديو اللازمة للمراجعة عن بعد قبل التغليف."},
+      {"title": "التغليف والنقل", "body": "يخطط التغليف وأحجام الوحدات والمناولة بحسب مسار النقل وإمكانية دخول الموقع. يوضح العرض النقل والتأمين والترتيبات الجمركية ومسؤولية التفريغ."},
+      {"title": "التركيب والتسليم النهائي", "body": "يمكن مناقشة التصنيع فقط أو التسليم أو التركيب في الموقع. وتحدد وسائل التثبيت والفرق المحلية وإمكانية الوصول ومعلومات التجميع والمسؤوليات بحسب المشروع."}
+    ],
+    "faqs": [
+      {"question": "أين يتم التصنيع؟", "answer": "يقع مركز إنتاجنا في أتاشهير، إسطنبول، تركيا. ننسق المشاريع الأوروبية من هذه الورشة، ويحدد نطاق التسليم وأعمال الموقع عند الحاجة بحسب الوجهة."},
+      {"question": "ماذا يشمل التسليم؟", "answer": "يحدد عرض السعر المكتوب نقطة التسليم والمسؤوليات. يجب مراجعة التغليف والشحن والتأمين والجمارك والضرائب والتفريغ والتركيب ضمن ذلك النطاق؛ فلا يوجد سعر تسليم موحد لكل المشاريع."},
+      {"question": "كيف يحدد الجدول الزمني؟", "answer": "شاركنا تاريخ التسليم أو الافتتاح المطلوب. نراعي الرسومات والاعتمادات والعينات والإنتاج والنقل والفترة المتاحة لدخول الموقع قبل تأكيد الجدول."},
+      {"question": "هل يمكنني إرسال ملفات CAD كبيرة؟", "answer": "أضف رابط مشاركة في نموذج الطلب للرسومات والنماذج ثلاثية الأبعاد الكبيرة. تقبل المرفقات المباشرة PDF وJPG وPNG وWebP، بحد أقصى 3 ملفات ومجموع 2 ميغابايت. إذا كانت هناك حاجة لاتفاقية سرية، أرسل وصفاً عاماً أولاً."}
+    ],
+    "project": {
+      "title": "كاونتر استقبال وعناصر جدارية نحتية",
+      "description": "كاونتر استقبال أزرق بخطوط انسيابية مع عناصر جدارية نحتية رمادية فضية. تظهر الصور العلاقة بين الأثاث والأشكال الرأسية المتكررة والحيز الداخلي المحيط.",
+      "facts": [{"label": "العناصر الظاهرة", "value": "كاونتر استقبال وعناصر جدارية نحتية"}, {"label": "الشكل", "value": "واجهة كاونتر متموجة ومقاطع رأسية متكررة"}, {"label": "التشطيب الظاهر", "value": "أسطح لامعة باللونين الأزرق والرمادي الفضي"}],
+      "details": ["يظهر الكاونتر والعناصر الجدارية بوصفهما مجموعة تصنيع داخلي متناسقة. توضح اللقطة الواسعة العلاقة بينهما، بينما تبين اللقطات القريبة المنحنيات والوصلات وانعكاسات السطح.", "لمشروع مشابه، شارك مخططاً بالأبعاد ومتطلبات استخدام الكاونتر وأبعاد الجدران ومراجع التشطيب. تحدد المواد والهيكل الداخلي والوصول وفتحات الخدمة والتركيب بحسب كل مشروع."],
+      "gallery": [{"alt": "كاونتر استقبال نحتي أزرق أمام عناصر جدارية رأسية رمادية فضية", "caption": "الكاونتر والعناصر الجدارية · تكوين داخلي متناسق."}, {"alt": "منظر واسع لألواح جدارية رمادية فضية بمنحنيات رأسية انسيابية", "caption": "التكوين الجداري · مقاطع انسيابية وعلاقتها بالمكان."}, {"alt": "لقطة قريبة لمنحنيات الألواح الجدارية الرمادية الفضية وانعكاسات الضوء عليها", "caption": "تفاصيل السطح · المنحنيات والوصلات والانعكاسات الطبيعية."}],
+      "note": "نقحت صور المشروع للعرض بإزالة فريق التركيب والأدوات ومواد التغليف المؤقتة."
+    }
+  }
+}

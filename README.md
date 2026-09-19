@@ -18,7 +18,7 @@ The endpoint reports success only after the team's notification has been accepte
 
 ## Content and visitor flow
 
-- `lib/projects.ts` defines seven curated portfolio examples, including the supplied FARMASI Boss Trip project visuals. Project URLs remain stable across all six languages; the original concert rockwork case study keeps its URL.
+- `lib/projects.ts` defines eight curated portfolio examples, including the supplied FARMASI Boss Trip visuals and the retouched sculptural reception photographs. Project URLs remain stable across all six languages; the original concert rockwork case study keeps its URL.
 - `lib/industries.ts` defines six sector pages and prospective applications. These applications are not claims of completed commissions.
 - `lib/planning.ts` supplies the planning guide and its matching FAQ structured data.
 - Visitors can filter work, select up to six examples, share a selection link and carry it into the short enquiry form.

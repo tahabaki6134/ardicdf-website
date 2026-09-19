@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { conversionForHref } from "@/lib/conversion-events";
 
 type EventProperties = Record<string, string | number | boolean>;
 
@@ -41,39 +42,9 @@ export function ConversionTracking() {
       }
 
       const href = target.getAttribute("href") || "";
-      const text = target.textContent?.trim().replace(/\s+/g, " ").toLowerCase() || "";
       const location = linkLocation(target);
-
-      if (href.startsWith("https://wa.me/")) {
-        trackConversion("whatsapp_click", { location });
-        return;
-      }
-
-      if (href.startsWith("tel:")) {
-        trackConversion("phone_click", { location });
-        return;
-      }
-
-      if (href.startsWith("mailto:")) {
-        trackConversion("email_click", { location });
-        return;
-      }
-
-      if (href === "/privacy" || href.endsWith("/privacy")) {
-        trackConversion("privacy_click", { location });
-        return;
-      }
-
-      if (
-        /\/contact(?:[?#]|$)/.test(href) &&
-        (text.includes("start") ||
-          text.includes("discuss") ||
-          text.includes("conversation") ||
-          text.includes("project") ||
-          text.includes("brief"))
-      ) {
-        trackConversion("start_project_click", { location });
-      }
+      const eventName = conversionForHref(href, window.location.href);
+      if (eventName) trackConversion(eventName, { location, language: document.documentElement.lang });
     }
 
     document.addEventListener("click", handleClick);
