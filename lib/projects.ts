@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   category: string;
   image: string;
+  gallery?: { src: string; width: number; height: number }[];
   alt: string;
   description: string;
   details: string[];
@@ -12,9 +13,25 @@ export type Project = {
   services: { label: string; href: string }[];
 };
 
-// These entries use existing portfolio photographs. Do not add dimensions,
+// These entries use existing portfolio photographs and supplied project visuals. Do not add dimensions,
 // client names, materials or delivery claims without a verified project record.
 export const projects: Project[] = [
+  {
+    id: "farmasi-boss-trip",
+    title: "FARMASI · Boss Trip event collection",
+    category: "Brand & event objects",
+    image: "/works/farmasi-boss-trip/personalised-sailboats.jpeg",
+    gallery: [
+      { src: "/works/farmasi-boss-trip/personalised-sailboats.jpeg", width: 1254, height: 1254 },
+      { src: "/works/farmasi-boss-trip/decorative-rings.jpeg", width: 864, height: 1536 }
+    ],
+    alt: "Personalised sailboat table pieces with FARMASI Boss Trip lettering",
+    description: "A coordinated nautical-themed collection: personalised sailboat table pieces, decorative rings and branded presentation packaging.",
+    details: ["Individual names and brand graphics connect the objects across the collection.", "Supplied project presentation visuals show the coordinated pieces and packaging."],
+    briefChecklist: ["Object references, quantities and personalisation list", "Approved brand artwork and packaging requirements", "Delivery destination, schedule and intended decorative use"],
+    industries: ["retail-brand-activations", "events-exhibitions"],
+    services: [{ label: "Integrated project fabrication", href: "/fabrication" }]
+  },
   {
     id: "modular-artificial-rock-concert-environment",
     title: "Modular rock concert environment",

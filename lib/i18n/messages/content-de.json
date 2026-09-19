@@ -1,5 +1,24 @@
 {
   "projects": {
+    "farmasi-boss-trip": {
+      "title": "FARMASI · Boss Trip Eventkollektion",
+      "description": "Personalisierte Segelboot-Tischobjekte, dekorative Ringe und eine Präsentationsverpackung mit Markenauftritt. Namen, Grafiken und Verpackung greifen ein gemeinsames maritimes Thema auf.",
+      "details": [
+        "Mehr als ein einzelnes Objekt: aufeinander abgestimmte Tischobjekte, Dekoration und eine Präsentation in der Box.",
+        "Für ähnliche Anfragen stimmen wir Stückzahlen, Namenslisten, Markendaten, Verpackung und Lieferort gemeinsam ab. Fertigungsverfahren, Abmessungen und Oberflächen werden projektspezifisch festgelegt."
+      ],
+      "gallery": [
+        {
+          "alt": "Segelboot-Tischobjekte in Holzoptik mit individuellen Namen und FARMASI Boss Trip Grafiken",
+          "caption": "Segelboot-Tischobjekte · Individuelle Namen und abgestimmte Markengrafiken."
+        },
+        {
+          "alt": "Weiße Dekoringe mit schwarzen Bändern, Nähten und Seildetails",
+          "caption": "Dekorative Ringe · Schwarz-weiße Oberflächen, Nähte und Seildetails."
+        }
+      ],
+      "note": "Die Bilder zeigen die Präsentation der Projektkollektion. Die ringförmigen Objekte dienen der Dekoration und werden nicht als Rettungsmittel angeboten."
+    },
     "modular-artificial-rock-concert-environment": {
       "title": "Modulare Felskulisse für ein Konzert",
       "description": "Eine künstliche Felslandschaft aus transportierbaren EPS-Modulen, die rund um die Konzertbühne zusammengefügt wurden. Das Projekt zeigt den Weg von der Werkstattfertigung bis zum fertigen Aufbau in der Arena."

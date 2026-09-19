@@ -1,5 +1,24 @@
 {
   "projects": {
+    "farmasi-boss-trip": {
+      "title": "FARMASI · Collection événementielle Boss Trip",
+      "description": "Voiliers de table personnalisés, anneaux décoratifs et coffret de présentation aux couleurs de la marque. Les noms, les graphismes et l’emballage déclinent un même thème nautique.",
+      "details": [
+        "Au-delà d’un objet isolé : des éléments de table, des objets décoratifs et une présentation en coffret coordonnés.",
+        "Pour un projet similaire, nous étudions ensemble les quantités, la liste des noms, les fichiers de marque, l’emballage et le lieu de livraison. Les procédés de fabrication, les dimensions et les finitions sont définis pour chaque projet."
+      ],
+      "gallery": [
+        {
+          "alt": "Voiliers de table d’aspect bois portant des noms personnalisés et les graphismes FARMASI Boss Trip",
+          "caption": "Voiliers de table · Noms personnalisés et graphismes de marque coordonnés."
+        },
+        {
+          "alt": "Anneaux décoratifs blancs avec bandes noires, coutures et détails en corde",
+          "caption": "Anneaux décoratifs · Surfaces noires et blanches, coutures et cordages."
+        }
+      ],
+      "note": "Ces visuels présentent la collection du projet. Les objets en forme de bouée sont décoratifs et ne sont pas proposés comme équipements de sauvetage."
+    },
     "modular-artificial-rock-concert-environment": {
       "title": "Décor rocheux modulaire de concert",
       "description": "Un décor de rochers artificiels en modules EPS transportables, assemblés en paysage continu autour de la scène. Le projet relie la fabrication en atelier à l’installation achevée dans l’arène."

@@ -1,5 +1,24 @@
 {
   "projects": {
+    "farmasi-boss-trip": {
+      "title": "FARMASI · Boss Trip event collection",
+      "description": "Personalised sailboat table pieces, decorative rings and branded presentation packaging. A nautical theme connects the individual names, graphics and packaging across the collection.",
+      "details": [
+        "More than a single object: coordinated table pieces, decorative objects and a boxed presentation.",
+        "For a similar brief, we review quantities, the personalisation list, brand artwork, packaging and delivery destination together. Manufacturing methods, dimensions and finishes are agreed for each project."
+      ],
+      "gallery": [
+        {
+          "alt": "Wood-effect sailboat table pieces with individual names and FARMASI Boss Trip graphics",
+          "caption": "Sailboat table pieces · Individual names and coordinated brand graphics."
+        },
+        {
+          "alt": "White decorative rings with black straps, stitching and rope details",
+          "caption": "Decorative rings · Black-and-white surfaces, stitching and rope details."
+        }
+      ],
+      "note": "The images present the project collection. The ring-shaped objects are decorative and are not offered as lifesaving equipment."
+    },
     "modular-artificial-rock-concert-environment": {
       "title": "Modular rock concert environment",
       "description": "An artificial-rock environment made as transportable EPS modules and assembled into a continuous landscape around the concert stage. The project follows workshop production through to the completed arena setting."
