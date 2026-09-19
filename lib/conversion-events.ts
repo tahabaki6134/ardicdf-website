@@ -1,5 +1,6 @@
 // Classify destinations, never translated link labels or private form content.
 export function conversionForHref(href: string, base: string): string | null {
+  if (!href.trim() || href.startsWith("#") || href.startsWith("?")) return null;
   let url: URL;
   try { url = new URL(href, base); } catch { return null; }
   if (url.protocol === "mailto:") return "email_click";

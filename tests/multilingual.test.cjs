@@ -60,6 +60,7 @@ test('all localized contact links are measured independently of button wording',
   assert.equal(conversionForHref('https://wa.me/905436268969',siteOrigin),'whatsapp_click');
   assert.equal(conversionForHref('https://other.example/contact',siteOrigin),null);
   assert.equal(conversionForHref('/en/contact-details',siteOrigin),null);
+  for(const anchor of ['', '#main-content', '?method=carbon']) assert.equal(conversionForHref(anchor,siteOrigin+'/de/contact'),null);
 });
 
 test('reception project has complete localized evidence, valid routes and enquiry selection',()=>{
