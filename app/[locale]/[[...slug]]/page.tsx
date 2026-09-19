@@ -8,7 +8,7 @@ import { dictionary } from "@/lib/i18n/dictionary";
 // Known pages are pre-rendered; unmatched paths still enter their language layout
 // so visitors receive a localized 404 instead of Next's global English fallback.
 export const dynamicParams = true;
-export function generateStaticParams() { return locales.flatMap(locale => allPages.filter(page => pageLocales(page).includes(locale)).map(page => ({ locale, slug: pagePath(locale, page).slice(prefix(locale).length).split("/").filter(Boolean) }))); }
+export function generateStaticParams() { return locales.flatMap(locale => allPages.filter(page => pageLocales(page).includes(locale)).map(page => ({ locale, slug: page.kind === "home" ? [] : pagePath(locale, page).slice(prefix(locale).length).split("/").filter(Boolean) }))); }
 export function generateMetadata({ params }: { params: { locale: string; slug?: string[] } }) {
   if (!isLocale(params.locale)) return { robots: { index: false } };
   const page = resolvePage(params.locale, params.slug);

@@ -24,7 +24,7 @@ for route in manifest:
     html=root/'.next/server/app'/ (route.lstrip('/')+'.html')
     if not html.exists():errors.append(f'Missing build HTML: {route}');continue
     parsed=Page();parsed.feed(html.read_text())
-    public=route[3:] or '/' if segments[0]=='tr' else route
+    public=route[3:] if segments[0]=='tr' and len(segments)>1 else route
     pages[public]=parsed
     if parsed.lang!=segments[0] or parsed.direction!=('rtl' if segments[0]=='ar' else 'ltr'):errors.append(f'Wrong language/direction: {public}')
     if parsed.h1!=1:errors.append(f'H1 count {parsed.h1}: {public}')

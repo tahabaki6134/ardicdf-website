@@ -9,7 +9,7 @@ const resolve = Module._resolveFilename;
 Module._resolveFilename = function(request, ...args) { return resolve.call(this, request.startsWith('@/') ? path.join(root, request.slice(2)) : request, ...args); };
 require.extensions['.ts'] = (module, filename) => module._compile(ts.transpileModule(fs.readFileSync(filename, 'utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText, filename);
 const {locales,siteOrigin} = require('../lib/i18n/locales.ts');
-const {allPages,pagePath,resolvePage,languageAlternates} = require('../lib/i18n/routes.ts');
+const {allPages,pagePath,resolvePage,parsePublicPath,languageAlternates} = require('../lib/i18n/routes.ts');
 const {pageMetadata} = require('../lib/i18n/seo.ts');
 const {dictionary} = require('../lib/i18n/dictionary.ts');
 const {methodCopy,methodIds} = require('../lib/i18n/methods.ts');
@@ -51,7 +51,7 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
   const urls=new Set();
   for(const locale of locales) for(const page of allPages) {
     const url=pagePath(locale,page); assert.ok(!urls.has(url),url);urls.add(url);
-    const slug=url.split('/').filter(Boolean);if(locale!=='tr')slug.shift();
+    const slug=url.split('/').filter(Boolean);if(slug[0]===locale)slug.shift();
     assert.deepEqual(resolvePage(locale,slug),page,url);
     const meta=pageMetadata(locale,page);
     assert.equal(meta.alternates.canonical,siteOrigin+url);
@@ -67,9 +67,16 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
   }
 });
 
-test('legacy links retain meaning and Turkish root paths rewrite without changing language',()=>{
+test('English entry preserves queries and Turkish pages remain directly accessible',()=>{
   function route(pathname,host=siteOrigin){return middleware(new NextRequest(host+pathname));}
-  assert.equal(route('/').headers.get('x-middleware-rewrite'),siteOrigin+'/tr');
+  assert.equal(route('/').status,308);
+  assert.equal(route('/?utm_source=event').headers.get('location'),siteOrigin+'/en?utm_source=event');
+  assert.equal(route('/en').headers.get('location'),null);
+  assert.equal(route('/tr').headers.get('location'),null);
+  assert.equal(route('/tr').headers.get('x-middleware-rewrite'),null);
+  assert.equal(pagePath('tr',{kind:'home'}),'/tr');
+  assert.deepEqual(parsePublicPath('/'),{locale:'en',page:{kind:'home'}});
+  assert.deepEqual(parsePublicPath('/tr'),{locale:'tr',page:{kind:'home'}});
   assert.equal(route('/contact?method=carbon').headers.get('x-middleware-rewrite'),siteOrigin+'/tr/contact?method=carbon');
   assert.equal(route('/manufacturing/carbon-fiber?x=1').headers.get('location'),siteOrigin+'/en/manufacturing/carbon-fiber?x=1');
   assert.equal(route('/en/live').headers.get('location'),siteOrigin+'/en/fabrication');

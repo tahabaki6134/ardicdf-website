@@ -4,9 +4,10 @@ The existing `ardicdf-website` Next.js/Vercel project now contains six language 
 
 ## Address policy
 
-- Turkish: unprefixed paths on `https://www.ardicdf.com`, including `/contact`, `/works`, `/imalat/karbon-fiber` and `/karsilastir`.
+- The international root `/` redirects to `/en` with status 308, preserving query parameters. This is the user-requested English entry, independent of visitor location or browser language.
+- Turkish: the homepage is `/tr`; existing inner paths on `https://www.ardicdf.com` remain unprefixed, including `/contact`, `/works`, `/imalat/karbon-fiber` and `/karsilastir`.
 - Other languages: `/en`, `/de`, `/fr`, `/ru`, `/ar`, with matching page identities beneath them. Next.js normalizes trailing slashes.
-- `/tr` is an internal rendering prefix, excluded from public links and the sitemap. Its pages carry the unprefixed Turkish canonical URL. Do not add a redirect on this internal render target: it can loop when a hosting proxy follows a middleware rewrite.
+- `/tr` is the public Turkish homepage and appears in the sitemap and language alternatives. `/tr/...` still provides internal rendering for existing unprefixed Turkish inner pages; their canonical URLs stay unprefixed. Do not redirect internal render targets, because a hosting proxy may follow a middleware rewrite and create a loop.
 - Existing English-only `/manufacturing/...` and `/compare` addresses redirect to their `/en/...` versions. Legacy service articles redirect to the relevant manufacturing or application page. Shared old paths retain their subject with Turkish as the default; English counterparts remain under `/en`.
 - `/live` remains removed and redirects to the workshop. `/references` redirects to projects.
 - The user clarified on 2026-09-14 that `.com.tr` must remain an independent Turkish website for the domestic market. Do not redirect its pages, sitemap or robots to `.com`, and do not change the domestic site's content or contact setup as part of international-site work. The former companion redirect was reversed. The six-language international site remains on `.com`.

@@ -12,6 +12,11 @@ const legacyServices: Record<string, string> = {
 };
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
+  // The international entry opens in English; existing Turkish inner URLs remain valid.
+  if (url.pathname === "/") {
+    url.pathname = "/en";
+    return NextResponse.redirect(url, 308);
+  }
   const parts = url.pathname.split("/").filter(Boolean);
   const prefixed = isLocale(parts[0]);
   const locale: Locale = prefixed ? parts.shift() as Locale : "tr";
