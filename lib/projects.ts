@@ -23,7 +23,8 @@ export const projects: Project[] = [
     image: "/works/farmasi-boss-trip/personalised-sailboats.jpeg",
     gallery: [
       { src: "/works/farmasi-boss-trip/personalised-sailboats.jpeg", width: 1254, height: 1254 },
-      { src: "/works/farmasi-boss-trip/decorative-rings.jpeg", width: 864, height: 1536 }
+      { src: "/works/farmasi-boss-trip/decorative-rings.jpeg", width: 864, height: 1536 },
+      { src: "/works/farmasi-boss-trip/presentation-box.jpeg", width: 1312, height: 1199 }
     ],
     alt: "Personalised sailboat table pieces with FARMASI Boss Trip lettering",
     description: "A coordinated nautical-themed collection: personalised sailboat table pieces, decorative rings and branded presentation packaging.",
