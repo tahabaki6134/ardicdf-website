@@ -24,17 +24,18 @@ export function MultilingualEnquiry({ locale, t, methods, countries, projectName
   const [token, setToken] = useState(""), [scriptReady, setScriptReady] = useState(false), [verificationError, setVerificationError] = useState("");
   const [sending, setSending] = useState(false), [sent, setSent] = useState(false), [confirmationSent, setConfirmationSent] = useState(false);
   const [hasComparison, setHasComparison] = useState(false);
-  const { selected, setSelected, toggle } = useProjectSelection();
+  const { selected, ready, setSelected, toggle } = useProjectSelection();
   const widget = useRef<HTMLDivElement>(null), widgetId = useRef<string>();
   const details = useRef<HTMLDetailsElement>(null), successHeading = useRef<HTMLHeadingElement>(null), busy = useRef(false), started = useRef(false);
   useEffect(() => {
+    if (!ready) return;
     const params = new URLSearchParams(window.location.search);
     const primary = methods[params.get("method") || ""], alternative = methods[params.get("alternative") || ""];
     const industry = params.get("industry") || "";
     setForm(current => ({ ...current, projectType: primary || t.unsure, materialPreference: [primary, alternative].filter(Boolean).join(" / "), industry: getIndustry(industry) ? industry : "" }));
     setHasComparison(Boolean(primary || alternative));
     const ids = parseSelectedProjects(params.get("selected")); if (ids.length) setSelected(ids);
-  }, [methods, t.unsure, setSelected]);
+  }, [methods, t.unsure, setSelected, ready]);
   useEffect(() => {
     if (!siteKey || !scriptReady || !widget.current || !window.turnstile || sent) return;
     try {
@@ -87,7 +88,7 @@ export function MultilingualEnquiry({ locale, t, methods, countries, projectName
       {verificationError && <p role="alert" className="text-sm leading-7 text-red-800">{verificationError} <button type="button" className="min-h-11 px-2 underline" onClick={() => { if (widgetId.current) window.turnstile?.reset(widgetId.current); setToken(""); }}>{t.retry}</button></p>}
       <p className="text-xs leading-6 text-ink/65">{t.privacy_short} <Link className="underline" href={pagePath(locale, { kind: "privacy" })}>{t.nav_privacy}</Link></p>
       {error && <p role="alert" className="border-s-2 border-red-700 ps-3 text-sm leading-7 text-red-800">{error}</p>}
-      <button type="submit" disabled={sending || !siteKey} className="button-primary w-full sm:w-auto">{sending ? t.sending : t.submit}</button>
+      <button type="submit" disabled={sending || !siteKey || !ready} className="button-primary w-full sm:w-auto">{sending ? t.sending : t.submit}</button>
     </fieldset><p className="mt-5 break-words text-sm leading-7"><a dir="ltr" href={`mailto:${contactEmail}`} className="underline">{contactEmail}</a></p>
   </form>;
 }
