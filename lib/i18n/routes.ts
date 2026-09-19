@@ -9,7 +9,7 @@ const manufacturingMethods = [
  { id: "wood", slug: { tr: "ahsap-cnc", en: "wood-cnc" } }
 ];
 export const routeMethodIds = [...manufacturingMethods.map(m => m.id), "cnc"];
-const projectIds = ["modular-artificial-rock-concert-environment", "cosmetic-bottle-display-props", "giant-burger-display-prop", "classical-decorative-columns", "ornamental-elephant-sculpture", "decorative-entrance-arch"];
+const projectIds = ["farmasi-boss-trip", "modular-artificial-rock-concert-environment", "cosmetic-bottle-display-props", "giant-burger-display-prop", "classical-decorative-columns", "ornamental-elephant-sculpture", "decorative-entrance-arch"];
 const archiveIds = ["safari-experiences", "sculptures-characters", "artificial-rock-organic-forms", "historical-thematic-environments", "cnc-manufacturing-processes", "molds-composite-production", "commercial-brand-installations"];
 const industryIds = ["retail-brand-activations", "events-exhibitions", "museums-themed-attractions", "hospitality-architectural-decor", "film-television", "prototypes-display-models"];
 import { locales, prefix, isLocale, type Locale } from "./locales";

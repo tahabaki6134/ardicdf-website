@@ -60,7 +60,7 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
     assert.equal(meta.alternates.languages['x-default'],siteOrigin+pagePath('en',page));
     assert.ok(meta.title&&meta.description);
   }
-  assert.equal(urls.size,240);
+  assert.equal(urls.size,246);
   for(const m of manufacturingMethods) {
     assert.equal(pagePath('tr',{kind:'method',id:m.id}),methodPath(m,'tr'));
     assert.equal(pagePath('en',{kind:'method',id:m.id}),'/en'+methodPath(m,'en'));
@@ -100,4 +100,26 @@ test('all languages share one verified notification path and localize customer r
     const invalid=await POST(request({...payload,country:'',email:'invalid'}));assert.equal(invalid.status,400);const body=await invalid.json();assert.equal(body.fields.country,dictionary(language).error_required);assert.equal(body.fields.email,dictionary(language).error_email);assert.equal(calls.length,0);
     const malformed=await POST(new Request(siteOrigin+'/api/contact',{method:'POST',headers:{'X-ARDIC-Language':language},body:'broken'}));assert.equal((await malformed.json()).error,dictionary(language).error_request);
   });
+});
+
+test('FARMASI gallery, translations, enquiry selection and sharing metadata stay in sync',()=>{
+  const project=projects.find(p=>p.id==='farmasi-boss-trip');
+  assert.equal(project.gallery.length,2);
+  assert.equal(new Set(project.gallery.map(image=>image.src)).size,2);
+  assert.equal(project.gallery[0].src,project.image);
+  for(const image of project.gallery) {
+    assert.ok(fs.existsSync(path.join(root,'public',image.src)),image.src);
+    assert.ok(image.width>0&&image.height>0);
+  }
+  for(const locale of locales) {
+    const copy=localizedContent(locale).projects[project.id];
+    assert.equal(copy.gallery.length,project.gallery.length);
+    assert.ok(copy.note&&copy.details.length>=2);
+    for(const image of copy.gallery) assert.ok(image.alt&&image.caption);
+    const meta=pageMetadata(locale,{kind:'project',id:project.id});
+    assert.equal(meta.openGraph.images[0].url,siteOrigin+project.image);
+    assert.equal(meta.twitter.images[0],siteOrigin+project.image);
+  }
+  const {parseSelectedProjects}=require('../lib/projects.ts');
+  assert.deepEqual(parseSelectedProjects(project.id),[project.id]);
 });

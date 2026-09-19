@@ -1,5 +1,24 @@
 {
   "projects": {
+    "farmasi-boss-trip": {
+      "title": "FARMASI · Boss Trip etkinlik koleksiyonu",
+      "description": "Kişiye özel yelkenli masa objeleri, dekoratif simitler ve markalı sunum kutusu. Denizcilik teması; isim, grafik ve ambalaj detaylarıyla aynı koleksiyonda buluşuyor.",
+      "details": [
+        "Tek bir obje yerine birbiriyle uyumlu parçalar: kişiselleştirilmiş masa düzeni, dekoratif objeler ve kutulu sunum.",
+        "Benzer bir talepte adetleri, isim listesini, marka dosyalarını, ambalajı ve teslim yerini birlikte değerlendiriyoruz. Üretim yöntemi, ölçüler ve son yüzey proje için ayrıca belirlenir."
+      ],
+      "gallery": [
+        {
+          "alt": "FARMASI Boss Trip yazılı, kişiye özel isimler taşıyan ahşap görünümlü yelkenli masa objeleri",
+          "caption": "Yelkenli masa objeleri · Kişiye özel isimler ve marka grafikleri."
+        },
+        {
+          "alt": "Siyah şerit, dikiş ve halat detaylı beyaz dekoratif simitler",
+          "caption": "Dekoratif simitler · Siyah-beyaz yüzey, dikiş ve halat detayları."
+        }
+      ],
+      "note": "Görseller projenin sunumunu gösterir. Simit biçimli objeler dekoratif amaçlıdır; can kurtarma ekipmanı olarak sunulmaz."
+    },
     "modular-artificial-rock-concert-environment": {
       "title": "Modüler konser kaya dekoru",
       "description": "Taşınabilir EPS modüllerle üretilen yapay kaya dekoru, konser sahnesi çevresinde devamlı bir peyzaj oluşturacak şekilde birleştirildi. Atölye üretiminden tamamlanmış arena uygulamasına uzanan bir örnek."
