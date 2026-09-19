@@ -17,6 +17,23 @@ export type Project = {
 // client names, materials or delivery claims without a verified project record.
 export const projects: Project[] = [
   {
+    id: "sculptural-reception-interior",
+    title: "Sculptural reception & wall elements",
+    category: "Integrated interior fabrication",
+    image: "/works/sculptural-reception-interior/reception.webp",
+    gallery: [
+      { src: "/works/sculptural-reception-interior/reception.webp", width: 1670, height: 941 },
+      { src: "/works/sculptural-reception-interior/wall-wide.webp", width: 1672, height: 941 },
+      { src: "/works/sculptural-reception-interior/wall-detail.webp", width: 1651, height: 953 }
+    ],
+    alt: "Blue sculptural reception counter and silver-grey wall elements",
+    description: "A flowing blue reception counter paired with silver-grey sculptural wall elements.",
+    details: ["A coordinated interior composition shown through an overall view and surface details.", "Project photographs retouched to remove installation personnel, tools and temporary packaging."],
+    briefChecklist: ["Measured plan, counter functions and wall dimensions", "Finish references, interfaces and service openings", "Delivery access and installation scope"],
+    industries: ["hospitality-architectural-decor", "retail-brand-activations"],
+    services: [{ label: "Integrated project fabrication", href: "/fabrication" }]
+  },
+  {
     id: "farmasi-boss-trip",
     title: "FARMASI · Boss Trip event collection",
     category: "Brand & event objects",

@@ -46,7 +46,7 @@ for route,p in pages.items():
         path=urlparse(src).path
         if path=='/_next/image':path=parse_qs(urlparse(src).query)['url'][0]
         if path.startswith('/') and not (root/'public'/unquote(path.lstrip('/'))).is_file():errors.append(f'Missing image: {path}')
-assert len(pages)==246,len(pages)
+assert len(pages)==252,len(pages)
 if errors:
     print('\n'.join(errors[:40]));raise SystemExit(f'{len(errors)} rendered-page issues')
 print(f'{len(pages)} rendered HTML pages: language, RTL, H1, canonical, reciprocal alternates, internal links, anchors and image paths passed')
