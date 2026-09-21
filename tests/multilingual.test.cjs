@@ -100,6 +100,42 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
   }
 });
 
+test('sitemap URLs are final and indexable; utility pages retain readable noindex',async t=>{
+  const originalEnv=process.env.VERCEL_ENV;
+  t.after(()=>{if(originalEnv===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=originalEnv;});
+  const sitemap=require('../app/sitemap.ts').default;
+  const robots=require('../app/robots.ts').default;
+  process.env.VERCEL_ENV='production';
+  const entries=sitemap();
+  assert.equal(entries.length,246);
+  const urls=new Set(entries.map(entry=>entry.url));
+  assert.equal(urls.size,entries.length);
+  for(const entry of entries) {
+    const pathname=new URL(entry.url).pathname;
+    const {locale,page}=parsePublicPath(pathname);
+    assert.ok(page,pathname);
+    assert.equal(pageMetadata(locale,page).robots.index,true,pathname);
+    assert.equal(pageMetadata(locale,page).alternates.canonical,entry.url,pathname);
+    const response=middleware(new NextRequest(entry.url));
+    assert.equal(response.status,200,pathname);
+    assert.equal(response.headers.get('location'),null,pathname);
+    for(const alternate of Object.values(entry.alternates.languages))assert.ok(urls.has(alternate),alternate);
+  }
+  assert.ok(!robots().rules.disallow.includes('/review.html'));
+  const {default:config}=await import('../next.config.mjs');
+  const reviewHeader=(await config.headers()).find(rule=>rule.source==='/review.html');
+  assert.ok(reviewHeader.headers.some(header=>header.key==='X-Robots-Tag'&&header.value.includes('noindex')));
+  for(const locale of locales) {
+    const selection={kind:'selection'};
+    assert.equal(pageMetadata(locale,selection).robots.index,false);
+    assert.ok(!urls.has(siteOrigin+pagePath(locale,selection)));
+  }
+  assert.ok(!urls.has(siteOrigin+'/'));
+  process.env.VERCEL_ENV='preview';
+  assert.deepEqual(robots().rules.disallow,['/']);
+  assert.equal(pageMetadata('en',{kind:'home'}).robots.index,false);
+});
+
 test('English entry preserves queries and Turkish pages remain directly accessible',()=>{
   function route(pathname,host=siteOrigin){return middleware(new NextRequest(host+pathname));}
   assert.equal(route('/').status,308);
