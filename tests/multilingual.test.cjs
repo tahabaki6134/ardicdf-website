@@ -146,10 +146,10 @@ test('English entry preserves queries and Turkish pages remain directly accessib
   assert.equal(pagePath('tr',{kind:'home'}),'/tr');
   assert.deepEqual(parsePublicPath('/'),{locale:'en',page:{kind:'home'}});
   assert.deepEqual(parsePublicPath('/tr'),{locale:'tr',page:{kind:'home'}});
-  assert.equal(route('/contact?method=carbon').headers.get('x-middleware-rewrite'),siteOrigin+'/tr/contact?method=carbon');
+  assert.equal(route('/contact?method=carbon').headers.get('location'),siteOrigin+'/en/contact?method=carbon');
   assert.equal(route('/manufacturing/carbon-fiber?x=1').headers.get('location'),siteOrigin+'/en/manufacturing/carbon-fiber?x=1');
   assert.equal(route('/en/live').headers.get('location'),siteOrigin+'/en/fabrication');
-  assert.equal(route('/live').headers.get('location'),siteOrigin+'/fabrication');
+  assert.equal(route('/live').headers.get('location'),siteOrigin+'/en/fabrication');
   assert.equal(route('/ar/references').headers.get('location'),siteOrigin+'/ar/works');
   assert.equal(route('/services/composite-fabrication').headers.get('location'),siteOrigin+'/en/manufacturing/fiberglass-grp');
   assert.equal(route('/tr/imalat/epoksi-recine-dokum').headers.get('location'),null);
