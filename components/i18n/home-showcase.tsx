@@ -11,7 +11,7 @@ type Props = { locale: Locale; t: Dictionary };
 export function HomeShowcase({ locale, t }: Props) {
   const project = getProject("sculptural-reception-interior")!;
   const copy = localizedContent(locale).projects[project.id];
-  const [cover, ...details] = project.gallery!;
+  const [cover] = project.gallery!;
   const href = pagePath(locale, { kind: "project", id: project.id });
   return <section className="home-intro grid items-center gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
     <div>
@@ -25,7 +25,6 @@ export function HomeShowcase({ locale, t }: Props) {
         <Image src={cover.src} alt={copy.gallery![0].alt} width={cover.width} height={cover.height} priority sizes="(min-width:1024px) 58vw, 100vw" className="h-auto w-full bg-smoke/20" />
         <figcaption className="mt-3 flex items-center justify-between gap-3 text-sm leading-6"><span>{copy.title}</span><span aria-hidden="true">↗</span></figcaption>
       </figure></Link>
-      <div className="mt-3 grid grid-cols-2 gap-3">{details.map((item, index) => <Link key={item.src} href={href} aria-label={copy.gallery![index + 1].alt} className="block"><Image src={item.src} alt={copy.gallery![index + 1].alt} width={item.width} height={item.height} sizes="(min-width:1024px) 28vw, 48vw" className="h-auto w-full bg-smoke/20" /></Link>)}</div>
     </div>
   </section>;
 }
