@@ -45,7 +45,7 @@ export function resolvePage(locale: Locale, slug: string[] = []) {
 export function parsePublicPath(pathname: string): { locale: Locale; page?: Page } {
   const parts = pathname.split("/").filter(Boolean);
   if (!parts.length) return { locale: "en", page: { kind: "home" } };
-  const locale: Locale = isLocale(parts[0]) ? parts.shift() as Locale : "tr";
+  const locale: Locale = isLocale(parts[0]) ? parts.shift() as Locale : "en";
   return { locale, page: resolvePage(locale, parts) };
 }
 export function pageLocales(page: Page): Locale[] { return page.kind === "country" ? countryPages.filter(p => p.country === page.id).map(p => p.locale) : [...locales]; }
