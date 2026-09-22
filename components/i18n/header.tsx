@@ -28,7 +28,7 @@ export function LocaleHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
     if (selectedQuery.length) target.searchParams.set("selected", selectedQuery.join(","));
     const industry = source.searchParams.get("industry");
     if (industry && getIndustry(industry)) target.searchParams.set("industry", industry);
-    if (["#brief", "#methods", "#project-delivery"].includes(source.hash)) target.hash = source.hash;
+    if (["#brief", "#methods", "#featured-projects", "#project-delivery"].includes(source.hash)) target.hash = source.hash;
     window.location.assign(target.href);
   }
   const nav: { kind: Page["kind"]; label: string }[] = [{ kind: "works", label: t.nav_works }, { kind: "services", label: t.nav_services }, { kind: "industries", label: t.nav_industries }, { kind: "planning", label: t.nav_planning }, { kind: "about", label: t.nav_about }];
