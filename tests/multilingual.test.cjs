@@ -160,7 +160,7 @@ test('English entry preserves queries and Turkish pages remain directly accessib
 test('all languages share one verified notification path and localize customer replies and errors',async t=>{
   const originalFetch=global.fetch,originalEnv={...process.env};
   t.after(()=>{global.fetch=originalFetch;process.env=originalEnv;});
-  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';
+  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';process.env.RESEND_FROM_EMAIL='ARDIÇ <projects@ardicdf.com>';
   for(const language of locales) await t.test(language,async()=>{
     const calls=[];
     global.fetch=async(url,options)=>{calls.push({url,options});return Response.json(url.includes('siteverify')?{success:true}:{id:'mock'});};
