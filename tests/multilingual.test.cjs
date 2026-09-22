@@ -178,6 +178,19 @@ test('all languages share one verified notification path and localize customer r
   });
 });
 
+test('customer confirmation waits for a branded sender without blocking the team enquiry',async t=>{
+  const originalFetch=global.fetch,originalEnv={...process.env};
+  t.after(()=>{global.fetch=originalFetch;process.env=originalEnv;});
+  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';delete process.env.RESEND_FROM_EMAIL;
+  const calls=[];
+  global.fetch=async(url,options)=>{calls.push({url,options});return Response.json(url.includes('siteverify')?{success:true}:{id:'mock'});};
+  const language='en';
+  const payload={...initialEnquiry,language,country:'DE',fullName:'Example Client',email:'client@example.com',message:'Custom reception counter.',projectType:methodCopy(language,'wood').title,turnstileToken:'mock'};
+  const response=await POST(new Request(siteOrigin+'/api/contact',{method:'POST',headers:{'Content-Type':'application/json','X-ARDIC-Language':language},body:JSON.stringify(payload)}));
+  assert.equal(response.status,200);const body=await response.json();assert.equal(body.confirmationSent,false);assert.equal(calls.length,2);
+  assert.equal(JSON.parse(calls[1].options.body).to,'team@example.com');
+});
+
 test('FARMASI gallery, translations, enquiry selection and sharing metadata stay in sync',()=>{
   const project=projects.find(p=>p.id==='farmasi-boss-trip');
   assert.equal(project.gallery.length,3);
