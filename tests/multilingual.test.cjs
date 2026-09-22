@@ -160,7 +160,7 @@ test('English entry preserves queries and Turkish pages remain directly accessib
 test('all languages share one verified notification path and localize customer replies and errors',async t=>{
   const originalFetch=global.fetch,originalEnv={...process.env};
   t.after(()=>{global.fetch=originalFetch;process.env=originalEnv;});
-  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';
+  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';process.env.RESEND_FROM_EMAIL='ARDIÇ <projects@ardicdf.com>';
   for(const language of locales) await t.test(language,async()=>{
     const calls=[];
     global.fetch=async(url,options)=>{calls.push({url,options});return Response.json(url.includes('siteverify')?{success:true}:{id:'mock'});};
@@ -176,6 +176,19 @@ test('all languages share one verified notification path and localize customer r
     const invalid=await POST(request({...payload,country:'',email:'invalid'}));assert.equal(invalid.status,400);const body=await invalid.json();assert.equal(body.fields.country,dictionary(language).error_required);assert.equal(body.fields.email,dictionary(language).error_email);assert.equal(calls.length,0);
     const malformed=await POST(new Request(siteOrigin+'/api/contact',{method:'POST',headers:{'X-ARDIC-Language':language},body:'broken'}));assert.equal((await malformed.json()).error,dictionary(language).error_request);
   });
+});
+
+test('customer confirmation waits for a branded sender without blocking the team enquiry',async t=>{
+  const originalFetch=global.fetch,originalEnv={...process.env};
+  t.after(()=>{global.fetch=originalFetch;process.env=originalEnv;});
+  process.env.RESEND_API_KEY='mock';process.env.TURNSTILE_SECRET_KEY='mock';process.env.CONTACT_NOTIFICATION_EMAIL='team@example.com';delete process.env.RESEND_FROM_EMAIL;
+  const calls=[];
+  global.fetch=async(url,options)=>{calls.push({url,options});return Response.json(url.includes('siteverify')?{success:true}:{id:'mock'});};
+  const language='en';
+  const payload={...initialEnquiry,language,country:'DE',fullName:'Example Client',email:'client@example.com',message:'Custom reception counter.',projectType:methodCopy(language,'wood').title,turnstileToken:'mock'};
+  const response=await POST(new Request(siteOrigin+'/api/contact',{method:'POST',headers:{'Content-Type':'application/json','X-ARDIC-Language':language},body:JSON.stringify(payload)}));
+  assert.equal(response.status,200);const body=await response.json();assert.equal(body.confirmationSent,false);assert.equal(calls.length,2);
+  assert.equal(JSON.parse(calls[1].options.body).to,'team@example.com');
 });
 
 test('FARMASI gallery, translations, enquiry selection and sharing metadata stay in sync',()=>{

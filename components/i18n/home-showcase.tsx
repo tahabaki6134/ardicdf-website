@@ -18,7 +18,7 @@ export function HomeShowcase({ locale, t }: Props) {
       <p className="eyebrow">{t.hero_eyebrow}</p>
       <h1 className="mt-4 font-display text-[2.25rem] leading-[1.12] sm:text-5xl xl:text-[3.4rem]">{t.hero_title}<span className="mt-1 block text-bronze">{t.hero_accent}</span></h1>
       <p className="mt-5 max-w-xl text-base leading-7 text-ink/75">{t.hero_intro}</p>
-      <div className="mt-6 flex flex-wrap gap-3"><Link className="button-primary" href={pagePath(locale, { kind: "contact" }) + "#brief"}>{t.send_project} <span aria-hidden="true">↗</span></Link><a className="button-secondary" href="#methods">{t.explore_methods}</a></div>
+      <div className="mt-6 flex flex-wrap gap-3"><Link className="button-primary" href={pagePath(locale, { kind: "contact" }) + "#brief"}>{t.send_project} <span aria-hidden="true">↗</span></Link><a className="button-secondary" href="#featured-projects">{t.all_projects}</a></div>
     </div>
     <div className="min-w-0">
       <Link href={href} className="block"><figure>

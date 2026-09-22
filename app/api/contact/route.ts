@@ -205,22 +205,27 @@ export async function POST(request: Request) {
 
   const confirmationText = [t.thanks, t.success_body, t.projectType + ": " + inquiry.projectType, t.nda_note].join("\n\n");
   let confirmationSent = false;
-  try {
-    await sendEmail({
-      to: inquiry.email,
-      subject: "Ardıç Design & Fabrication — " + t.confirmation_subject,
-      html:
-        '<div lang="' + locale + '" dir="' + direction(locale) + '" style="font-family:Arial,sans-serif;line-height:1.7;white-space:pre-wrap">' +
-        escapeHtml(confirmationText) +
-        "</div>",
-      text: confirmationText,
-      replyTo: notificationEmail
-    });
-    confirmationSent = true;
-  } catch {
-    // The team's notification succeeded. Report receipt accurately without
-    // encouraging a duplicate enquiry when the optional confirmation fails.
-    console.error("Contact confirmation could not be sent.");
+  // Do not send customer-facing mail from Resend's onboarding domain. Team
+  // notifications can still use the fallback so a missing branded sender can
+  // never block a valid enquiry.
+  if (process.env.RESEND_FROM_EMAIL?.trim()) {
+    try {
+      await sendEmail({
+        to: inquiry.email,
+        subject: "Ardıç Design & Fabrication — " + t.confirmation_subject,
+        html:
+          '<div lang="' + locale + '" dir="' + direction(locale) + '" style="font-family:Arial,sans-serif;line-height:1.7;white-space:pre-wrap">' +
+          escapeHtml(confirmationText) +
+          "</div>",
+        text: confirmationText,
+        replyTo: notificationEmail
+      });
+      confirmationSent = true;
+    } catch {
+      // The team's notification succeeded. Report receipt accurately without
+      // encouraging a duplicate enquiry when the optional confirmation fails.
+      console.error("Contact confirmation could not be sent.");
+    }
   }
   return NextResponse.json({ ok: true, confirmationSent });
 }
