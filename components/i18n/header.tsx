@@ -4,11 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { localeNames, locales, type Locale } from "@/lib/i18n/locales";
-import { pagePath, pageLocales, parsePublicPath, type Page } from "@/lib/i18n/routes";
-import { routeMethodIds as methodIds } from "@/lib/i18n/routes";
+import { pagePath, parsePublicPath, type Page } from "@/lib/i18n/routes";
+import { languagePath } from "@/lib/i18n/navigation";
 import type { Dictionary } from "@/lib/i18n/dictionary";
-import { parseSelectedProjects } from "@/lib/projects";
-import { getIndustry } from "@/lib/industries";
 import { useProjectSelection } from "../project-selection-provider";
 
 export function LocaleHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
@@ -19,17 +17,7 @@ export function LocaleHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
   useEffect(() => setOpen(false), [pathname]);
   function changeLanguage(next: Locale) {
     const source = new URL(window.location.href);
-    const target = new URL(pagePath(next, currentPage && pageLocales(currentPage).includes(next) ? currentPage : { kind: "home" }), source.origin);
-    for (const key of ["method", "alternative", "left", "right"]) {
-      const value = source.searchParams.get(key);
-      if (value && methodIds.includes(value)) target.searchParams.set(key, value);
-    }
-    const selectedQuery = parseSelectedProjects(source.searchParams.get("selected"));
-    if (selectedQuery.length) target.searchParams.set("selected", selectedQuery.join(","));
-    const industry = source.searchParams.get("industry");
-    if (industry && getIndustry(industry)) target.searchParams.set("industry", industry);
-    if (["#brief", "#methods", "#featured-projects", "#project-delivery"].includes(source.hash)) target.hash = source.hash;
-    window.location.assign(target.href);
+    window.location.assign(languagePath(source.pathname, next, source.searchParams, source.hash));
   }
   const nav: { kind: Page["kind"]; label: string }[] = [{ kind: "works", label: t.nav_works }, { kind: "services", label: t.nav_services }, { kind: "industries", label: t.nav_industries }, { kind: "planning", label: t.nav_planning }, { kind: "about", label: t.nav_about }];
   const links = nav.map(item => <Link key={item.kind} href={pagePath(locale, item)} aria-current={currentPage?.kind === item.kind ? "page" : (item.kind === "services" && currentPage?.kind === "method") || (item.kind === "works" && ["project", "archive"].includes(currentPage?.kind ?? "")) || (item.kind === "industries" && currentPage?.kind === "industry") ? "location" : undefined} className="min-h-11 py-3 font-semibold text-ink/75 hover:text-bronze aria-[current=page]:text-bronze aria-[current=location]:text-bronze">{item.label}</Link>);

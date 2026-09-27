@@ -38,4 +38,4 @@ Before releasing on the production branch, review the preview and verify real fo
 
 ## Multilingual preview
 
-Six editions share the existing project. The root opens in English at `/en`; the Turkish homepage is `/tr` and existing Turkish inner addresses remain unprefixed. German, French, Russian and Arabic use language paths. See [the rollout guide](docs/multilingual-rollout.md) for redirects, country-page rules, content editing, enquiry configuration and release checks. The public preview review screen is `/review.html`.
+Six editions share the existing project. The root opens in English at `/en`; Turkish pages use `/tr` and its subpaths. Legacy unprefixed international addresses redirect to `/en`, while explicitly Turkish manufacturing slugs redirect to `/tr`. The separate `.com.tr` website is unchanged. German, French, Russian and Arabic use language paths. Both language menus preserve validated comparison and enquiry selections. See [the rollout guide](docs/multilingual-rollout.md) for content editing and enquiry configuration. The public preview review screen is `/review.html`.

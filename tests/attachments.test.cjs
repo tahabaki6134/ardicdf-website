@@ -27,6 +27,7 @@ test("enquiry attachments reach only the team notification", async t => {
   process.env.RESEND_API_KEY = "mock-key";
   process.env.TURNSTILE_SECRET_KEY = "mock-key";
   process.env.CONTACT_NOTIFICATION_EMAIL = "team@example.com";
+  process.env.RESEND_FROM_EMAIL = "ARDIÇ <projects@ardicdf.com>";
   t.after(() => { global.fetch = beforeFetch; process.env = beforeEnv; });
   const valid = { fullName: "Example", email: "client@example.com", projectType: "Wood furniture", message: "A complete cabinet for Seoul, with https://example.com/a and https://example.com/b and https://example.com/c", turnstileToken: "mock-token", attachments: [pdf] };
   let emails = [];
