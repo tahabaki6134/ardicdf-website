@@ -95,9 +95,43 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
   }
   assert.equal(urls.size,252);
   for(const m of manufacturingMethods) {
-    assert.equal(pagePath('tr',{kind:'method',id:m.id}),methodPath(m,'tr'));
+    assert.equal(pagePath('tr',{kind:'method',id:m.id}),'/tr'+methodPath(m,'tr'));
     assert.equal(pagePath('en',{kind:'method',id:m.id}),'/en'+methodPath(m,'en'));
   }
+});
+
+test('language changes preserve validated comparison and enquiry context in every locale',()=>{
+  const {languagePath}=require('../lib/i18n/navigation.ts');
+  const selected='sculptural-reception-interior';
+  for(const locale of locales) {
+    const comparison=new URL(languagePath('/en/compare',locale,new URLSearchParams('left=carbon&right=epoxy')),siteOrigin);
+    assert.equal(comparison.pathname,pagePath(locale,{kind:'compare'}));
+    assert.equal(comparison.searchParams.get('left'),'carbon');
+    assert.equal(comparison.searchParams.get('right'),'epoxy');
+    const brief=new URL(languagePath('/en/contact',locale,new URLSearchParams(`method=wood&alternative=printing&selected=${selected},unknown&industry=events-exhibitions&email=private@example.com`),'#brief'),siteOrigin);
+    assert.equal(brief.pathname,pagePath(locale,{kind:'contact'}));
+    assert.equal(brief.searchParams.get('method'),'wood');
+    assert.equal(brief.searchParams.get('alternative'),'printing');
+    assert.equal(brief.searchParams.get('selected'),selected);
+    assert.equal(brief.searchParams.get('industry'),'events-exhibitions');
+    assert.equal(brief.searchParams.has('email'),false);
+    assert.equal(brief.hash,'#brief');
+  }
+  assert.equal(languagePath('/en/contact','de',new URLSearchParams('method=constructor&alternative=__proto__&selected=missing&industry=unknown'),'#private'),'/de/contact');
+});
+
+test('partial or invalid comparison links always show two real, distinct methods',()=>{
+  const {comparisonFromQuery,methodFromQuery}=require('../lib/i18n/navigation.ts');
+  for(const [query,expected] of [
+    ['',{left:'foam',right:'printing'}],
+    ['left=printing',{left:'printing',right:'foam'}],
+    ['right=foam',{left:'printing',right:'foam'}],
+    ['left=carbon&right=carbon',{left:'carbon',right:'printing'}],
+    ['left=wood&right=epoxy',{left:'wood',right:'epoxy'}],
+    ['left=constructor&right=__proto__',{left:'foam',right:'printing'}]
+  ]) assert.deepEqual(comparisonFromQuery(new URLSearchParams(query)),expected,query);
+  for(const value of [null,'','unknown','constructor','__proto__','toString'])assert.equal(methodFromQuery(value),undefined);
+  for(const id of methodIds)assert.equal(methodFromQuery(id),id);
 });
 
 test('sitemap URLs are final and indexable; utility pages retain readable noindex',async t=>{

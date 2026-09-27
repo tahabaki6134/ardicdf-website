@@ -7,6 +7,7 @@ import { validateLocalized } from "@/lib/i18n/validation";
 import type { Locale } from "@/lib/i18n/locales";
 import type { Dictionary } from "@/lib/i18n/dictionary";
 import { pagePath } from "@/lib/i18n/routes";
+import { methodFromQuery } from "@/lib/i18n/navigation";
 import { attachmentAccept, MAX_ATTACHMENTS, MAX_ATTACHMENT_BYTES } from "@/lib/attachment-options";
 import { useProjectSelection } from "../project-selection-provider";
 import { parseSelectedProjects } from "@/lib/projects";
@@ -30,7 +31,8 @@ export function MultilingualEnquiry({ locale, t, methods, countries, projectName
   useEffect(() => {
     if (!ready) return;
     const params = new URLSearchParams(window.location.search);
-    const primary = methods[params.get("method") || ""], alternative = methods[params.get("alternative") || ""];
+    const primaryId = methodFromQuery(params.get("method")), alternativeId = methodFromQuery(params.get("alternative"));
+    const primary = primaryId ? methods[primaryId] : undefined, alternative = alternativeId ? methods[alternativeId] : undefined;
     const industry = params.get("industry") || "";
     setForm(current => ({ ...current, projectType: primary || t.unsure, materialPreference: [primary, alternative].filter(Boolean).join(" / "), industry: getIndustry(industry) ? industry : "" }));
     setHasComparison(Boolean(primary || alternative));
