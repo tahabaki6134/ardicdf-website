@@ -154,5 +154,9 @@
   "planning_intro": "İlk talebinizde çizim veya fotoğraf, yaklaşık ölçü, adet, kullanım yeri, yüzey beklentisi, teslim noktası ve montaj ihtiyacını paylaşın. Eksik bilgileri teklif öncesinde birlikte tamamlayabiliriz.",
   "applications_intro": "Aşağıdaki alanlar, mevcut imalat yöntemlerimizin değerlendirilebileceği uygulama örnekleridir. Kapsamı ve uygunluğu projeniz üzerinden belirliyoruz.",
   "not_found": "Bu sayfa bulunamadı.",
-  "dimensions_hint": "200 × 80 × 40 cm"
+  "dimensions_hint": "200 × 80 × 40 cm",
+  "call_us": "Bizi arayın",
+  "verification_required": "Göndermeden önce güvenlik doğrulamasını tamamlayın.",
+  "error_timeout": "Talebinizin iletilip iletilmediğini doğrulayamadık. Bilgileriniz formda duruyor. Tekrar göndermeden önce bize doğrudan ulaşın.",
+  "enquiry_fallback": "Yazdığınız bilgiler formda duruyor. E-posta, WhatsApp veya telefonla da bize ulaşabilirsiniz."
 }

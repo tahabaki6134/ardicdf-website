@@ -154,5 +154,9 @@
   "planning_intro": "For an initial enquiry, share a drawing or photo, approximate dimensions, quantity, setting, finish, destination and installation needs. We can clarify missing information before quotation.",
   "applications_intro": "These are possible applications of our manufacturing methods. Scope and suitability are assessed for your project.",
   "not_found": "This page could not be found.",
-  "dimensions_hint": "200 × 80 × 40 cm"
+  "dimensions_hint": "200 × 80 × 40 cm",
+  "call_us": "Call us",
+  "verification_required": "Complete the security check before sending.",
+  "error_timeout": "We could not confirm whether your enquiry was delivered. Your details are still here. Contact us directly before sending again.",
+  "enquiry_fallback": "Your entries are still in this form. You can also contact us by email, WhatsApp or phone."
 }

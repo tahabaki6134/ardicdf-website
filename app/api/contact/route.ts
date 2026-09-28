@@ -24,6 +24,18 @@ const escapeHtml = (value: string) =>
     .replace(/'/g, "&#39;");
 const safeSubject = (value: string) => value.replace(/[\r\n]+/g, " ").slice(0, 160);
 
+class EmailProviderError extends Error {
+  constructor(public readonly status: number) { super("Email provider rejected delivery."); }
+}
+function logDeliveryFailure(stage: "notification" | "confirmation", cause: unknown) {
+  // Operational diagnostics only: never log the enquiry, address, file or token.
+  console.error("Contact delivery failed", {
+    stage,
+    reason: cause instanceof EmailProviderError ? "provider_rejected" : "network_or_timeout",
+    status: cause instanceof EmailProviderError ? cause.status : null
+  });
+}
+
 async function verifyTurnstile(token: string, remoteIp: string) {
   if (!process.env.TURNSTILE_SECRET_KEY)
     return { ok: false, error: "Verification service is not configured." };
@@ -76,7 +88,7 @@ async function sendEmail(payload: {
     })
   });
   if (!response.ok)
-    throw new Error("Email provider rejected the request (" + response.status + ").");
+    throw new EmailProviderError(response.status);
 }
 
 export async function POST(request: Request) {
@@ -195,8 +207,8 @@ export async function POST(request: Request) {
       replyTo: inquiry.email,
       attachments
     });
-  } catch {
-    console.error("Contact notification could not be sent.");
+  } catch (cause) {
+    logDeliveryFailure("notification", cause);
     return NextResponse.json(
       { error: t.error_send },
       { status: 502 }
@@ -221,10 +233,10 @@ export async function POST(request: Request) {
         replyTo: notificationEmail
       });
       confirmationSent = true;
-    } catch {
+    } catch (cause) {
       // The team's notification succeeded. Report receipt accurately without
       // encouraging a duplicate enquiry when the optional confirmation fails.
-      console.error("Contact confirmation could not be sent.");
+      logDeliveryFailure("confirmation", cause);
     }
   }
   return NextResponse.json({ ok: true, confirmationSent });
