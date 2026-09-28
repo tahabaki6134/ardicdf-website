@@ -154,5 +154,9 @@
   "planning_intro": "Pour une première demande, partagez un dessin ou une photo, les dimensions, la quantité, l’usage, la finition, la destination et les besoins de pose. Nous compléterons les informations avant le devis.",
   "applications_intro": "Ces domaines illustrent les applications possibles de nos procédés. Le périmètre et l’adéquation sont étudiés pour votre projet.",
   "not_found": "Cette page est introuvable.",
-  "dimensions_hint": "200 × 80 × 40 cm"
+  "dimensions_hint": "200 × 80 × 40 cm",
+  "call_us": "Appelez-nous",
+  "verification_required": "Veuillez effectuer la vérification de sécurité avant l’envoi.",
+  "error_timeout": "Nous n’avons pas pu confirmer la réception de votre demande. Vos informations sont toujours dans le formulaire. Contactez-nous directement avant de la renvoyer.",
+  "enquiry_fallback": "Vos informations sont toujours dans le formulaire. Vous pouvez aussi nous joindre par e-mail, WhatsApp ou téléphone."
 }

@@ -154,5 +154,9 @@
   "planning_intro": "Für die erste Anfrage helfen eine Zeichnung oder ein Foto, ungefähre Maße, Stückzahl, Einsatzort, Oberfläche, Lieferort und Montagebedarf. Fehlende Angaben klären wir vor dem Angebot.",
   "applications_intro": "Diese Bereiche zeigen mögliche Anwendungen unserer Fertigungsverfahren. Umfang und Eignung prüfen wir für Ihr Projekt.",
   "not_found": "Diese Seite wurde nicht gefunden.",
-  "dimensions_hint": "200 × 80 × 40 cm"
+  "dimensions_hint": "200 × 80 × 40 cm",
+  "call_us": "Rufen Sie uns an",
+  "verification_required": "Bitte schließen Sie vor dem Senden die Sicherheitsprüfung ab.",
+  "error_timeout": "Wir konnten nicht bestätigen, ob Ihre Anfrage übermittelt wurde. Ihre Angaben sind weiterhin im Formular. Kontaktieren Sie uns bitte direkt, bevor Sie erneut senden.",
+  "enquiry_fallback": "Ihre Angaben bleiben im Formular erhalten. Sie erreichen uns auch per E-Mail, WhatsApp oder Telefon."
 }
