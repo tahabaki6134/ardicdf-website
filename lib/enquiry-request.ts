@@ -12,14 +12,22 @@ export class EnquiryRequestError extends Error {
 
 // Leave time for verification and mail delivery, but never leave the visitor
 // indefinitely on "Sending". A timeout is an unknown result, not a failed send.
-export async function sendEnquiry(payload: object, locale: Locale, timeoutMs = 60_000) {
+export async function sendEnquiry(payload: object, locale: Locale, timeoutMs = 60_000, files: File[] = []) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
+    let body: string | FormData = JSON.stringify(payload);
+    const headers: Record<string, string> = { "X-ARDIC-Language": locale };
+    if (files.length) {
+      const form = new FormData();
+      form.append("payload", body);
+      files.forEach(file => form.append("attachments", file, file.name));
+      body = form;
+    } else headers["Content-Type"] = "application/json";
     const response = await fetch("/api/contact", {
       method: "POST",
-      headers: { "Content-Type": "application/json", "X-ARDIC-Language": locale },
-      body: JSON.stringify(payload),
+      headers,
+      body,
       signal: controller.signal
     });
     const result = await response.json().catch(() => null);

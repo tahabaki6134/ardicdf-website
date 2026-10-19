@@ -10,7 +10,8 @@ import { getProject } from "@/lib/projects";
 type Props = { locale: Locale; t: Dictionary };
 export function HomeShowcase({ locale, t }: Props) {
   const project = getProject("sculptural-reception-interior")!;
-  const copy = localizedContent(locale).projects[project.id];
+  const content = localizedContent(locale);
+  const copy = content.projects[project.id];
   const [cover] = project.gallery!;
   const href = pagePath(locale, { kind: "project", id: project.id });
   return <section className="home-intro grid items-center gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
@@ -22,9 +23,12 @@ export function HomeShowcase({ locale, t }: Props) {
     </div>
     <div className="min-w-0">
       <Link href={href} className="block"><figure>
-        <Image src={cover.src} alt={copy.gallery![0].alt} width={cover.width} height={cover.height} priority sizes="(min-width:1024px) 58vw, 100vw" className="h-auto w-full bg-smoke/20" />
+        <Image src={cover.src} alt={copy.gallery![0].alt} width={cover.width} height={cover.height} priority sizes="(min-width:1280px) 690px, (min-width:1024px) 55vw, 100vw" className="h-auto w-full bg-smoke/20" />
         <figcaption className="mt-3 flex items-center justify-between gap-3 text-sm leading-6"><span>{copy.title}</span><span aria-hidden="true">↗</span></figcaption>
       </figure></Link>
+      <div className="mt-5 grid grid-cols-[1.25fr_1fr] gap-4">
+        {[{ id: "modular-artificial-rock-concert-environment", src: getProject("modular-artificial-rock-concert-environment")!.image, label: t.hero_scenic, contain: false }, { id: "cosmetic-bottle-display-props", src: "/projects/portfolio/commercial-brand-installations/commercial-brand-installations-10.jpeg", label: t.hero_brand, contain: true }].map(item => <Link key={item.id} href={pagePath(locale, { kind: "project", id: item.id })} className="min-w-0"><figure><div className="relative h-36 bg-smoke/30 sm:h-44"><Image src={item.src} alt={content.projects[item.id].title} fill sizes="(min-width:1280px) 380px, (min-width:1024px) 30vw, 55vw" className={item.contain ? "object-contain" : "object-cover"} /></div><figcaption className="mt-2 text-xs leading-5 sm:text-sm">{item.label} <span aria-hidden="true">↗</span></figcaption></figure></Link>)}
+      </div>
     </div>
   </section>;
 }

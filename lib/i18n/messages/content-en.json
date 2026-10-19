@@ -25,27 +25,51 @@
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modular rock concert environment",
-      "description": "An artificial-rock environment made as transportable EPS modules and assembled into a continuous landscape around the concert stage. The project follows workshop production through to the completed arena setting."
+      "description": "An artificial-rock environment made as transportable EPS modules and assembled into a continuous landscape around the concert stage. The project follows workshop production through to the completed arena setting.",
+      "details": [
+        "Transportable EPS rock modules connect into a continuous stage landscape. Workshop and arena images show the transition from separate forms to the assembled setting.",
+        "The completed views show how the rock forms frame the performance area at different viewing distances."
+      ]
     },
     "cosmetic-bottle-display-props": {
       "title": "Cosmetic bottle display props",
-      "description": "Oversized packaging forms create a focal point for a branded setting. Bottle profiles, shaped caps, coloured surfaces and applied graphics make the products recognisable."
+      "description": "Oversized packaging forms create a focal point for a branded setting. Bottle profiles, shaped caps, coloured surfaces and applied graphics make the products recognisable.",
+      "details": [
+        "Bottle profiles, cap details and applied graphics establish recognisable product forms.",
+        "Several shapes and colour treatments appear together in the portfolio photograph, showing the range of display objects within the collection."
+      ]
     },
     "giant-burger-display-prop": {
       "title": "Giant burger display prop",
-      "description": "A sculptural food display with individually shaped ingredient layers, textured surfaces and paint. The workshop photograph shows the assembled composition and surface treatment."
+      "description": "A sculptural food display with individually shaped ingredient layers, textured surfaces and paint. The workshop photograph shows the assembled composition and surface treatment.",
+      "details": [
+        "Separate ingredient forms build depth across the assembled burger, with distinct textures and painted surfaces.",
+        "The workshop view shows the complete composition as well as the relief of the individual layers."
+      ]
     },
     "classical-decorative-columns": {
       "title": "Classical decorative columns",
-      "description": "A pair of decorative columns with fluted shafts, scroll capitals and bases. Repeated architectural details are unified by a coordinated stone-effect finish."
+      "description": "A pair of decorative columns with fluted shafts, scroll capitals and bases. Repeated architectural details are unified by a coordinated stone-effect finish.",
+      "details": [
+        "Fluted shafts, scroll capitals and base profiles repeat across the pair of columns.",
+        "A coordinated stone-effect finish connects the separate architectural details into a consistent decorative composition."
+      ]
     },
     "ornamental-elephant-sculpture": {
       "title": "Ornamental elephant sculpture",
-      "description": "An elephant-head sculpture with prominent curved tusks and ornamental relief. The white surface highlights the patterned detail and layered sculptural form."
+      "description": "An elephant-head sculpture with prominent curved tusks and ornamental relief. The white surface highlights the patterned detail and layered sculptural form.",
+      "details": [
+        "The white surface reveals the ornamental relief and layered forms around the elephant’s head.",
+        "Curved tusks extend the silhouette; the front view shows their relationship to the central sculptural form."
+      ]
     },
     "decorative-entrance-arch": {
       "title": "Decorative entrance arch",
-      "description": "A shaped ornamental surround defines the storefront entrance. The installation photograph shows the light-coloured arch being positioned against the darker facade."
+      "description": "A shaped ornamental surround defines the storefront entrance. The installation photograph shows the light-coloured arch being positioned against the darker facade.",
+      "details": [
+        "The site photograph shows the ornamental surround being positioned around the storefront entrance.",
+        "The curved profile and light surface stand out against the darker facade, making the entrance the visual focus."
+      ]
     }
   },
   "archives": {

@@ -4,10 +4,10 @@ const photos: Record<string, string> = {
   tooling: "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-04.jpeg",
   cnc: "/projects/portfolio/cnc-manufacturing-processes/cnc-manufacturing-processes-04.jpeg"
 };
-export function ProcessVisual({id, title, illustration, detail = false}: {id: string; title: string; illustration: string; detail?: boolean}) {
+export function ProcessVisual({id, title, illustration, detail = false, sizes}: {id: string; title: string; illustration: string; detail?: boolean; sizes?: string}) {
  const photo = photos[id];
  return <figure className="min-w-0"><div className={`relative overflow-hidden bg-[#e9e4d9] ${detail ? "aspect-[16/7]" : "aspect-[16/9]"}`}>
-      {photo ? <Image src={photo} alt={title} fill sizes={detail ? "(min-width: 1024px) 80vw, 100vw" : "(min-width: 1024px) 24vw, (min-width: 640px) 48vw, 100vw"} className="object-cover" /> : <svg viewBox="0 0 480 270" role="img" aria-label={`${illustration}: ${title}`} className="h-full w-full">
+      {photo ? <Image src={photo} alt={title} fill sizes={sizes || (detail ? "(min-width: 1024px) 80vw, 100vw" : "(min-width: 1024px) 30vw, (min-width: 640px) 48vw, 100vw")} className="object-cover" /> : <svg viewBox="0 0 480 270" role="img" aria-label={`${illustration}: ${title}`} className="h-full w-full">
         <defs><pattern id={`fiber-${id}`} width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#252722"/><path d="M0 0h7v14H0z" fill="#45483f"/><path d="M0 7h14" stroke="#111" strokeWidth="3"/></pattern></defs>
         <path d="M55 224h370" stroke="#c4baa8" strokeWidth="2"/>
         {(id === "carbon" || id === "glass") && <g strokeWidth="3" strokeLinejoin="round">

@@ -1,0 +1,254 @@
+{
+  "en": {
+    "sculptural-reception-interior": [
+      "Measured plan, counter functions and wall dimensions",
+      "Finish references, interfaces and service openings",
+      "Delivery access and installation scope"
+    ],
+    "farmasi-boss-trip": [
+      "Object references, quantities and personalisation list",
+      "Approved brand artwork and packaging requirements",
+      "Delivery destination, schedule and intended decorative use"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "Stage plan, access routes and maximum module sizes",
+      "Performer interaction and venue requirements",
+      "Installation window, touring plans and destination"
+    ],
+    "cosmetic-bottle-display-props": [
+      "Packaging drawings or a sample, plus approved brand artwork",
+      "Display dimensions, viewing distance and quantity",
+      "Indoor or outdoor use, handling and mounting requirements"
+    ],
+    "giant-burger-display-prop": [
+      "Product references and intended display size",
+      "Whether visitors can touch or interact with the object",
+      "Display duration, transport route and fixing method"
+    ],
+    "classical-decorative-columns": [
+      "Overall height, diameter and architectural drawings",
+      "Decorative role, interfaces and fixing requirements",
+      "Finish references, quantity and installation setting"
+    ],
+    "ornamental-elephant-sculpture": [
+      "Reference artwork, desired scale and viewing angles",
+      "Wall or support information and available installation space",
+      "Surface finish, lighting and visitor access"
+    ],
+    "decorative-entrance-arch": [
+      "Measured facade drawings and clear entrance dimensions",
+      "Existing structure, fixing interfaces and access constraints",
+      "Exposure conditions, finish reference and installation sequence"
+    ]
+  },
+  "tr": {
+    "sculptural-reception-interior": [
+      "Ölçülü plan, bankonun işlevleri ve duvar ölçüleri",
+      "Yüzey referansları, birleşimler ve tesisat boşlukları",
+      "Teslimat erişimi ve montaj kapsamı"
+    ],
+    "farmasi-boss-trip": [
+      "Obje referansları, adetler ve kişiselleştirme listesi",
+      "Onaylı marka görselleri ve ambalaj gereksinimleri",
+      "Teslimat noktası, takvim ve dekoratif kullanım amacı"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "Sahne planı, erişim yolları ve azami modül ölçüleri",
+      "Sanatçıların dekorla etkileşimi ve mekân gereksinimleri",
+      "Montaj süresi, turne planı ve teslimat noktası"
+    ],
+    "cosmetic-bottle-display-props": [
+      "Ambalaj çizimleri veya numune ve onaylı marka görselleri",
+      "Sergileme ölçüleri, izleme mesafesi ve adet",
+      "İç veya dış mekân kullanımı, taşıma ve sabitleme gereksinimleri"
+    ],
+    "giant-burger-display-prop": [
+      "Ürün referansları ve hedeflenen sergileme ölçüsü",
+      "Ziyaretçilerin objeye dokunup dokunmayacağı veya etkileşime girip girmeyeceği",
+      "Sergileme süresi, taşıma güzergâhı ve sabitleme yöntemi"
+    ],
+    "classical-decorative-columns": [
+      "Toplam yükseklik, çap ve mimari çizimler",
+      "Dekoratif işlev, birleşimler ve sabitleme gereksinimleri",
+      "Yüzey referansları, adet ve montaj ortamı"
+    ],
+    "ornamental-elephant-sculpture": [
+      "Referans görseller, istenen ölçek ve izleme açıları",
+      "Duvar veya taşıyıcı bilgisi ve montaj için ayrılan alan",
+      "Yüzey bitişi, aydınlatma ve ziyaretçi erişimi"
+    ],
+    "decorative-entrance-arch": [
+      "Ölçülü cephe çizimleri ve net giriş ölçüleri",
+      "Mevcut yapı, sabitleme noktaları ve erişim kısıtları",
+      "Dış etkenler, yüzey referansı ve montaj sırası"
+    ]
+  },
+  "de": {
+    "sculptural-reception-interior": [
+      "Bemaßter Grundriss, Thekenfunktionen und Wandmaße",
+      "Oberflächenreferenzen, Anschlüsse und Installationsöffnungen",
+      "Anlieferungszugang und Montageumfang"
+    ],
+    "farmasi-boss-trip": [
+      "Objektreferenzen, Stückzahlen und Personalisierungsliste",
+      "Freigegebene Markengrafiken und Verpackungsanforderungen",
+      "Lieferort, Terminplan und vorgesehene dekorative Nutzung"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "Bühnenplan, Zugangswege und maximale Modulgrößen",
+      "Interaktion der Darsteller mit dem Bühnenbild und Vorgaben des Veranstaltungsorts",
+      "Montagezeitfenster, Tourneeplanung und Lieferort"
+    ],
+    "cosmetic-bottle-display-props": [
+      "Verpackungszeichnungen oder Muster sowie freigegebene Markengrafiken",
+      "Displaymaße, Betrachtungsabstand und Stückzahl",
+      "Innen- oder Außeneinsatz, Handhabung und Befestigung"
+    ],
+    "giant-burger-display-prop": [
+      "Produktreferenzen und gewünschte Displaygröße",
+      "Berührung oder Interaktion durch Besucher",
+      "Ausstellungsdauer, Transportweg und Befestigungsart"
+    ],
+    "classical-decorative-columns": [
+      "Gesamthöhe, Durchmesser und Architekturzeichnungen",
+      "Dekorative Funktion, Anschlüsse und Befestigungsanforderungen",
+      "Oberflächenreferenzen, Stückzahl und Einbauumgebung"
+    ],
+    "ornamental-elephant-sculpture": [
+      "Bildvorlagen, gewünschter Maßstab und Betrachtungswinkel",
+      "Angaben zu Wand oder Träger und verfügbarem Einbauraum",
+      "Oberfläche, Beleuchtung und Besucherzugang"
+    ],
+    "decorative-entrance-arch": [
+      "Bemaßte Fassadenpläne und lichte Eingangsmaße",
+      "Bestehende Struktur, Befestigungspunkte und Zugangsbeschränkungen",
+      "Umwelteinflüsse, Oberflächenreferenz und Montagefolge"
+    ]
+  },
+  "fr": {
+    "sculptural-reception-interior": [
+      "Plan coté, fonctions du comptoir et dimensions des murs",
+      "Références de finition, raccords et passages techniques",
+      "Accès pour la livraison et périmètre de pose"
+    ],
+    "farmasi-boss-trip": [
+      "Références des objets, quantités et liste de personnalisation",
+      "Visuels de marque approuvés et besoins d’emballage",
+      "Destination, calendrier et usage décoratif prévu"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "Plan de scène, accès et dimensions maximales des modules",
+      "Interactions des artistes avec le décor et exigences du lieu",
+      "Créneau de montage, tournée prévue et destination"
+    ],
+    "cosmetic-bottle-display-props": [
+      "Plans d’emballage ou échantillon et visuels de marque approuvés",
+      "Dimensions d’exposition, distance de vue et quantité",
+      "Usage intérieur ou extérieur, manutention et fixation"
+    ],
+    "giant-burger-display-prop": [
+      "Références du produit et dimensions d’exposition souhaitées",
+      "Possibilité pour les visiteurs de toucher l’objet ou d’interagir avec lui",
+      "Durée d’exposition, trajet de transport et fixation"
+    ],
+    "classical-decorative-columns": [
+      "Hauteur totale, diamètre et plans architecturaux",
+      "Fonction décorative, raccords et besoins de fixation",
+      "Références de finition, quantité et lieu de pose"
+    ],
+    "ornamental-elephant-sculpture": [
+      "Références visuelles, échelle et angles de vue souhaités",
+      "Informations sur le mur ou le support et espace disponible",
+      "Finition, éclairage et accès des visiteurs"
+    ],
+    "decorative-entrance-arch": [
+      "Plans de façade cotés et dimensions libres de l’entrée",
+      "Structure existante, points de fixation et contraintes d’accès",
+      "Exposition aux éléments, référence de finition et ordre de pose"
+    ]
+  },
+  "ru": {
+    "sculptural-reception-interior": [
+      "План с размерами, функции стойки и размеры стен",
+      "Образцы отделки, стыки и отверстия для коммуникаций",
+      "Доступ для доставки и объём монтажа"
+    ],
+    "farmasi-boss-trip": [
+      "Примеры объектов, количество и список персонализации",
+      "Утверждённая графика бренда и требования к упаковке",
+      "Место доставки, график и предполагаемое декоративное использование"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "План сцены, пути доступа и максимальные размеры модулей",
+      "Взаимодействие артистов с декорациями и требования площадки",
+      "Время на монтаж, планы гастролей и место доставки"
+    ],
+    "cosmetic-bottle-display-props": [
+      "Чертежи упаковки или образец и утверждённая графика бренда",
+      "Размеры экспозиции, расстояние просмотра и количество",
+      "Использование внутри или снаружи, перемещение и крепление"
+    ],
+    "giant-burger-display-prop": [
+      "Примеры продукта и желаемый размер объекта",
+      "Возможность прикосновения или взаимодействия посетителей с объектом",
+      "Срок экспозиции, маршрут перевозки и способ крепления"
+    ],
+    "classical-decorative-columns": [
+      "Общая высота, диаметр и архитектурные чертежи",
+      "Декоративная функция, стыки и требования к креплению",
+      "Образцы отделки, количество и условия монтажа"
+    ],
+    "ornamental-elephant-sculpture": [
+      "Визуальные образцы, масштаб и углы обзора",
+      "Информация о стене или опоре и доступное пространство",
+      "Отделка поверхности, освещение и доступ посетителей"
+    ],
+    "decorative-entrance-arch": [
+      "Чертежи фасада с размерами и размеры входа в свету",
+      "Существующая конструкция, точки крепления и ограничения доступа",
+      "Внешние воздействия, образец отделки и порядок монтажа"
+    ]
+  },
+  "ar": {
+    "sculptural-reception-interior": [
+      "مخطط بالأبعاد ووظائف المنضدة وأبعاد الجدران",
+      "مراجع التشطيب والوصلات وفتحات الخدمات",
+      "إمكانية الوصول للتسليم ونطاق التركيب"
+    ],
+    "farmasi-boss-trip": [
+      "مراجع المجسمات والكميات وقائمة الأسماء للتخصيص",
+      "رسومات العلامة التجارية المعتمدة ومتطلبات التغليف",
+      "وجهة التسليم والجدول الزمني والاستخدام الزخرفي المقصود"
+    ],
+    "modular-artificial-rock-concert-environment": [
+      "مخطط المسرح ومسارات الوصول والأبعاد القصوى للوحدات",
+      "تفاعل الفنانين مع الديكور ومتطلبات موقع العرض",
+      "الفترة المتاحة للتركيب وخطة الجولات ووجهة التسليم"
+    ],
+    "cosmetic-bottle-display-props": [
+      "رسومات العبوة أو عينة منها ورسومات العلامة التجارية المعتمدة",
+      "أبعاد العرض ومسافة المشاهدة والكمية",
+      "استخدام داخلي أو خارجي ومتطلبات المناولة والتثبيت"
+    ],
+    "giant-burger-display-prop": [
+      "مراجع المنتج وحجم العرض المطلوب",
+      "إمكانية لمس الزوار للمجسم أو التفاعل معه",
+      "مدة العرض ومسار النقل وطريقة التثبيت"
+    ],
+    "classical-decorative-columns": [
+      "الارتفاع الكلي والقطر والرسومات المعمارية",
+      "الدور الزخرفي والوصلات ومتطلبات التثبيت",
+      "مراجع التشطيب والكمية وبيئة التركيب"
+    ],
+    "ornamental-elephant-sculpture": [
+      "المراجع البصرية والحجم وزوايا المشاهدة المطلوبة",
+      "معلومات الجدار أو الدعامة والمساحة المتاحة للتركيب",
+      "تشطيب السطح والإضاءة ووصول الزوار"
+    ],
+    "decorative-entrance-arch": [
+      "رسومات واجهة بالأبعاد والأبعاد الصافية للمدخل",
+      "الهيكل القائم ونقاط التثبيت وقيود الوصول",
+      "ظروف التعرض للعوامل الخارجية ومرجع التشطيب وتسلسل التركيب"
+    ]
+  }
+}

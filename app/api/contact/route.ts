@@ -4,6 +4,7 @@ import { validateLocalized } from "@/lib/i18n/validation";
 import { pagePath } from "@/lib/i18n/routes";
 import { parseAttachments, type EnquiryAttachment } from "@/lib/enquiry-attachments";
 import { NextResponse } from "next/server";
+import { EnquiryPayloadError, readEnquiryPayload } from "@/lib/enquiry-payload";
 import {
   fieldLabels,
   initialEnquiry,
@@ -97,13 +98,9 @@ export async function POST(request: Request) {
   let t = dictionary(locale);
   let payload: Record<string, unknown>;
   try {
-    const body = await request.text();
-    if (Buffer.byteLength(body) > 3 * 1024 * 1024) return NextResponse.json({ error: t.error_files }, { status: 413 });
-    const value: unknown = JSON.parse(body);
-    if (!value || typeof value !== "object" || Array.isArray(value))
-      throw new Error("Invalid body");
-    payload = value as Record<string, unknown>;
-  } catch {
+    payload = await readEnquiryPayload(request);
+  } catch (error) {
+    if (error instanceof EnquiryPayloadError && error.status === 413) return NextResponse.json({ error: t.error_files }, { status: 413 });
     return NextResponse.json({ error: t.error_request }, { status: 400 });
   }
 

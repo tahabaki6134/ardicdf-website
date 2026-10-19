@@ -25,27 +25,51 @@
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Décor rocheux modulaire de concert",
-      "description": "Un décor de rochers artificiels en modules EPS transportables, assemblés en paysage continu autour de la scène. Le projet relie la fabrication en atelier à l’installation achevée dans l’arène."
+      "description": "Un décor de rochers artificiels en modules EPS transportables, assemblés en paysage continu autour de la scène. Le projet relie la fabrication en atelier à l’installation achevée dans l’arène.",
+      "details": [
+        "Des modules rocheux transportables en EPS s’assemblent pour former un paysage scénique continu. Les images d’atelier et de salle montrent le passage des formes séparées au décor monté.",
+        "Les vues finales montrent comment les rochers encadrent l’espace de spectacle à différentes distances."
+      ]
     },
     "cosmetic-bottle-display-props": {
       "title": "Présentoirs en forme de flacons cosmétiques",
-      "description": "Des emballages agrandis deviennent le point focal d’un espace de marque. Profils de flacons, bouchons façonnés, surfaces colorées et graphismes rendent les produits reconnaissables."
+      "description": "Des emballages agrandis deviennent le point focal d’un espace de marque. Profils de flacons, bouchons façonnés, surfaces colorées et graphismes rendent les produits reconnaissables.",
+      "details": [
+        "Les profils des flacons, les détails des bouchons et les graphismes appliqués rendent les produits reconnaissables.",
+        "Plusieurs formes et traitements de couleur réunis sur la photo illustrent la variété des objets de présentation de la collection."
+      ]
     },
     "giant-burger-display-prop": {
       "title": "Burger géant pour présentation",
-      "description": "Un décor alimentaire sculpté avec des couches d’ingrédients façonnées séparément, des textures et une mise en couleur. La photo d’atelier montre l’assemblage et le traitement de surface."
+      "description": "Un décor alimentaire sculpté avec des couches d’ingrédients façonnées séparément, des textures et une mise en couleur. La photo d’atelier montre l’assemblage et le traitement de surface.",
+      "details": [
+        "Les ingrédients sculptés séparément donnent de la profondeur au burger assemblé, avec des surfaces texturées et peintes.",
+        "La vue d’atelier montre la composition complète ainsi que le relief des différentes couches."
+      ]
     },
     "classical-decorative-columns": {
       "title": "Colonnes décoratives classiques",
-      "description": "Deux colonnes décoratives à fûts cannelés, chapiteaux à volutes et bases. Les détails architecturaux répétés sont unifiés par une finition effet pierre."
+      "description": "Deux colonnes décoratives à fûts cannelés, chapiteaux à volutes et bases. Les détails architecturaux répétés sont unifiés par une finition effet pierre.",
+      "details": [
+        "Fûts cannelés, chapiteaux à volutes et profils des bases se répètent sur les deux colonnes.",
+        "Une finition coordonnée à effet pierre réunit les détails architecturaux dans une composition décorative cohérente."
+      ]
     },
     "ornamental-elephant-sculpture": {
       "title": "Sculpture d’éléphant ornementale",
-      "description": "Une tête d’éléphant sculptée avec des défenses courbes et des reliefs ornementaux. La surface blanche révèle les motifs et les volumes superposés."
+      "description": "Une tête d’éléphant sculptée avec des défenses courbes et des reliefs ornementaux. La surface blanche révèle les motifs et les volumes superposés.",
+      "details": [
+        "La surface blanche révèle les reliefs ornementaux et les formes superposées autour de la tête d’éléphant.",
+        "Les défenses courbes prolongent la silhouette ; la vue de face montre leur rapport avec la forme sculpturale centrale."
+      ]
     },
     "decorative-entrance-arch": {
       "title": "Arche d’entrée décorative",
-      "description": "Un encadrement ornemental façonné donne son caractère à l’entrée du commerce. La photo de pose montre l’arche claire positionnée devant la façade sombre."
+      "description": "Un encadrement ornemental façonné donne son caractère à l’entrée du commerce. La photo de pose montre l’arche claire positionnée devant la façade sombre.",
+      "details": [
+        "La photo de chantier montre la mise en place de l’encadrement ornemental autour de l’entrée du magasin.",
+        "Le profil courbe et la surface claire se détachent de la façade sombre et soulignent visuellement l’entrée."
+      ]
     }
   },
   "archives": {

@@ -27,7 +27,7 @@ All six editions submit to the existing same-origin `/api/contact` endpoint and 
 
 Public enquiry settings remain `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and optionally `CONTACT_NOTIFICATION_EMAIL`. Preview hostnames require permitted Turnstile configuration to submit real forms. No credential has been copied into source, and no external verification or email protection has been removed. The form displays a direct-contact fallback if configuration is unavailable.
 
-Files remain limited to 3 PDF/JPG/PNG/WebP attachments, 2 MB combined. They are checked on the server and sent only to the team, never to a public image store or in the customer confirmation. Public example IDs can remain in session storage; form text, country and personal contact fields are not added to language-switch URLs.
+Files are limited to 6 PDF/JPG/PNG/WebP attachments, 4 MB combined (decimal bytes). Multipart upload avoids base64 request overhead; the server stops reading at 4.3 MB, leaving room below the hosting request limit. File types, signatures, names and combined size are checked on the server. Attachments are sent only to the team, never to a public image store or in the customer confirmation. Public example IDs can remain in session storage; form text, country and personal contact fields are not added to language-switch URLs.
 
 ## Review
 

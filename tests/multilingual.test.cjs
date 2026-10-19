@@ -39,7 +39,13 @@ test('six complete dictionaries, technical content and portfolio assets', () => 
       for(const key of ['steps','uses','drivers','limits']) assert.ok(copy[key].length,`${locale}/${id}/${key}`);
     }
     assert.equal(methodCopy(locale,'carbon').processes.length,3);
-    for(const project of projects) assert.ok(content.projects[project.id]?.description);
+    for(const project of projects) {
+      const copy = content.projects[project.id];
+      assert.ok(copy?.description);
+      assert.ok(copy.details?.length >= 2, `${locale}/${project.id}/details`);
+      assert.equal(copy.briefChecklist?.length, 3, `${locale}/${project.id}/briefChecklist`);
+    }
+    assert.notEqual(pageMetadata(locale, {kind:'services'}).description, pageMetadata(locale, {kind:'compare'}).description);
     for(const category of portfolioCategories.filter(c=>c.published!==false)) assert.ok(content.archives[category.slug]?.title);
     if(locale!=='en') assert.notEqual(t.hero_intro,dictionary('en').hero_intro);
   }

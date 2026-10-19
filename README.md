@@ -23,7 +23,7 @@ The endpoint reports success only after the team's notification has been accepte
 - `lib/planning.ts` supplies the planning guide and its matching FAQ structured data.
 - Visitors can filter work, select up to six examples, share a selection link and carry it into the short enquiry form.
 - Only public portfolio IDs are stored in session storage or share links. Personal and project form text stays in page memory until submission.
-- Visitors can attach up to three PDF/JPG/PNG/WebP files (2 MB total); larger CAD files use a share-link field. Validated file bytes are attached only to the team notification. There is no instant pricing calculator.
+- Visitors can attach up to six PDF/JPG/PNG/WebP files (4 MB total, decimal bytes); larger CAD files use a share-link field. Files use multipart upload to avoid base64 request overhead and stay below the hosting limit. The API bounds streamed requests at 4.3 MB, validates files, and retains compatibility with older JSON clients. Validated file bytes are attached only to the team notification. There is no instant pricing calculator.
 - Keep all existing gallery and service URLs. Update `app/sitemap.ts` when publishing substantive content changes.
 
 Do not invent client names, dimensions, lead times, certifications or materials when extending the portfolio. Add these details only when verified project records are available. New project/sector pages have page-specific metadata and structured data; search or AI recommendations are not guaranteed.
