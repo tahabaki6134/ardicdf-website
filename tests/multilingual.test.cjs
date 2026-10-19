@@ -99,7 +99,7 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
     assert.equal(meta.alternates.languages['x-default'],siteOrigin+pagePath('en',page));
     assert.ok(meta.title&&meta.description);
   }
-  assert.equal(urls.size,252);
+  assert.equal(urls.size,258);
   for(const m of manufacturingMethods) {
     assert.equal(pagePath('tr',{kind:'method',id:m.id}),'/tr'+methodPath(m,'tr'));
     assert.equal(pagePath('en',{kind:'method',id:m.id}),'/en'+methodPath(m,'en'));
@@ -147,7 +147,7 @@ test('sitemap URLs are final and indexable; utility pages retain readable noinde
   const robots=require('../app/robots.ts').default;
   process.env.VERCEL_ENV='production';
   const entries=sitemap();
-  assert.equal(entries.length,246);
+  assert.equal(entries.length,252);
   const urls=new Set(entries.map(entry=>entry.url));
   assert.equal(urls.size,entries.length);
   for(const entry of entries) {
@@ -251,4 +251,27 @@ test('FARMASI gallery, translations, enquiry selection and sharing metadata stay
   }
   const {parseSelectedProjects}=require('../lib/projects.ts');
   assert.deepEqual(parseSelectedProjects(project.id),[project.id]);
+});
+
+
+test('gallery includes published images once, labels concepts and localizes routes', () => {
+  const {galleryImages} = require('../lib/photo-gallery.ts');
+  const aliases = require('../lib/gallery-image-aliases.json');
+  const crypto = require('node:crypto');
+  const baseline = galleryImages('en');
+  const hashes = baseline.map(image => crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'public',image.src))).digest('hex'));
+  assert.equal(new Set(hashes).size, hashes.length, 'No byte-identical photographs should repeat');
+  const canonical = src => aliases[src] || src;
+  const sourcePaths = new Set(baseline.map(image=>image.src));
+  for (const src of require('../lib/site-showcase.ts').concertDetailImages) assert.ok(sourcePaths.has(canonical(src)),src);
+  for (const p of projects) for (const src of [p.image,...(p.gallery || []).map(i=>i.src)]) assert.ok(sourcePaths.has(canonical(src)),src);
+  for (const c of portfolioCategories.filter(c=>c.published!==false)) for (const image of c.images) assert.ok(sourcePaths.has(canonical(getPortfolioImageSrc(image))));
+  for (const c of conceptCollections) for (const src of [c.image,...(c.galleryImages || []).map(i=>i.src)].filter(Boolean)) assert.equal(baseline.find(i=>i.src===canonical(src)).concept,true);
+  for (const locale of locales) {
+    const images=galleryImages(locale);
+    assert.deepEqual(images.map(i=>i.src),baseline.map(i=>i.src));
+    assert.ok(images.every(i=>i.title && i.src.startsWith('/')));
+    assert.equal(resolvePage(locale,['gallery']).kind,'gallery');
+    assert.ok(pageMetadata(locale,{kind:'gallery'}).description);
+  }
 });

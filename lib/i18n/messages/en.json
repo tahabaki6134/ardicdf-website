@@ -179,5 +179,18 @@
   "seo_services_title": "CNC, Composites, 3D Printing & Custom Fabrication",
   "seo_compare_title": "Compare Materials & Fabrication Methods",
   "seo_works_title": "Scenic, Sculptural & Brand Fabrication Projects",
-  "seo_workshop_title": "Istanbul Workshop & Production Capabilities"
+  "seo_workshop_title": "Istanbul Workshop & Production Capabilities",
+  "nav_gallery": "Gallery",
+  "gallery_title": "All images, one place.",
+  "gallery_intro": "Explore our project photographs, workshop images and clearly labelled design concepts in one continuous gallery.",
+  "gallery_download": "Download watermarked image",
+  "gallery_loading": "Preparing download…",
+  "gallery_error": "The download could not be prepared. Please try again.",
+  "gallery_watermark": "Downloads include an ARDIÇ DESIGN FABRICATION watermark.",
+  "gallery_view": "View image",
+  "gallery_previous": "Previous image",
+  "gallery_next": "Next image",
+  "gallery_concept": "Design concept",
+  "gallery_success": "Download prepared.",
+  "gallery_all": "View all images"
 }

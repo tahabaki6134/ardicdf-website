@@ -34,3 +34,6 @@ export const showcase = [
 export function showcaseHref(item: typeof showcase[number], lang: Language) {
   return lang === "en" ? `/works/${item.id}` : item.archive;
 }
+
+// Shared by the case study and the unified gallery.
+export const concertDetailImages = [showcase[0].image, ...["side-view", "full-stage", "performance-detail-01", "performance-detail-02"].map(name => "/works/modular-artificial-rock-concert-environment/concert-rock-environment-" + name + ".jpeg")];

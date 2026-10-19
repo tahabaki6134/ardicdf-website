@@ -179,5 +179,18 @@
   "seo_services_title": "CNC, Verbundwerkstoffe, 3D-Druck & Sonderfertigung",
   "seo_compare_title": "Materialien und Fertigungsverfahren vergleichen",
   "seo_works_title": "Projekte: Bühnenbilder, Skulpturen und Markenobjekte",
-  "seo_workshop_title": "Werkstatt und Fertigungsmöglichkeiten in Istanbul"
+  "seo_workshop_title": "Werkstatt und Fertigungsmöglichkeiten in Istanbul",
+  "nav_gallery": "Galerie",
+  "gallery_title": "Alle Bilder an einem Ort.",
+  "gallery_intro": "Entdecken Sie Projektfotos, Werkstattbilder und gekennzeichnete Designkonzepte in einer durchgehenden Galerie.",
+  "gallery_download": "Bild mit Wasserzeichen herunterladen",
+  "gallery_loading": "Download wird vorbereitet…",
+  "gallery_error": "Das Bild konnte nicht vorbereitet werden. Bitte erneut versuchen.",
+  "gallery_watermark": "Downloads enthalten ein Wasserzeichen von ARDIÇ DESIGN FABRICATION.",
+  "gallery_view": "Bild vergrößern",
+  "gallery_previous": "Vorheriges Bild",
+  "gallery_next": "Nächstes Bild",
+  "gallery_concept": "Designkonzept",
+  "gallery_success": "Download vorbereitet.",
+  "gallery_all": "Alle Bilder ansehen"
 }

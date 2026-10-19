@@ -28,6 +28,12 @@ The endpoint reports success only after the team's notification has been accepte
 
 Do not invent client names, dimensions, lead times, certifications or materials when extending the portfolio. Add these details only when verified project records are available. New project/sector pages have page-specific metadata and structured data; search or AI recommendations are not guaranteed.
 
+## Gallery
+
+The main menu and homepage link to `/en/gallery` (and the five other language editions). `lib/photo-gallery.ts` collects all published project, archive and concept images in a single lazy-loaded grid. Byte-identical legacy copies are mapped in `lib/gallery-image-aliases.json`; reused concept covers retain their concept label. There are no category tabs or pagination.
+
+The image viewer supports keyboard navigation and a watermarked JPEG download. The browser renders an iridescent central ARDIÇ mark and a footer into the downloaded pixels, preserving aspect ratio and limiting the long edge to 4096 pixels. Original assets stay unchanged. This is a branded download feature, not DRM: public original files and screenshots cannot be prevented.
+
 ## Checks
 
 Run `pnpm lint`, `node --test tests/contact.test.cjs` and `pnpm build`.

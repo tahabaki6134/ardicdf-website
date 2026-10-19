@@ -179,5 +179,18 @@
   "seo_services_title": "CNC, Kompozit, 3D Baskı ve Özel İmalat",
   "seo_compare_title": "Malzeme ve Üretim Yöntemlerini Karşılaştır",
   "seo_works_title": "Sahne, Heykel ve Marka Objesi Projeleri",
-  "seo_workshop_title": "İstanbul Atölyesi ve Üretim Kapasitesi"
+  "seo_workshop_title": "İstanbul Atölyesi ve Üretim Kapasitesi",
+  "nav_gallery": "Galeri",
+  "gallery_title": "Tüm görseller bir arada.",
+  "gallery_intro": "Proje fotoğraflarımızı, atölye görsellerimizi ve ayrıca belirtilen tasarım konseptlerini tek bir galeride inceleyin.",
+  "gallery_download": "Filigranlı görseli indir",
+  "gallery_loading": "İndirme hazırlanıyor…",
+  "gallery_error": "Görsel hazırlanamadı. Lütfen tekrar deneyin.",
+  "gallery_watermark": "İndirilen görseller ARDIÇ DESIGN FABRICATION filigranı içerir.",
+  "gallery_view": "Görseli büyüt",
+  "gallery_previous": "Önceki görsel",
+  "gallery_next": "Sonraki görsel",
+  "gallery_concept": "Tasarım konsepti",
+  "gallery_success": "İndirme hazırlandı.",
+  "gallery_all": "Tüm görselleri gör"
 }
