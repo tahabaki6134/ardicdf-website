@@ -263,6 +263,7 @@ test('gallery includes published images once, labels concepts and localizes rout
   assert.equal(new Set(hashes).size, hashes.length, 'No byte-identical photographs should repeat');
   const canonical = src => aliases[src] || src;
   const sourcePaths = new Set(baseline.map(image=>image.src));
+  for (const src of require('../lib/site-showcase.ts').concertDetailImages) assert.ok(sourcePaths.has(canonical(src)),src);
   for (const p of projects) for (const src of [p.image,...(p.gallery || []).map(i=>i.src)]) assert.ok(sourcePaths.has(canonical(src)),src);
   for (const c of portfolioCategories.filter(c=>c.published!==false)) for (const image of c.images) assert.ok(sourcePaths.has(canonical(getPortfolioImageSrc(image))));
   for (const c of conceptCollections) for (const src of [c.image,...(c.galleryImages || []).map(i=>i.src)].filter(Boolean)) assert.equal(baseline.find(i=>i.src===canonical(src)).concept,true);

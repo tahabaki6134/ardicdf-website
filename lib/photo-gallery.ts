@@ -1,3 +1,5 @@
+import { concertDetailImages, showcase } from "./site-showcase";
+import { industries } from "./industries";
 import { projects } from "./projects";
 import { portfolioCategories, getPortfolioImageSrc, conceptCollections } from "./content";
 import { localizedContent } from "./i18n/content";
@@ -22,6 +24,8 @@ export function galleryImages(locale: Locale): GalleryImage[] {
     add(project.image, copy.title);
     project.gallery?.forEach((image, i) => add(image.src, copy.gallery?.[i]?.alt || copy.title));
   }
+  concertDetailImages.forEach(src => add(src, content.projects[showcase[0].id].title));
+  industries.forEach(industry => add(industry.image, content.industries[industry.slug].title));
   for (const category of portfolioCategories.filter(c => c.published !== false)) {
     const title = content.archives[category.slug].title;
     if (category.coverImage) add(category.coverImage, title);
