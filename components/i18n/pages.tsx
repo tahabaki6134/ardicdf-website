@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { PhotoGallery } from "./photo-gallery";
+import { galleryImages } from "@/lib/photo-gallery";
 import Link from "next/link";
 import { dictionary, type Dictionary } from "@/lib/i18n/dictionary";
 import { localizedContent } from "@/lib/i18n/content";
@@ -39,6 +41,7 @@ export function LocalizedPage({ locale, page }: { locale: Locale; page: Page }) 
   const props = { locale, t };
   let body: React.ReactNode;
   switch (page.kind) {
+    case "gallery": body = <><Intro title={t.gallery_title} text={t.gallery_intro} eyebrow={t.nav_gallery} /><PhotoGallery images={galleryImages(locale)} t={t} /></>; break;
     case "country": { const copy = countryPages.find(p => p.locale === locale && p.country === page.id)!; body = <><Intro title={copy.title} text={copy.description} eyebrow={t.production_location} /><div className="mt-8 max-w-4xl space-y-5 leading-8">{copy.paragraphs.map(text => <p key={text}>{text}</p>)}</div><CTA {...props} /></>; break; }
     case "home": body = <><HomeShowcase {...props} /><section id="featured-projects" className="mt-12"><p className="eyebrow">{t.works_eyebrow}</p><div className="mt-3 flex flex-wrap items-end justify-between gap-5"><h2 className="font-display text-3xl md:text-4xl">{t.works_title}</h2><Link className="text-link" href={pagePath(locale, { kind: "works" })}>{t.all_projects} ↗</Link></div><WorkCards {...props} ids={["modular-artificial-rock-concert-environment", "farmasi-boss-trip", "classical-decorative-columns"]} /></section><InternationalSummary {...props} /><CompactMethods {...props} /><Scope {...props} /><CTA {...props} /></>; break;
     case "services": body = <><Intro title={t.methods_title} text={t.methods_intro} eyebrow={t.methods_eyebrow} /><Link className="text-link mt-6 inline-block" href={pagePath(locale, { kind: "compare" })}>{t.compare_cta} ↗</Link><MethodGrid {...props} /><p className="mt-7 text-sm leading-7 text-ink/65">{t.cost_note}</p><CTA {...props} /></>; break;

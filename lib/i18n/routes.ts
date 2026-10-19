@@ -15,9 +15,9 @@ const industryIds = ["retail-brand-activations", "events-exhibitions", "museums-
 import { locales, prefix, homePath, isLocale, type Locale } from "./locales";
 import { countryPages } from "./country-pages";
 
-export type Page = { kind: "home" | "services" | "compare" | "works" | "about" | "workshop" | "contact" | "privacy" | "concepts" | "planning" | "industries" | "selection" | "method" | "project" | "archive" | "industry" | "country"; id?: string };
-export const staticPages: Page["kind"][] = ["home", "services", "compare", "works", "about", "workshop", "contact", "privacy", "concepts", "planning", "industries", "selection"];
-const staticSegments: Record<string, string> = { home: "", services: "services", compare: "compare", works: "works", about: "about", workshop: "fabrication", contact: "contact", privacy: "privacy", concepts: "concepts", planning: "planning", industries: "industries", selection: "project-selection" };
+export type Page = { kind: "home" | "gallery" | "services" | "compare" | "works" | "about" | "workshop" | "contact" | "privacy" | "concepts" | "planning" | "industries" | "selection" | "method" | "project" | "archive" | "industry" | "country"; id?: string };
+export const staticPages: Page["kind"][] = ["home", "gallery", "services", "compare", "works", "about", "workshop", "contact", "privacy", "concepts", "planning", "industries", "selection"];
+const staticSegments: Record<string, string> = { home: "", gallery: "gallery", services: "services", compare: "compare", works: "works", about: "about", workshop: "fabrication", contact: "contact", privacy: "privacy", concepts: "concepts", planning: "planning", industries: "industries", selection: "project-selection" };
 export const allPages: Page[] = [
   ...staticPages.map(kind => ({ kind })),
   ...[...manufacturingMethods.map(m => m.id), "cnc"].map(id => ({ kind: "method" as const, id })),

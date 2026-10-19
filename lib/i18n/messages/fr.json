@@ -179,5 +179,18 @@
   "seo_services_title": "CNC, Composites, Impression 3D et Fabrication sur Mesure",
   "seo_compare_title": "Comparer les Matériaux et Procédés de Fabrication",
   "seo_works_title": "Projets de Décors, Sculptures et Objets de Marque",
-  "seo_workshop_title": "Atelier et Capacités de Production à Istanbul"
+  "seo_workshop_title": "Atelier et Capacités de Production à Istanbul",
+  "nav_gallery": "Galerie",
+  "gallery_title": "Toutes les images au même endroit.",
+  "gallery_intro": "Découvrez nos photos de projets, notre atelier et nos concepts de design clairement identifiés dans une galerie continue.",
+  "gallery_download": "Télécharger avec filigrane",
+  "gallery_loading": "Préparation du téléchargement…",
+  "gallery_error": "Impossible de préparer cette image. Veuillez réessayer.",
+  "gallery_watermark": "Les images téléchargées portent le filigrane ARDIÇ DESIGN FABRICATION.",
+  "gallery_view": "Agrandir l’image",
+  "gallery_previous": "Image précédente",
+  "gallery_next": "Image suivante",
+  "gallery_concept": "Concept de design",
+  "gallery_success": "Téléchargement préparé.",
+  "gallery_all": "Voir toutes les images"
 }

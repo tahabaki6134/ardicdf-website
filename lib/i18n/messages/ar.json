@@ -179,5 +179,18 @@
   "seo_services_title": "تصنيع CNC والكومبوزيت والطباعة ثلاثية الأبعاد",
   "seo_compare_title": "مقارنة المواد وطرق التصنيع",
   "seo_works_title": "مشاريع الديكور والمنحوتات ومجسمات العلامات التجارية",
-  "seo_workshop_title": "ورشة إسطنبول وقدرات الإنتاج"
+  "seo_workshop_title": "ورشة إسطنبول وقدرات الإنتاج",
+  "nav_gallery": "المعرض",
+  "gallery_title": "كل الصور في مكان واحد.",
+  "gallery_intro": "تصفح صور مشاريعنا وورشتنا ومفاهيم التصميم الموضحة بوضوح في معرض واحد متواصل.",
+  "gallery_download": "تنزيل الصورة بعلامة مائية",
+  "gallery_loading": "جارٍ تجهيز التنزيل…",
+  "gallery_error": "تعذر تجهيز الصورة. يرجى المحاولة مجدداً.",
+  "gallery_watermark": "تتضمن الصور المنزلة علامة ARDIÇ DESIGN FABRICATION المائية.",
+  "gallery_view": "تكبير الصورة",
+  "gallery_previous": "الصورة السابقة",
+  "gallery_next": "الصورة التالية",
+  "gallery_concept": "مفهوم تصميم",
+  "gallery_success": "تم تجهيز التنزيل.",
+  "gallery_all": "عرض جميع الصور"
 }

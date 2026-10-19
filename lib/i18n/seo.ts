@@ -11,7 +11,7 @@ export function pageMetadata(locale: Locale, page: Page): Metadata {
   const t = dictionary(locale), content = localizedContent(locale);
   let title: string = (t as Record<string, string>)[`nav_${page.kind}`] || t.hero_title;
   let description = t.hero_intro;
-  const introKeys = { home: "hero_intro", services: "methods_intro", compare: "compare_intro", works: "works_intro", workshop: "workshop_intro", about: "about_intro", contact: "contact_intro", privacy: "privacy_body", concepts: "concepts_intro", planning: "planning_intro", industries: "applications_intro", selection: "selection_intro" } as const;
+  const introKeys = { home: "hero_intro", gallery: "gallery_intro", services: "methods_intro", compare: "compare_intro", works: "works_intro", workshop: "workshop_intro", about: "about_intro", contact: "contact_intro", privacy: "privacy_body", concepts: "concepts_intro", planning: "planning_intro", industries: "applications_intro", selection: "selection_intro" } as const;
   if (page.kind in introKeys) description = t[introKeys[page.kind as keyof typeof introKeys]];
   if (page.kind === "home") title = t.hero_seo_title;
   if (page.kind === "services") title = t.seo_services_title;
