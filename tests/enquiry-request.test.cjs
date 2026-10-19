@@ -40,4 +40,17 @@ test('client delivery does not report success for failures or leave a stalled re
     global.fetch = async () => { throw new TypeError('connection lost'); };
     await assert.rejects(sendEnquiry({}, 'fr'), e => e.reason === 'network');
   });
+  await t.test('attachments use raw multipart bytes and the browser boundary', async () => {
+    const { File } = require('node:buffer');
+    global.fetch = async (_url, options) => {
+      assert.ok(options.body instanceof FormData);
+      assert.equal(options.headers['Content-Type'], undefined);
+      assert.equal(options.headers['X-ARDIC-Language'], 'tr');
+      assert.equal(JSON.parse(options.body.get('payload')).message, 'Çizim');
+      assert.equal(options.body.get('attachments').name, 'drawing.pdf');
+      assert.equal(await options.body.get('attachments').text(), '%PDF-1.4');
+      return Response.json({ ok: true, confirmationSent: true });
+    };
+    assert.deepEqual(await sendEnquiry({ message: 'Çizim' }, 'tr', 60_000, [new File(['%PDF-1.4'], 'drawing.pdf')]), { confirmationSent: true });
+  });
 });

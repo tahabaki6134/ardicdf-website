@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useProjectSelection } from "../project-selection-provider";
 import { MAX_SELECTED_PROJECTS, parseSelectedProjects } from "@/lib/projects";
 import { pagePath } from "@/lib/i18n/routes";
@@ -10,6 +11,19 @@ export function SelectButton({ id, t }: { id: string; t: Dictionary }) {
   const { selected, ready, toggle } = useProjectSelection();
   const active = selected.includes(id);
   return <button type="button" aria-pressed={active} disabled={!ready || (!active && selected.length >= MAX_SELECTED_PROJECTS)} onClick={() => toggle(id)} className="button-secondary text-sm">{active ? "✓" : "+"} {active ? t.selected_project : t.select_project}</button>;
+}
+export function SelectionBar({ locale, t }: { locale: Locale; t: Dictionary }) {
+  const { selected, ready } = useProjectSelection();
+  const pathname = usePathname();
+  const contactPath = pagePath(locale, { kind: "contact" });
+  if (!ready || !selected.length || pathname === contactPath) return null;
+  const query = "?selected=" + selected.join(",");
+  return <aside className="selection-bar" aria-label={t.nav_selection}>
+    <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-2">
+      <div className="min-w-0"><p role="status" className="text-sm font-semibold">{t.selection_count.replace("{count}", String(selected.length))}</p><Link className="inline-block min-h-11 py-2 text-sm underline underline-offset-4" href={pagePath(locale, { kind: "selection" }) + query}>{t.selection_review}</Link></div>
+      <Link className="button-primary text-sm" href={contactPath + query + "#brief"}>{t.selection_quote} <span aria-hidden="true">↗</span></Link>
+    </div>
+  </aside>;
 }
 export function SelectionList({ locale, t, names }: { locale: Locale; t: Dictionary; names: Record<string, string> }) {
   const { selected, ready, toggle, setSelected } = useProjectSelection();

@@ -25,27 +25,51 @@
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modüler konser kaya dekoru",
-      "description": "Taşınabilir EPS modüllerle üretilen yapay kaya dekoru, konser sahnesi çevresinde devamlı bir peyzaj oluşturacak şekilde birleştirildi. Atölye üretiminden tamamlanmış arena uygulamasına uzanan bir örnek."
+      "description": "Taşınabilir EPS modüllerle üretilen yapay kaya dekoru, konser sahnesi çevresinde devamlı bir peyzaj oluşturacak şekilde birleştirildi. Atölye üretiminden tamamlanmış arena uygulamasına uzanan bir örnek.",
+      "details": [
+        "Taşınabilir EPS kaya modülleri birleşerek kesintisiz bir sahne peyzajı oluşturuyor. Atölye ve arena görselleri, ayrı parçalardan kurulu dekora geçişi gösteriyor.",
+        "Tamamlanmış sahne görüntülerinde kaya formlarının performans alanını farklı izleme mesafelerinde nasıl çerçevelediği görülüyor."
+      ]
     },
     "cosmetic-bottle-display-props": {
       "title": "Büyük kozmetik şişesi teşhirleri",
-      "description": "Ambalaj biçimini büyüterek marka alanının odak noktasına dönüştüren teşhirler. Şişe profilleri, kapak ayrıntıları, renkli yüzeyler ve uygulanan grafikler ürünün tanınmasını sağlar."
+      "description": "Ambalaj biçimini büyüterek marka alanının odak noktasına dönüştüren teşhirler. Şişe profilleri, kapak ayrıntıları, renkli yüzeyler ve uygulanan grafikler ürünün tanınmasını sağlar.",
+      "details": [
+        "Şişe profilleri, kapak detayları ve uygulanan grafikler ürünlerin tanınmasını sağlıyor.",
+        "Portfolyo fotoğrafında bir arada görülen farklı formlar ve renk uygulamaları, koleksiyondaki sergileme objelerinin çeşitliliğini gösteriyor."
+      ]
     },
     "giant-burger-display-prop": {
       "title": "Büyük burger teşhir heykeli",
-      "description": "Ayrı şekillendirilmiş malzeme katmanları, dokulu yüzeyler ve boyayla oluşturulan büyük bir yiyecek heykeli. Atölye fotoğrafı parçaların birleşimini ve yüzey uygulamasını gösterir."
+      "description": "Ayrı şekillendirilmiş malzeme katmanları, dokulu yüzeyler ve boyayla oluşturulan büyük bir yiyecek heykeli. Atölye fotoğrafı parçaların birleşimini ve yüzey uygulamasını gösterir.",
+      "details": [
+        "Ayrı ayrı şekillendirilmiş malzeme katmanları, dokulu ve boyalı yüzeylerle burger formuna derinlik kazandırıyor.",
+        "Atölye görüntüsü hem bütün kompozisyonu hem de katmanların kabartılı detaylarını gösteriyor."
+      ]
     },
     "classical-decorative-columns": {
       "title": "Klasik dekoratif kolonlar",
-      "description": "Yivli gövdeler, kıvrımlı başlıklar ve kaidelerle oluşturulmuş iki dekoratif kolon. Tekrarlanan mimari ayrıntılar taş efektli son yüzeyle bütünleşir."
+      "description": "Yivli gövdeler, kıvrımlı başlıklar ve kaidelerle oluşturulmuş iki dekoratif kolon. Tekrarlanan mimari ayrıntılar taş efektli son yüzeyle bütünleşir.",
+      "details": [
+        "Yivli gövdeler, kıvrımlı başlıklar ve kaide profilleri iki kolonda da tekrarlanıyor.",
+        "Uyumlu taş efektli yüzey, ayrı mimari detayları bütünlüklü bir dekoratif kompozisyonda birleştiriyor."
+      ]
     },
     "ornamental-elephant-sculpture": {
       "title": "Rölyefli fil heykeli",
-      "description": "Belirgin kıvrımlı dişler ve yüzey rölyefleriyle tamamlanmış fil başı heykeli. Beyaz yüzey, desenli ayrıntıları ve katmanlı heykelsi formu görünür kılar."
+      "description": "Belirgin kıvrımlı dişler ve yüzey rölyefleriyle tamamlanmış fil başı heykeli. Beyaz yüzey, desenli ayrıntıları ve katmanlı heykelsi formu görünür kılar.",
+      "details": [
+        "Beyaz yüzey, fil başının çevresindeki süslemeli kabartmaları ve katmanlı formları belirginleştiriyor.",
+        "Kıvrımlı dişler silueti genişletiyor; önden görünüm bu parçaların ana heykelsi formla ilişkisini gösteriyor."
+      ]
     },
     "decorative-entrance-arch": {
       "title": "Dekoratif giriş kemeri",
-      "description": "Mağaza girişini tanımlayan özel biçimli ve rölyefli kemer. Uygulama fotoğrafında açık renkli parçanın koyu cephe önüne yerleştirilmesi görülür."
+      "description": "Mağaza girişini tanımlayan özel biçimli ve rölyefli kemer. Uygulama fotoğrafında açık renkli parçanın koyu cephe önüne yerleştirilmesi görülür.",
+      "details": [
+        "Saha fotoğrafı, süslemeli çevre elemanının mağaza girişine yerleştirilme aşamasını gösteriyor.",
+        "Kavisli profil ve açık renkli yüzey, koyu cepheye karşı belirginleşerek girişi görsel odak haline getiriyor."
+      ]
     }
   },
   "archives": {

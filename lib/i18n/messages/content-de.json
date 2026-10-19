@@ -25,27 +25,51 @@
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modulare Felskulisse für ein Konzert",
-      "description": "Eine künstliche Felslandschaft aus transportierbaren EPS-Modulen, die rund um die Konzertbühne zusammengefügt wurden. Das Projekt zeigt den Weg von der Werkstattfertigung bis zum fertigen Aufbau in der Arena."
+      "description": "Eine künstliche Felslandschaft aus transportierbaren EPS-Modulen, die rund um die Konzertbühne zusammengefügt wurden. Das Projekt zeigt den Weg von der Werkstattfertigung bis zum fertigen Aufbau in der Arena.",
+      "details": [
+        "Transportfähige EPS-Felsmodule verbinden sich zu einer durchgehenden Bühnenlandschaft. Werkstatt- und Arenabilder zeigen den Weg von einzelnen Formen zum aufgebauten Bühnenbild.",
+        "Die fertigen Ansichten zeigen, wie die Felsformen den Aufführungsbereich aus verschiedenen Betrachtungsabständen rahmen."
+      ]
     },
     "cosmetic-bottle-display-props": {
       "title": "Übergroße Kosmetikflaschen für Displays",
-      "description": "Vergrößerte Verpackungsformen als Blickfang im Markenauftritt. Flaschenkonturen, geformte Verschlüsse, farbige Oberflächen und aufgebrachte Grafiken machen das Produkt erkennbar."
+      "description": "Vergrößerte Verpackungsformen als Blickfang im Markenauftritt. Flaschenkonturen, geformte Verschlüsse, farbige Oberflächen und aufgebrachte Grafiken machen das Produkt erkennbar.",
+      "details": [
+        "Flaschenprofile, Kappendetails und aufgebrachte Grafiken machen die Produktformen erkennbar.",
+        "Mehrere Formen und Farbgestaltungen sind gemeinsam im Portfoliofoto zu sehen und zeigen die Bandbreite der Displayobjekte."
+      ]
     },
     "giant-burger-display-prop": {
       "title": "Übergroßes Burger-Display",
-      "description": "Ein plastisches Lebensmittel-Display mit einzeln geformten Zutatenlagen, strukturierten Flächen und Bemalung. Das Werkstattfoto zeigt Zusammenbau und Oberflächenbehandlung."
+      "description": "Ein plastisches Lebensmittel-Display mit einzeln geformten Zutatenlagen, strukturierten Flächen und Bemalung. Das Werkstattfoto zeigt Zusammenbau und Oberflächenbehandlung.",
+      "details": [
+        "Einzeln geformte Zutaten verleihen dem zusammengesetzten Burger Tiefe, Struktur und bemalte Oberflächen.",
+        "Die Werkstattaufnahme zeigt sowohl die Gesamtkomposition als auch das Relief der einzelnen Schichten."
+      ]
     },
     "classical-decorative-columns": {
       "title": "Klassische Dekorsäulen",
-      "description": "Ein Paar Dekorsäulen mit kannelierten Schäften, Volutenkapitellen und Sockeln. Wiederkehrende architektonische Details werden durch eine abgestimmte Steinoptik verbunden."
+      "description": "Ein Paar Dekorsäulen mit kannelierten Schäften, Volutenkapitellen und Sockeln. Wiederkehrende architektonische Details werden durch eine abgestimmte Steinoptik verbunden.",
+      "details": [
+        "Kannelierte Schäfte, Volutenkapitelle und Sockelprofile wiederholen sich an beiden Säulen.",
+        "Die abgestimmte Steinoptik verbindet die architektonischen Details zu einer einheitlichen dekorativen Komposition."
+      ]
     },
     "ornamental-elephant-sculpture": {
       "title": "Ornamentale Elefantenskulptur",
-      "description": "Eine Elefantenkopf-Skulptur mit markanten gebogenen Stoßzähnen und ornamentalen Reliefs. Die weiße Oberfläche hebt Muster und plastische Schichtung hervor."
+      "description": "Eine Elefantenkopf-Skulptur mit markanten gebogenen Stoßzähnen und ornamentalen Reliefs. Die weiße Oberfläche hebt Muster und plastische Schichtung hervor.",
+      "details": [
+        "Die weiße Oberfläche lässt das ornamentale Relief und die geschichteten Formen am Elefantenkopf hervortreten.",
+        "Gebogene Stoßzähne erweitern die Silhouette; die Vorderansicht zeigt ihre Beziehung zur zentralen skulpturalen Form."
+      ]
     },
     "decorative-entrance-arch": {
       "title": "Dekorativer Eingangsbogen",
-      "description": "Ein geformter, ornamentaler Rahmen prägt den Ladeneingang. Das Montagefoto zeigt den hellen Bogen beim Einsetzen vor der dunkleren Fassade."
+      "description": "Ein geformter, ornamentaler Rahmen prägt den Ladeneingang. Das Montagefoto zeigt den hellen Bogen beim Einsetzen vor der dunkleren Fassade.",
+      "details": [
+        "Die Baustellenaufnahme zeigt die Positionierung der ornamentalen Einfassung am Ladeneingang.",
+        "Das geschwungene Profil und die helle Oberfläche heben sich von der dunklen Fassade ab und betonen den Eingang."
+      ]
     }
   },
   "archives": {

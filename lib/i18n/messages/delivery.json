@@ -4,8 +4,8 @@
       "hero_eyebrow": "ARDIÇ · Bespoke project fabrication",
       "hero_title": "From a single piece",
       "hero_accent": "to a complete project.",
-      "hero_intro": "Bespoke furniture, sculptural interiors and facade elements for projects across Europe and beyond. Design development, fabrication and delivery, with installation planned for your site.",
-      "hero_seo_title": "Bespoke Furniture & Project Fabrication for Europe",
+      "hero_intro": "Sculptural interiors, stage scenery, oversized brand props and bespoke furniture. From design development to workshop fabrication, delivery and installation planned around your project.",
+      "hero_seo_title": "Scenic, Sculptural & Bespoke Project Fabrication",
       "footer_note": "An EPSLAM company. Design, digital fabrication and workshop craft.",
       "international_title": "Planning your project from abroad.",
       "international_intro": "Production is based in Istanbul, Türkiye. For projects in Europe, Russia and the Gulf, we agree the drawings, finish, packing, destination and installation responsibilities before production.",
@@ -32,7 +32,7 @@
       {"question": "Where is the project manufactured?", "answer": "Our production base is in Ataşehir, Istanbul, Türkiye. European projects are coordinated from this workshop; delivery and any site work are scoped for the destination."},
       {"question": "What is included in delivery?", "answer": "The written quotation specifies the delivery point and responsibilities. Packing, freight, insurance, customs, taxes, unloading and installation must be checked against that scope; there is no single delivery price for every project."},
       {"question": "How is the schedule agreed?", "answer": "Share the required delivery or opening date. Drawings, approvals, samples, production, transport and any site access window are considered together before a programme is confirmed."},
-      {"question": "Can I send large CAD files?", "answer": "Yes, add a share link in the enquiry form for larger drawings or 3D models. Direct attachments accept PDF, JPG, PNG and WebP, up to 3 files and 2 MB total. If confidentiality requires an NDA, send a general outline first."}
+      {"question": "Can I send large CAD files?", "answer": "Yes, add a share link in the enquiry form for larger drawings or 3D models. Direct attachments accept PDF, JPG, PNG and WebP, up to 6 files and 4 MB total. If confidentiality requires an NDA, send a general outline first."}
     ],
     "project": {
       "title": "Sculptural reception & wall elements",
@@ -48,8 +48,8 @@
       "hero_eyebrow": "ARDIÇ · Projeye özel imalat",
       "hero_title": "Tek parçadan",
       "hero_accent": "bütün bir projeye.",
-      "hero_intro": "Avrupa ve diğer pazarlardaki projeler için özel mobilya, heykelsi iç mekân elemanları ve cephe imalatı. Projelendirme, üretim ve teslimat; ihtiyaca göre yerinde montaj.",
-      "hero_seo_title": "Avrupa Projeleri İçin Özel Mobilya ve İmalat",
+      "hero_intro": "Heykelsi iç mekânlar, sahne dekorları, dev marka objeleri ve özel mobilyalar. Tasarım geliştirmeden atölye üretimine, teslimattan montaja kadar projenize uygun çözümler.",
+      "hero_seo_title": "Sahne Dekoru, Heykel ve Projeye Özel İmalat",
       "footer_note": "Bir EPSLAM şirketi. Tasarım, dijital üretim ve atölye ustalığı.",
       "international_title": "Yurt dışından projenizi birlikte planlayalım.",
       "international_intro": "Üretim merkezimiz İstanbul, Türkiye’dedir. Avrupa, Rusya ve Körfez projelerinde çizimleri, yüzeyi, paketlemeyi, teslimat adresini ve montaj sorumluluklarını üretimden önce netleştiriyoruz.",
@@ -76,7 +76,7 @@
       {"question": "Üretim nerede yapılıyor?", "answer": "Üretim merkezimiz İstanbul Ataşehir’dedir. Avrupa projeleri bu atölyeden koordine edilir; teslimat ve gerekiyorsa saha çalışması varış noktasına göre kapsamlandırılır."},
       {"question": "Teslimata neler dahil?", "answer": "Teslimat noktası ve sorumluluklar yazılı teklifte belirtilir. Paketleme, taşıma, sigorta, gümrük, vergiler, boşaltma ve montajın bu kapsamda olup olmadığı kontrol edilir; her proje için tek bir sabit teslimat bedeli yoktur."},
       {"question": "İş takvimi nasıl belirleniyor?", "answer": "Hedef teslim veya açılış tarihini paylaşın. Çizim, onay, numune, üretim, nakliye ve varsa saha erişim aralığı birlikte değerlendirilerek takvim netleştirilir."},
-      {"question": "Büyük CAD dosyası gönderebilir miyim?", "answer": "Büyük çizimleri ve 3D modelleri teklif formundaki paylaşım bağlantısı alanından iletebilirsiniz. Doğrudan ekler PDF, JPG, PNG ve WebP biçiminde en fazla 3 dosya ve toplam 2 MB olabilir. Gizlilik sözleşmesi gerekiyorsa önce genel bir açıklama paylaşın."}
+      {"question": "Büyük CAD dosyası gönderebilir miyim?", "answer": "Büyük çizimleri ve 3D modelleri teklif formundaki paylaşım bağlantısı alanından iletebilirsiniz. Doğrudan ekler PDF, JPG, PNG ve WebP biçiminde en fazla 6 dosya ve toplam 4 MB olabilir. Gizlilik sözleşmesi gerekiyorsa önce genel bir açıklama paylaşın."}
     ],
     "project": {
       "title": "Heykelsi banko ve duvar elemanları",
@@ -92,8 +92,8 @@
       "hero_eyebrow": "ARDIÇ · Projektbezogene Sonderfertigung",
       "hero_title": "Vom Einzelstück",
       "hero_accent": "zum Gesamtprojekt.",
-      "hero_intro": "Maßmöbel, plastische Raumelemente und Fassadenelemente für Projekte in Europa und darüber hinaus. Planung, Fertigung und Lieferung – mit Montage nach Projektumfang.",
-      "hero_seo_title": "Maßmöbel und Sonderfertigung für Projekte in Europa",
+      "hero_intro": "Skulpturale Innenräume, Bühnenbilder, übergroße Markenobjekte und Maßmöbel. Von der Entwurfsentwicklung über die Fertigung bis zu Lieferung und projektbezogener Montage.",
+      "hero_seo_title": "Bühnenbilder, Skulpturen & Sonderfertigung",
       "footer_note": "Ein EPSLAM-Unternehmen. Design, digitale Fertigung und Handwerk.",
       "international_title": "Ihr Projekt aus dem Ausland planen.",
       "international_intro": "Unser Fertigungsstandort liegt in Istanbul, Türkei. Für Projekte in Europa, Russland und den Golfstaaten stimmen wir Zeichnungen, Oberflächen, Verpackung, Lieferort und Montagezuständigkeiten vor der Produktion ab.",
@@ -120,7 +120,7 @@
       {"question": "Wo wird gefertigt?", "answer": "Unser Fertigungsstandort befindet sich in Ataşehir, Istanbul, Türkei. Von dort koordinieren wir europäische Projekte; Lieferung und mögliche Arbeiten vor Ort werden für das jeweilige Ziel geplant."},
       {"question": "Was ist in der Lieferung enthalten?", "answer": "Lieferpunkt und Zuständigkeiten stehen im schriftlichen Angebot. Verpackung, Fracht, Versicherung, Zoll, Steuern, Entladung und Montage sind anhand dieses Umfangs zu prüfen. Einen einheitlichen Lieferpreis für alle Projekte gibt es nicht."},
       {"question": "Wie wird der Zeitplan festgelegt?", "answer": "Teilen Sie uns den gewünschten Liefer- oder Eröffnungstermin mit. Zeichnungen, Freigaben, Muster, Fertigung, Transport und verfügbare Montagezeiten werden gemeinsam berücksichtigt, bevor der Ablauf bestätigt wird."},
-      {"question": "Kann ich große CAD-Dateien senden?", "answer": "Für größere Zeichnungen und 3D-Modelle können Sie im Anfrageformular einen Freigabelink angeben. Direkt anhängen lassen sich bis zu 3 PDF-, JPG-, PNG- oder WebP-Dateien mit insgesamt 2 MB. Wenn eine Geheimhaltungsvereinbarung erforderlich ist, genügt zunächst eine allgemeine Beschreibung."}
+      {"question": "Kann ich große CAD-Dateien senden?", "answer": "Für größere Zeichnungen und 3D-Modelle können Sie im Anfrageformular einen Freigabelink angeben. Direkt anhängen lassen sich bis zu 6 PDF-, JPG-, PNG- oder WebP-Dateien mit insgesamt 4 MB. Wenn eine Geheimhaltungsvereinbarung erforderlich ist, genügt zunächst eine allgemeine Beschreibung."}
     ],
     "project": {
       "title": "Skulpturale Empfangstheke und Wandelemente",
@@ -136,8 +136,8 @@
       "hero_eyebrow": "ARDIÇ · Fabrication sur mesure",
       "hero_title": "D’une pièce unique",
       "hero_accent": "au projet complet.",
-      "hero_intro": "Mobilier sur mesure, éléments sculpturaux et éléments de façade pour vos projets en Europe et au-delà. Études, fabrication et livraison, avec une pose définie selon le chantier.",
-      "hero_seo_title": "Mobilier et fabrication sur mesure pour l’Europe",
+      "hero_intro": "Intérieurs sculpturaux, décors de scène, objets de marque géants et mobilier sur mesure. Du développement du design à la fabrication, la livraison et la pose adaptées à votre projet.",
+      "hero_seo_title": "Décors, Sculptures et Fabrication sur Mesure",
       "footer_note": "Une société d’EPSLAM. Conception, fabrication numérique et savoir-faire d’atelier.",
       "international_title": "Planifier votre projet à distance.",
       "international_intro": "Notre site de production se trouve à Istanbul, en Turquie. Pour les projets en Europe, en Russie et dans le Golfe, nous définissons plans, finitions, emballage, destination et responsabilités de pose avant la fabrication.",
@@ -164,7 +164,7 @@
       {"question": "Où la fabrication est-elle réalisée ?", "answer": "Notre site de production est situé à Ataşehir, Istanbul, en Turquie. Nous y coordonnons les projets européens ; la livraison et les éventuelles interventions sur site sont étudiées selon la destination."},
       {"question": "Que comprend la livraison ?", "answer": "Le devis écrit précise le point de livraison et les responsabilités. Emballage, transport, assurance, douane, taxes, déchargement et pose doivent être vérifiés dans ce périmètre. Il n’existe pas de prix de livraison unique pour tous les projets."},
       {"question": "Comment le calendrier est-il établi ?", "answer": "Indiquez la date de livraison ou d’ouverture souhaitée. Plans, validations, échantillons, fabrication, transport et créneaux d’accès au chantier sont pris en compte avant de confirmer le calendrier."},
-      {"question": "Puis-je transmettre des fichiers CAO volumineux ?", "answer": "Ajoutez un lien de partage dans le formulaire pour les plans et modèles 3D volumineux. Les pièces jointes acceptent les formats PDF, JPG, PNG et WebP, jusqu’à 3 fichiers et 2 Mo au total. Si un accord de confidentialité est nécessaire, commencez par une description générale."}
+      {"question": "Puis-je transmettre des fichiers CAO volumineux ?", "answer": "Ajoutez un lien de partage dans le formulaire pour les plans et modèles 3D volumineux. Les pièces jointes acceptent les formats PDF, JPG, PNG et WebP, jusqu’à 6 fichiers et 4 Mo au total. Si un accord de confidentialité est nécessaire, commencez par une description générale."}
     ],
     "project": {
       "title": "Banque d’accueil et éléments muraux sculpturaux",
@@ -180,8 +180,8 @@
       "hero_eyebrow": "ARDIÇ · Изготовление по индивидуальным проектам",
       "hero_title": "От одной детали",
       "hero_accent": "до целого проекта.",
-      "hero_intro": "Мебель на заказ, скульптурные элементы интерьера и фасадные детали для проектов в Европе и других регионах. Проектирование, изготовление и доставка; монтаж — по согласованному объёму работ.",
-      "hero_seo_title": "Мебель на заказ и комплексное изготовление для Европы",
+      "hero_intro": "Скульптурные интерьеры, сценические декорации, гигантские брендированные объекты и мебель на заказ. Разработка дизайна, изготовление, доставка и монтаж с учётом вашего проекта.",
+      "hero_seo_title": "Декорации, Скульптуры и Изготовление на Заказ",
       "footer_note": "Компания EPSLAM. Дизайн, цифровое производство и мастерство.",
       "international_title": "Как организовать проект из другой страны.",
       "international_intro": "Наша производственная база находится в Стамбуле, Турция. Для проектов в Европе, России и странах Персидского залива до начала производства согласуем чертежи, отделку, упаковку, место доставки и ответственность за монтаж.",
@@ -208,7 +208,7 @@
       {"question": "Где выполняется производство?", "answer": "Наша производственная база находится в Аташехире, Стамбул, Турция. Отсюда координируются европейские проекты; доставка и возможные работы на объекте планируются для конкретного места назначения."},
       {"question": "Что входит в доставку?", "answer": "В письменном предложении указываются пункт доставки и обязанности сторон. Упаковку, перевозку, страхование, таможню, налоги, разгрузку и монтаж нужно проверять по этому объёму. Единой цены доставки для всех проектов нет."},
       {"question": "Как согласуются сроки?", "answer": "Сообщите желаемую дату доставки или открытия. До подтверждения графика учитываются чертежи, согласования, образцы, производство, транспорт и доступное время для работ на объекте."},
-      {"question": "Можно отправить большие CAD-файлы?", "answer": "Для больших чертежей и 3D-моделей добавьте ссылку в форму заявки. Вложения принимаются в PDF, JPG, PNG и WebP: до 3 файлов общим объёмом 2 МБ. Если требуется соглашение о конфиденциальности, сначала пришлите общее описание."}
+      {"question": "Можно отправить большие CAD-файлы?", "answer": "Для больших чертежей и 3D-моделей добавьте ссылку в форму заявки. Вложения принимаются в PDF, JPG, PNG и WebP: до 6 файлов общим объёмом 4 МБ. Если требуется соглашение о конфиденциальности, сначала пришлите общее описание."}
     ],
     "project": {
       "title": "Скульптурная стойка ресепшен и стеновые элементы",
@@ -224,8 +224,8 @@
       "hero_eyebrow": "ARDIÇ · تصنيع مخصص للمشاريع",
       "hero_title": "من قطعة واحدة",
       "hero_accent": "إلى مشروع متكامل.",
-      "hero_intro": "أثاث حسب الطلب وعناصر داخلية نحتية وعناصر واجهات لمشاريع في أوروبا وخارجها. تطوير التصميم والتصنيع والتسليم، مع تحديد أعمال التركيب وفق متطلبات الموقع.",
-      "hero_seo_title": "أثاث حسب الطلب وتصنيع متكامل للمشاريع في أوروبا",
+      "hero_intro": "تصاميم داخلية نحتية وديكورات مسرحية ومجسمات ضخمة للعلامات التجارية وأثاث حسب الطلب. من تطوير التصميم إلى التصنيع والتسليم والتركيب وفق متطلبات مشروعك.",
+      "hero_seo_title": "ديكورات ومجسمات وتصنيع حسب الطلب",
       "footer_note": "إحدى شركات EPSLAM. تصميم وتصنيع رقمي وحرفية الورشة.",
       "international_title": "خطط لمشروعك معنا من خارج تركيا.",
       "international_intro": "يقع مركز إنتاجنا في إسطنبول، تركيا. لمشاريع أوروبا وروسيا ودول الخليج، نتفق على الرسومات والتشطيبات والتغليف ووجهة التسليم ومسؤوليات التركيب قبل بدء الإنتاج.",
@@ -252,7 +252,7 @@
       {"question": "أين يتم التصنيع؟", "answer": "يقع مركز إنتاجنا في أتاشهير، إسطنبول، تركيا. ننسق المشاريع الأوروبية من هذه الورشة، ويحدد نطاق التسليم وأعمال الموقع عند الحاجة بحسب الوجهة."},
       {"question": "ماذا يشمل التسليم؟", "answer": "يحدد عرض السعر المكتوب نقطة التسليم والمسؤوليات. يجب مراجعة التغليف والشحن والتأمين والجمارك والضرائب والتفريغ والتركيب ضمن ذلك النطاق؛ فلا يوجد سعر تسليم موحد لكل المشاريع."},
       {"question": "كيف يحدد الجدول الزمني؟", "answer": "شاركنا تاريخ التسليم أو الافتتاح المطلوب. نراعي الرسومات والاعتمادات والعينات والإنتاج والنقل والفترة المتاحة لدخول الموقع قبل تأكيد الجدول."},
-      {"question": "هل يمكنني إرسال ملفات CAD كبيرة؟", "answer": "أضف رابط مشاركة في نموذج الطلب للرسومات والنماذج ثلاثية الأبعاد الكبيرة. تقبل المرفقات المباشرة PDF وJPG وPNG وWebP، بحد أقصى 3 ملفات ومجموع 2 ميغابايت. إذا كانت هناك حاجة لاتفاقية سرية، أرسل وصفاً عاماً أولاً."}
+      {"question": "هل يمكنني إرسال ملفات CAD كبيرة؟", "answer": "أضف رابط مشاركة في نموذج الطلب للرسومات والنماذج ثلاثية الأبعاد الكبيرة. تقبل المرفقات المباشرة PDF وJPG وPNG وWebP، بحد أقصى 6 ملفات ومجموع 4 ميغابايت. إذا كانت هناك حاجة لاتفاقية سرية، أرسل وصفاً عاماً أولاً."}
     ],
     "project": {
       "title": "كاونتر استقبال وعناصر جدارية نحتية",
