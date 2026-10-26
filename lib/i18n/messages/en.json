@@ -197,5 +197,16 @@
   "season_title": "Festive orders are now open.",
   "season_body": "We are taking orders for mascots, seasonal décor and bespoke projects. Our workshop schedule is busy. Send your brief early so we can plan your delivery together.",
   "season_cta": "Request a project quote",
-  "season_continue": "Continue exploring"
+  "season_continue": "Continue exploring",
+  "targetDeliveryDate": "Target delivery or event date",
+  "budgetRange": "Approximate budget",
+  "delivery_date_help": "Enter a date, a date range or let us know if it is flexible.",
+  "budget_help": "Include an amount or range and the currency. Leave blank if not yet defined.",
+  "enquiry_summary": "Your enquiry summary",
+  "error_files_count": "You can attach up to 6 files.",
+  "error_files_size": "The attachments exceed the 4 MB total limit. You can share large files using a download link.",
+  "error_files_format": "Choose non-empty PDF, JPG, PNG or WebP files. File names must be 180 characters or fewer.",
+  "files_not_added": "The newly selected files were not added. Your previous attachments are unchanged.",
+  "use_share_link": "Add a share link",
+  "large_files_help": "For large photographs, CAD drawings or 3D models, add a download link below and make sure our team can open it. You do not need to compress your original files."
 }

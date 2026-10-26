@@ -197,5 +197,16 @@
   "season_title": "Les commandes pour les fêtes sont ouvertes.",
   "season_body": "Nous prenons les commandes de mascottes, de décors festifs et de projets sur mesure. Notre atelier est très sollicité. Envoyez votre projet dès maintenant pour préparer ensemble votre livraison.",
   "season_cta": "Demander un devis",
-  "season_continue": "Continuer la visite"
+  "season_continue": "Continuer la visite",
+  "targetDeliveryDate": "Date de livraison ou de l’événement souhaitée",
+  "budgetRange": "Budget approximatif",
+  "delivery_date_help": "Indiquez une date, une période ou précisez si le calendrier est flexible.",
+  "budget_help": "Indiquez un montant ou une fourchette avec la devise. Laissez vide si le budget n’est pas encore défini.",
+  "enquiry_summary": "Récapitulatif de votre demande",
+  "error_files_count": "Vous pouvez joindre jusqu’à 6 fichiers.",
+  "error_files_size": "Les pièces jointes dépassent la limite totale de 4 Mo. Vous pouvez partager les fichiers volumineux par un lien de téléchargement.",
+  "error_files_format": "Choisissez des fichiers PDF, JPG, PNG ou WebP non vides. Les noms de fichiers ne doivent pas dépasser 180 caractères.",
+  "files_not_added": "Les nouveaux fichiers sélectionnés n’ont pas été ajoutés. Vos pièces jointes précédentes sont inchangées.",
+  "use_share_link": "Ajouter un lien de partage",
+  "large_files_help": "Pour les photos volumineuses, dessins CAO ou modèles 3D, ajoutez un lien de téléchargement ci-dessous et vérifiez que notre équipe peut l’ouvrir. Vous n’avez pas besoin de compresser vos fichiers originaux."
 }

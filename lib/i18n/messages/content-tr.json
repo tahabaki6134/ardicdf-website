@@ -2,9 +2,9 @@
   "projects": {
     "farmasi-boss-trip": {
       "title": "FARMASI · Boss Trip etkinlik koleksiyonu",
-      "description": "Kişiye özel yelkenli masa objeleri, dekoratif simitler ve markalı sunum kutusu. Denizcilik teması; isim, grafik ve ambalaj detaylarıyla aynı koleksiyonda buluşuyor.",
+      "description": "Kişiye özel yelkenli masa objeleri, dekoratif simitler ve markalı sunum ambalajından oluşan denizcilik temalı etkinlik koleksiyonu. İsimler, marka grafikleri ve ambalaj aynı görsel dilde bir araya geliyor.",
       "details": [
-        "Tek bir obje yerine birbiriyle uyumlu parçalar: kişiselleştirilmiş masa düzeni, dekoratif objeler ve kutulu sunum.",
+        "Yelkenli masa objeleri, ahşap görünümüyle kişiye özel isimleri ve FARMASI Boss Trip grafiklerini birleştiriyor. Siyah-beyaz dekoratif simitlerde şerit, dikiş ve halat detayları; kutulu sunumda ise markalı ambalaj öne çıkıyor.",
         "Benzer bir talepte adetleri, isim listesini, marka dosyalarını, ambalajı ve teslim yerini birlikte değerlendiriyoruz. Üretim yöntemi, ölçüler ve son yüzey proje için ayrıca belirlenir."
       ],
       "gallery": [
@@ -21,14 +21,42 @@
           "caption": "Kutulu sunum · Markalı kutu, yerleşim ve tamamlayıcı ambalaj detayları."
         }
       ],
-      "note": "Görseller projenin sunumunu gösterir. Simit biçimli objeler dekoratif amaçlıdır; can kurtarma ekipmanı olarak sunulmaz."
+      "note": "Görseller projenin sunumunu gösterir. Simit biçimli objeler dekoratif amaçlıdır; can kurtarma ekipmanı olarak sunulmaz.",
+      "facts": [
+        {
+          "label": "Koleksiyon",
+          "value": "Yelkenli masa objeleri, dekoratif simitler ve sunum ambalajı"
+        },
+        {
+          "label": "Kişiselleştirme",
+          "value": "Kişiye özel isimler ve FARMASI Boss Trip grafikleri"
+        },
+        {
+          "label": "Dekoratif detaylar",
+          "value": "Ahşap görünümü, siyah-beyaz yüzeyler, dikiş ve halat"
+        }
+      ]
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modüler konser kaya dekoru",
-      "description": "Taşınabilir EPS modüllerle üretilen yapay kaya dekoru, konser sahnesi çevresinde devamlı bir peyzaj oluşturacak şekilde birleştirildi. Atölye üretiminden tamamlanmış arena uygulamasına uzanan bir örnek.",
+      "description": "Taşınabilir EPS modüllerden üretilen yapay kaya dekoru. Atölyede hazırlanan parçalar, konser sahnesinin çevresinde kesintisiz bir peyzaj oluşturacak şekilde sahada birleştirildi.",
       "details": [
-        "Taşınabilir EPS kaya modülleri birleşerek kesintisiz bir sahne peyzajı oluşturuyor. Atölye ve arena görselleri, ayrı parçalardan kurulu dekora geçişi gösteriyor.",
-        "Tamamlanmış sahne görüntülerinde kaya formlarının performans alanını farklı izleme mesafelerinde nasıl çerçevelediği görülüyor."
+        "Kaya formları, ayrı taşınabilen EPS modüller olarak üretildi. Atölye üretimini yerinde montaj izledi.",
+        "Birleşen modüller, sahnenin çevresinde devamlı bir kaya peyzajı oluşturuyor. Kaya formları performans alanını çerçeveliyor."
+      ],
+      "facts": [
+        {
+          "label": "Kullanım",
+          "value": "Konser sahnesi çevresinde yapay kaya dekoru"
+        },
+        {
+          "label": "Üretim",
+          "value": "Taşınabilir EPS modüller"
+        },
+        {
+          "label": "Uygulama",
+          "value": "Atölye üretimi ve yerinde montaj"
+        }
       ]
     },
     "cosmetic-bottle-display-props": {

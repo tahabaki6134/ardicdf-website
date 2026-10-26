@@ -2,9 +2,9 @@
   "projects": {
     "farmasi-boss-trip": {
       "title": "FARMASI · Collection événementielle Boss Trip",
-      "description": "Voiliers de table personnalisés, anneaux décoratifs et coffret de présentation aux couleurs de la marque. Les noms, les graphismes et l’emballage déclinent un même thème nautique.",
+      "description": "Une collection événementielle sur le thème nautique : voiliers de table personnalisés, anneaux décoratifs et emballage de présentation aux couleurs de la marque. Noms, graphismes et emballage partagent une même identité visuelle.",
       "details": [
-        "Au-delà d’un objet isolé : des éléments de table, des objets décoratifs et une présentation en coffret coordonnés.",
+        "Les voiliers de table associent un aspect bois aux noms personnalisés et aux graphismes FARMASI Boss Trip. Les anneaux décoratifs noirs et blancs présentent des bandes, des coutures et des cordages ; l’emballage de marque complète la présentation en coffret.",
         "Pour un projet similaire, nous étudions ensemble les quantités, la liste des noms, les fichiers de marque, l’emballage et le lieu de livraison. Les procédés de fabrication, les dimensions et les finitions sont définis pour chaque projet."
       ],
       "gallery": [
@@ -21,14 +21,42 @@
           "caption": "Présentation en coffret · Emballage de marque, disposition et détails de finition."
         }
       ],
-      "note": "Ces visuels présentent la collection du projet. Les objets en forme de bouée sont décoratifs et ne sont pas proposés comme équipements de sauvetage."
+      "note": "Ces visuels présentent la collection du projet. Les objets en forme de bouée sont décoratifs et ne sont pas proposés comme équipements de sauvetage.",
+      "facts": [
+        {
+          "label": "Collection",
+          "value": "Voiliers de table, anneaux décoratifs et emballage de présentation"
+        },
+        {
+          "label": "Personnalisation",
+          "value": "Noms individuels et graphismes FARMASI Boss Trip"
+        },
+        {
+          "label": "Détails décoratifs",
+          "value": "Aspect bois, surfaces noires et blanches, coutures et cordages"
+        }
+      ]
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Décor rocheux modulaire de concert",
-      "description": "Un décor de rochers artificiels en modules EPS transportables, assemblés en paysage continu autour de la scène. Le projet relie la fabrication en atelier à l’installation achevée dans l’arène.",
+      "description": "Un décor de rochers artificiels réalisé en modules EPS transportables. Les éléments fabriqués en atelier ont été assemblés sur place pour former un paysage continu autour de la scène de concert.",
       "details": [
-        "Des modules rocheux transportables en EPS s’assemblent pour former un paysage scénique continu. Les images d’atelier et de salle montrent le passage des formes séparées au décor monté.",
-        "Les vues finales montrent comment les rochers encadrent l’espace de spectacle à différentes distances."
+        "Les formes rocheuses ont été fabriquées en modules EPS distincts et transportables. La fabrication en atelier a été suivie de l’assemblage sur place.",
+        "Les modules assemblés composent un paysage rocheux continu autour de la scène. Les formes rocheuses encadrent l’espace de spectacle."
+      ],
+      "facts": [
+        {
+          "label": "Application",
+          "value": "Décor rocheux artificiel autour d’une scène de concert"
+        },
+        {
+          "label": "Construction",
+          "value": "Modules EPS transportables"
+        },
+        {
+          "label": "Étapes",
+          "value": "Fabrication en atelier et assemblage sur place"
+        }
       ]
     },
     "cosmetic-bottle-display-props": {

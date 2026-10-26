@@ -2,9 +2,9 @@
   "projects": {
     "farmasi-boss-trip": {
       "title": "FARMASI · Boss Trip event collection",
-      "description": "Personalised sailboat table pieces, decorative rings and branded presentation packaging. A nautical theme connects the individual names, graphics and packaging across the collection.",
+      "description": "A nautical-themed event collection of personalised sailboat table pieces, decorative rings and branded presentation packaging. Individual names, brand graphics and packaging share a consistent visual identity.",
       "details": [
-        "More than a single object: coordinated table pieces, decorative objects and a boxed presentation.",
+        "The sailboat table pieces combine a wood-effect appearance with individual names and FARMASI Boss Trip graphics. Black-and-white decorative rings carry strap, stitching and rope details, with branded packaging completing the boxed presentation.",
         "For a similar brief, we review quantities, the personalisation list, brand artwork, packaging and delivery destination together. Manufacturing methods, dimensions and finishes are agreed for each project."
       ],
       "gallery": [
@@ -21,14 +21,42 @@
           "caption": "Boxed presentation · Branded packaging, arrangement and finishing details."
         }
       ],
-      "note": "The images present the project collection. The ring-shaped objects are decorative and are not offered as lifesaving equipment."
+      "note": "The images present the project collection. The ring-shaped objects are decorative and are not offered as lifesaving equipment.",
+      "facts": [
+        {
+          "label": "Collection",
+          "value": "Sailboat table pieces, decorative rings and presentation packaging"
+        },
+        {
+          "label": "Personalisation",
+          "value": "Individual names and FARMASI Boss Trip graphics"
+        },
+        {
+          "label": "Decorative details",
+          "value": "Wood-effect appearance, black-and-white surfaces, stitching and rope"
+        }
+      ]
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modular rock concert environment",
-      "description": "An artificial-rock environment made as transportable EPS modules and assembled into a continuous landscape around the concert stage. The project follows workshop production through to the completed arena setting.",
+      "description": "Artificial-rock scenery made from transportable EPS modules. Workshop-produced pieces were assembled on site into a continuous landscape around the concert stage.",
       "details": [
-        "Transportable EPS rock modules connect into a continuous stage landscape. Workshop and arena images show the transition from separate forms to the assembled setting.",
-        "The completed views show how the rock forms frame the performance area at different viewing distances."
+        "The rock forms were produced as separate, transportable EPS modules. Workshop fabrication was followed by on-site assembly.",
+        "The assembled modules create a continuous rock landscape around the stage. The rock forms frame the performance area."
+      ],
+      "facts": [
+        {
+          "label": "Application",
+          "value": "Artificial-rock scenery around a concert stage"
+        },
+        {
+          "label": "Construction",
+          "value": "Transportable EPS modules"
+        },
+        {
+          "label": "Process",
+          "value": "Workshop fabrication and on-site assembly"
+        }
       ]
     },
     "cosmetic-bottle-display-props": {
