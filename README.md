@@ -23,20 +23,20 @@ The endpoint reports success only after the team's notification has been accepte
 - `lib/planning.ts` supplies the planning guide and its matching FAQ structured data.
 - Visitors can filter work, select up to six examples, share a selection link and carry it into the short enquiry form.
 - Only public portfolio IDs are stored in session storage or share links. Personal and project form text stays in page memory until submission.
-- Visitors can attach up to six PDF/JPG/PNG/WebP files (4 MB total, decimal bytes); larger CAD files use a share-link field. Files use multipart upload to avoid base64 request overhead and stay below the hosting limit. The API bounds streamed requests at 4.3 MB, validates files, and retains compatibility with older JSON clients. Validated file bytes are attached only to the team notification. There is no instant pricing calculator.
+- Visitors can attach up to six PDF/JPG/PNG/WebP files (4 MB total, decimal bytes); larger CAD files use a share-link field. Files use multipart upload to avoid base64 request overhead and stay below the hosting limit. The API bounds streamed requests at 4.3 MB, validates files, and retains compatibility with older JSON clients. Validated file bytes are attached only to the team notification. Optional delivery/event date and budget (including currency) fields are sent with the team notification and shown in the success summary. Oversized files get a specific explanation and a direct path to the share-link field; no originals are silently compressed. There is no instant pricing calculator.
 - Keep all existing gallery and service URLs. Update `app/sitemap.ts` when publishing substantive content changes.
 
 Do not invent client names, dimensions, lead times, certifications or materials when extending the portfolio. Add these details only when verified project records are available. New project/sector pages have page-specific metadata and structured data; search or AI recommendations are not guaranteed.
 
 ## Gallery
 
-The main menu and homepage link to `/en/gallery` (and the five other language editions). `lib/photo-gallery.ts` collects all published project, archive and concept images in a single lazy-loaded grid. Byte-identical legacy copies are mapped in `lib/gallery-image-aliases.json`; reused concept covers retain their concept label. There are no category tabs or pagination.
+The main menu and homepage link to `/en/gallery` (and the five other language editions). `lib/photo-gallery.ts` collects all published project, archive and concept images in a single lazy-loaded grid. Byte-identical legacy copies are mapped in `lib/gallery-image-aliases.json`; reused concept covers retain their concept label. Visitors can search the gallery and filter by category or by production photographs versus design concepts. The viewer links to the corresponding project or archive and carries verified project references into the enquiry. Concept images remain explicitly labelled and never become completed-project selections.
 
-The image viewer supports keyboard navigation and a watermarked JPEG download. The browser renders an iridescent central ARDIÇ mark and a footer into the downloaded pixels, preserving aspect ratio and limiting the long edge to 4096 pixels. Original assets stay unchanged. This is a branded download feature, not DRM: public original files and screenshots cannot be prevented.
+The image viewer supports keyboard navigation within the filtered results, restores focus when closed, and provides a watermarked JPEG download. The browser renders an iridescent central ARDIÇ mark and a footer into the downloaded pixels, preserving aspect ratio and limiting the long edge to 4096 pixels. Original assets stay unchanged. This is a branded download feature, not DRM: public original files and screenshots cannot be prevented.
 
 ## Checks
 
-Run `pnpm lint`, `node --test tests/contact.test.cjs` and `pnpm build`.
+Run `pnpm lint`, `node --test tests/*.test.cjs` and `pnpm build`.
 
 Tests exercise the actual contact route against mocked providers, including the former Seoul/SEO false-positive, invalid input, HTML escaping, verification failure, notification failure, optional confirmation failure and selection validation. They also check curated asset paths.
 

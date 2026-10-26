@@ -2,9 +2,9 @@
   "projects": {
     "farmasi-boss-trip": {
       "title": "FARMASI · Boss Trip Eventkollektion",
-      "description": "Personalisierte Segelboot-Tischobjekte, dekorative Ringe und eine Präsentationsverpackung mit Markenauftritt. Namen, Grafiken und Verpackung greifen ein gemeinsames maritimes Thema auf.",
+      "description": "Eine maritime Eventkollektion aus personalisierten Segelboot-Tischobjekten, dekorativen Ringen und Präsentationsverpackungen mit Markenauftritt. Individuelle Namen, Markengrafiken und Verpackung folgen einer gemeinsamen Gestaltung.",
       "details": [
-        "Mehr als ein einzelnes Objekt: aufeinander abgestimmte Tischobjekte, Dekoration und eine Präsentation in der Box.",
+        "Die Segelboot-Tischobjekte verbinden Holzoptik mit individuellen Namen und FARMASI Boss Trip Grafiken. Die schwarz-weißen Dekoringe tragen Bänder, Nähte und Seildetails; eine Verpackung mit Markenauftritt ergänzt die Präsentation in der Box.",
         "Für ähnliche Anfragen stimmen wir Stückzahlen, Namenslisten, Markendaten, Verpackung und Lieferort gemeinsam ab. Fertigungsverfahren, Abmessungen und Oberflächen werden projektspezifisch festgelegt."
       ],
       "gallery": [
@@ -21,14 +21,42 @@
           "caption": "Präsentationsbox · Markenverpackung, Anordnung und ergänzende Details."
         }
       ],
-      "note": "Die Bilder zeigen die Präsentation der Projektkollektion. Die ringförmigen Objekte dienen der Dekoration und werden nicht als Rettungsmittel angeboten."
+      "note": "Die Bilder zeigen die Präsentation der Projektkollektion. Die ringförmigen Objekte dienen der Dekoration und werden nicht als Rettungsmittel angeboten.",
+      "facts": [
+        {
+          "label": "Kollektion",
+          "value": "Segelboot-Tischobjekte, dekorative Ringe und Präsentationsverpackung"
+        },
+        {
+          "label": "Personalisierung",
+          "value": "Individuelle Namen und FARMASI Boss Trip Grafiken"
+        },
+        {
+          "label": "Dekorative Details",
+          "value": "Holzoptik, schwarz-weiße Oberflächen, Nähte und Seile"
+        }
+      ]
     },
     "modular-artificial-rock-concert-environment": {
       "title": "Modulare Felskulisse für ein Konzert",
-      "description": "Eine künstliche Felslandschaft aus transportierbaren EPS-Modulen, die rund um die Konzertbühne zusammengefügt wurden. Das Projekt zeigt den Weg von der Werkstattfertigung bis zum fertigen Aufbau in der Arena.",
+      "description": "Eine künstliche Felskulisse aus transportierbaren EPS-Modulen. Die in der Werkstatt gefertigten Teile wurden vor Ort zu einer durchgehenden Landschaft rund um die Konzertbühne zusammengesetzt.",
       "details": [
-        "Transportfähige EPS-Felsmodule verbinden sich zu einer durchgehenden Bühnenlandschaft. Werkstatt- und Arenabilder zeigen den Weg von einzelnen Formen zum aufgebauten Bühnenbild.",
-        "Die fertigen Ansichten zeigen, wie die Felsformen den Aufführungsbereich aus verschiedenen Betrachtungsabständen rahmen."
+        "Die Felsformen wurden als einzelne, transportierbare EPS-Module gefertigt. Auf die Werkstattfertigung folgte die Montage vor Ort.",
+        "Die zusammengesetzten Module bilden eine durchgehende Felslandschaft um die Bühne. Die Felsformen rahmen den Aufführungsbereich."
+      ],
+      "facts": [
+        {
+          "label": "Anwendung",
+          "value": "Künstliche Felskulisse rund um eine Konzertbühne"
+        },
+        {
+          "label": "Aufbau",
+          "value": "Transportierbare EPS-Module"
+        },
+        {
+          "label": "Ablauf",
+          "value": "Werkstattfertigung und Montage vor Ort"
+        }
       ]
     },
     "cosmetic-bottle-display-props": {

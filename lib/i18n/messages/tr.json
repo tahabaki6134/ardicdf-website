@@ -197,5 +197,16 @@
   "season_title": "Yılbaşı siparişleri başladı.",
   "season_body": "Maskot, dekor ve özel üretim projeleriniz için sipariş alıyoruz. Üretim yoğunluğumuz yüksek; vakit daralmadan projenizi iletin, teslimat planınızı birlikte oluşturalım.",
   "season_cta": "Projeniz için teklif alın",
-  "season_continue": "Siteyi keşfetmeye devam et"
+  "season_continue": "Siteyi keşfetmeye devam et",
+  "targetDeliveryDate": "Hedef teslim veya etkinlik tarihi",
+  "budgetRange": "Yaklaşık bütçe",
+  "delivery_date_help": "Bir tarih, tarih aralığı veya esnek olduğunu yazabilirsiniz.",
+  "budget_help": "Tutarı ya da aralığı para birimiyle yazın. Henüz belli değilse boş bırakabilirsiniz.",
+  "enquiry_summary": "Gönderdiğiniz talebin özeti",
+  "error_files_count": "En fazla 6 dosya ekleyebilirsiniz.",
+  "error_files_size": "Eklerin toplam boyutu 4 MB sınırını aşıyor. Büyük dosyaları paylaşım bağlantısıyla iletebilirsiniz.",
+  "error_files_format": "Boş olmayan PDF, JPG, PNG veya WebP dosyaları seçin. Dosya adı en fazla 180 karakter olmalıdır.",
+  "files_not_added": "Yeni seçtiğiniz dosyalar eklenmedi. Önceki ekleriniz değişmedi.",
+  "use_share_link": "Paylaşım bağlantısı ekle",
+  "large_files_help": "Büyük fotoğraf, CAD çizimi veya 3D model için aşağıya bir indirme bağlantısı ekleyin. Ekibimizin bağlantıyı açabildiğini kontrol edin. Orijinal dosyalarınızı küçültmeniz gerekmez."
 }

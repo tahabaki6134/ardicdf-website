@@ -197,5 +197,16 @@
   "season_title": "Bestellungen für die Festtage sind geöffnet.",
   "season_body": "Wir nehmen Aufträge für Maskottchen, festliche Dekoration und Sonderanfertigungen an. Unsere Produktion ist stark ausgelastet. Senden Sie uns Ihr Projekt frühzeitig, damit wir die Lieferung gemeinsam planen können.",
   "season_cta": "Projektangebot anfragen",
-  "season_continue": "Website weiter ansehen"
+  "season_continue": "Website weiter ansehen",
+  "targetDeliveryDate": "Gewünschter Liefer- oder Veranstaltungstermin",
+  "budgetRange": "Ungefähres Budget",
+  "delivery_date_help": "Geben Sie ein Datum oder einen Zeitraum an, oder teilen Sie uns mit, ob der Termin flexibel ist.",
+  "budget_help": "Geben Sie einen Betrag oder eine Spanne mit Währung an. Falls noch offen, lassen Sie das Feld leer.",
+  "enquiry_summary": "Zusammenfassung Ihrer Anfrage",
+  "error_files_count": "Sie können bis zu 6 Dateien anhängen.",
+  "error_files_size": "Die Anhänge überschreiten die Gesamtgrenze von 4 MB. Große Dateien können Sie über einen Download-Link teilen.",
+  "error_files_format": "Wählen Sie nicht leere PDF-, JPG-, PNG- oder WebP-Dateien. Dateinamen dürfen höchstens 180 Zeichen enthalten.",
+  "files_not_added": "Die neu ausgewählten Dateien wurden nicht hinzugefügt. Ihre bisherigen Anhänge bleiben unverändert.",
+  "use_share_link": "Freigabelink hinzufügen",
+  "large_files_help": "Fügen Sie für große Fotos, CAD-Zeichnungen oder 3D-Modelle unten einen Download-Link ein. Stellen Sie sicher, dass unser Team ihn öffnen kann. Ihre Originaldateien müssen Sie nicht komprimieren."
 }

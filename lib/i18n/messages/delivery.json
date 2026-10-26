@@ -15,7 +15,7 @@
       "guide_steps": "From your brief to delivery",
       "guide_questions": "Before you send your project",
       "guide_link": "How your project is planned",
-      "project_facts": "The work shown",
+      "project_facts": "Project at a glance",
       "related_title": "From method to finished form",
       "related_intro": "Explore the documented project or workshop photographs alongside the manufacturing guide.",
       "referenceLink": "Link to a large drawing, 3D model or reference (optional)"
@@ -36,9 +36,9 @@
     ],
     "project": {
       "title": "Sculptural reception & wall elements",
-      "description": "A blue reception counter with a flowing profile, paired with silver-grey sculptural wall elements. The photographs show the relationship between furniture, repeated vertical forms and the surrounding interior.",
-      "facts": [{"label": "Elements shown", "value": "Reception counter and sculptural wall elements"}, {"label": "Form", "value": "Flowing counter front and repeated vertical profiles"}, {"label": "Visible finish", "value": "Glossy blue and silver-grey surfaces"}],
-      "details": ["The reception counter and wall elements are presented as a coordinated interior fabrication package. The wide view shows their relationship; the closer views show the curves, junctions and surface reflections.", "For a similar project, share a measured plan, counter requirements, wall dimensions and finish references. Materials, internal structure, access, service openings and installation are specified for the individual brief."],
+      "description": "A flowing blue reception counter paired with silver-grey sculptural wall elements. The curved counter front and repeated vertical profiles form a coordinated reception setting.",
+      "facts": [{"label": "Scope", "value": "Reception counter and sculptural wall elements"}, {"label": "Form", "value": "Flowing counter front and repeated vertical profiles"}, {"label": "Finish", "value": "Glossy blue and silver-grey surfaces"}],
+      "details": ["The counter and wall elements form a coordinated interior fabrication package. Curves, junctions and reflections across the glossy surfaces connect the furniture with the wall composition.", "For a similar project, share a measured plan, counter requirements, wall dimensions and finish references. Materials, internal structure, access, service openings and installation are specified for the individual brief."],
       "gallery": [{"alt": "Blue sculptural reception counter in front of silver-grey vertical wall elements", "caption": "Reception counter and wall elements · A coordinated interior composition."}, {"alt": "Wide view of silver-grey wall panels with flowing vertical curves", "caption": "Wall composition · Flowing profiles and their relationship to the room."}, {"alt": "Close view of curved silver-grey wall panels and surface reflections", "caption": "Surface detail · Curves, junctions and natural light reflections."}],
       "note": "Project photographs retouched for presentation: installation personnel, tools and temporary packaging have been removed."
     }
@@ -59,7 +59,7 @@
       "guide_steps": "İlk talepten teslimata",
       "guide_questions": "Projenizi göndermeden önce",
       "guide_link": "Projenizi nasıl planlıyoruz?",
-      "project_facts": "Görsellerdeki işin kapsamı",
+      "project_facts": "Proje özeti",
       "related_title": "Yöntemden bitmiş ürüne",
       "related_intro": "İmalat açıklamalarıyla birlikte ilgili proje veya atölye fotoğraflarını inceleyin.",
       "referenceLink": "Büyük çizim, 3D model veya referans bağlantısı (isteğe bağlı)"
@@ -80,9 +80,9 @@
     ],
     "project": {
       "title": "Heykelsi banko ve duvar elemanları",
-      "description": "Akıcı forma sahip mavi banko ile gümüş gri heykelsi duvar elemanları. Fotoğraflar mobilyayı, tekrarlanan düşey formları ve çevreleyen mekânı birlikte gösteriyor.",
-      "facts": [{"label": "Görünen elemanlar", "value": "Karşılama bankosu ve heykelsi duvar elemanları"}, {"label": "Form", "value": "Dalgalı banko önü ve tekrarlanan düşey profiller"}, {"label": "Görünen yüzey", "value": "Parlak mavi ve gümüş gri yüzeyler"}],
-      "details": ["Banko ve duvar elemanları, birbiriyle uyumlu iç mekân imalatı olarak sunuluyor. Geniş açı birlikte oluşturdukları görünümü; yakın planlar kıvrımları, birleşimleri ve yüzey yansımalarını gösteriyor.", "Benzer bir iş için ölçülü plan, bankonun kullanım ihtiyaçları, duvar ölçüleri ve yüzey referanslarını paylaşın. Malzeme, iç taşıyıcı, erişim, servis boşlukları ve montaj projeye özel belirlenir."],
+      "description": "Akıcı hatlara sahip mavi karşılama bankosu ve gümüş gri heykelsi duvar elemanları. Bankonun kıvrımlı ön yüzü ile tekrarlanan düşey profiller, aynı karşılama alanında bir araya geliyor.",
+      "facts": [{"label": "Kapsam", "value": "Karşılama bankosu ve heykelsi duvar elemanları"}, {"label": "Form", "value": "Dalgalı banko önü ve tekrarlanan düşey profiller"}, {"label": "Son yüzey", "value": "Parlak mavi ve gümüş gri yüzeyler"}],
+      "details": ["Banko ve duvar elemanları, birlikte ele alınan bir iç mekân imalatı oluşturuyor. Kıvrımlar, birleşim noktaları ve parlak yüzeylerdeki ışık yansımaları, mobilya ile duvar kompozisyonu arasındaki ilişkiyi belirginleştiriyor.", "Benzer bir iş için ölçülü plan, bankonun kullanım ihtiyaçları, duvar ölçüleri ve yüzey referanslarını paylaşın. Malzeme, iç taşıyıcı, erişim, servis boşlukları ve montaj projeye özel belirlenir."],
       "gallery": [{"alt": "Gümüş gri düşey duvar elemanlarının önünde mavi heykelsi karşılama bankosu", "caption": "Banko ve duvar elemanları · Birlikte ele alınan iç mekân imalatı."}, {"alt": "Akıcı düşey kıvrımlara sahip gümüş gri duvar panellerinin geniş görünümü", "caption": "Duvar kompozisyonu · Akıcı profiller ve mekânla ilişkileri."}, {"alt": "Gümüş gri kıvrımlı duvar panellerinde yüzey ve ışık yansımalarının yakın görünümü", "caption": "Yüzey detayı · Kıvrımlar, birleşimler ve doğal ışık yansımaları."}],
       "note": "Proje fotoğrafları sunum için rötuşlandı; montaj personeli, aletler ve geçici ambalajlar kaldırıldı."
     }
@@ -103,7 +103,7 @@
       "guide_steps": "Von der Anfrage bis zur Lieferung",
       "guide_questions": "Vor Ihrer Projektanfrage",
       "guide_link": "So planen wir Ihr Projekt",
-      "project_facts": "Die gezeigten Arbeiten",
+      "project_facts": "Projekt im Überblick",
       "related_title": "Vom Verfahren zur fertigen Form",
       "related_intro": "Ergänzend zum Fertigungsleitfaden zeigen wir passende Projekt- oder Werkstattaufnahmen.",
       "referenceLink": "Link zu einer großen Zeichnung, einem 3D-Modell oder einer Referenz (optional)"
@@ -124,9 +124,9 @@
     ],
     "project": {
       "title": "Skulpturale Empfangstheke und Wandelemente",
-      "description": "Eine blaue Empfangstheke mit fließendem Profil, kombiniert mit silbergrauen plastischen Wandelementen. Die Aufnahmen zeigen das Zusammenspiel von Möbel, wiederkehrenden vertikalen Formen und Innenraum.",
-      "facts": [{"label": "Gezeigte Elemente", "value": "Empfangstheke und plastische Wandelemente"}, {"label": "Form", "value": "Geschwungene Thekenfront und vertikale Profile"}, {"label": "Sichtbare Oberfläche", "value": "Glänzendes Blau und Silbergrau"}],
-      "details": ["Theke und Wandelemente bilden eine aufeinander abgestimmte Innenraumfertigung. Die Gesamtansicht zeigt ihr Zusammenspiel, die Nahaufnahmen zeigen Rundungen, Übergänge und Lichtreflexe.", "Für eine ähnliche Anfrage benötigen wir einen bemaßten Grundriss, funktionale Anforderungen an die Theke, Wandmaße und Oberflächenreferenzen. Material, Unterkonstruktion, Zugänge, Serviceöffnungen und Montage werden für das jeweilige Projekt festgelegt."],
+      "description": "Eine blaue Empfangstheke mit fließenden Linien, kombiniert mit silbergrauen skulpturalen Wandelementen. Die geschwungene Thekenfront und wiederkehrende vertikale Profile bilden einen abgestimmten Empfangsbereich.",
+      "facts": [{"label": "Umfang", "value": "Empfangstheke und plastische Wandelemente"}, {"label": "Form", "value": "Geschwungene Thekenfront und vertikale Profile"}, {"label": "Oberfläche", "value": "Glänzendes Blau und Silbergrau"}],
+      "details": ["Theke und Wandelemente bilden ein zusammenhängendes Ensemble für den Innenraum. Rundungen, Übergänge und Reflexe auf den glänzenden Oberflächen verbinden das Möbel mit der Wandgestaltung.", "Für eine ähnliche Anfrage benötigen wir einen bemaßten Grundriss, funktionale Anforderungen an die Theke, Wandmaße und Oberflächenreferenzen. Material, Unterkonstruktion, Zugänge, Serviceöffnungen und Montage werden für das jeweilige Projekt festgelegt."],
       "gallery": [{"alt": "Blaue skulpturale Empfangstheke vor silbergrauen vertikalen Wandelementen", "caption": "Theke und Wandelemente · Eine abgestimmte Innenraumkomposition."}, {"alt": "Gesamtansicht silbergrauer Wandpaneele mit fließenden vertikalen Rundungen", "caption": "Wandgestaltung · Fließende Profile im räumlichen Zusammenhang."}, {"alt": "Nahaufnahme geschwungener silbergrauer Wandpaneele und ihrer Lichtreflexe", "caption": "Oberflächendetail · Rundungen, Übergänge und natürliche Reflexe."}],
       "note": "Projektfotos für die Präsentation retuschiert: Montagepersonal, Werkzeuge und vorübergehende Verpackungen wurden entfernt."
     }
@@ -147,7 +147,7 @@
       "guide_steps": "De votre demande à la livraison",
       "guide_questions": "Avant de nous présenter votre projet",
       "guide_link": "Comment votre projet est organisé",
-      "project_facts": "Les éléments présentés",
+      "project_facts": "Le projet en bref",
       "related_title": "Du procédé à la forme réalisée",
       "related_intro": "Consultez les vues de projet ou d’atelier en complément du guide de fabrication.",
       "referenceLink": "Lien vers un dessin volumineux, un modèle 3D ou une référence (facultatif)"
@@ -168,9 +168,9 @@
     ],
     "project": {
       "title": "Banque d’accueil et éléments muraux sculpturaux",
-      "description": "Une banque d’accueil bleue aux lignes fluides, associée à des éléments muraux sculpturaux gris argenté. Les photographies montrent le dialogue entre mobilier, formes verticales répétées et espace intérieur.",
-      "facts": [{"label": "Éléments présentés", "value": "Banque d’accueil et éléments muraux sculpturaux"}, {"label": "Formes", "value": "Façade de comptoir ondulée et profils verticaux"}, {"label": "Finition visible", "value": "Surfaces brillantes bleues et gris argenté"}],
-      "details": ["Le comptoir et les éléments muraux constituent un ensemble d’agencement coordonné. La vue générale montre leur relation ; les vues rapprochées détaillent les courbes, les jonctions et les reflets.", "Pour une demande similaire, transmettez un plan coté, les besoins fonctionnels du comptoir, les dimensions des murs et des références de finition. Matériaux, structure interne, accès, ouvertures techniques et pose sont définis selon le projet."],
+      "description": "Une banque d’accueil bleue aux lignes fluides, associée à des éléments muraux sculpturaux gris argenté. La façade courbe du comptoir et les profils verticaux répétés composent un espace d’accueil coordonné.",
+      "facts": [{"label": "Ensemble", "value": "Banque d’accueil et éléments muraux sculpturaux"}, {"label": "Formes", "value": "Façade de comptoir ondulée et profils verticaux"}, {"label": "Finition", "value": "Surfaces brillantes bleues et gris argenté"}],
+      "details": ["Le comptoir et les éléments muraux constituent un ensemble d’agencement coordonné. Courbes, jonctions et reflets sur les surfaces brillantes relient le mobilier à la composition murale.", "Pour une demande similaire, transmettez un plan coté, les besoins fonctionnels du comptoir, les dimensions des murs et des références de finition. Matériaux, structure interne, accès, ouvertures techniques et pose sont définis selon le projet."],
       "gallery": [{"alt": "Banque d’accueil sculpturale bleue devant des éléments muraux verticaux gris argenté", "caption": "Comptoir et éléments muraux · Une composition intérieure coordonnée."}, {"alt": "Vue générale des panneaux muraux gris argenté aux courbes verticales fluides", "caption": "Composition murale · Des profils fluides intégrés à l’espace."}, {"alt": "Vue rapprochée des courbes et reflets des panneaux muraux gris argenté", "caption": "Détail de surface · Courbes, jonctions et reflets naturels."}],
       "note": "Photographies du projet retouchées pour la présentation : personnel de montage, outils et emballages temporaires retirés."
     }
@@ -191,7 +191,7 @@
       "guide_steps": "От заявки до доставки",
       "guide_questions": "Перед отправкой проекта",
       "guide_link": "Как мы планируем ваш проект",
-      "project_facts": "Что представлено на фотографиях",
+      "project_facts": "Кратко о проекте",
       "related_title": "От технологии к готовой форме",
       "related_intro": "Посмотрите фотографии проекта или мастерской вместе с описанием технологии изготовления.",
       "referenceLink": "Ссылка на большой чертёж, 3D-модель или референс (необязательно)"
@@ -212,9 +212,9 @@
     ],
     "project": {
       "title": "Скульптурная стойка ресепшен и стеновые элементы",
-      "description": "Синяя стойка ресепшен с плавным профилем в сочетании с серебристо-серыми скульптурными стеновыми элементами. Фотографии показывают взаимосвязь мебели, повторяющихся вертикальных форм и интерьера.",
-      "facts": [{"label": "Представленные элементы", "value": "Стойка ресепшен и скульптурные стеновые элементы"}, {"label": "Форма", "value": "Волнообразный фасад стойки и вертикальные профили"}, {"label": "Видимая отделка", "value": "Глянцевые синие и серебристо-серые поверхности"}],
-      "details": ["Стойка и стеновые элементы представлены как согласованный комплект изделий для интерьера. Общий вид показывает композицию, крупные планы — изгибы, стыки и отражения света.", "Для похожего проекта пришлите обмерный план, функциональные требования к стойке, размеры стен и образцы желаемой отделки. Материалы, внутренний каркас, доступ, технологические отверстия и монтаж определяются для конкретного задания."],
+      "description": "Синяя стойка ресепшен с плавными линиями в сочетании с серебристо-серыми скульптурными стеновыми элементами. Изогнутый фасад стойки и повторяющиеся вертикальные профили образуют единую зону приёма.",
+      "facts": [{"label": "Состав", "value": "Стойка ресепшен и скульптурные стеновые элементы"}, {"label": "Форма", "value": "Волнообразный фасад стойки и вертикальные профили"}, {"label": "Отделка", "value": "Глянцевые синие и серебристо-серые поверхности"}],
+      "details": ["Стойка и стеновые элементы образуют согласованный комплект интерьерных изделий. Изгибы, стыки и отражения на глянцевых поверхностях связывают мебель со стеновой композицией.", "Для похожего проекта пришлите обмерный план, функциональные требования к стойке, размеры стен и образцы желаемой отделки. Материалы, внутренний каркас, доступ, технологические отверстия и монтаж определяются для конкретного задания."],
       "gallery": [{"alt": "Синяя скульптурная стойка ресепшен перед серебристо-серыми вертикальными стеновыми элементами", "caption": "Стойка и стеновые элементы · Единая интерьерная композиция."}, {"alt": "Общий вид серебристо-серых стеновых панелей с плавными вертикальными изгибами", "caption": "Стеновая композиция · Плавные профили в интерьере."}, {"alt": "Крупный план изгибов и отражений на серебристо-серых стеновых панелях", "caption": "Деталь поверхности · Изгибы, стыки и естественные отражения."}],
       "note": "Фотографии проекта отретушированы для презентации: монтажники, инструменты и временная упаковка удалены."
     }
@@ -235,7 +235,7 @@
       "guide_steps": "من طلبك الأول إلى التسليم",
       "guide_questions": "قبل إرسال مشروعك",
       "guide_link": "كيف نخطط لمشروعك",
-      "project_facts": "العناصر الظاهرة في الصور",
+      "project_facts": "المشروع بإيجاز",
       "related_title": "من طريقة التصنيع إلى الشكل النهائي",
       "related_intro": "اطلع على صور المشروع أو الورشة إلى جانب شرح طريقة التصنيع.",
       "referenceLink": "رابط لرسومات كبيرة أو نموذج ثلاثي الأبعاد أو مرجع (اختياري)"
@@ -256,9 +256,9 @@
     ],
     "project": {
       "title": "كاونتر استقبال وعناصر جدارية نحتية",
-      "description": "كاونتر استقبال أزرق بخطوط انسيابية مع عناصر جدارية نحتية رمادية فضية. تظهر الصور العلاقة بين الأثاث والأشكال الرأسية المتكررة والحيز الداخلي المحيط.",
-      "facts": [{"label": "العناصر الظاهرة", "value": "كاونتر استقبال وعناصر جدارية نحتية"}, {"label": "الشكل", "value": "واجهة كاونتر متموجة ومقاطع رأسية متكررة"}, {"label": "التشطيب الظاهر", "value": "أسطح لامعة باللونين الأزرق والرمادي الفضي"}],
-      "details": ["يظهر الكاونتر والعناصر الجدارية بوصفهما مجموعة تصنيع داخلي متناسقة. توضح اللقطة الواسعة العلاقة بينهما، بينما تبين اللقطات القريبة المنحنيات والوصلات وانعكاسات السطح.", "لمشروع مشابه، شارك مخططاً بالأبعاد ومتطلبات استخدام الكاونتر وأبعاد الجدران ومراجع التشطيب. تحدد المواد والهيكل الداخلي والوصول وفتحات الخدمة والتركيب بحسب كل مشروع."],
+      "description": "كاونتر استقبال أزرق بخطوط انسيابية مع عناصر جدارية نحتية رمادية فضية. تشكّل واجهة الكاونتر المنحنية والمقاطع الرأسية المتكررة مساحة استقبال متناسقة.",
+      "facts": [{"label": "المكونات", "value": "كاونتر استقبال وعناصر جدارية نحتية"}, {"label": "الشكل", "value": "واجهة كاونتر متموجة ومقاطع رأسية متكررة"}, {"label": "التشطيب", "value": "أسطح لامعة باللونين الأزرق والرمادي الفضي"}],
+      "details": ["يشكّل الكاونتر والعناصر الجدارية مجموعة متناسقة من القطع المصنّعة للحيز الداخلي. تربط المنحنيات والوصلات وانعكاسات الأسطح اللامعة بين الأثاث والتكوين الجداري.", "لمشروع مشابه، شارك مخططاً بالأبعاد ومتطلبات استخدام الكاونتر وأبعاد الجدران ومراجع التشطيب. تحدد المواد والهيكل الداخلي والوصول وفتحات الخدمة والتركيب بحسب كل مشروع."],
       "gallery": [{"alt": "كاونتر استقبال نحتي أزرق أمام عناصر جدارية رأسية رمادية فضية", "caption": "الكاونتر والعناصر الجدارية · تكوين داخلي متناسق."}, {"alt": "منظر واسع لألواح جدارية رمادية فضية بمنحنيات رأسية انسيابية", "caption": "التكوين الجداري · مقاطع انسيابية وعلاقتها بالمكان."}, {"alt": "لقطة قريبة لمنحنيات الألواح الجدارية الرمادية الفضية وانعكاسات الضوء عليها", "caption": "تفاصيل السطح · المنحنيات والوصلات والانعكاسات الطبيعية."}],
       "note": "نقحت صور المشروع للعرض بإزالة فريق التركيب والأدوات ومواد التغليف المؤقتة."
     }

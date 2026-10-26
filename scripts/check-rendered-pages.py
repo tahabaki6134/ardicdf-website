@@ -16,14 +16,14 @@ class Page(HTMLParser):
         if tag=='a' and 'href' in a:self.links.append(a['href'])
         if tag=='img' and 'src' in a:self.images.append(a['src'])
         if a.get('id'):self.ids.add(a['id'])
-manifest=json.loads((root/'.next/prerender-manifest.json').read_text())['routes']
+manifest=json.loads((root/'.next/prerender-manifest.json').read_text(encoding='utf-8'))['routes']
 site='https://www.ardicdf.com';locales=['tr','en','de','fr','ru','ar'];pages={};errors=[]
 for route in manifest:
     segments=route.strip('/').split('/')
     if segments[0] not in locales:continue
     html=root/'.next/server/app'/ (route.lstrip('/')+'.html')
     if not html.exists():errors.append(f'Missing build HTML: {route}');continue
-    parsed=Page();parsed.feed(html.read_text())
+    parsed=Page();parsed.feed(html.read_text(encoding='utf-8'))
     public=route
     pages[public]=parsed
     if parsed.lang!=segments[0] or parsed.direction!=('rtl' if segments[0]=='ar' else 'ltr'):errors.append(f'Wrong language/direction: {public}')
@@ -46,7 +46,7 @@ for route,p in pages.items():
         path=urlparse(src).path
         if path=='/_next/image':path=parse_qs(urlparse(src).query)['url'][0]
         if path.startswith('/') and not (root/'public'/unquote(path.lstrip('/'))).is_file():errors.append(f'Missing image: {path}')
-assert len(pages)==252,len(pages)
+assert len(pages)==258,len(pages)
 if errors:
     print('\n'.join(errors[:40]));raise SystemExit(f'{len(errors)} rendered-page issues')
 print(f'{len(pages)} rendered HTML pages: language, RTL, H1, canonical, reciprocal alternates, internal links, anchors and image paths passed')
