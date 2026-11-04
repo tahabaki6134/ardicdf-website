@@ -1,0 +1,626 @@
+{
+  "en": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "Physical brand experiences",
+          "description": "Explore oversized product replicas, sculptural displays and photo focal points for launches and pop-ups."
+        },
+        {
+          "title": "Repeat campaign installations",
+          "description": "Plan modular elements, replaceable graphics and packing around different venues and future reuse."
+        }
+      ],
+      "checklist": [
+        "Approved product geometry, artwork and brand colours",
+        "Locations, quantities, opening date and display duration",
+        "Visitor contact, transport access and reuse plans"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "Scenic environments",
+          "description": "Review rockwork, sculptural stage elements and exhibition focal points against the venue layout."
+        },
+        {
+          "title": "Modular and seasonal decor",
+          "description": "Discuss split lines, repeated assembly, repair access and storage before fabrication."
+        }
+      ],
+      "checklist": [
+        "Venue plans, opening date and installation windows",
+        "Door sizes, transport limits and handling equipment",
+        "Fixing requirements, venue material rules and reuse plans"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "Immersive landscapes",
+          "description": "Develop scenic rock forms and architectural details around an agreed visitor route."
+        },
+        {
+          "title": "Characters and interpretive models",
+          "description": "Explore figures and enlarged models using approved references, with touch access and maintenance in mind."
+        }
+      ],
+      "checklist": [
+        "Approved references, interpretation goals and visitor route",
+        "Indoor or outdoor conditions, touch access and cleaning",
+        "Lighting, AV interfaces, fixing requirements and project standards"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "Sculptural reception spaces",
+          "description": "Coordinate counters, wall elements and furniture forms around the designer’s layout and intended use."
+        },
+        {
+          "title": "Tactile surfaces and ornament",
+          "description": "Review textured panels, curved profiles and decorative details with finish samples and cleaning requirements."
+        }
+      ],
+      "checklist": [
+        "Measured plans, critical dimensions and adjacent materials",
+        "Finish references, touch exposure and maintenance needs",
+        "Support structure, fixing interfaces and installation access"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "Camera-facing props",
+          "description": "Review product replicas and sculptural objects for the planned camera distance, lighting and visible faces."
+        },
+        {
+          "title": "Scenic pieces and repeat props",
+          "description": "Discuss themed surfaces, architectural pieces and duplicates around the art department’s drawings."
+        }
+      ],
+      "checklist": [
+        "Drawings, visual references and camera requirements",
+        "Handling, performer interaction and duplicate quantities",
+        "Shoot dates, set access and confidentiality requirements"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "Form and presentation models",
+          "description": "Use physical models to review proportions, geometry and appearance before selecting a production route."
+        },
+        {
+          "title": "Patterns and display shells",
+          "description": "Discuss master patterns, molds and non-functional display shells. Functional performance requires a separate agreed scope."
+        }
+      ],
+      "checklist": [
+        "CAD files, scale, revision and critical dimensions",
+        "Visual or functional use, interfaces and required testing",
+        "Quantity, finish references and delivery target"
+      ]
+    }
+  },
+  "tr": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "Fiziksel marka deneyimleri",
+          "description": "Lansmanlar ve pop-up alanlar için büyük ölçekli ürün replikalarını, heykelsi stantları ve fotoğraf odaklarını değerlendirelim."
+        },
+        {
+          "title": "Tekrarlanan kampanya kurulumları",
+          "description": "Modüler parçaları, değiştirilebilir grafikleri ve ambalajı farklı mekânlara ve yeniden kullanıma göre planlayalım."
+        }
+      ],
+      "checklist": [
+        "Onaylı ürün geometrisi, grafikler ve marka renkleri",
+        "Konumlar, adetler, açılış tarihi ve sergileme süresi",
+        "Ziyaretçi teması, taşıma erişimi ve yeniden kullanım planı"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "Sahne ve sergi ortamları",
+          "description": "Kaya dekorlarını, heykelsi sahne öğelerini ve sergi odaklarını mekân planına göre değerlendirelim."
+        },
+        {
+          "title": "Modüler ve sezonluk dekor",
+          "description": "Parça birleşimlerini, tekrar kurulumu, onarım erişimini ve depolamayı üretimden önce ele alalım."
+        }
+      ],
+      "checklist": [
+        "Mekân planları, açılış tarihi ve kurulum saatleri",
+        "Kapı ölçüleri, taşıma sınırları ve ekipman",
+        "Sabitleme ihtiyaçları, mekânın malzeme kuralları ve yeniden kullanım"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "Ziyaretçiyi içine alan ortamlar",
+          "description": "Kaya formlarını ve mimari detayları belirlenmiş ziyaretçi güzergâhına göre geliştirelim."
+        },
+        {
+          "title": "Karakterler ve anlatım modelleri",
+          "description": "Onaylı referanslardan figürleri ve büyütülmüş modelleri; dokunma erişimi ve bakım ihtiyaçlarıyla birlikte değerlendirelim."
+        }
+      ],
+      "checklist": [
+        "Onaylı referanslar, anlatım hedefleri ve ziyaretçi güzergâhı",
+        "İç veya dış mekân koşulları, dokunma erişimi ve temizlik",
+        "Aydınlatma, ses-görüntü bağlantıları, sabitleme ve proje standartları"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "Heykelsi karşılama alanları",
+          "description": "Bankoları, duvar öğelerini ve mobilya formlarını tasarımcının planı ve kullanım amacıyla birlikte ele alalım."
+        },
+        {
+          "title": "Dokulu yüzeyler ve süslemeler",
+          "description": "Dokulu panelleri, eğrisel profilleri ve dekoratif detayları yüzey numuneleri ve temizlik ihtiyaçlarıyla değerlendirelim."
+        }
+      ],
+      "checklist": [
+        "Ölçülü planlar, kritik ölçüler ve bitişik malzemeler",
+        "Yüzey referansları, temas koşulları ve bakım ihtiyaçları",
+        "Taşıyıcı yapı, bağlantı detayları ve montaj erişimi"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "Kamera önündeki objeler",
+          "description": "Ürün replikalarını ve heykelsi objeleri çekim mesafesi, ışık ve görünecek yüzeylere göre değerlendirelim."
+        },
+        {
+          "title": "Dekor parçaları ve tekrar üretimler",
+          "description": "Temalı yüzeyleri, mimari parçaları ve kopyaları sanat ekibinin çizimleri üzerinden ele alalım."
+        }
+      ],
+      "checklist": [
+        "Çizimler, görsel referanslar ve kamera gereksinimleri",
+        "Taşıma, oyuncu teması ve kopya adetleri",
+        "Çekim tarihleri, sete erişim ve gizlilik ihtiyaçları"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "Form ve sunum modelleri",
+          "description": "Üretim yöntemini belirlemeden önce oranları, geometriyi ve görünümü fiziksel modellerle değerlendirelim."
+        },
+        {
+          "title": "Ana modeller ve sergileme kabukları",
+          "description": "Ana modelleri, kalıpları ve işlevsel olmayan sergileme kabuklarını ele alalım. İşlevsel performans ayrı kapsam anlaşması gerektirir."
+        }
+      ],
+      "checklist": [
+        "CAD dosyaları, ölçek, revizyon ve kritik ölçüler",
+        "Görsel veya işlevsel kullanım, bağlantılar ve gerekli testler",
+        "Adet, yüzey referansları ve hedef teslim tarihi"
+      ]
+    }
+  },
+  "de": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "Räumliche Markenerlebnisse",
+          "description": "Entwickeln Sie übergroße Produktrepliken, skulpturale Displays und Fotomotive für Produkteinführungen und Pop-ups."
+        },
+        {
+          "title": "Wiederkehrende Kampagnenaufbauten",
+          "description": "Modulare Elemente, austauschbare Grafiken und Verpackung für verschiedene Standorte und spätere Wiederverwendung planen."
+        }
+      ],
+      "checklist": [
+        "Freigegebene Produktgeometrie, Grafiken und Markenfarben",
+        "Standorte, Stückzahlen, Eröffnungstermin und Ausstellungsdauer",
+        "Besucherkontakt, Transportzugang und Wiederverwendungspläne"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "Bühnen- und Ausstellungswelten",
+          "description": "Felskulissen, skulpturale Bühnenelemente und Blickfänge anhand des Veranstaltungsplans prüfen."
+        },
+        {
+          "title": "Modulare und saisonale Dekoration",
+          "description": "Teilungen, wiederholten Aufbau, Reparaturzugang und Lagerung vor der Fertigung besprechen."
+        }
+      ],
+      "checklist": [
+        "Raumpläne, Eröffnungstermin und Aufbauzeiten",
+        "Türmaße, Transportgrenzen und Handhabungsgeräte",
+        "Befestigungen, Materialvorgaben des Veranstaltungsorts und Wiederverwendung"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "Immersive Landschaften",
+          "description": "Szenische Felsformen und architektonische Details entlang eines abgestimmten Besucherwegs entwickeln."
+        },
+        {
+          "title": "Figuren und Vermittlungsmodelle",
+          "description": "Figuren und vergrößerte Modelle anhand freigegebener Vorlagen prüfen, einschließlich Berührung und Wartung."
+        }
+      ],
+      "checklist": [
+        "Freigegebene Vorlagen, Vermittlungsziele und Besucherweg",
+        "Innen- oder Außenbedingungen, Berührung und Reinigung",
+        "Licht, AV-Schnittstellen, Befestigungen und Projektstandards"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "Skulpturale Empfangsbereiche",
+          "description": "Tresen, Wandelemente und Möbelformen auf den Entwurf und die vorgesehene Nutzung abstimmen."
+        },
+        {
+          "title": "Taktile Oberflächen und Ornamente",
+          "description": "Strukturierte Paneele, geschwungene Profile und dekorative Details anhand von Oberflächenmustern und Reinigungsanforderungen prüfen."
+        }
+      ],
+      "checklist": [
+        "Aufmaßpläne, kritische Maße und angrenzende Materialien",
+        "Oberflächenreferenzen, Berührung und Wartungsbedarf",
+        "Tragstruktur, Befestigungsschnittstellen und Montagezugang"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "Requisiten vor der Kamera",
+          "description": "Produktrepliken und skulpturale Objekte nach Kameraabstand, Beleuchtung und sichtbaren Seiten prüfen."
+        },
+        {
+          "title": "Kulissenteile und Requisitenserien",
+          "description": "Thematische Oberflächen, Architekturteile und Duplikate anhand der Zeichnungen des Szenenbildteams besprechen."
+        }
+      ],
+      "checklist": [
+        "Zeichnungen, Bildreferenzen und Kameraanforderungen",
+        "Handhabung, Kontakt mit Darstellern und Anzahl der Duplikate",
+        "Drehtermine, Setzugang und Vertraulichkeit"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "Form- und Präsentationsmodelle",
+          "description": "Proportionen, Geometrie und Erscheinungsbild mit physischen Modellen vor der Wahl des Fertigungsverfahrens prüfen."
+        },
+        {
+          "title": "Urmodelle und Ausstellungshüllen",
+          "description": "Urmodelle, Formen und nicht funktionsfähige Ausstellungshüllen besprechen. Funktionale Leistungen benötigen einen gesondert vereinbarten Umfang."
+        }
+      ],
+      "checklist": [
+        "CAD-Dateien, Maßstab, Revisionsstand und kritische Maße",
+        "Visuelle oder funktionale Nutzung, Schnittstellen und Prüfungen",
+        "Stückzahl, Oberflächenreferenzen und Lieferziel"
+      ]
+    }
+  },
+  "fr": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "Expériences de marque physiques",
+          "description": "Étudions des répliques de produits grand format, des présentoirs sculpturaux et des décors photo pour les lancements et pop-up."
+        },
+        {
+          "title": "Installations de campagne réutilisables",
+          "description": "Planifions les modules, les visuels remplaçables et l’emballage pour plusieurs lieux et de futures utilisations."
+        }
+      ],
+      "checklist": [
+        "Géométrie produit, visuels et couleurs de marque validés",
+        "Lieux, quantités, date d’ouverture et durée d’exposition",
+        "Contact du public, accès de livraison et réutilisation"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "Univers scéniques et d’exposition",
+          "description": "Étudions les décors rocheux, les éléments sculpturaux et les pièces phares à partir du plan du lieu."
+        },
+        {
+          "title": "Décors modulaires et saisonniers",
+          "description": "Précisons les séparations, les montages répétés, l’accès pour réparation et le stockage avant fabrication."
+        }
+      ],
+      "checklist": [
+        "Plans du lieu, date d’ouverture et créneaux de montage",
+        "Dimensions des portes, limites de transport et moyens de manutention",
+        "Fixations, règles du lieu sur les matériaux et réutilisation"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "Paysages immersifs",
+          "description": "Développons les formes rocheuses et les détails architecturaux autour d’un parcours de visite validé."
+        },
+        {
+          "title": "Personnages et modèles pédagogiques",
+          "description": "Étudions des figures et modèles agrandis à partir de références validées, en tenant compte du toucher et de l’entretien."
+        }
+      ],
+      "checklist": [
+        "Références validées, objectifs pédagogiques et parcours de visite",
+        "Conditions intérieures ou extérieures, toucher et nettoyage",
+        "Éclairage, interfaces audiovisuelles, fixations et normes du projet"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "Espaces d’accueil sculpturaux",
+          "description": "Coordonnons les comptoirs, les éléments muraux et les formes de mobilier avec le plan du designer et l’usage prévu."
+        },
+        {
+          "title": "Surfaces tactiles et ornements",
+          "description": "Étudions panneaux texturés, profils courbes et détails décoratifs avec des échantillons de finition et les besoins de nettoyage."
+        }
+      ],
+      "checklist": [
+        "Plans cotés, dimensions critiques et matériaux adjacents",
+        "Références de finition, contact et entretien",
+        "Structure porteuse, interfaces de fixation et accès de pose"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "Accessoires face caméra",
+          "description": "Étudions répliques et objets sculpturaux selon la distance de prise de vue, la lumière et les faces visibles."
+        },
+        {
+          "title": "Éléments de décor et accessoires en série",
+          "description": "Examinons surfaces thématiques, éléments architecturaux et doublons à partir des dessins de l’équipe artistique."
+        }
+      ],
+      "checklist": [
+        "Dessins, références visuelles et exigences caméra",
+        "Manipulation, interaction avec les artistes et nombre de doublons",
+        "Dates de tournage, accès au plateau et confidentialité"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "Maquettes de forme et de présentation",
+          "description": "Évaluons proportions, géométrie et aspect avec des modèles physiques avant de choisir la fabrication."
+        },
+        {
+          "title": "Modèles maîtres et coques d’exposition",
+          "description": "Étudions modèles maîtres, moules et coques non fonctionnelles. Les performances fonctionnelles nécessitent un périmètre convenu séparément."
+        }
+      ],
+      "checklist": [
+        "Fichiers CAO, échelle, révision et dimensions critiques",
+        "Usage visuel ou fonctionnel, interfaces et essais requis",
+        "Quantité, références de finition et date de livraison visée"
+      ]
+    }
+  },
+  "ru": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "Физические бренд-пространства",
+          "description": "Рассмотрим увеличенные реплики продукции, скульптурные витрины и фотообъекты для презентаций и поп-апов."
+        },
+        {
+          "title": "Повторные кампании",
+          "description": "Спланируем модульные элементы, сменную графику и упаковку для разных площадок и повторного использования."
+        }
+      ],
+      "checklist": [
+        "Утверждённая геометрия продукции, графика и фирменные цвета",
+        "Площадки, количество, дата открытия и срок экспозиции",
+        "Контакт с посетителями, доступ для доставки и повторное использование"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "Сценические и выставочные пространства",
+          "description": "Рассмотрим скальные декорации, скульптурные элементы сцены и выставочные объекты с учётом плана площадки."
+        },
+        {
+          "title": "Модульный и сезонный декор",
+          "description": "До изготовления обсудим стыки, повторную сборку, доступ для ремонта и хранение."
+        }
+      ],
+      "checklist": [
+        "Планы площадки, дата открытия и время монтажа",
+        "Размеры дверей, ограничения перевозки и погрузочное оборудование",
+        "Крепления, требования площадки к материалам и повторное использование"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "Иммерсивные ландшафты",
+          "description": "Разработаем скальные формы и архитектурные детали вокруг согласованного маршрута посетителей."
+        },
+        {
+          "title": "Персонажи и экспозиционные модели",
+          "description": "Рассмотрим фигуры и увеличенные модели по утверждённым образцам с учётом прикосновений и обслуживания."
+        }
+      ],
+      "checklist": [
+        "Утверждённые образцы, цели экспозиции и маршрут посетителей",
+        "Условия внутри или снаружи, прикосновения и уборка",
+        "Освещение, аудиовизуальные интерфейсы, крепления и стандарты проекта"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "Скульптурные зоны ресепшена",
+          "description": "Согласуем стойки, настенные элементы и формы мебели с планировкой дизайнера и предполагаемым использованием."
+        },
+        {
+          "title": "Фактурные поверхности и орнамент",
+          "description": "Рассмотрим текстурные панели, криволинейные профили и декоративные детали по образцам отделки и требованиям к уборке."
+        }
+      ],
+      "checklist": [
+        "Обмерные планы, критические размеры и соседние материалы",
+        "Образцы отделки, контакт с поверхностями и обслуживание",
+        "Несущая конструкция, узлы крепления и доступ для монтажа"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "Реквизит для съёмок",
+          "description": "Рассмотрим реплики продукции и скульптурные объекты с учётом расстояния до камеры, света и видимых сторон."
+        },
+        {
+          "title": "Элементы декораций и повторный реквизит",
+          "description": "Обсудим тематические поверхности, архитектурные детали и дубликаты по чертежам художественного отдела."
+        }
+      ],
+      "checklist": [
+        "Чертежи, визуальные образцы и требования к съёмке",
+        "Обращение, взаимодействие с актёрами и количество дубликатов",
+        "Даты съёмок, доступ на площадку и конфиденциальность"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "Макеты формы и презентационные модели",
+          "description": "Оценим пропорции, геометрию и внешний вид на физических моделях до выбора технологии изготовления."
+        },
+        {
+          "title": "Мастер-модели и демонстрационные оболочки",
+          "description": "Обсудим мастер-модели, формы и нефункциональные оболочки. Рабочие характеристики требуют отдельного согласования объёма работ."
+        }
+      ],
+      "checklist": [
+        "CAD-файлы, масштаб, версия и критические размеры",
+        "Визуальное или функциональное назначение, сопряжения и испытания",
+        "Количество, образцы отделки и желаемый срок доставки"
+      ]
+    }
+  },
+  "ar": {
+    "retail-brand-activations": {
+      "applications": [
+        {
+          "title": "تجارب ملموسة للعلامات التجارية",
+          "description": "لندرس مجسمات المنتجات المكبّرة وعناصر العرض النحتية ونقاط التصوير لإطلاق المنتجات والمساحات المؤقتة."
+        },
+        {
+          "title": "تركيبات للحملات المتكررة",
+          "description": "لنخطط للعناصر المعيارية والرسومات القابلة للاستبدال والتغليف بما يلائم المواقع المختلفة وإعادة الاستخدام."
+        }
+      ],
+      "checklist": [
+        "هندسة المنتج والرسومات وألوان العلامة المعتمدة",
+        "المواقع والكميات وموعد الافتتاح ومدة العرض",
+        "ملامسة الزوار وإمكانية النقل وخطط إعادة الاستخدام"
+      ]
+    },
+    "events-exhibitions": {
+      "applications": [
+        {
+          "title": "بيئات المسارح والمعارض",
+          "description": "لندرس الديكورات الصخرية وعناصر المسرح النحتية والقطع البارزة وفق مخطط الموقع."
+        },
+        {
+          "title": "ديكورات معيارية وموسمية",
+          "description": "لنناقش مواضع الفصل وتكرار التجميع وإمكانية الإصلاح والتخزين قبل التصنيع."
+        }
+      ],
+      "checklist": [
+        "مخططات الموقع وموعد الافتتاح وفترات التركيب",
+        "أبعاد الأبواب وحدود النقل ومعدات المناولة",
+        "متطلبات التثبيت وقواعد الموقع للمواد وإعادة الاستخدام"
+      ]
+    },
+    "museums-themed-attractions": {
+      "applications": [
+        {
+          "title": "مناظر غامرة",
+          "description": "لنطوّر التكوينات الصخرية والتفاصيل المعمارية حول مسار زيارة متفق عليه."
+        },
+        {
+          "title": "شخصيات ونماذج تفسيرية",
+          "description": "لندرس الشخصيات والنماذج المكبّرة استنادًا إلى مراجع معتمدة مع مراعاة اللمس والصيانة."
+        }
+      ],
+      "checklist": [
+        "المراجع المعتمدة وأهداف العرض ومسار الزائر",
+        "الظروف الداخلية أو الخارجية وإمكانية اللمس والتنظيف",
+        "الإضاءة والواجهات السمعية البصرية والتثبيت ومعايير المشروع"
+      ]
+    },
+    "hospitality-architectural-decor": {
+      "applications": [
+        {
+          "title": "مساحات استقبال نحتية",
+          "description": "لننسّق المكاتب والعناصر الجدارية وأشكال الأثاث مع مخطط المصمم والاستخدام المقصود."
+        },
+        {
+          "title": "أسطح ملمسية وزخارف",
+          "description": "لندرس الألواح ذات الملمس والمقاطع المنحنية والتفاصيل الزخرفية مع عينات التشطيب ومتطلبات التنظيف."
+        }
+      ],
+      "checklist": [
+        "المخططات المقاسة والأبعاد الحرجة والمواد المجاورة",
+        "مراجع التشطيب وظروف اللمس واحتياجات الصيانة",
+        "الهيكل الداعم وواجهات التثبيت والوصول للتركيب"
+      ]
+    },
+    "film-television": {
+      "applications": [
+        {
+          "title": "قطع تظهر أمام الكاميرا",
+          "description": "لندرس مجسمات المنتجات والقطع النحتية وفق مسافة التصوير والإضاءة والأوجه الظاهرة."
+        },
+        {
+          "title": "عناصر ديكور ونسخ متعددة",
+          "description": "لنناقش الأسطح الموضوعية والقطع المعمارية والنسخ الإضافية وفق رسومات الفريق الفني."
+        }
+      ],
+      "checklist": [
+        "الرسومات والمراجع البصرية ومتطلبات التصوير",
+        "المناولة وتفاعل الممثلين وعدد النسخ",
+        "مواعيد التصوير والوصول إلى الموقع ومتطلبات السرية"
+      ]
+    },
+    "prototypes-display-models": {
+      "applications": [
+        {
+          "title": "نماذج الشكل والعرض",
+          "description": "لنقيّم النسب والهندسة والمظهر بنماذج مادية قبل اختيار طريقة التصنيع."
+        },
+        {
+          "title": "نماذج أصلية وهياكل عرض",
+          "description": "لنناقش النماذج الأصلية والقوالب وهياكل العرض غير الوظيفية. يتطلب الأداء الوظيفي نطاق عمل متفقًا عليه بشكل منفصل."
+        }
+      ],
+      "checklist": [
+        "ملفات CAD والمقياس والإصدار والأبعاد الحرجة",
+        "الاستخدام البصري أو الوظيفي والواجهات والاختبارات المطلوبة",
+        "الكمية ومراجع التشطيب وموعد التسليم المستهدف"
+      ]
+    }
+  }
+}
