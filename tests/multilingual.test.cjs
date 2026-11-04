@@ -16,6 +16,7 @@ const {methodCopy,methodIds} = require('../lib/i18n/methods.ts');
 const {localizedContent} = require('../lib/i18n/content.ts');
 const {manufacturingMethods,methodPath} = require('../lib/manufacturing.ts');
 const {projects} = require('../lib/projects.ts');
+const {industries} = require('../lib/industries.ts');
 const {portfolioCategories,getPortfolioImageSrc,conceptCollections} = require('../lib/content.ts');
 const {targetCountries,countryOptions} = require('../lib/i18n/countries.ts');
 const {countryPages} = require('../lib/i18n/country-pages.ts');
@@ -39,6 +40,14 @@ test('six complete dictionaries, technical content and portfolio assets', () => 
       for(const key of ['steps','uses','drivers','limits']) assert.ok(copy[key].length,`${locale}/${id}/${key}`);
     }
     assert.equal(methodCopy(locale,'carbon').processes.length,3);
+    for (const industry of industries) {
+      const copy = content.industries[industry.slug];
+      assert.equal(copy.applications.length, 2, `${locale}/${industry.slug}/applications`);
+      assert.equal(copy.checklist.length, 3, `${locale}/${industry.slug}/checklist`);
+      assert.ok(copy.applications.every(item => item.title.trim() && item.description.trim()));
+      assert.ok(copy.checklist.every(item => item.trim()));
+      if (locale !== 'en') assert.notEqual(copy.applications[0].description, localizedContent('en').industries[industry.slug].applications[0].description);
+    }
     for(const project of projects) {
       const copy = content.projects[project.id];
       assert.ok(copy?.description);
@@ -204,12 +213,15 @@ test('all languages share one verified notification path and localize customer r
   for(const language of locales) await t.test(language,async()=>{
     const calls=[];
     global.fetch=async(url,options)=>{calls.push({url,options});return Response.json(url.includes('siteverify')?{success:true}:{id:'mock'});};
-    const payload={...initialEnquiry,language,country:'QA',fullName:'Example Client',email:'client@example.com',message:'Complete cabinet, 200 × 80 × 40 cm.',projectType:methodCopy(language,'wood').title,turnstileToken:'mock',selectedProjects:[projects[0].id]};
+    const payload={...initialEnquiry,language,country:'QA',fullName:'Example Client',email:'client@example.com',message:'Complete cabinet, 200 × 80 × 40 cm.',targetDeliveryDate:'2027-02-15',intendedUse:'Indoor <display> & visitor area',budgetRange:'15000–20000 EUR',projectType:methodCopy(language,'wood').title,turnstileToken:'mock',selectedProjects:[projects[0].id]};
     const request=data=>new Request(siteOrigin+'/api/contact',{method:'POST',headers:{'Content-Type':'application/json','X-ARDIC-Language':language},body:JSON.stringify(data)});
     const response=await POST(request(payload)); assert.equal(response.status,200);assert.equal(calls.length,3);
     const team=JSON.parse(calls[1].options.body),client=JSON.parse(calls[2].options.body);
     assert.equal(team.to,'team@example.com');assert.match(team.text,/QA/);assert.ok(team.text.includes('('+language+')'));
     assert.ok(team.text.includes(siteOrigin+pagePath(language,{kind:'project',id:projects[0].id})));
+    for (const field of ['targetDeliveryDate', 'intendedUse', 'budgetRange']) assert.ok(team.text.includes(payload[field]), `${language}/${field}`);
+    assert.ok(team.html.includes('Indoor &lt;display&gt; &amp; visitor area'));
+    assert.ok(!team.html.includes('<display>'));
     assert.ok(client.subject.includes(dictionary(language).confirmation_subject));
     assert.ok(client.html.includes(`lang="${language}"`));assert.ok(client.html.includes(`dir="${language==='ar'?'rtl':'ltr'}"`));assert.equal(client.attachments,undefined);
     calls.length=0;
