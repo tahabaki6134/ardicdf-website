@@ -18,7 +18,7 @@ The endpoint reports success only after the team's notification has been accepte
 
 ## Content and visitor flow
 
-- `lib/projects.ts` defines eight curated portfolio examples, including the supplied FARMASI Boss Trip visuals and the retouched sculptural reception photographs. Project URLs remain stable across all six languages; the original concert rockwork case study keeps its URL.
+- `lib/projects.ts` defines ten curated portfolio examples, including the supplied FARMASI Boss Trip visuals and the retouched sculptural reception photographs. Project URLs remain stable across all six languages; the original concert rockwork case study keeps its URL.
 - `lib/industries.ts` defines six sector pages and prospective applications. These applications are not claims of completed commissions.
 - `lib/planning.ts` supplies the planning guide and its matching FAQ structured data.
 - Visitors can filter work, select up to six examples, share a selection link and carry it into the short enquiry form.
@@ -30,7 +30,7 @@ Do not invent client names, dimensions, lead times, certifications or materials 
 
 ## Gallery
 
-The main menu and homepage link to `/en/gallery` (and the five other language editions). `lib/photo-gallery.ts` collects all published project, archive and concept images in a single lazy-loaded grid. Byte-identical legacy copies are mapped in `lib/gallery-image-aliases.json`; reused concept covers retain their concept label. There are no category tabs or pagination.
+The main menu and homepage link to `/en/gallery` (and the five other language editions). `lib/photo-gallery.ts` collects all published project, archive and concept images in a single lazy-loaded grid. Byte-identical legacy copies are mapped in `lib/gallery-image-aliases.json`; reused concept covers retain their concept label. The full gallery remains a single page. The dedicated epoxy collection at `/en/works/epoxy-wood-collection` has five category filters. Gallery viewers link to the corresponding project and enquiry when a curated project is known.
 
 The image viewer supports keyboard navigation and a watermarked JPEG download. The browser renders an iridescent central ARDIÇ mark and a footer into the downloaded pixels, preserving aspect ratio and limiting the long edge to 4096 pixels. Original assets stay unchanged. This is a branded download feature, not DRM: public original files and screenshots cannot be prevented.
 
@@ -45,3 +45,10 @@ Before releasing on the production branch, review the preview and verify real fo
 ## Multilingual preview
 
 Six editions share the existing project. The root opens in English at `/en`; Turkish pages use `/tr` and its subpaths. Legacy unprefixed international addresses redirect to `/en`, while explicitly Turkish manufacturing slugs redirect to `/tr`. The separate `.com.tr` website is unchanged. German, French, Russian and Arabic use language paths. Both language menus preserve validated comparison and enquiry selections. See [the rollout guide](docs/multilingual-rollout.md) for content editing and enquiry configuration. The public preview review screen is `/review.html`.
+
+## Epoxy and mascot additions (13 November 2026)
+
+- 34 supplied epoxy photographs are in `lib/epoxy-assets.json`, with localized captions and five categories in `lib/i18n/messages/collections.json`. WebP copies preserve image content and orientation; originals are not committed.
+- The astronaut monkey project includes two supplied photographs and four short H.264 clips. Video audio is removed, playback is user-initiated and `preload=none` avoids downloading all clips on page load.
+- The homepage features the mascot and a separate epoxy collection link. Epoxy is reachable from the main menu, full gallery and epoxy manufacturing page in all six languages.
+- The dated seasonal notice is dismissible and in the page flow; it does not block browsing or claim the workshop is busy.

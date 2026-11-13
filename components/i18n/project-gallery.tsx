@@ -16,6 +16,9 @@ export function ProjectGallery({ project, copy }: { project: Project; copy: Proj
       {caption && <figcaption className="mt-3 border-b border-ink/15 pb-4 text-sm leading-7 text-ink/70">{caption.caption} <span aria-hidden="true">↗</span></figcaption>}
     </figure>;
   }
+  if (project.id === "astronaut-monkey-mascot") {
+    return <div className="mt-8 grid max-w-5xl items-start gap-7 sm:grid-cols-2">{project.gallery.map(figure)}</div>;
+  }
   return <div className="mt-8 max-w-5xl">
     {figure(cover, 0)}
     <div className="mt-7 grid items-start gap-7 sm:grid-cols-2">{details.map((item, index) => figure(item, index + 1))}</div>

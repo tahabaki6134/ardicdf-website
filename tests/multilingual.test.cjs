@@ -15,7 +15,7 @@ const {dictionary} = require('../lib/i18n/dictionary.ts');
 const {methodCopy,methodIds} = require('../lib/i18n/methods.ts');
 const {localizedContent} = require('../lib/i18n/content.ts');
 const {manufacturingMethods,methodPath} = require('../lib/manufacturing.ts');
-const {projects} = require('../lib/projects.ts');
+const {projects,getProject} = require('../lib/projects.ts');
 const {industries} = require('../lib/industries.ts');
 const {portfolioCategories,getPortfolioImageSrc,conceptCollections} = require('../lib/content.ts');
 const {targetCountries,countryOptions} = require('../lib/i18n/countries.ts');
@@ -108,7 +108,7 @@ test('canonical URLs and reciprocal language alternates resolve to equivalent pa
     assert.equal(meta.alternates.languages['x-default'],siteOrigin+pagePath('en',page));
     assert.ok(meta.title&&meta.description);
   }
-  assert.equal(urls.size,258);
+  assert.equal(urls.size,270);
   for(const m of manufacturingMethods) {
     assert.equal(pagePath('tr',{kind:'method',id:m.id}),'/tr'+methodPath(m,'tr'));
     assert.equal(pagePath('en',{kind:'method',id:m.id}),'/en'+methodPath(m,'en'));
@@ -156,7 +156,7 @@ test('sitemap URLs are final and indexable; utility pages retain readable noinde
   const robots=require('../app/robots.ts').default;
   process.env.VERCEL_ENV='production';
   const entries=sitemap();
-  assert.equal(entries.length,252);
+  assert.equal(entries.length,264);
   const urls=new Set(entries.map(entry=>entry.url));
   assert.equal(urls.size,entries.length);
   for(const entry of entries) {
@@ -286,4 +286,30 @@ test('gallery includes published images once, labels concepts and localizes rout
     assert.equal(resolvePage(locale,['gallery']).kind,'gallery');
     assert.ok(pageMetadata(locale,{kind:'gallery'}).description);
   }
+});
+
+test('new collections preserve localized enquiry context and include all supplied media', () => {
+  const {epoxyImages,galleryImages}=require('../lib/photo-gallery.ts');
+  const {parseSelectedProjects}=require('../lib/projects.ts');
+  for (const locale of locales) {
+    const items=epoxyImages(locale);
+    assert.equal(items.length,34);
+    assert.equal(new Set(items.map(item=>item.category)).size,5);
+    const full=new Set(galleryImages(locale).map(item=>item.src));
+    for(const item of items) {
+      assert.ok(item.title.trim()); assert.ok(full.has(item.src));
+      assert.equal(parsePublicPath(item.href).page.id,'epoxy-wood-collection');
+      const enquiry=new URL(item.enquiryHref,siteOrigin);
+      assert.equal(enquiry.searchParams.get('method'),'epoxy');
+      assert.deepEqual(parseSelectedProjects(enquiry.searchParams.get('selected')),['epoxy-wood-collection']);
+    }
+    const mascot=localizedContent(locale).projects['astronaut-monkey-mascot'];
+    assert.equal(mascot.gallery.length,2);
+    assert.ok(mascot.gallery.every(item=>item.alt&&item.caption));
+    for(const id of ['astronaut-monkey-mascot','epoxy-wood-collection']) {
+      assert.equal(resolvePage(locale,['works',id]).id,id);
+      assert.equal(pageMetadata(locale,{kind:'project',id}).openGraph.images[0].url,siteOrigin+getProject(id).image);
+    }
+  }
+  for(let i=1;i<=4;i++)for(const extension of ['mp4','webp'])assert.ok(fs.existsSync(path.join(root,`public/works/astronaut-monkey-mascot/detail-${i}.${extension}`)));
 });

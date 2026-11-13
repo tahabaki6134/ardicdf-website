@@ -70,6 +70,46 @@
         "Saha fotoğrafı, süslemeli çevre elemanının mağaza girişine yerleştirilme aşamasını gösteriyor.",
         "Kavisli profil ve açık renkli yüzey, koyu cepheye karşı belirginleşerek girişi görsel odak haline getiriyor."
       ]
+    },
+    "astronaut-monkey-mascot": {
+      "title": "Astronot maymun maskot",
+      "description": "Yüzey hazırlığından boyalı kostüm ve kürk detaylarına uzanan üretim aşamalarıyla astronot maymun karakter heykeli.",
+      "details": [
+        "Atölye fotoğrafları aynı karakterin son yüzey işlemleri öncesini ve boya ile kürk uygulaması tamamlandıktan sonraki hâlini gösteriyor.",
+        "Açık el, başparmak hareketi, sırt çantası ve kuyruk; figüre farklı açılardan tanınan bir siluet kazandırıyor."
+      ],
+      "facts": [
+        {
+          "label": "Gösterilen iş",
+          "value": "Karakter heykeli"
+        },
+        {
+          "label": "Görünür yüzey",
+          "value": "Boyalı kostüm ve kürk detayları"
+        },
+        {
+          "label": "Dokümantasyon",
+          "value": "Hazırlık, bitmiş ürün ve video görüntüleri"
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "Boyalı astronot kostümü ve kürk detaylarıyla tamamlanmış maskot.",
+          "caption": "Boyalı astronot kostümü ve kürk detaylarıyla tamamlanmış maskot."
+        },
+        {
+          "alt": "Son boya ve kürk uygulamasından önceki üretim aşaması.",
+          "caption": "Son boya ve kürk uygulamasından önceki üretim aşaması."
+        }
+      ]
+    },
+    "epoxy-wood-collection": {
+      "title": "Epoksi ve ahşap koleksiyonu",
+      "description": "Saatler, aydınlatmalar, sunum parçaları ve şeffaf döküm objeler. Atölyemizdeki işlerin ahşap dokusunu, rengini ve derinliğini inceleyin; kendi projeniz için beğendiğiniz örneği paylaşın.",
+      "details": [
+        "Koleksiyon; ahşap ve renkli reçine çalışmalarını, aydınlatmalı parçaları ve şeffaf kapsülleme örneklerini bir araya getiriyor.",
+        "Fotoğraflar atölye örneklerini gösterir; yeni bir üretim için ölçü, renk ve kullanım amacı ayrıca değerlendirilir."
+      ]
     }
   },
   "archives": {

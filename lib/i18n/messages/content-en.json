@@ -70,6 +70,46 @@
         "The site photograph shows the ornamental surround being positioned around the storefront entrance.",
         "The curved profile and light surface stand out against the darker facade, making the entrance the visual focus."
       ]
+    },
+    "astronaut-monkey-mascot": {
+      "title": "Astronaut monkey mascot",
+      "description": "A sculptural astronaut monkey character, shown from surface preparation to the finished painted suit and fur details.",
+      "details": [
+        "The workshop photographs document the same character before finishing and after painting and fur application.",
+        "The open hand, thumbs-up gesture, backpack and tail give the figure a recognisable silhouette from several angles."
+      ],
+      "facts": [
+        {
+          "label": "Work shown",
+          "value": "Character sculpture"
+        },
+        {
+          "label": "Visible finish",
+          "value": "Painted suit and fur details"
+        },
+        {
+          "label": "Documentation",
+          "value": "Preparation, finish and video views"
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "Finished astronaut monkey with painted suit and fur details.",
+          "caption": "Finished astronaut monkey with painted suit and fur details."
+        },
+        {
+          "alt": "Production stage before the final paint and fur finish.",
+          "caption": "Production stage before the final paint and fur finish."
+        }
+      ]
+    },
+    "epoxy-wood-collection": {
+      "title": "Epoxy & wood collection",
+      "description": "Clocks, lighting, serving pieces and clear cast objects. Explore the grain, colour and depth of our workshop pieces, then share a reference for your own project.",
+      "details": [
+        "The collection brings together wood and coloured resin, illuminated pieces and transparent encapsulation work.",
+        "Each photograph shows a workshop piece; dimensions, colours and intended use can be discussed for a new commission."
+      ]
     }
   },
   "archives": {
