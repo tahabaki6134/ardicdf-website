@@ -195,7 +195,7 @@
   "gallery_all": "Tüm görselleri gör",
   "season_eyebrow": "Yılbaşı 2027",
   "season_title": "Yılbaşı siparişleri başladı.",
-  "season_body": "Maskot, dekor ve özel üretim projeleriniz için sipariş alıyoruz. Üretim yoğunluğumuz yüksek; vakit daralmadan projenizi iletin, teslimat planınızı birlikte oluşturalım.",
+  "season_body": "Yılbaşı dekoru, maskot ve özel üretim projeleri için talep alıyoruz. Projenizi ve hedef teslim tarihinizi paylaşın.",
   "season_cta": "Projeniz için teklif alın",
   "season_continue": "Siteyi keşfetmeye devam et",
   "application_paths_title": "Nasıl bir proje planlıyorsunuz?",
@@ -214,5 +214,6 @@
   "intendedUse": "Kullanım alanı ve koşulları",
   "budgetRange": "Hedef bütçe",
   "intended_use_hint": "İç / dış mekân, ziyaretçi teması, kullanım süresi",
-  "budget_hint": "Biliniyorsa tutar veya aralık ve para birimi"
+  "budget_hint": "Biliniyorsa tutar veya aralık ve para birimi",
+  "nav_epoxy": "Epoksi"
 }

@@ -1,3 +1,5 @@
+import epoxyAssets from "./epoxy-assets.json";
+
 export type Project = {
   id: string;
   title: string;
@@ -16,6 +18,35 @@ export type Project = {
 // These entries use existing portfolio photographs and supplied project visuals. Do not add dimensions,
 // client names, materials or delivery claims without a verified project record.
 export const projects: Project[] = [
+  {
+    id: "astronaut-monkey-mascot",
+    title: "Astronaut monkey mascot",
+    category: "Sculpture & characters",
+    image: "/works/astronaut-monkey-mascot/finished.webp",
+    gallery: [
+      { src: "/works/astronaut-monkey-mascot/finished.webp", width: 864, height: 1536 },
+      { src: "/works/astronaut-monkey-mascot/in-production.webp", width: 1152, height: 1536 }
+    ],
+    alt: "Finished astronaut monkey sculpture with painted suit and fur details",
+    description: "A sculptural astronaut monkey character, from surface preparation to the finished painted suit and fur details.",
+    details: ["Workshop photographs show the character before and after finishing.", "Short videos document the suit, backpack and tail."],
+    briefChecklist: ["Character artwork, dimensions and quantity", "Display location, visitor interaction and mounting", "Finish, destination and schedule"],
+    industries: ["museums-themed-attractions", "retail-brand-activations", "events-exhibitions"],
+    services: [{ label: "Custom character fabrication", href: "/fabrication" }]
+  },
+  {
+    id: "epoxy-wood-collection",
+    title: "Epoxy & wood collection",
+    category: "Epoxy & wood",
+    image: "/works/epoxy-wood-collection/epoxy-27.webp",
+    gallery: epoxyAssets,
+    alt: "Illuminated horizontal panel combining wood and epoxy resin",
+    description: "Clocks, lighting, serving pieces, decorative objects and clear resin casting.",
+    details: ["Wood grain and resin colour form the collection's varied compositions.", "Workshop photographs show illuminated pieces and transparent encapsulation alongside everyday decorative objects."],
+    briefChecklist: ["Reference, dimensions and quantity", "Colour, wood composition and lighting", "Intended use, destination and schedule"],
+    industries: ["hospitality-architectural-decor", "prototypes-display-models"],
+    services: [{ label: "Epoxy resin casting", href: "/manufacturing/epoxy-resin-casting" }]
+  },
   {
     id: "sculptural-reception-interior",
     title: "Sculptural reception & wall elements",

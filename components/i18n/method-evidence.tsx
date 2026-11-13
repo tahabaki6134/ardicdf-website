@@ -10,6 +10,7 @@ import { pagePath, type Page } from "@/lib/i18n/routes";
 // Only connect processes backed by the existing project record or named workshop archive.
 // Do not infer a new photograph's materials from its appearance.
 const evidence: Record<string, Page> = {
+  epoxy: { kind: "project", id: "epoxy-wood-collection" },
   foam: { kind: "project", id: "modular-artificial-rock-concert-environment" },
   glass: { kind: "archive", id: "molds-composite-production" },
   tooling: { kind: "archive", id: "molds-composite-production" },

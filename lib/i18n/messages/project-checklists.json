@@ -39,6 +39,16 @@
       "Measured facade drawings and clear entrance dimensions",
       "Existing structure, fixing interfaces and access constraints",
       "Exposure conditions, finish reference and installation sequence"
+    ],
+    "astronaut-monkey-mascot": [
+      "Character artwork, desired dimensions and quantity",
+      "Display location, visitor interaction and mounting requirements",
+      "Finish references, delivery destination and schedule"
+    ],
+    "epoxy-wood-collection": [
+      "Reference image, overall dimensions and quantity",
+      "Colour, wood composition and lighting preferences",
+      "Intended use, delivery location and schedule"
     ]
   },
   "tr": {
@@ -81,6 +91,16 @@
       "Ölçülü cephe çizimleri ve net giriş ölçüleri",
       "Mevcut yapı, sabitleme noktaları ve erişim kısıtları",
       "Dış etkenler, yüzey referansı ve montaj sırası"
+    ],
+    "astronaut-monkey-mascot": [
+      "Karakter çizimleri, istenen ölçüler ve adet",
+      "Sergileme yeri, ziyaretçi etkileşimi ve sabitleme ihtiyaçları",
+      "Yüzey referansları, teslimat yeri ve takvim"
+    ],
+    "epoxy-wood-collection": [
+      "Referans görsel, dış ölçüler ve adet",
+      "Renk, ahşap yerleşimi ve aydınlatma tercihleri",
+      "Kullanım amacı, teslimat yeri ve takvim"
     ]
   },
   "de": {
@@ -123,6 +143,16 @@
       "Bemaßte Fassadenpläne und lichte Eingangsmaße",
       "Bestehende Struktur, Befestigungspunkte und Zugangsbeschränkungen",
       "Umwelteinflüsse, Oberflächenreferenz und Montagefolge"
+    ],
+    "astronaut-monkey-mascot": [
+      "Figurenentwurf, gewünschte Maße und Stückzahl",
+      "Aufstellort, Besucherinteraktion und Befestigung",
+      "Oberflächenreferenzen, Lieferort und Zeitplan"
+    ],
+    "epoxy-wood-collection": [
+      "Referenzbild, Gesamtmaße und Stückzahl",
+      "Farbe, Holzanordnung und Beleuchtung",
+      "Verwendungszweck, Lieferort und Zeitplan"
     ]
   },
   "fr": {
@@ -165,6 +195,16 @@
       "Plans de façade cotés et dimensions libres de l’entrée",
       "Structure existante, points de fixation et contraintes d’accès",
       "Exposition aux éléments, référence de finition et ordre de pose"
+    ],
+    "astronaut-monkey-mascot": [
+      "Dessin du personnage, dimensions souhaitées et quantité",
+      "Lieu d’exposition, interaction du public et fixation",
+      "Références de finition, destination et calendrier"
+    ],
+    "epoxy-wood-collection": [
+      "Image de référence, dimensions et quantité",
+      "Couleurs, composition du bois et éclairage",
+      "Usage prévu, destination et calendrier"
     ]
   },
   "ru": {
@@ -207,6 +247,16 @@
       "Чертежи фасада с размерами и размеры входа в свету",
       "Существующая конструкция, точки крепления и ограничения доступа",
       "Внешние воздействия, образец отделки и порядок монтажа"
+    ],
+    "astronaut-monkey-mascot": [
+      "Эскиз персонажа, размеры и количество",
+      "Место установки, взаимодействие с посетителями и крепление",
+      "Примеры отделки, адрес доставки и сроки"
+    ],
+    "epoxy-wood-collection": [
+      "Фото примера, габариты и количество",
+      "Цвет, расположение дерева и подсветка",
+      "Назначение, место доставки и сроки"
     ]
   },
   "ar": {
@@ -249,6 +299,16 @@
       "رسومات واجهة بالأبعاد والأبعاد الصافية للمدخل",
       "الهيكل القائم ونقاط التثبيت وقيود الوصول",
       "ظروف التعرض للعوامل الخارجية ومرجع التشطيب وتسلسل التركيب"
+    ],
+    "astronaut-monkey-mascot": [
+      "رسومات الشخصية والأبعاد المطلوبة والكمية",
+      "موقع العرض وتفاعل الزوار ومتطلبات التثبيت",
+      "مراجع التشطيب ووجهة التسليم والجدول الزمني"
+    ],
+    "epoxy-wood-collection": [
+      "صورة مرجعية والأبعاد والكمية",
+      "الألوان وتوزيع الخشب وتفضيلات الإضاءة",
+      "الاستخدام المقصود وموقع التسليم والجدول الزمني"
     ]
   }
 }

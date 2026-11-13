@@ -70,6 +70,46 @@
         "La photo de chantier montre la mise en place de l’encadrement ornemental autour de l’entrée du magasin.",
         "Le profil courbe et la surface claire se détachent de la façade sombre et soulignent visuellement l’entrée."
       ]
+    },
+    "astronaut-monkey-mascot": {
+      "title": "Mascotte singe astronaute",
+      "description": "Un singe astronaute sculptural, présenté depuis la préparation de surface jusqu’à la combinaison peinte et aux détails de fourrure.",
+      "details": [
+        "Les photos d’atelier montrent le même personnage avant la finition, puis après la peinture et la pose de fourrure.",
+        "La main ouverte, le pouce levé, le sac à dos et la queue donnent à la figure une silhouette reconnaissable sous plusieurs angles."
+      ],
+      "facts": [
+        {
+          "label": "Travail présenté",
+          "value": "Sculpture de personnage"
+        },
+        {
+          "label": "Finition visible",
+          "value": "Combinaison peinte et fourrure"
+        },
+        {
+          "label": "Documentation",
+          "value": "Préparation, pièce terminée et vidéos"
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "Mascotte terminée avec combinaison peinte et détails de fourrure.",
+          "caption": "Mascotte terminée avec combinaison peinte et détails de fourrure."
+        },
+        {
+          "alt": "Étape de fabrication avant la peinture finale et la pose de fourrure.",
+          "caption": "Étape de fabrication avant la peinture finale et la pose de fourrure."
+        }
+      ]
+    },
+    "epoxy-wood-collection": {
+      "title": "Collection époxy et bois",
+      "description": "Horloges, luminaires, pièces de service et objets coulés transparents. Découvrez le veinage, la couleur et la profondeur de nos pièces d’atelier, puis partagez une référence pour votre projet.",
+      "details": [
+        "La collection associe bois et résines colorées, pièces éclairées et inclusions transparentes.",
+        "Les photos présentent des exemples d’atelier ; dimensions, couleurs et usage sont étudiés pour chaque nouvelle commande."
+      ]
     }
   },
   "archives": {

@@ -70,6 +70,46 @@
         "Die Baustellenaufnahme zeigt die Positionierung der ornamentalen Einfassung am Ladeneingang.",
         "Das geschwungene Profil und die helle Oberfläche heben sich von der dunklen Fassade ab und betonen den Eingang."
       ]
+    },
+    "astronaut-monkey-mascot": {
+      "title": "Astronautenaffe als Maskottchen",
+      "description": "Eine skulpturale Astronautenaffen-Figur, von der Oberflächenvorbereitung bis zum bemalten Anzug und den Felldetails.",
+      "details": [
+        "Die Werkstattfotos zeigen dieselbe Figur vor der Endbearbeitung und nach Bemalung und Fellauftrag.",
+        "Offene Hand, Daumen-hoch-Geste, Rucksack und Schwanz ergeben eine aus mehreren Blickwinkeln erkennbare Silhouette."
+      ],
+      "facts": [
+        {
+          "label": "Gezeigte Arbeit",
+          "value": "Figurenskulptur"
+        },
+        {
+          "label": "Sichtbare Oberfläche",
+          "value": "Bemalter Anzug und Felldetails"
+        },
+        {
+          "label": "Dokumentation",
+          "value": "Vorbereitung, fertiges Objekt und Videos"
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "Fertiges Maskottchen mit bemaltem Astronautenanzug und Felldetails.",
+          "caption": "Fertiges Maskottchen mit bemaltem Astronautenanzug und Felldetails."
+        },
+        {
+          "alt": "Fertigungsphase vor der abschließenden Bemalung und Fellapplikation.",
+          "caption": "Fertigungsphase vor der abschließenden Bemalung und Fellapplikation."
+        }
+      ]
+    },
+    "epoxy-wood-collection": {
+      "title": "Epoxidharz- und Holzkollektion",
+      "description": "Uhren, Leuchten, Servierobjekte und transparente Gussobjekte. Entdecken Sie Maserung, Farbe und Tiefe unserer Werkstattarbeiten und senden Sie uns eine Referenz für Ihr Projekt.",
+      "details": [
+        "Die Kollektion vereint Holz und farbiges Harz, beleuchtete Objekte und transparente Einbettungen.",
+        "Die Fotos zeigen Werkstattbeispiele; Maße, Farben und Verwendungszweck werden für einen neuen Auftrag besprochen."
+      ]
     }
   },
   "archives": {

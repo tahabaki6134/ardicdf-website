@@ -195,7 +195,7 @@
   "gallery_all": "View all images",
   "season_eyebrow": "New Year 2027",
   "season_title": "Festive orders are now open.",
-  "season_body": "We are taking orders for mascots, seasonal décor and bespoke projects. Our workshop schedule is busy. Send your brief early so we can plan your delivery together.",
+  "season_body": "We are taking enquiries for New Year décor, mascots and bespoke projects. Share your brief and preferred delivery date.",
   "season_cta": "Request a project quote",
   "season_continue": "Continue exploring",
   "application_paths_title": "What are you planning?",
@@ -214,5 +214,6 @@
   "intendedUse": "Use & setting",
   "budgetRange": "Target budget",
   "intended_use_hint": "Indoor / outdoor, visitor contact, display duration",
-  "budget_hint": "Amount or range and currency, if known"
+  "budget_hint": "Amount or range and currency, if known",
+  "nav_epoxy": "Epoxy"
 }

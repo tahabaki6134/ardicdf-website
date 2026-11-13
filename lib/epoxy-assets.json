@@ -1,0 +1,274 @@
+[
+  {
+    "id": "epoxy-02",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-02.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 2
+  },
+  {
+    "id": "epoxy-05",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-05.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 5
+  },
+  {
+    "id": "epoxy-06",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-06.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 6
+  },
+  {
+    "id": "epoxy-09",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-09.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 9
+  },
+  {
+    "id": "epoxy-14",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-14.webp",
+    "width": 900,
+    "height": 1600,
+    "number": 14
+  },
+  {
+    "id": "epoxy-16",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-16.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 16
+  },
+  {
+    "id": "epoxy-18",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-18.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 18
+  },
+  {
+    "id": "epoxy-22",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-22.webp",
+    "width": 900,
+    "height": 1600,
+    "number": 22
+  },
+  {
+    "id": "epoxy-25",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-25.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 25
+  },
+  {
+    "id": "epoxy-29",
+    "category": "clocks",
+    "src": "/works/epoxy-wood-collection/epoxy-29.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 29
+  },
+  {
+    "id": "epoxy-11",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-11.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 11
+  },
+  {
+    "id": "epoxy-15",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-15.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 15
+  },
+  {
+    "id": "epoxy-23",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-23.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 23
+  },
+  {
+    "id": "epoxy-27",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-27.webp",
+    "width": 1536,
+    "height": 864,
+    "number": 27
+  },
+  {
+    "id": "epoxy-28",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-28.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 28
+  },
+  {
+    "id": "epoxy-31",
+    "category": "lighting",
+    "src": "/works/epoxy-wood-collection/epoxy-31.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 31
+  },
+  {
+    "id": "epoxy-03",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-03.webp",
+    "width": 900,
+    "height": 1600,
+    "number": 3
+  },
+  {
+    "id": "epoxy-04",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-04.webp",
+    "width": 1536,
+    "height": 864,
+    "number": 4
+  },
+  {
+    "id": "epoxy-17",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-17.webp",
+    "width": 1536,
+    "height": 864,
+    "number": 17
+  },
+  {
+    "id": "epoxy-26",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-26.webp",
+    "width": 1536,
+    "height": 864,
+    "number": 26
+  },
+  {
+    "id": "epoxy-32",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-32.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 32
+  },
+  {
+    "id": "epoxy-35",
+    "category": "serving",
+    "src": "/works/epoxy-wood-collection/epoxy-35.webp",
+    "width": 1536,
+    "height": 864,
+    "number": 35
+  },
+  {
+    "id": "epoxy-10",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-10.webp",
+    "width": 1152,
+    "height": 1536,
+    "number": 10
+  },
+  {
+    "id": "epoxy-12",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-12.webp",
+    "width": 900,
+    "height": 1600,
+    "number": 12
+  },
+  {
+    "id": "epoxy-13",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-13.webp",
+    "width": 1200,
+    "height": 1600,
+    "number": 13
+  },
+  {
+    "id": "epoxy-21",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-21.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 21
+  },
+  {
+    "id": "epoxy-24",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-24.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 24
+  },
+  {
+    "id": "epoxy-33",
+    "category": "casting",
+    "src": "/works/epoxy-wood-collection/epoxy-33.webp",
+    "width": 900,
+    "height": 1600,
+    "number": 33
+  },
+  {
+    "id": "epoxy-01",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-01.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 1
+  },
+  {
+    "id": "epoxy-07",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-07.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 7
+  },
+  {
+    "id": "epoxy-08",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-08.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 8
+  },
+  {
+    "id": "epoxy-30",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-30.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 30
+  },
+  {
+    "id": "epoxy-34",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-34.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 34
+  },
+  {
+    "id": "epoxy-36",
+    "category": "art",
+    "src": "/works/epoxy-wood-collection/epoxy-36.webp",
+    "width": 864,
+    "height": 1536,
+    "number": 36
+  }
+]
